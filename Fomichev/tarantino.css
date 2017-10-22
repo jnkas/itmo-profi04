@@ -1,0 +1,57 @@
+body{
+background-color: black;
+}
+
+h2 {
+	color: gold;
+	font-size: 150%;
+	font-family: 'Verdana', 'Times New Roman' ;
+}
+p {
+	font-family: 'Futura pro bold', 'Times New Roman' ;
+	font-size: 120%;
+	color: gold;
+
+}
+i {
+	color: gold;
+}
+.text-page1{
+	width: 50%;
+	min-width: 400px;
+	height:800px ;
+	min-height: 500px;
+	background: rgba(0,0,0,0.);
+}
+
+.text-page2, .text-page3, .text-page4{
+	width: 50%;
+	min-width: 400px;
+	height:800px ;
+	min-height: 500px;
+	background: rgba(0,0,0,0.8);
+}
+.page1 {
+	margin-top: 20px;
+	background-image: url(img/page.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: 0;
+	z-index:11 ;
+	 }
+.page2 {
+	background-image: url(img/kriminal2.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: 0;
+	 }
+.page3 {
+	background-image: url(img/dead.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	 }
+.page4 {
+	background-image: url(img/dogs.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	 }
