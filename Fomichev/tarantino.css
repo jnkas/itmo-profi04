@@ -16,12 +16,23 @@ p {
 i {
 	color: gold;
 }
+a{
+	text-decoration: none;
+	color: orange;
+}
+a: visited {
+	color: gold;
+}
+a: active {
+	color: red;
+}
 .text-page1{
+
 	width: 50%;
 	min-width: 400px;
 	height:800px ;
 	min-height: 500px;
-	background: rgba(0,0,0,0.);
+	background: rgba(0,0,0,0.8);
 }
 
 .text-page2, .text-page3, .text-page4{
@@ -54,4 +65,16 @@ i {
 	background-image: url(img/dogs.jpg);
 	background-repeat: no-repeat;
 	background-size: 100%;
+	 }
+.podrobnee {
+	font-family: 'Verdana', 'Times New Roman' ;
+	font-size: 1.5em;
+	color: orange;
+	text-shadow: gray 3px 3px 13px;
+	height:10px ;
+	min-height: 100px;
+	float:right;
+	background: rgba(0,0,0,0.4);
+	text-align: center;
+	border-radius: 50%;
 	 }
