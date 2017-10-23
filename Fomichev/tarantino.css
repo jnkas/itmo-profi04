@@ -1,9 +1,56 @@
+.statistics {
+	background-color: grey;
+	color: black;
+	border:2px solid black;
+	background: linear-gradient(to top, white, black);
+	height: 300px;
+}
+
+table{
+	font-size: 20px;
+	border-collapse: collapse;
+}
+th , td{
+border: 1px solid black;
+border-collapse: collapse;
+}
+
+.menu{
+	background: linear-gradient(to top, black, white);
+}
+.menu ul {
+background: rgba(0,0,0,0.1);/* Цвет фона меню и его прозрачность*/
+overflow: hidden;/* элемент во всю ширину*/
+padding-left: 5%;/*Отступ меню слева*/
+}
+
+.menu li {
+border: 1px solid gold;
+border-radius: 50%;
+list-style: none;/* убираем маркеры списка*/
+float: left;/* начало списка*/
+font-family: Verdana, impact, Times New Roman ;/* стиль текста*/
+font-size: 20px;/*Размер шрифта*/
+}
+
+.menu a {
+text-decoration: none;/*Убираем подчеркивание ссылок*/
+display: block;/*закрепляем отступы*/
+padding: 1em;
+color: gold;
+}
+
 body{
 background-color: black;
 }
 
+h3 {
+	color: black;
+	font-size: 150%;
+	font-family: 'Verdana', 'Times New Roman' }
+
 h2 {
-	color: gold;
+	color: black;
 	font-size: 150%;
 	font-family: 'Verdana', 'Times New Roman' ;
 }
