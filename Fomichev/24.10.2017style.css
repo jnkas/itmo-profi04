@@ -1,0 +1,34 @@
+body{
+	text-shadow: 5px 10px 5px grey;
+}
+h1{
+	font-size: 3em;
+	color:green;
+}
+li{
+	font-size: 40px;
+}
+div ul{
+	color: orange; 
+}
+.block-four_and_eight{
+font-size: 2em;
+text-shadow: 5px 15px 1px green;
+font-family: arial, "Times New Roman", sans-serif,georgia;
+}
+a{
+	text-decoration: none;
+}
+.font-bold{
+	font-weight: bold;
+}
+#identificator001{
+
+}
+#identificator004{
+	font-size: 10px;
+	text-shadow: none;
+}
+p{
+line-height:2.1
+}
