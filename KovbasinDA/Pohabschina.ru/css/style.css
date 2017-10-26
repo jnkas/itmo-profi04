@@ -1,0 +1,43 @@
+/*Не забыть удалить лишнее в будущем*/
+font-face {
+    font-family: "Toms Handwriting", "Times New Roman", "Pompadur";
+    scr: url(../fonts/TomsHandwriting.ttf);
+    scr: url(../fonts/Pompadur.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Pompadur", "Toms Handwriting", "Lucida Handwriting", "Times New Roman";
+    font-size: 103px;
+}
+
+h2 {
+    font-family: "Pompadur", "Toms Handwriting", "Lucida Handwriting", "Times New Roman";
+    font-size: 77px;
+}
+
+h3 {
+    font-family: "Pompadur", "Toms Handwriting", "Lucida Handwriting", "Times New Roman";
+    font-size: 33px;
+}
+
+body {
+    font-family: cursive;
+}
+
+.myPageLinks{
+    font-family: "Pompadur", "Toms Handwriting", "Lucida Handwriting", "Times New Roman";
+    font-size: 64px;
+}
+
+#textStyleMainPage {
+    font-family: cursive, "Times New Roman";
+    font-weight: 600;
+    line-height: 150%;
+}
+
+div p + p + p + p {
+    color: red;
+    font-weight: 800;
+}
