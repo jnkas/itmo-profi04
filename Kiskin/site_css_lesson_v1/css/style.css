@@ -1,0 +1,87 @@
+body {
+width: 850px; /* ширина основного блока */
+margin: 0 auto; /* задаем отступ слева и справа auto чтобы сработало выравнивание по центру */
+}
+#text {
+    font-family: Helvetica;
+    }
+.col { 
+    width: 850px; /* Ширина блока */
+    word-wrap: break-word; /* Перенос слов */ 
+    }
+#nol {
+     font-size: 11px;
+     line-height: 15px;
+     padding: 10px;  
+     }
+.shapka {
+    font-size: 12px;
+    }
+div h1 {
+    font-size: 25px;
+    font-weight: bold;
+    }
+div h2 {
+    font-size: 20px;
+    font-weight: bold;
+    }
+div h3 {
+    font-size: 12px;
+    font-weight: bold;
+    color: darkgrey;
+    }
+div h4 {
+    font-size: 12px;
+    font-weight: normal;
+    }
+div h5 {
+    font-size: 10px;
+    font-weight: normal;
+    }
+div ul {
+    font-size: 12px;
+    }
+.block { 
+    width: 827px; 
+    background: black;
+    padding: 5px;
+    padding-right: 20px; 
+    border: solid 0px black; 
+    float: left;
+    }
+.leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 0px 15px 0px 0; /* Отступы вокруг картинки */
+    }
+.td, th {
+    background: black; /* Цвет фона ячеек */
+    padding: 5px; /* Поля вокруг текста */
+    font-size: 8px;
+    color: white;
+    }
+.layout { 
+    overflow: hidden; /* Отмена обтекания */
+    width: 850px;
+    }
+   .col1news, .col2news, .col3news { 
+    width: 30%; /* Ширина колонок */
+    float: left; /* Создаем колонки */
+    font-size: 12px;
+    height: 400px; /* Высота колонок */
+    padding: 10px; /* Поля */
+    margin: 10 10px; /* Отступы */
+    }
+   .col1info, .col2info { 
+    width: 46%; /* Ширина колонок */
+    float: left; /* Создаем колонки */
+    font-size: 12px;
+    margin: 10px; /* Отступы */
+    padding: 10 10px; /* Поля */
+    }
+    .col1coop, .col2coop, .col3coop { 
+    width: 28%; /* Ширина колонок */
+    float: left; /* Создаем колонки */
+    font-size: 12px;
+    height: 790px; /* Высота колонок */
+    padding: 10px; /* Поля */
+    margin: 0 10px; /* Отступы */        

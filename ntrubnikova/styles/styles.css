@@ -1,0 +1,110 @@
+/* Common Styles*/
+
+html, body {
+    height:100%;
+    margin:0;
+    padding:0;
+    
+}
+
+.wrap {
+    height:100%;
+    position:absolute;
+    min-height:100%;
+}
+
+/*Left Column*/
+
+.columnleft {
+    width: 25%;
+    float:left;
+    background-color: #4A235A;
+    color:whitesmoke;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    height:100%;
+    
+}
+
+.welcome {
+    color:#4A235A;
+    font-size: 16pt;
+    padding-left:18px;
+    background-color: #FADBD8;
+    border: 1px double #FADBD8;
+    margin:5px;
+}
+
+.columnleft li {
+    color:whitesmoke;
+    font-size:18px;
+    list-style-type:none;
+    padding:10px 20px 20px -5px;
+    margin: 20px 0 20px 0;
+    
+}
+
+.columnleft li a {
+    color:#FADBD8;
+}
+
+.picture {
+    float:left;
+    margin-right:10px;
+    width:30%;
+    height:30%;
+}
+
+.mytext {
+    margin-left: 20px;
+}
+
+/*Right Column*/
+
+.columnright {
+    width:75%;
+    float:left;
+    height:100%;
+}
+
+.columnright p {
+    font-size: 16px; 
+    padding:5px;
+    margin:10px;
+}
+
+.columnright {
+    font-family: Geneva, Arial, Helvetica, sans-serif; 
+    
+}
+
+.columnright li {
+    padding:5px;
+    margin-left: 20px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0 0 0 15px;
+    color: #5B2C6F;
+}
+
+
+/*Table Styles*/
+
+table {
+    width:50%;
+    text-align:left;
+    margin-left:15px;
+    border-collapse: collapse;
+    
+}
+
+table td, table th {
+    border: 1px solid #4A235A;
+    padding:5px;
+}
+
+table th {
+    color:#4A235A;
+    background-color: #FADBD8;
+}
