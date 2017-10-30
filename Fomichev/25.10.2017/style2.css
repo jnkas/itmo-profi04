@@ -1,3 +1,4 @@
+/* top menu */
 *{
 	box-sizing: border-box;
 }
@@ -58,42 +59,66 @@ body{
 	display: inline;
 }
 
+/*  end top menu */
 
-
-.conor{
-	width: 100%;
-	height: 1024px;
-	background-image: url(img/2-1-3.png);
-	background-repeat: no-repeat;
-
-}
-.fon{
-	width: 100%;
+.green, .white, .orange{
+	width: 33.33%;
 	height: 100%;
-	background-color: rgba(0,0,0,0.4);
 }
-.conorBiog1{
+.green{
+	background: rgba(58,129,29,0.5);
+	float: left;
+}
+.white{
+	background: rgba(255,255,255,0.4);
+	float: left;
+}
+.orange{
+	background: rgba(233,108,61,0.4);
+	float: left;
+}
+
+.conor1{
 	clear: both;
+	background: url(img/1.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
 	width: 100%;
-	height: 200px;
-	background: green;
+	height: 1000px;
 }
 
-.conorBiog2{
-	width: 100%;
-	height: 1024px;
-	background-image: url(img/2-1-3.png);
+.conor2{
+	background: url(img/2.jpg);
 	background-repeat: no-repeat;
-}
-.conorBiog3{
+	background-size: 100%;
 	width: 100%;
-	height: 200px;
-	background: grey;
+	height: 1000px;
+}
+.conor3{
+	background: url(img/3.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 100%;
+	height: 1000px;
 }
 
-.conorBiog4{
+.info{
+	background: white;
 	width: 100%;
-	height: 1024px;
-	background-image: url(img/2-1-3.png);
-	background-repeat: no-repeat;
+	height: 300px;
+}
+.text1{
+	color:rgba(255, 87, 34, 0.55);
+	font-size: 2em;
+	opacity: 2;
+}
+.text2{
+	color: rgba(76, 175, 80, 0.59);
+	font-size: 2em;
+	opacity: 2;
+}
+.text3{
+	color: rgba(247, 247, 247, 0.81);
+	font-size: 2em;
+	opacity: 2;
 }

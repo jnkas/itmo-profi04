@@ -75,6 +75,28 @@
 	background: rgba(233,108,61,0.4);
 	height: 100%;
 }
+.buttom{
+	left: 10%;
+	top: 60%;
+	font-size: 50px;
+	border:1px solid rgba(255, 255, 255, 0.66);;
+	border-radius: 50px 50px 50px 50px;
+	padding: 5px 50px 5px 50px;
+	position: absolute;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.66);
+	font-family: 'Fira Sans Condensed', sans-serif;
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0.44);
+}
+.str{
+	height: 40px;
+	width: 50px;
+}
+.buttom:hover{
+	font-size: 70px;
+}
+
 
 
 font-family: 'Saira Extra Condensed', sans-serif;
