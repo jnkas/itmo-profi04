@@ -4,7 +4,7 @@
 }
 #logo{
 	width:100px;
-	height:100px;
+	height:100px; 
 }
 .top_menu li{
 	text-decoration: none;
@@ -74,8 +74,8 @@
 	width: 33%;
 	background: rgba(233,108,61,0.4);
 	height: 100%;
-
 }
+
 
 font-family: 'Saira Extra Condensed', sans-serif;
 font-family: 'Lobster', cursive;

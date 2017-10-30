@@ -1,0 +1,64 @@
+.header {
+	width: 100%;
+	height: 400px;
+	background-color: rgb(30,37,66);
+}
+.banner{
+	background-image: url(design/images/banner.jpg);
+	background-size: 100%;
+	width: 100%;
+	height: 100%;
+}
+
+.block2-1{
+	float: left;
+	height: 350px;
+	width: 40%;
+	background-color: rgb(119,191,216);
+}
+.block2-2{
+	float: left;
+	height: 350px;
+	width: 60%;
+	background-color: rgb(125,118,180);
+}
+.block3-1{
+	float: left;
+	height: 350px;
+	width: 60%;
+	background-color: rgb(227,145,138);
+
+}
+.block3-2{
+	float: left;
+	height: 350px;
+	width: 40%;
+	background-color: rgb(223,182,143);
+}
+.block4-1{
+	float: left;
+	height: 350px;
+	width: 40%;
+	background-color: rgb(130,153,209);
+}
+.block4-2{
+	float: left;
+	height: 350px;
+	width: 60%;
+	background-color: rgb(121,173,150);
+}
+.block5{
+	clear: both;
+	height: 350px;
+	background-color: rgb(42,47,74);
+	width: 100%;
+}
+.footer{
+	width: 100%;
+	height: 700px;
+	background-color: rgb(36,41,67);
+}
+
+.bg-siren{
+
+}
