@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+}
+
+.container{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.main-header {
+    padding-top: 35px;
+    padding-bottom: 70px;
+}
+
+.header-top {
+ margin-bottom: 20px;    
+}
+.header-top::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.logo {
+    float: left;
+    min-height: 100px;
+    width: 200px;
+}
+
+.main-menu {
+    float: right;
+    min-height: 40px;
+
+}
+
+.promo {
+    width: 900px;
+    min-height: 200px;
+    padding-top: 40px;
+    font-family: Arial;
+}
+
+.promo-title {
+    font-size: 44px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.promo p {
+    font-size: 22px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.features {
+    padding-top: 25px;
+    padding-bottom: 45px;
+    font-family: Tahoma;
+}
+
+.features .container::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.features-title {
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+.features-item {
+    float: left;
+    width: 310px;
+    min-height: 90px;
+    padding-right: 35px;
+}
+
+.features-item:last-child {
+    padding-right: 0;
+    }
+
+.main-footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-top::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.footer-address {
+    min-height: 180px;
+    width: 300px;
+    float: left;
+    margin-right: 40px;
+}
+
+.footer-menu {
+    min-height: 180px;
+    float: left;
+    width: 180px;
+    margin-top: 25px;
+}
+
+.footer bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+.copyright {
+        
+}

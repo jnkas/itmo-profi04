@@ -1,0 +1,191 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+.header {
+	background-image: url(/designe_ap/images/banner.jpg);
+	background-size: cover;
+	height: 225px;
+	}	
+.header_1 {
+    background-size: cover;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	float:left;
+	padding: 0;
+    background: rgba(26, 25, 45, 0.85)
+    }
+.hr_header {
+	margin: 0px 100px 0px 100px;
+	size: 20px;
+}
+
+.button {
+	color: #ffffff;
+	color: #ec0a0a;
+    text-decoration: none;
+    font-family: arial;
+    text-transform: uppercase;
+    border: 1px solid;
+    padding: 5px 20px 5px 20px;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    max-width: 110px;
+    max-height: 50px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    vertical-align: center;
+    margin-left: 250px;
+	}
+.first_line {
+	height: 100%;
+	clear: left;
+	display: block;
+	width: 100%;
+	top: 0;
+	padding: 0;
+}
+.aliquam {
+	background-image: url(/designe_ap/images/pic01.jpg);
+	background-size: cover;
+	top: 0;
+	height: 145px;
+	width: 40%;
+	float:left;
+	padding: 0;
+}
+.aliquam_1 {
+    background-size: cover;
+	top: 0;
+	height: 145px;
+	width: 100%;
+	float:left;
+	padding: 0;
+    background: rgba(64, 173, 208, 0.85)
+}
+.tempus {
+	background-image: url(/designe_ap/images/pic02.jpg);
+	background-size: cover;
+	top: 0;
+	height: 145px;;
+	width: 60%;
+	display: inline-block;
+	padding: 0;
+}	
+.tempus_1 {
+    background-size: cover;
+	top: 0;
+	height: 145px;;
+	width: 100%;
+	float:left;
+	padding: 0;
+    background: rgba(133, 95, 156, 0.85)
+}
+.second_line {
+	height: 100%;
+	clear: left;
+	display: block;
+	width: 100%;
+	top: 0;
+	padding: 0;
+}
+.magna {
+	background-image: url(/designe_ap/images/pic03.jpg);
+	background-size: cover;
+	height: 145px;;
+	width: 60%;
+	float:left;
+}
+.magna_1 {
+    background-size: cover;
+	top: 0;
+	height: 145px;;
+	width: 100%;
+	float:left;
+	padding: 0;
+    background: rgba(202, 95, 89, 0.85)
+}
+.ipsum {
+	background-image: url(/designe_ap/images/pic04.jpg);
+	background-size: cover;
+	height: 145px;;
+	width:40%;
+	float:left;
+}
+.ipsum_1 {
+    background-size: cover;
+	top: 0;
+	height: 145px;;
+	width: 100%;
+	float:left;
+	padding: 0;
+    background: rgba(216, 171, 114, 0.85)
+    }
+    .theard_line {
+	height: 100%;
+	clear: left;
+	display: block;
+	width: 100%;
+	top: 0;
+	padding: 0;
+}
+.consequant {
+	background-image: url(/designe_ap/images/pic05.jpg);
+	background-size: cover;
+	top: 0;
+	height: 145px;;
+	width: 40%;
+	float:left;
+	padding: 0;
+}
+.consequant_1 {
+    background-size: cover;
+	top: 0;
+	height: 145px;;
+	width: 100%;
+	float:left;
+	padding: 0;
+    background: rgba(127, 155, 220, 0.85)
+}
+.etiam {
+	background-image: url(/designe_ap/images/pic06.jpg);
+	background-size: cover;
+	top: 0;
+	height: 145px;;
+	width: 60%;
+	display: inline-block;
+	padding: 0;
+}
+.etiam_1 {
+    background-size: cover;
+	top: 0;
+	height: 145px;;
+	width: 100%;
+	float:left;
+	padding: 0;
+    background: rgba(149, 199, 140, 0.85)
+}
+.forth_line {
+	height: 100%;
+	clear: left;
+	display: block;
+	width: 100%;
+	top: 0;
+	padding: 0;
+}
+.massa_libero {
+	background-size: cover;
+	top: 0;
+	height: 145px;;
+	width: 100%;
+	display: inline-block;
+	padding: 0;
+}	
