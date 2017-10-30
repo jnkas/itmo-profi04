@@ -1,0 +1,64 @@
+* {
+	box-sizing: border-box;
+}
+
+body{
+	text-shadow: 5px 10px 5px grey;
+	margin: 0;
+}
+h1{
+	font-size: 3em;
+	color:green;
+}
+li{
+	font-size: 40px;
+}
+div ul{
+	color: orange; 
+}
+.block-four_and_eight{
+font-size: 2em;
+text-shadow: 5px 15px 1px green;
+font-family: arial, "Times New Roman", sans-serif,georgia;
+}
+a{
+	text-decoration: none;
+}
+.font-bold{
+	font-weight: bold;
+}
+#identificator001{
+
+}
+#identificator004{
+	font-size: 10px;
+	text-shadow: none;
+}
+p{
+line-height:2.1;
+color: green;
+}
+.color-blue{
+	color: blue;
+}
+.font-25 {
+	font-size: 25px;
+}
+
+body{
+	background: url(indi/img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.block1 p{
+	padding-top: 100px;
+	background: grey;
+	padding-left: 120px;
+	margin: 45px 25px 15px 25px;
+	border: 5px solid pink;
+}
+
+.button{
+
+}

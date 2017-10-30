@@ -1,0 +1,74 @@
+body {
+	background: #000 url(img/bg.jpg) no-repeat fixed left bottom/* фон */
+}
+
+
+
+
+/*---------------------------Верхнее меню----------------------------*/
+.logo{
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	padding-left: 10%;
+
+}
+.menu-top ul {
+background: rgba(0,0,0,0.1);/* Цвет фона меню и его прозрачность*/
+overflow: hidden;/* элемент во всю ширину*/
+padding-left: 30%;/*Отступ меню слева*/
+
+}
+.menu-top li {
+list-style: none;/* убираем маркеры списка*/
+float: left;/* начало списка*/
+font-family: impact, Times New Roman ;/* стиль текста*/
+font-size: 20px;/*Размер шрифта*/
+
+
+}
+
+
+.menu-top a {
+text-decoration: none;/*Убираем подчеркивание ссылок*/
+display: block;/*закрепляем отступы*/
+padding: 1em;
+color: #434141;
+}
+
+/*---------------------------Основная часть ----------------------------*/
+
+
+}
+
+}
+
+.hexagon {
+  position: relative;
+  width: 173px; 
+  height: 99.88px;
+  background-color: rgba(0,0,0,0.3);
+  margin: 49.94px 0;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;/*Tреугольник */
+  border-left: 86.5px solid transparent;/*Tреугольник */
+  border-right: 86.5px solid transparent;/*Tреугольник */
+}
+
+.hexagon:before {
+  bottom: 100%;/*Tреугольник */
+  border-bottom: 49.94px solid rgba(0,0,0,0.3);/*верхний треугольник */
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 49.94px solid rgba(0,0,0,0.3);/*Нижний треугольник*/
+}
+p{position: bottom;}
+

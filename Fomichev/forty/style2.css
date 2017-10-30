@@ -1,0 +1,165 @@
+
+.colored-block{
+	padding: 50px 0 50px 50px;
+	color: white;
+}
+
+.bg-siren{
+	background: rgba(30,37,66,0.9);
+}
+
+.banner{
+	background: url(images/banner.jpg) no-repeat center top;
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+}
+
+/*  Первое изображение*/
+
+.bg-aqua{
+	background: rgba(119,191,216, 0.9);
+	height: 100%;
+}
+.bg-aqua:hover{
+	background: inherit;
+	transition: 2s linear;
+}
+
+.pic1{
+	background: url(images/pic01.jpg) no-repeat center top;
+}
+
+/* Второе изображение*/
+.bg-purple{
+	background: rgba(125,118,180,0.9);
+	height: 100%;
+}
+.bg-purple:hover{
+	background: inherit;
+	transition: 2s linear;
+}
+
+.pic2{
+	background: url(images/pic02.jpg) no-repeat center top;
+}
+
+
+/*  третье изображение*/
+
+.bg-orange{
+	background: rgba(227,145,138,0.9);
+	height: 100%;
+}
+.bg-orange:hover{
+	background: inherit;
+	transition: 2s linear;
+}
+
+
+.pic3{
+	background: url(images/pic03.jpg) no-repeat center top;
+}
+
+/*  Четвертое изображение*/
+.bg-yellow{
+	background:rgba(223,182,143,0.9);
+	height: 100%;
+}
+.bg-yellow:hover{
+	background: inherit;
+	transition: 2s linear;
+}
+
+.pic4{
+	background: url(images/pic04.jpg) no-repeat center top;
+}
+/*  Пятое изображение*/
+.bg-blue{
+	background: rgba(130,153,209,0.9);
+	height: 100%;
+}
+.bg-blue:hover{
+	background: inherit;
+	transition: 2s linear;
+}
+
+.pic5{
+	background: url(images/pic05.jpg) no-repeat center top;
+}
+/*  Шестое изображение*/
+.bg-green{
+	background: rgba(121,173,150,0.9);
+	height: 100%;
+}
+.bg-green:hover{
+	background: inherit;
+	transition: 2s linear;
+}
+
+.pic6{
+	background: url(images/pic06.jpg) no-repeat center top;
+}
+
+/* все изображения*/
+
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6{
+	box-sizing: border-box;
+	width: 100%;
+	height: 380px;
+	background-size: cover;
+}
+
+
+.top-text{
+	width: 300px;
+	display: inline-block;
+	margin-top: 2%;
+}
+
+.caption-top{
+	border-bottom: 2px solid;
+	padding-bottom: 10px;
+	}
+
+.caption-middle{
+	width: 180px;
+	margin-top: 100px;
+	border-bottom: 2px solid;
+	padding-bottom: 10px;
+
+}
+.get-started{
+	border: 1px solid white;
+	padding: 8px 8px 8px 8px;
+	text-decoration: none;
+	color: white;
+	margin-bottom: 10px;
+}
+
+.block{
+	margin-bottom: 40px;
+	margin-right: 10%;
+	margin-left: 10%;
+}
+.bg-darkSiren1{
+	height: 600px;
+	background: rgba(36,41,67,1);
+	float: right;
+	border: 1px solid rgba(42,47,73,1);
+
+}
+.bg-darkSiren2{
+	border: 1px solid rgba(42,47,73,1);
+	background: rgba(36,41,67,1);
+	height: 200px;
+	padding: 50px 100px 50px 50px;
+}
+.mail{
+	width: 50px;
+	height: 50px;
+}
+a{
+	text-decoration: none;
+
+}
