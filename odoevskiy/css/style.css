@@ -1,0 +1,113 @@
+.colored-block {
+    padding: 50px 50px 50px 50px;
+    color: white;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    padding: 140px 50px 140px 50px;
+}
+
+h1 {
+    border-bottom: 1px solid white;
+}
+
+.bg-top {
+    background-color: #131819;
+    background-image: url(../images/banner.jpg);
+    padding: 230px 100px 230px 100px;
+}
+
+.bg-aqua {
+    background-color: #4DD0E1;
+    background-image: url(../images/pic01.jpg);
+}
+
+.bg-aqua:hover {
+    background-color: transparent;
+    background-image: url(../images/pic01.jpg);
+}
+
+.bg-purple {
+    background-color: #5a391b;
+    background-image: url(../images/pic02.jpg);
+}
+
+.bg-purple:hover {
+    background-color: transparent;
+    background-image: url(../images/pic02.jpg);
+}
+
+.bg-orange {
+    background-color: #31173c;
+    background-image: url(../images/pic03.jpg);
+}
+
+.bg-orange:hover {
+    background-color: transparent;
+    background-image: url(../images/pic03.jpg);
+}
+
+.bg-yellow {
+    background-color: #4c1913;
+    background-image: url(../images/pic04.jpg);
+}
+
+.bg-yellow:hover {
+    background-color: transparent;
+    background-image: url(../images/pic04.jpg);
+}
+.bg-blue {
+    background-color: #2a3156;
+    background-image: url(../images/pic05.jpg);
+}
+
+.bg-blue:hover {
+    background-color: transparent;
+    background-image: url(../images/pic05.jpg);
+}
+
+.bg-green {
+    background-color: #3d673f;
+    background-image: url(../images/pic06.jpg);
+}
+
+.bg-green:hover {
+    background-color: transparent;
+    background-image: url(../images/pic06.jpg);
+}
+
+.bg-bottom {
+    background: #1a2021; 
+}
+
+.contacts {
+    background: #101415; 
+    height: 500px;
+    border-bottom: 1px solid #1a2021;
+    border-right: 1px solid #1a2021;
+}
+
+.email {
+    background: #101415;
+    border-bottom: 1px solid #1a2021;
+    height: 150px;
+}
+
+.phone {
+    background: #101415; 
+    border-bottom: 1px solid #1a2021;
+    height: 150px;
+}
+
+.adress {
+    background: #101415;
+    border-bottom: 1px solid #1a2021;
+    height: 200px;
+}
+
+.follow {
+    background: #101415;
+    padding: 50px 50px 50px 50px;
+}
+
+
