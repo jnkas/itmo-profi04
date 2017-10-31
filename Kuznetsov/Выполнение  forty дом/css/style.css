@@ -8,11 +8,14 @@ body {
 }
 
 .colored-block {
-    padding: 50px 0 50px 50px;
+    padding: 50px 50px 50px 50px;
     background: rgba(42, 47, 74, 1);
     color: #fff;
 }
-
+.img-block {
+	margin: 0;
+	padding: 0;
+}
 
 .bg-aqua {
     background: rgba(119, 188, 213, 1);
@@ -35,6 +38,21 @@ body {
 .dark {
 	background: #242943;
 }
+
+p.uppercase {
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+img {
+width: 100%;
+float: left;
+}
+
+
+
+
+
 
 
 
