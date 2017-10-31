@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    font-family:Arial;
+}
+
+
+/*Block Styles*/
+
+.colored-block {
+    padding: 50px 0 50px 50px;
+    background:black;
+    color:white;
+}
+
+.bg-aqua {
+    background: #72f6f6;
+}
+
+.bg-purple {
+     background: #9b59b6;
+}
+
+.bg-blue {
+    background: #2980b9;
+}
+
+.bg-green {
+    background: #16a085;
+}
+
+.bg-darkblue {
+    background: #34495e;
+}
+
+.bg-orange {
+    background: #fe9e48;
+}
+
+.bg-yellow {
+    background: #f1f160;
+}
+
+/*Block Content Styles*/
+
+.forty {
+    border-bottom: 1px solid white;
+    width: 700px;
+    padding-bottom:20px;
+}
+
+.forty-text {
+    text-transform: uppercase;
+    font-size:10px;
+    letter-spacing: 1px;
+}
+
+.block-underline {
+    border-bottom: 1px solid white;
+    width: 250px;
+    padding-bottom:20px;
+}
+
+.button {
+    border: 1px solid white;
+    width:170px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size:14px;
+}
+
+.arrow-line {
+    border-bottom: 1px solid white;
+    padding-bottom:5px;
+}

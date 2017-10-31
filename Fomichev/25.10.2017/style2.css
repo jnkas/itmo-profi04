@@ -1,0 +1,124 @@
+/* top menu */
+*{
+	box-sizing: border-box;
+}
+body{
+	margin:0;
+}
+.header{
+	width: 100%;
+	height: 100px;
+}
+.header{
+	width: 100%;
+	height: 100px;
+}
+#logo{
+	width:100px;
+	height:100px;
+}
+.top_menu li{
+	text-decoration: none;
+	list-style: none;
+	display: inline;
+	margin:10px;
+	color:green;
+	font-size: 1.5em;
+	font-family: 'Fira Sans Condensed', sans-serif;
+
+}
+.top_menu li+li{
+	border-left:  2px solid green;
+	padding-left: 1em;
+
+
+}
+
+.top_menu{
+	float: right;
+	margin-right: 10%;
+	margin-top: 2%;
+}
+
+#insta, #vk {
+	width: 30px;
+	height: 30px; 
+}
+
+.sc {
+	text-decoration: none;
+	list-style: none;
+	float: right;
+	position: absolute;
+	left: 90%;
+	top: 3%;
+
+}
+.sc li{
+	text-decoration: none;
+	display: inline;
+}
+
+/*  end top menu */
+
+.green, .white, .orange{
+	width: 33.33%;
+	height: 100%;
+}
+.green{
+	background: rgba(58,129,29,0.5);
+	float: left;
+}
+.white{
+	background: rgba(255,255,255,0.4);
+	float: left;
+}
+.orange{
+	background: rgba(233,108,61,0.4);
+	float: left;
+}
+
+.conor1{
+	clear: both;
+	background: url(img/1.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 100%;
+	height: 1000px;
+}
+
+.conor2{
+	background: url(img/2.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 100%;
+	height: 1000px;
+}
+.conor3{
+	background: url(img/3.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 100%;
+	height: 1000px;
+}
+
+.info{
+	background: white;
+	width: 100%;
+	height: 300px;
+}
+.text1{
+	color:rgba(255, 87, 34, 0.55);
+	font-size: 2em;
+	opacity: 2;
+}
+.text2{
+	color: rgba(76, 175, 80, 0.59);
+	font-size: 2em;
+	opacity: 2;
+}
+.text3{
+	color: rgba(247, 247, 247, 0.81);
+	font-size: 2em;
+	opacity: 2;
+}
