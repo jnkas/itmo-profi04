@@ -35,10 +35,16 @@ body {
 }
 
 .bg-purple {
-    background-color: purple;
+    background-color: rgba(155, 89, 182, 0.85);
+}
+
+.tempusPict {
+    background-image: url(../images/pic02.jpg);
+    background-size: cover;
 }
 
 .bg-orange {
+    
     background-color: orange;
 }
 
@@ -55,7 +61,7 @@ body {
 }
 
 .bg-darkblue {
-    background-color: #2a2f4a;
+    background-color: rgb(42, 47, 74, 0.85);
 }
 
 .bg-deepblue {
