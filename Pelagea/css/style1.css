@@ -1,0 +1,71 @@
+* {
+   box-sizing: border-box
+}
+
+body {
+    margin: 0;
+}
+
+.column {
+    /*background: green;*/
+    width: 33.33%;
+    border: 1px solid black;
+    float: left;
+}
+
+.colored-block {
+    padding: 50px 0 50px 50px;
+    /*background-color: #322048;*/
+    color: #ffffff;
+}
+
+.topBlockPict {
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+}
+
+.bg-aqua {
+    background-color: rgba(0, 255, 255, 0.85);
+}
+
+.aliquamPict {
+    background-image: url('../images/pic01.jpg');
+    background-size: cover;
+    
+}
+
+.bg-purple {
+    background-color: purple;
+}
+
+.bg-orange {
+    background-color: orange;
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+
+.bg-grey {
+    background-color: #89a0d8;
+}
+
+.bg-green {
+    background-color: #77d0a7;
+}
+
+.bg-darkblue {
+    background-color: #2a2f4a;
+}
+
+.bg-deepblue {
+background: #242943;    
+}
+
+p {
+    text-transform: uppercase;
+}
+
+.no-upper {
+    text-transform: none;
+}
