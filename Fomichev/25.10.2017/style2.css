@@ -85,6 +85,7 @@ body{
 	background-size: 100%;
 	width: 100%;
 	height: 1000px;
+	background-attachment:fixed;
 }
 
 .conor2{
@@ -93,6 +94,7 @@ body{
 	background-size: 100%;
 	width: 100%;
 	height: 1000px;
+	background-attachment: fixed;
 }
 .conor3{
 	background: url(img/3.jpg);
@@ -100,6 +102,7 @@ body{
 	background-size: 100%;
 	width: 100%;
 	height: 1000px;
+	background-attachment: fixed;
 }
 
 .info{
@@ -122,15 +125,17 @@ body{
 	opacity: 2;
 }
 .text3{
-	padding-top: 90%;
+	padding-top: 70%;
 	padding-left: 10px;
 	color: rgba(247, 247, 247, 0.81);
 	font-size: 1.5em;
 	opacity: 2;
 }
 p{
+	font-size: 15px;
 	padding-left: 2px;
-	font-family: 'Lobster', cursive;
+	font-family: 'OpinionPro', cursive;
+
 }
 
 #let12{
@@ -138,12 +143,11 @@ p{
 	margin-top: 10px;
 	margin-left: 40px;
 	margin-right: 40px;
-	border: 5px solid green;
+	
 	border-radius: 10%;
 	float: left;
 }
 p+p{
-	border-top: 5px solid green;
 	padding-top: 10px;
 }
 #champ{
@@ -151,12 +155,12 @@ p+p{
 	margin-top: 10px;
 	margin-left: 40px;
 	margin-right: 40px;
-	border: 5px solid green;
 	border-radius: 10%;
 	float: right;
 
 }
 h2{
+	margin-top: 0;
 	padding-left: 5px;
-	font-family: 'Lobster', cursive;
+	font-family: 'Fira Sans Condensed', cursive;
 }
