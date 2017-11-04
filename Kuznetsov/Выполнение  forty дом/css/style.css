@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    /*margin: 0;
+    padding: 0;*/
+}
+body {
+    margin: 0;
+}
+
+.colored-block {
+    padding: 50px 50px 50px 50px;
+    background: rgba(42, 47, 74, 1);
+    color: #fff;
+}
+.img-block {
+	margin: 0;
+	padding: 0;
+}
+
+.bg-aqua {
+    background: rgba(119, 188, 213, 1);
+}
+.bg-purple {
+    background: #7c75b2;
+}
+.bg-orange {
+    background: #e49289;
+}
+.bg-yellow {
+    background: #d0a57f;
+}
+.bg-blue {
+	background: #8a9fd5;
+}
+.bg-green {
+	background: #79af96;
+}
+.dark {
+	background: #242943;
+}
+
+p.uppercase {
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+img {
+width: 100%;
+float: left;
+}
+
+
+
+
+
+
+
+
+/*Отсюда начинаются стили для лендинга*/
+
+.bg-lighter {
+	background: #2e3450;
+}
+.bg-lightest {
+	background: #333856;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

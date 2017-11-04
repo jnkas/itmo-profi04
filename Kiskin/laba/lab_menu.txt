@@ -1,0 +1,187 @@
+Создание многоуровневого меню.
+
+Создадим структуру html:
+
+<div class="container">
+    <div class="row navbar">
+        <div class="col-6 offset-6">
+           <nav class="menu">
+                <ul class="menu level level-1">
+                    <li class="menu__item">
+                        <a href="#">Link</a>
+                    </li>
+                    <li class="menu__item"><a href="#">Link</a></li>
+                    <li class="menu__item"><a href="#">Link</a></li>
+                    <li class="menu__item"><a href="#">Link</a></li>
+                </ul>
+            </nav>    
+        </div>
+    </div>
+</div>                        
+                        
+                        
+подключите grid.css и style.css
+Для конкретного примера из grid.css потребуются следующие правила:
+* {
+    box-sizing: border-box; 
+}
+.container {
+    width: 1170px;
+    margin: auto;
+}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.col-6 {
+    width: 50%;
+    float: left;
+}
+.offset-6 {
+    margin-left: 50%;
+}
+
+Далее все стили записываем в style.css
+
+Опишем поведение 1 уровня меню(видимой части):
+
+
+ul {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.menu {
+    float: left;
+}
+
+Таким правилом мы занулили отступы списка и поскольку его родители "плавают", его сделали таким же. Появился размер.
+Проверьте в браузере габариты блока со списком
+
+Зададим ссылке блочное отображение и отступы(будем тянуть ссылку, а не li). можно задать фиксированные размеры:
+
+.menu__item > a{
+    padding: 2em 2em;
+    display: block;
+}
+Закрасим полосу под меню, для наглядности:
+
+.navbar {
+    background: gray;
+}
+
+Элементы Li тоже сделаем блочными и они будут плавать:
+.level-1 > .menu__item {
+    display: block;
+    float: left;
+}
+
+Добавим в html еще уровень вложенности:
+    ...
+        <ul class="menu level level-1">
+            <li class="menu__item">
+                <a href="#">Link</a>
+                <ul class="level-2 level">
+                    <li class="menu__item"><a href="#">Link</a></li>
+                    <li class="menu__item"><a href="#">Link</a></li>
+                    <li class="menu__item"><a href="#">Link</a></li>
+                </ul>
+            </li>
+            <li class="menu__item"><a href="#">Link</a></li>
+            <li class="menu__item"><a href="#">Link</a></li>
+            <li class="menu__item"><a href="#">Link</a></li>
+        <ul>
+    ...
+    
+Будем делать из рассчета на 3 уровня вложенности, но можно делать и больше.
+
+Сразу скроем другие уровни в css:
+
+.level-2,
+.level-3 {
+    display: none;
+}
+
+И теперь смое интересное, запишем селектор, который будет показывать нужный вложенный уровень:
+
+.menu__item:hover > .level-2 {
+    display: block;
+}
+
+Если разобрать, что написано выше, то браузер в момент наведения курсора на .menu__item повесит на него псевдокласс :hover
+и к такому элементу можно применить правило по селектору .menu__item:hover . Но правило мы применяем не к нему, а к его "детям", исходя из состояния родителя(есть :hover или нет)
+
+
+Сделаем визуальное выделение при наведении:
+
+.menu__item:hover {
+    background: #0e0e0e;
+}
+
+Посмотрите в браузере.
+
+
+Допишием стили, что бы расположить каждый выпадающий уровень зависимо от его родительской ссылки:
+.menu__item {
+    position: relative;
+}
+
+И спозиционируем его абсолютно:
+
+.level-2,
+.level-3 {
+    position: absolute;
+    list-style: none;
+    background: #d1d1d1;
+    margin: 0;
+    padding: 0;    
+}
+
+
+Добавим в html 3 уровень вложенности:
+    ...
+        <ul class="menu level level-1">
+            <li class="menu__item">
+                <a href="#">Link</a>
+                <ul class="level-2 level">
+                    <li class="menu__item">
+                        <a href="#">Link</a>
+                        <ul class="level-3 level">
+                            <li class="menu__item"><a href="#">Link</a></li>
+                            <li class="menu__item"><a href="#">Link</a></li>
+                            <li class="menu__item"><a href="#">Link</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#">Link</a>
+                        <ul class="level-3 level">
+                            <li class="menu__item"><a href="#">Link</a></li>
+                            <li class="menu__item"><a href="#">Link</a></li>
+                            <li class="menu__item"><a href="#">Link</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item"><a href="#">Link</a></li>
+                </ul>
+            </li>
+            <li class="menu__item"><a href="#">Link</a></li>
+            <li class="menu__item"><a href="#">Link</a></li>
+            <li class="menu__item"><a href="#">Link</a></li>
+        <ul>
+    ...
+    
+Проверим. Сейчас его невидно.
+
+Добавим css:
+
+.level-2 .menu__item:hover > .level-3 {
+    display: block;
+}
+
+Так как его расположение совпадает со вторым, надо его сдвинуть на собственную ширину вправо.
+
+.level-3 {
+    right: -100%;
+    top: 0;
+}
+

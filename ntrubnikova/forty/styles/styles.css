@@ -1,27 +1,133 @@
+/*Start Styles*/
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin:0;
-    font-family:Arial;
+    /* font-family:Arial; */
+    font-family: 'Roboto';
+
 }
 
+/*Header Styles*/
+
+.header {
+    position:fixed;
+    width:100%;
+    padding:5px;
+    background: #072a3a;
+    
+}
+
+.logo {
+    font-size:10px;
+    text-transform:uppercase;
+    color:white;
+    background: #072a3a;
+    letter-spacing: 3px;
+    padding:15px 10px 15px 15px;
+    float:left;
+    width:80%;
+}
+
+.logo-span {
+    color:#072a3a;
+    background: white;
+    padding:3px;
+    font-weight: 700;
+    
+}
+
+.menu {
+    text-align: right;
+    padding:10px;
+    background: #072a3a;
+    float:left;
+    width: 20%; 
+}
+
+.menu button {
+    background: #072a3a;
+    border: none;
+}
+
+.menu-bar{
+    display:block;
+    width:18px;
+    height:1.5px;
+    border-radius:1px;
+    background: white;
+    margin: 4px 0;
+}
+
+
+.menu-container {
+    background: gray;
+    position:fixed;
+    background: #072a3a;
+    opacity:0.9;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    padding-left:0;
+    display:none;
+}
+
+.menu-container ul {
+    width:100%;
+    max-width: 300px;
+    margin:auto;
+    /*padding-top: 100px;*/
+    text-align: center;
+    list-style: none;
+    transform: translate(-50%, -50%); /*move element along x and y axes*/
+    top:50%;
+    left:50%;
+    position:absolute;
+}
+
+.menu-container a {
+    display:inline-block;
+    color:white;
+    width:100%;
+    padding:20px 0;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
 
 /*Block Styles*/
 
 .colored-block {
-    padding: 50px 0 50px 50px;
-    background:black;
+    padding: 100px 0 100px 50px;
+    background:#072a3a;
     color:white;
 }
 
 .bg-aqua {
     background: #72f6f6;
+    opacity:0.5;
+}
+
+.bg-aqua-pic {
+    background-image:url(../images/pic01.jpg);
+    background: cover;
 }
 
 .bg-purple {
      background: #9b59b6;
+}
+
+
+.bg-orange {
+    background: #fe9e48;
+}
+
+.bg-yellow {
+    background: #f1f160;
+}
 }
 
 .bg-blue {
@@ -32,16 +138,9 @@ body {
     background: #16a085;
 }
 
+
 .bg-darkblue {
     background: #34495e;
-}
-
-.bg-orange {
-    background: #fe9e48;
-}
-
-.bg-yellow {
-    background: #f1f160;
 }
 
 /*Block Content Styles*/
@@ -50,18 +149,23 @@ body {
     border-bottom: 1px solid white;
     width: 700px;
     padding-bottom:20px;
+    max-width:90%;
+    overflow:hidden;
 }
 
 .forty-text {
     text-transform: uppercase;
     font-size:10px;
     letter-spacing: 1px;
+    overflow:hidden;
 }
 
 .block-underline {
     border-bottom: 1px solid white;
     width: 250px;
+    max-width:80%;
     padding-bottom:20px;
+    overflow:hidden;
 }
 
 .button {
@@ -76,3 +180,5 @@ body {
     border-bottom: 1px solid white;
     padding-bottom:5px;
 }
+
+/*Form Styles*/
