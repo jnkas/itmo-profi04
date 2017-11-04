@@ -1,0 +1,33 @@
+ul {
+    float: left;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu {
+    float: left;
+    margin: auto;
+}
+
+.menu__item > a{
+    display: inline-block;
+}
+
+.navbar {
+    background: gray;
+}
+
+.level-1 > .menu__item {
+    display: block;
+    float: left;
+}
+
+.level-2,
+.level-3 {
+    display: none;
+}
+
+.menu__item:hover > .level-2 {
+    display: block;
+}

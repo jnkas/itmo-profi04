@@ -1,4 +1,6 @@
-
+body{
+	font-family: arial;
+}
 .colored-block{
 	padding: 50px 0 50px 50px;
 	color: white;
@@ -159,7 +161,75 @@
 	width: 50px;
 	height: 50px;
 }
+
 a{
 	text-decoration: none;
+
+}
+.header{
+	background: rgba(128, 128, 128, 0.19);;
+	padding: 20px;
+	position: fixed;
+	width: 100%;
+}
+
+.logo{
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.logo span{
+	color: rgb(30,37,66);
+	background: white;
+	padding:3px;
+	letter-spacing: 2px;
+	display: inline-block;
+}
+.menu{
+	text-align: right;
+	display: inline-block;
+	float: right;
+}
+.menu-container{
+	background: rgba(30,37,66,0.9);
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left:0;
+	bottom: 0;
+	display: none;
+}
+.menu-container ul{
+	list-style-type: none;
+	text-align: center;
+	padding-left: 0;
+	padding-top: 50vh;
+	width: 100%;
+	max-width: 500px;
+	margin: auto;
+	transform: translate(0,-25%);
+}
+.menu-container a{
+	color: #fff;
+	width: 100%;
+	display: inline-block;
+	padding: 10px 0;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+	text-transform: uppercase;
+
+}
+.mail{
+	float: left;
+	border: 1px solid white;
+	border-radius: 100%;
+	background-color: white;
+	text-align: center;
+	padding-top: 7px;
+}
+h2{
+	color: white;
 
 }
