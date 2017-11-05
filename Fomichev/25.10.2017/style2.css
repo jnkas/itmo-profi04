@@ -3,7 +3,7 @@
 	box-sizing: border-box;
 }
 body{
-	margin:0;
+	margin:10px;
 }
 .header{
 	width: 100%;
@@ -132,7 +132,7 @@ body{
 	opacity: 2;
 }
 p{
-	font-size: 15px;
+	font-size: 17px;
 	padding-left: 2px;
 	font-family: 'OpinionPro', cursive;
 
