@@ -40,7 +40,6 @@ ul {
     position: relative;
 }
 
-
 .level-2,
 .level-3 {
     position: absolute;
@@ -57,4 +56,52 @@ ul {
 .level-3 {
     right: -100%;
     top: 0;
+}
+
+button {
+    width: 200px;
+    height: 70px;
+    font-size: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(20,20,20,0.7);
+}
+
+.modal:target {
+    display: block;
+}
+
+.message {
+    position: relative;
+    width: 400px;
+    margin: 20% auto;
+    padding: 20px 40px;
+    border-radius: 20px;
+    background-color: burlywood;
+}
+
+.close-btn {
+    padding-top: 4px;
+    position: absolute;
+    right: -5px;
+    top: -10px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    background: purple;
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.close-btn:hover {
+    background: white;
+    color: purple;
 }

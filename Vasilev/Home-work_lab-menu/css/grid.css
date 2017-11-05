@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box; 
 }
+
+a {
+    text-decoration: none;
+}
 .container {
     width: 1170px;
     margin: auto;
