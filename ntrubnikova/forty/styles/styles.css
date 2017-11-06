@@ -1,0 +1,380 @@
+/*Start Styles*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    /*font-family:'Arial';*/
+    font-family: 'Roboto';
+
+}
+
+/*Header Styles*/
+
+.header {
+    position:fixed;
+    width:100%;
+    padding:5px;
+    background: rgb(11, 23, 51);
+    z-index: 2;
+    
+}
+
+.logo {
+    font-size:10px;
+    text-transform:uppercase;
+    color:white;
+    background: rgb(11, 23, 51);
+    letter-spacing: 3px;
+    padding:15px 10px 15px 15px;
+    float:left;
+    width:80%;
+}
+
+.logo-span {
+    color:#072a3a;
+    background: white;
+    padding:3px;
+    font-weight: 700;
+    
+}
+
+.menu {
+    text-align: right;
+    padding:10px;
+    background: rgb(11, 23, 51);
+    float:left;
+    width: 20%; 
+}
+
+.menu button {
+     background: rgb(11, 23, 51);
+    border: none;
+    float:right;
+}
+
+.menu a {
+    display:block;
+    text-decoration: none;
+}
+
+
+a .menu:hover{
+    color: #8af0f0;
+    text-decoration: none:
+    background: #8af0f0;
+}
+
+
+
+.menu-bar{
+    display:block;
+    width:18px;
+    height:1.5px;
+    border-radius:1px;
+    background: white;
+    margin: 4px 0;
+}
+
+.menu-text {
+    color:white;
+    text-transform: uppercase;
+    font-size:10px;
+    letter-spacing: 3px;
+}
+
+.menu-container {
+    background: gray;
+    position:fixed;
+    background: rgb(11, 23, 51);
+    opacity:0.9;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    padding-left:0;
+    display:none;
+}
+
+
+.menu-container:target {
+    display:block;
+}
+
+.menu-container ul {
+    width:100%;
+    max-width: 300px;
+    margin:auto;
+    /*padding-top: 100px;*/
+    text-align: center;
+    list-style: none;
+    transform: translate(-50%, -50%); /*move element along x and y axes*/
+    top:50%;
+    left:50%;
+    position:absolute;
+}
+
+.menu-container a {
+    display:inline-block;
+    color:white;
+    width:100%;
+    padding:20px 0;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+.close {
+    color: white;
+    font-size: 35px;
+    text-align: right;
+    position:relative;
+    float:right;
+    top:5px;
+    right:15px;
+    display: block;
+    text-decoration: none;
+}
+
+.close a {
+    border-bottom: none;
+    padding:0;
+}
+
+/*Block Styles*/
+
+.colored-block {
+    padding: 120px 0 120px 50px;
+    background:#2a354e;
+    color:white;
+}
+
+.bg-darkblue {
+    background: rgba(11, 23, 51, 0.7)
+}
+
+.banner-pic {
+    background-image:url(../images/banner.jpg);
+    background: cover;
+}
+
+.bg-aqua {
+    background: rgba(114,246,246,0.7);
+}
+
+.bg-aqua-pic {
+    background-image:url(../images/pic01.jpg);
+    background: cover;
+}
+
+.bg-aqua:hover, .bg-purple:hover, .bg-orange:hover, .bg-yellow:hover, .bg-blue:hover, .bg-green:hover {
+    background: rgba(0,0,0,0);
+}
+
+.col-5 a, .col-7 a {
+    text-decoration: none;
+}
+
+.bg-purple {
+     background: rgba(155, 89, 182, 0.7);
+}
+
+.bg-purple-pic {
+    background-image:url(../images/pic02.jpg);
+    background: cover;
+}
+
+
+.bg-orange {
+    background: rgba(254, 158, 72, 0.7);
+}
+
+.bg-orange-pic {
+    background-image:url(../images/pic03.jpg);
+    background: cover;
+}
+
+.bg-yellow {
+    background: rgba(241, 241, 96, 0.7);
+}
+
+.bg-yellow-pic {
+    background-image:url(../images/pic04.jpg);
+    background: cover;
+}
+
+.bg-blue {
+    background: rgba(41, 128, 185, 0.7);
+}
+
+.bg-blue-pic {
+    background-image:url(../images/pic05.jpg);
+    background: cover;
+}
+
+
+.bg-green {
+    background: rgba(22, 160, 133, 0.7);
+}
+
+.bg-green-pic {
+    background-image:url(../images/pic06.jpg);
+    background: cover;
+}
+
+.bg-bottom-blue {
+    background: #1e283f;
+}
+
+/*Block Content Styles*/
+
+.forty {
+    border-bottom: 1px solid white;
+    width: 800px;
+    padding-bottom:20px;
+    max-width:90%;
+    overflow:hidden;
+    font-size:42px;
+    letter-spacing: 2px;
+}
+
+.forty-text {
+    text-transform: uppercase;
+    font-size:10px;
+    letter-spacing: 2px;
+    line-height: 16px;
+    overflow:hidden;
+    width:40%;
+    float:left;
+    margin-right:20px;
+}
+
+.massa-text {
+    font-size:13px;
+    letter-spacing: 2px;
+    line-height: 16px;
+    max-width:80%;
+}
+
+.block-underline {
+    border-bottom: 1px solid white;
+    width: 250px;
+    max-width:80%;
+    padding-bottom:20px;
+    overflow:hidden;
+}
+
+.button {
+    border: 2px solid white;
+    width:170px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size:12px;
+    letter-spacing: 2px;
+    float:left;
+    margin: 10px 0;
+    color:white;
+    text-decoration: none;
+}
+
+a .button:hover {
+    border:2px solid #8af0f0;
+    color:#8af0f0;
+}
+
+.arrow-line {
+    border-bottom: 1px solid white;
+    padding-bottom:5px;
+}
+
+/*Form Styles*/
+
+.form {
+    margin:auto;
+    width: 90%;
+    padding: 10px 0;
+}
+
+.form-bg {
+    background: #2a354e;
+}
+
+
+.input-name, .input-email {
+    padding: 5px 0 5px 20px;
+    min-width:50%;
+    float:left;
+    
+}
+
+
+.input-message {
+     padding: 5px 20px;
+}
+
+.input-message textarea {
+    height:120px;
+    min-width:87%;
+    width:385px;
+    background: #1e283f;
+    border:none;
+    font-size:12px;
+    color:white;
+    padding: 5px 5px;
+}
+
+input[type=text] {
+    background: #1e283f;
+    border:none;
+    font-size:12px;
+    color:white;
+    padding: 5px 10px;
+    width:68%;
+}
+
+input[type=submit] {
+    background: white;
+    border:none;
+    padding:10px 10px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-size:11px;
+    letter-spacing: 2px;
+}
+
+input[type=submit]:hover{
+    background: #8af0f0;
+    cursor: pointer;
+}
+
+input[type=reset] {
+    background: #2a354e;
+    color:white;
+    border: 2px solid white;
+    padding:10px 10px;
+    text-transform: uppercase;
+    font-size:11px;
+    letter-spacing: 2px;
+}
+
+input[type=reset]:hover {
+    border: 2px solid #8af0f0;
+    cursor: pointer;
+    color: #8af0f0;
+}
+
+.form p {
+    text-transform: uppercase;
+    font-size:12px;
+    letter-spacing: 2px;
+}
+
+.form-buttons {
+    padding: 10px 20px;
+}
+
+
+
+
+

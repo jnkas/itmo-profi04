@@ -1,0 +1,183 @@
+* {
+   box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.column {
+    width: 33.33%;
+    border: 1px solid black;
+    float: left;
+}
+
+.colored-block {
+    padding: 50px 0 50px 50px;
+    background-color: #322048;
+    color: #ffffff;
+}
+
+.bg-darkblue {
+    background-color: rgba(42, 47, 74, 0.75);
+}
+
+.top-block-pict {
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+}
+
+.bg-aqua {
+    background-color: rgba(0, 255, 255, 0.75);
+}
+
+.aliquam-pict {
+    background-image: url('../images/pic01.jpg');
+    background-size: cover;
+    
+}
+
+.bg-purple {
+    background-color: rgba(155, 89, 182, 0.75);
+}
+
+.tempus-pict {
+    background-image: url(../images/pic02.jpg);
+    background-size: cover;
+}
+
+.bg-rose {
+    background-color: rgba(255, 0, 144, 0.47);
+}
+
+.magna-pict {
+    background-image: url(../images/pic03.jpg);
+    background-size: cover;
+}
+
+.bg-peach {
+    background-color: rgba(255, 127, 0, 0.53);
+}
+
+.bg-grey {
+    background-color: rgba(137, 163, 216, 0.75);
+}
+
+.bg-green {
+    background-color: rgba(119, 208, 128, 0.79);
+}
+
+.bg-smokyblue {
+background: #242943;    
+}
+
+p {
+    text-transform: uppercase;
+}
+
+.no-upper {
+    text-transform: none;
+}
+
+.header {
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    background: #322048;
+}
+
+.logo {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    width: 80%;
+    float: left;
+}
+
+.logo span {
+    color: #322048;
+    background: #fff;
+    padding: 3px;
+    letter-spacing: 2px;
+}
+
+.logo:hover {
+    color: aquamarine;    
+}
+
+.menu {
+    text-align: right;
+  }
+
+.menu button {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    background: #322048;
+    border: none;
+}
+
+.menu button:hover {
+    color: aquamarine;
+}
+
+
+.menu-container {
+    background: rgba(36, 41, 67, 0.9);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.menu-container ul {
+    padding-left: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    list-style-type: none;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    
+}
+
+.menu-container a {
+    color: #fff;
+    width: 100%;
+    display: inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+}
+
+.form {
+    display: block;
+}
+
+.field {
+    margin: 0 0 40px 0;
+}
+
+.field .name-field,
+.field .email-field {
+       float: left;
+}
+
+ul.actions > li {
+    list-style: none;
+    text-decoration: none;
+    padding: 10px;
+    }
+
+ul.actions > li > input {
+   text-transform: uppercase;
+}
+

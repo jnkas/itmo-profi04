@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заявка на обучение</title>
+</head>
+<body>
+    <h1>Форма для заполнения заявки</h1>
+    <form action=" " method="post">
+        <table>
+            <tr>
+                <td class="title">
+                <label for="fullname">ФИО:</label>
+                </td>
+                <td class="field">
+                    <input type="text" id="fullname" name="fullname" placeholder="Представьтесь, пожалуйста">
+                </td>
+            </tr>
+            <tr>
+                <td class="title">
+                    <label for="age">Возраст:</label>
+                </td>
+                <td class="field">
+                    <input type="text" id="age" name="age" placeholder="Укажите Ваш возраст, пожалуйста">
+                </td>
+            </tr>
+            <tr>
+                <td class="title">Пол:</td>
+                <td class="field">
+                    <label><input type="radio" id="masc" name="sex" value="masc">Мужской</label>
+                    <label><input type="radio" id="fem" name="sex" value="fem">Женский</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="message">
+                   <label for="message">Сфера интересов, <br>особые пожелания:</label>
+                </td>
+                <td class="field">
+                   <textarea name="message" id="message" cols="30" rows="10">Расскажите, что Вас особенно интересует.</textarea>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="title"></td>
+                <td><input type="submit" class="btn send-application-btn" value="Отправить"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

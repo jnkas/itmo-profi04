@@ -1,0 +1,43 @@
+.float {
+    float:right;
+    padding: 50px; 
+    margin: 40px; 
+    width: 20%;
+    border: 1px solid black;
+}
+.shadow{
+    text-shadow: 4px 3px 3px 0.70;
+}
+ul {
+    list-style-type: none;
+}
+li{
+    font-kerning:unset;
+}
+.float-left {
+     float:left;
+     display: block;
+     margin-right: 30px;
+     padding-right: 40px
+}
+.text {
+    font-family: arial;   
+}
+
+h1, h2, h3, h4, h5 {
+    text-shadow: 2px 2px 4px grey;
+    font-size: 40px;
+    font-family: Arial;
+    font-family: "Times New Roman", Georgia;
+    border: none;  
+}
+right-article {
+    font-size: 6px;
+}
+h1{
+    letter-spacing:6px;
+}
+li {
+    text-indent:1.5em;
+    text-decoration:underline
+}
