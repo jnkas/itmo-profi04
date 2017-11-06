@@ -1,0 +1,119 @@
+.colored-block {
+    padding: 50px;
+    background: #34495e;
+    color: white;
+}
+.bg-picture{
+    background: url('../28/pic01.jpg');
+    background-size: cover;
+    background-position: center;
+    }
+.bg-aqua:hover{
+    color: aquamarine;
+}
+.bg-purple{ 
+    background-color: #9b59b6;
+    background: url(pic02.jpg);
+        
+}
+.bg-orange{
+    background-color: #e74c3c;
+    background: url(pic03.jpg)
+    
+}
+.bg-yellow{
+    background-color: #F9A825;
+    background: url(pic04.jpg);
+    
+}
+.bg-blue{
+    background-color: #2980b9;
+    background: url(pic05.jpg)
+    
+}
+.bg-green{
+    background-color:  #16a085;
+    background: url(pic06.jpg)
+    
+}
+.bg-dark-blue{
+    background:  #37474F;
+    
+}
+h1 {
+    text-underline-position: right;
+    padding-bottom: 25px;
+    border-bottom: 1px solid white;
+}
+p { 
+    text-align: left;
+    padding-right: 80px;
+    
+}
+.button {
+    color: #34495e;
+    text-decoration-color: white;
+    font-size:20px;
+    text-transform:uppercase;
+    font-family: cursive;
+    border: 1px solid white;
+    padding:0.5px 100px;
+    display:block;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    max-width: 80px;
+}
+.header {
+    position: fixed;
+    background: #34495e;    
+    padding: 5px;
+    width: 100%;
+}
+.logo{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white;    
+}
+.logo span {
+ color: #322048;
+    background: white;
+    padding: 3px;   
+    letter-spacing: 2px
+}
+.menu{
+    text-align: right;
+}
+.menu-container{
+    background: rgba (128, 128, 128, 0.35);
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+.menu-container ul {
+    padding-left: 0;
+    width: 100%;
+    position: absolute;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    list-style-type: none;
+    left: 50%;
+    transform: translate(-50%,-50);
+}
+.menu-container a{
+    color: white;
+    width: 100%;
+    display:inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+h2 {
+    text-underline-position: right;
+    padding-bottom: 25px;
+    border-bottom: 1px solid white;
+}
