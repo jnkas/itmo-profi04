@@ -1,0 +1,59 @@
+.menu .lvl1{
+	display: inline;
+}
+.level1 .lvl1{
+	border: 1px solid black;
+	padding: 10px;
+	float: left;
+	border-collapse: collapse;
+	background-color: grey;
+}
+
+.level1{
+	border-collapse: collapse;
+}
+.vmenu{
+
+}
+a{
+	color: #fff;
+	text-decoration: none;
+}
+.vmenu2{
+	position:absolute;
+	margin-left: -51px;
+	margin-top: 10px;
+	list-style-type:none;
+	display: none;
+}
+.vmenu4{
+	position: absolute;
+	list-style-type: none;
+	margin-left: -51px;
+	margin-top: 10px;
+	float: clear;
+	display: none;
+}
+.vmenu:hover > .vmenu2{
+	display: block;
+
+}
+
+.vmenu3:hover > .vmenu4{
+	display: block;
+
+}
+.vmenu2 > li{
+	border: 1px solid black;
+	padding: 10px;
+	background-color: grey;
+
+
+}
+
+.vmenu4 > li{
+	border: 1px solid black;
+	padding: 10px;
+	background-color: grey;
+
+}
