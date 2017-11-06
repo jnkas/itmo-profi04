@@ -8,7 +8,7 @@ body {
 
 .row:after {
     clear: both;
-    content: ".";
+    content: "";
     display: block;
     height: 0;
     visibility: hidden;
@@ -78,10 +78,3 @@ body {
 .col-12 {
     width: 100.00%;
 }
-
-
-.container {
-    width: 1170px;
-    margin: auto;
-}
-
