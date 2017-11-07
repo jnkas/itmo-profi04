@@ -367,3 +367,88 @@ a {
     width: 90%;
     margin: 0 5%;
 }
+
+.modal-dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    display: none;
+    pointer-events: none;
+}
+
+.modal-dialog:target {
+    display: block;
+    pointer-events: auto;
+}
+
+.modal-dialog > div {
+    width: 100%;
+    background-color: rgba(36, 41, 67, 0.9);
+    height: 100vh;
+    position: relative;
+    padding: 5px 20px 13px 20px;
+}
+
+.close {
+    font-size: 2em;
+    line-height: 25px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.close:hover {
+    font-size: 2.5em;
+    right: 20px;
+    top: 20px;
+    font-weight: 700;
+}
+
+.menu {
+    display: inline-block;
+    margin: 5% 40%;
+    font-size: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.menu li {
+    list-style: none;
+    padding: 10%;
+    width: 150%;
+}
+
+.menu .links li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu .links li:last-child {
+    border-bottom: none;
+}
+
+.menu .actions li {
+    /*width: 300px;*/
+    border: 1px solid #fff;
+    font-size: 17pt;
+    padding: 1em;
+    margin-bottom: 40px;
+}
+
+.menu .actions li:first-child a {
+    color: #252943;
+}
+
+.menu .actions li a {
+    width: 100%;
+}
