@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Forty</title>
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/forty.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<header id="header">
+    <section class="row">
+        <div class="col-11">
+            <a href="">
+                <strong>forty</strong>
+                <span>by html 5 up</span>
+            </a>
+        </div>
+
+        <div class="col-1">
+            <a href="#modalMenu">
+                <span>menu <i class="fa fa-bars"></i></span>
+            </a>
+        </div>
+    </section>
+</header>
+
+
+<div id="included">
+
+</div>
+
+<section class="row form-block">
+    <div class="col-7">
+        <form>
+            <div class="col-6">
+                <label for="name">Name</label>
+
+            </div>
+            <div class="col-6">
+                <label for="email">Email</label>
+
+            </div>
+            <div class="col-6">
+
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="col-6">
+
+                <input type="text" name="email" id="email">
+            </div>
+            <div class="col-12">
+                <label for="message">Message</label>
+            </div>
+
+            <div class="col-12">
+                <textarea name="message" id="message" rows="6"></textarea>
+            </div>
+            <div class="col-3">
+                <input type="submit" value="Send Message" class="started-button send">
+
+            </div>
+            <div class="col-9">
+                <input type="reset" value="Reset" class="started-button reset">
+            </div>
+        </form>
+    </div>
+    <div class="col-5">
+        <div class="col-12">
+            <div class="col-2">
+                <i class="fa alt fa-envelope"></i>
+            </div>
+            <div class="col-10">
+                <p>
+                    Email
+                </p>
+                <p>
+                    <a href="mailto:information@untitled.tld">information@untitled.tld</a>
+                </p>
+            </div>
+
+        </div>
+        <div class="col-12">
+            <div class="col-2">
+                <i class="fa alt fa-phone"></i>
+            </div>
+            <div class="col-10">
+                <p>
+                    Phone
+                </p>
+                <p>
+                    (000) 000-0000 x12387
+                </p>
+            </div>
+
+        </div>
+        <div class="col-12">
+            <div class="col-2">
+                <i class="fa alt fa-home"></i>
+            </div>
+            <div class="col-10">
+                <p>
+                    Address
+                </p>
+                <p>
+                    1234 Somewhere Road #5432 <br>
+                    Nashville, TN 00000<br>
+                    United States of America<br>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="row footer">
+    <a href="https://twitter.com/" target="_blank">
+        <i class="fa alt fa-twitter"></i>
+    </a>
+    <a href="https://facebook.com/" target="_blank">
+        <i class="fa alt fa-facebook"></i>
+    </a>
+    <a href="https://instagram.com/" target="_blank">
+        <i class="fa alt fa-instagram"></i>
+    </a>
+    <a href="https://github.com/" target="_blank">
+        <i class="fa alt fa-github"></i>
+    </a>
+    <a href="http://linkedin.com/" target="_blank">
+        <i class="fa alt fa-linkedin"></i>
+    </a>
+</section>
+
+<div id="modalMenu" class="modal-dialog">
+    <div>
+        <a href="#close" title="close" class="close"><i class="fa fa-close"></i></a>
+        <div class="menu">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html?page=landing">Landing</a></li>
+                <li><a href="index.html?page=generic">Generic</a></li>
+                <li><a href="index.html">Elements</a></li>
+            </ul>
+            <ul class="actions">
+                <li class="send"><a href="#">Get Started</a></li>
+                <li class="clear"><a href="#">Log In</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

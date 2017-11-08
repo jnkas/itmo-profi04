@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box; 
+}
+
+a {
+    text-decoration: none;
+}
+.container {
+    width: 1170px;
+    margin: auto;
+        background-color: yellow;
+}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.col-6 {
+    width: 50%;
+    float: left;
+}
+.offset-6 {
+    margin-left: 50%;
+}
