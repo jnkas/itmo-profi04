@@ -55,6 +55,14 @@ body {
     float:right;
 }
 
+.menu button:hover {
+    cursor: pointer;
+}
+
+.menu button:focus {
+    outline:none;
+}
+
 .menu a {
     display:block;
     text-decoration: none;
@@ -301,8 +309,15 @@ a .button:hover {
 }
 
 
-.input-name, .input-email {
-    padding: 5px 0 5px 20px;
+.input-name {
+    padding: 0.3em 0 0.3px 1.1em;
+    min-width:50%;
+    float:left;
+    
+}
+
+.input-email {
+    padding: 0.3em 0 0.3em 0;
     min-width:50%;
     float:left;
     
@@ -310,18 +325,18 @@ a .button:hover {
 
 
 .input-message {
-     padding: 5px 20px;
+     padding: 0.3em 1em;
 }
 
 .input-message textarea {
-    height:120px;
+    height:10em;
     min-width:87%;
-    width:385px;
+    width:21em;
     background: #1e283f;
     border:none;
     font-size:12px;
     color:white;
-    padding: 5px 5px;
+    padding: 0.3em 0.5em;
 }
 
 input[type=text] {
@@ -329,7 +344,7 @@ input[type=text] {
     border:none;
     font-size:12px;
     color:white;
-    padding: 5px 10px;
+    padding: 0.7em 0.5em;
     width:68%;
 }
 
@@ -374,7 +389,77 @@ input[type=reset]:hover {
     padding: 10px 20px;
 }
 
+/* Contacts */
+.contacts {
+    padding: 50px 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:334.4px;
+}
 
+.email {
+    font-size:1em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    padding: 0.2em 0 0 0.7em;
+    
+    
+    
+}
 
+.email::after {
+    clear:both;
+    content: '';
+    display:block;
+    visibility: hidden;
+    
+}
 
+.email+a, .address {
+    color: #dbd8d8;
+    font-size:0.9em;
+    text-decoration: underline;
+    text-decoration-style:dotted;
+    margin-left: 2.1em;
+    text-align: left;
+    position:absolute;
+    
+}
 
+.email-icon::before {
+    font-family: FontAwesome;
+    content: "\f0e0";
+    font-size:1.1em;
+    float:left;
+    
+}
+
+.phone-icon::before {
+    font-family: FontAwesome;
+    content: "\f095";
+    font-size:1.5em;
+    float:left;
+    
+}
+
+.address-icon::before {
+    font-family: FontAwesome;
+    content: "\f015";
+    font-size:1.5em;
+    float:left;
+    
+    
+}
+
+.address {
+   
+}
+
+/* Mobile Version */
+
+@media all and (max-width: 800px) {
+
+    /**/
+
+}
