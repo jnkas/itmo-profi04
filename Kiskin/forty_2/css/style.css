@@ -41,6 +41,7 @@ div h1 {
     margin-right: 0;
     margin-bottom: 0;
     width: 90%;
+    display: inline-block;
 }
 
 div h3 {
@@ -207,12 +208,11 @@ div a {
 
 /*Стиль кнопок*/
 
-.button-menu {
+div button {
   color: #fff;
   text-decoration: none;
   user-select: none;
   background: none;
-  padding: .7em 1.5em;
   outline: none;
 }
 
