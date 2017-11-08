@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+<!--    modal window    -->
+   <!--    modal window  (HTML)  -->
+    <center>
+        <button id="btnOpen">Открыть</button>
+    </center>
+    
+    <div class="modal">
+        <div class="modal-body">
+            <button id="btnClose">Закрыть</button>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga consequuntur quibusdam ipsum, eligendi, quam, tenetur a praesentium maiores neque id quaerat ad magnam alias tempore quasi magni sed! Dolore, nostrum.</p>
+        </div>
+    </div>
+    <!--    modal window  (CSS)  -->
+    <style>
+        .modal-body {
+            position: fixed;
+            border: 1px solid;
+            background: #fff;
+            top: 30vh;
+            right: 0;
+            left: 0;
+            margin: auto;
+            max-width: 400px;
+            min-height: 400px;
+            
+            display: none;
+        }
+    </style>
+    <!--    modal window  (JavaScript)  -->
+    <script>
+        var btnOpen = document.getElementById('btnOpen'),
+            btnClose = document.getElementById('btnClose'),
+            modal = document.getElementsByClassName('modal')[0],
+            state = modal.getAttribute("display");
+    
+        btnOpen.addEventListener('click', function(){
+            if (state !== 'block') {
+                modal.style.display = 'block';
+            }
+        })        
+        
+        btnClose.addEventListener('click', function(){
+            modal.style.display = 'none';
+        })
+        
+    </script>
+<!--    .modal window    -->
+     
+<!--    Flexbox    -->     
+    <style>
+        .flex-line{
+            display: flex;
+        }
+        .f-box { 
+            border: 1px solid;
+        }
+
+        .flex-shrink-3 { 
+          flex-shrink: 3; 
+        }
+        
+        .flex-shrink-1 { 
+          flex-shrink: 1; 
+        }
+        
+        .hide {
+            display: none;
+        }
+    </style> 
+         
+    <h1>flex-shrink</h1>
+    <div class="flex-line flex-line--first">
+        <div class="f-box flex-shrink-3">
+            <h1>Heading</h1>
+        </div>        
+        <div class="f-box flex-shrink-3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quam natus minima soluta recusandae eius. Fugiat dolorem, cum est. Aspernatur accusantium, sint in, doloremque deleniti tenetur sequi pariatur consectetur odit.</p>
+        </div>        
+        <div class="f-box flex-shrink-1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quam natus minima soluta recusandae eius. Fugiat dolorem, cum est. Aspernatur accusantium, sint in, doloremque deleniti tenetur sequi pariatur consectetur odit.</p>
+        </div>        
+        <div class="f-box flex-shrink-3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quam natus minima soluta recusandae eius. Fugiat dolorem, cum est. Aspernatur accusantium, sint in, doloremque deleniti tenetur sequi pariatur consectetur odit.</p>
+        </div>
+        
+    </div>
+</body>
+</html>
