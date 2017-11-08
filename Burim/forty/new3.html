@@ -30,26 +30,43 @@
         <div class="col-12">
              <div class="colored-block">
                 <h1>Hi, my name is Forty </h1>
-                <div class="col-6">
-                   <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique nobis blanditiis tenetur explicabo dolores ipsam modi quae officia sed, qui consequuntur, quam est earum odit. Aut sapiente molestias minima maxime!
-                </p>  
+                <div class="row"><!-- добавил -->
+                    <div class="col-6">
+                       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique nobis blanditiis tenetur explicabo dolores ipsam modi quae officia sed, qui consequuntur, quam est earum odit. Aut sapiente molestias minima maxime!</p>  
+                    </div><!-- добавил --> 
+                    <div class="col-6"><!-- добавил -->
+                       <button>Get started</button>
+                    </div><!-- добавил -->
                 </div>
                
-                   <button>Get started</button>
                                              
               </div>
             </div>
         </div>
                            <!--Почему после этого блока образуется пустое поле?-->
+                           <!--Ответ: Потому что элементы с классом .col-6 имеют свойство float:left, то есть они вне потока(обтекаются). Из этого следует, что если после них нет элемента(или псевдоэлемента) со свойством clear, остальные элементы так же не выстраиваются по правилам нормального потока и возникают наслоения или браузер не может определить высоту родительского контейнера  (см. https://webref.ru/css/float и https://webref.ru/css/clear) -->
                             
     <div class="row">
         <div class="col-5">
            <div class="colored-block bg-picture">
-              <div class="bg-aqua">                <!--Почему не работает hover по этому классу?-->
+<!-- Ваш код:
+              <div class="bg-aqua">                
+                 Почему не работает hover по этому классу?
                   </div>
+                  
                <h2>Alicuam </h2>
-                  <p>ipsum dolor sit amet</p>      <!--Почему из-за вставки текста "едут" все остальные блоки?-->   
-                            </div>
+                  <p>ipsum dolor sit amet</p>      
+                  Почему из-за вставки текста "едут" все остальные блоки?   
+-->
+             <!-- Внес изменения: -->
+            <div class="bg-aqua"> 
+               <h2>Alicuam </h2>
+               <p>ipsum dolor sit amet</p>                                      
+            </div>
+                  
+
+                  
+                </div>
             </div>
     </div>
                                    
@@ -64,6 +81,9 @@
         <div class="col-7">
           <div class="colored-block bg-orange">
            <h2>Magna</h2>
+           <p>ipsum dolor sit amet</p> 
+<!--     Ответ на вопрос "Почему из-за вставки текста "едут" все остальные блоки?"
+        Добавил текст и один блок стал выше другого, появился "зазор". Это ожидаемый результат, так как высота блоков определяется их содержимым. Это одна из главных проблем верстки сеткой, колонки никогда не будут автоматически принимать одинаковую высоту. Решается добавлением min-height или другими способами https://habrahabr.ru/post/64173/   -->
             </div>
         </div>
         <div class="col-5">

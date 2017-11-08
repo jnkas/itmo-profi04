@@ -62,13 +62,19 @@ body {
     width: 1170px;
     margin: auto;
 }
-.row: after{
+/* Убрал пробел и закомментировал лишний код*/
+/*.row: after{*/
+.row:after{
     content: "";
     display:block;
     height: 0;
+/*    добавил ключевое свойство, позволяющеее этому псевдоэлементу прекращать обтекание */
+    clear: both;
 }
+/*
 .row: before{
     content: "";
     display:block;
     height: 0;
 }
+*/
