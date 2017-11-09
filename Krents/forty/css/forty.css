@@ -47,7 +47,7 @@ body {
     line-height: 2.5em;
 }
 
-.top-block > h1, .line-520 h1, .bottom-block h1, .generic-page-content h1 {
+.top-block > h1, .line-520 h1, .bottom-block h1, .generic-page-content h1, .landing-row h1 {
     border-bottom: 2px solid #fff;
 }
 
@@ -182,11 +182,20 @@ body {
     z-index: 2;
 }
 
+.top-block-background-landing {
+    background-image: url("../images/pic07.jpg");
+    height: 525px;
+}
+
 .top-block {
     position: absolute;
     z-index: 200;
     top: 180px;
     padding: 0 20%;
+}
+
+.top-block-landing {
+    top: 120px;
 }
 
 .top-row::before {
@@ -200,6 +209,11 @@ body {
     top: 0;
     width: 100%;
     z-index: 1;
+}
+
+.top-row-landing::before {
+    background-color: #8d82c4;
+    height: 80%;
 }
 
 .started-button {
@@ -408,11 +422,8 @@ a {
     font-weight: bold;
 }
 
-.close:hover {
-    font-size: 2.5em;
-    right: 20px;
-    top: 20px;
-    font-weight: 700;
+.close i:hover {
+    color: aqua;
 }
 
 .menu {
@@ -451,4 +462,58 @@ a {
 
 .menu .actions li a {
     width: 100%;
+}
+
+.landing-image {
+    width: 100%;
+}
+
+.landing-row .col-9 {
+    padding: 5% 5%;
+}
+
+.landing-row .bottom-block {
+    padding: 7% 20%;
+}
+
+.landing-row .h1 {
+    width: max-content;
+}
+
+.landing-row:nth-child(even) {
+    background-color: #2e3450;
+}
+
+.landing-row:nth-child(odd) {
+    background-color: #333856;
+}
+
+.copyright li {
+    float: left;
+    list-style: none;
+
+}
+
+.copyright {
+    padding: 0;;
+}
+
+.copyright * {
+    color: rgba(244, 244, 255, 0.2)
+}
+
+.copyright a {
+    border-bottom: dotted 1px;
+}
+.copyright a:hover {
+    border-bottom: none;
+}
+
+.copyright li:first-child {
+    padding-right: 2%;
+}
+
+.copyright li + li {
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 0 2%;
 }
