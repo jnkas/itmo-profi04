@@ -38,7 +38,8 @@ body {
 }
 
 .line-520 > div {
-    height: 520px;
+    /*height: 520px;*/
+    height: calc(100vw * 300.0 / 1280.0);
 
 }
 
@@ -66,7 +67,7 @@ body {
 }
 
 #header .col-1 {
-    padding-left: 60px;
+    text-align: right;
 }
 
 #header strong {
@@ -202,13 +203,17 @@ body {
     background-color: #242943;
     content: '';
     display: block;
-    height: 110%;
+    height: 100%;
     left: 0;
     opacity: 0.85;
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 1;
+}
+
+.top-row {
+    position: relative;
 }
 
 .top-row-landing::before {
@@ -505,6 +510,7 @@ a {
 .copyright a {
     border-bottom: dotted 1px;
 }
+
 .copyright a:hover {
     border-bottom: none;
 }
@@ -516,4 +522,108 @@ a {
 .copyright li + li {
     border-left: 2px solid rgba(255, 255, 255, 0.1);
     padding: 0 2%;
+}
+
+@media all and (max-width: 480px) {
+
+}
+
+@media all and (max-width: 768px) {
+
+}
+
+@media all and (max-width: 991px) {
+
+    .top-block {
+        padding: 4%;
+
+    }
+
+    .top-block h1 {
+        font-size: 2em;
+
+    }
+
+    .bottom-block {
+        padding: 10% 6% 30% 6%;
+    }
+
+    .line-520 > div {
+        height: calc(100vw * 300.0 / 480.0);
+    }
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12 {
+        float: none;
+        width: 100%;
+    }
+
+    .form-block input[type=text], .form-block textarea {
+        width: 100%;
+    }
+
+    .form-block {
+        padding: 0;
+    }
+
+    .form-block .col-7 {
+        padding: 3% 6%;
+    }
+
+    #header .col-11 a span {
+        display: none;
+    }
+
+    #header .col-1 a span span {
+        display: none;
+    }
+
+    #header .col-1, #header .col-11 {
+        float: left;
+    }
+
+    #header .col-11 {
+        width: 80%;
+    }
+
+    #header .col-1 {
+        width: 20%;
+    }
+
+    .form-block .col-5 .col-12 {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: none;
+    }
+
+    .form-block .col-5 i {
+        float: left;
+        margin: 13% 5%;
+    }
+
+    .menu {
+        margin: 5% 0 0 0;
+    }
+
+    .modal-dialog > div {
+        padding: 0;
+    }
+
+    .menu li {
+        width: 140%;
+    }
+
+    form {
+        padding-bottom: 30%;
+    }
 }
