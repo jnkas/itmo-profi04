@@ -1,0 +1,62 @@
+#tubmler {
+    display: none;
+}
+
+.modal-body {
+    display: none;
+}
+
+.container label{
+    padding: 1em 1em;
+    width: 4em;
+    display: block;
+    cursor: pointer;
+    border: 2px solid green;
+    border-radius: 1em;
+}
+
+#tubmler:checked + .modal-body {
+    display: block;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    color: green;
+    font-size: 20px;
+    height: 1000px;
+}
+
+img {
+    width: 100%;
+}
+
+
+.modal-body {
+    position: fixed;
+    top: 0;
+    padding: 2em;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+
+    width: 50%;
+    height: 50%;
+    background: rgba(38, 135, 68, 0.69);
+    border-radius: 1em;
+}
+
+.modal-body label {
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.container label:hover {
+    background: rgba(38, 135, 68, 0.69);
+    transition: 1s;
+}
