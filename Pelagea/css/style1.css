@@ -1,5 +1,5 @@
 * {
-   box-sizing: border-box
+   box-sizing: border-box;
 }
 
 body {
@@ -19,6 +19,11 @@ body {
     color: #ffffff;
 }
 
+h1, 
+h2 {
+    display: block;
+}
+
 .bg-darkblue {
     background-color: rgba(42, 47, 74, 0.75);
 }
@@ -28,8 +33,8 @@ body {
     background-size: cover;
 }
 
-.bg-aqua {
-    background-color: rgba(0, 255, 255, 0.75);
+.bg-aliquam {
+    background-color: rgba(111, 195, 225, 0.8);
 }
 
 .aliquam-pict {
@@ -38,8 +43,8 @@ body {
     
 }
 
-.bg-purple {
-    background-color: rgba(155, 89, 182, 0.75);
+.bg-tempus {
+    background-color: rgba(141, 130, 196, 0.8);
 }
 
 .tempus-pict {
@@ -47,8 +52,8 @@ body {
     background-size: cover;
 }
 
-.bg-rose {
-    background-color: rgba(255, 0, 144, 0.47);
+.bg-magna {
+    background-color: rgba(236, 141, 129, 0.85);
 }
 
 .magna-pict {
@@ -56,16 +61,29 @@ body {
     background-size: cover;
 }
 
-.bg-peach {
-    background-color: rgba(255, 127, 0, 0.53);
+.bg-ipsum {
+    background-color: rgba(231, 183, 136, 0.8);
 }
 
-.bg-grey {
-    background-color: rgba(137, 163, 216, 0.75);
+.ipsum-pict {
+    background-image: url("../images/pic04.jpg");
+    
 }
 
-.bg-green {
-    background-color: rgba(119, 208, 128, 0.79);
+.bg-consequat {
+    background-color: rgba(142, 169, 232, 0.85);
+}
+
+.consequat-pict {
+    background-image: url("../images/pic05.jpg");    
+}
+
+.bg-etiam {
+    background-color: rgba(135, 195, 165, 0.85);
+}
+
+.etiam-pict {
+    background-image: url("../images/pic06.jpg");
 }
 
 .bg-smokyblue {
@@ -160,15 +178,34 @@ p {
 
 .form {
     display: block;
+    margin: auto;
 }
 
-.field {
-    margin: 0 0 40px 0;
+.field-top {
+    float: left;
+    width: 50%;
+    margin-bottom: 2em;
 }
 
-.field .name-field,
-.field .email-field {
-       float: left;
+.field-top:after {
+    content: "";
+    display: block;
+    height: none;
+    clear: both;
+}
+
+input[type="text"] {
+    background: #242943;
+    border: none;
+    height: 2.75em;
+    width: 85%;
+}
+
+textarea#message {
+    display: block;
+    width: 100%;
+    background: #242943;
+    border: none;
 }
 
 ul.actions > li {
@@ -177,7 +214,25 @@ ul.actions > li {
     padding: 10px;
     }
 
-ul.actions > li > input {
-   text-transform: uppercase;
+label {
+    display: block;
+    text-transform: uppercase;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
 }
 
+.icons {
+    display: inline-block;
+    position: relative;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 2.5em;
+    height:2.5em;
+}
+
+.icons > .fa {
+    color: #242943;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}

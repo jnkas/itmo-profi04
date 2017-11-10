@@ -42,7 +42,8 @@ h4 {
 input {
     border: none;
     height: 40px;
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     color: white;
     padding-left: 16px;
     padding-right: 16px;
@@ -51,7 +52,8 @@ input {
 textarea {
     border: none;
     height: 200px;
-    width: 670px;
+    width: 100%;
+    max-width: 670px;
     color: white;
     padding: 16px;
 }
@@ -213,13 +215,13 @@ footer {
 
 .smallContainer {
     float: right;
-    width: 700px;
+    max-width: 700px;
     border-left: none;
     padding-top: 60px;
 }
 
 .container {
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 
@@ -311,11 +313,13 @@ footer {
     color: #70e9fd;
     border: 2px ridge #70e9fd;
     transition: 1s;
+    cursor: pointer;
 }
 
 .buttonSendMess:hover {
     background: #70e9fd;
     transition: 1s;
+    cursor: pointer;
 }
 
 .buttonMenu:hover,
@@ -471,3 +475,117 @@ footer ul li a {
     color: #464c6e;
     border-bottom: 1px dotted #464c6e;
 }
+
+/*adaptive page-proofs*/
+
+@media all and (min-width: 991px) and (max-width: 1170px) {
+    .container {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    .smallContainer {
+        float: right;
+        max-width: 100%;
+        padding-right: 2em;
+        padding-left: 5em;
+        border-left: none;
+        padding-top: 60px;
+    }
+
+    .smallContainer form .col-12 .col-6:nth-child(2) {
+        padding-left: 1em;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 990px) {
+    .container {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    .smallContainer {
+        float: right;
+        max-width: 100%;
+        padding-right: 2em;
+        padding-left: 5em;
+        border-left: none;
+        padding-top: 60px;
+    }
+
+    .smallContainer form .col-12 .col-6:nth-child(2) {
+        padding-left: 1em;
+    }
+
+    .col-5-SL {
+        width: 100%;
+    }
+
+    .col-7-SL {
+        width: 100%;
+    }
+
+    .alignmentInfoBlock {
+        padding-left: 20px;
+    }
+
+    .alignmentTopBlock span {
+        margin-bottom: 2em;
+    }
+}
+
+@media all and (min-width: 320px) and (max-width: 767px) {
+    .container {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .smallContainer {
+        float: right;
+        max-width: 100%;
+        padding-right: 1em;
+        padding-left: 1em;
+        border-left: none;
+        padding-top: 60px;
+    }
+
+    .smallContainer form .col-12 .col-6:nth-child(2) {
+        padding-left: 1em;
+    }
+
+    .col-5-SL {
+        width: 100%;
+    }
+
+    .col-7-SL {
+        width: 100%;
+    }
+
+    .alignmentInfoBlock {
+        padding-left: 20px;
+    }
+
+    .alignmentTopBlock {
+        padding-top: 50px;
+    }
+    .alignmentTopBlock span {
+        margin-bottom: 2em;
+    }
+
+    .heightMobile {
+        height: 560px;
+    }
+
+    h1 {
+        font-size: 44px;
+    }
+
+    footer {
+        height: 250px;
+    }
+
+    .roundPic {
+        margin-top: 5px;
+    }
+}
+

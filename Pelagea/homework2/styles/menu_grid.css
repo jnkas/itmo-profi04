@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box; 
+}
+.container {
+    width: 1170px;
+    margin: auto;
+}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.col-6 {
+    width: 50%;
+    float: left;
+}
+.offset-6 {
+    margin-left: 50%;
+}

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 </head>
 <body>
-   <div class="header">
+   <section class="header">
        <div class="logo"><span>Forty</span> By html5 up</div>
        <div class="menu">
            <button>menu 
@@ -22,13 +22,13 @@
                </ul>
            </div>
        </div>
-   </div>
+   </section>
     <div class="row">
         <div class="col-12">
              <div class="top-block-pict">
               <div class="colored-block bg-darkblue"> 
                     <h1>Hi, my name is Forty</h1>
-                    <p>A responsive site template designed by html5 up andreleased under the creative commons.</p>
+                    <p>A responsive site template designed by html5 up and released under the creative commons.</p>
                 </div>
                 </div>
               </div>  
@@ -36,16 +36,16 @@
         <div class="row">
         <div class="col-5">
            <div class="aliquam-pict">
-               <div class="colored-block bg-aqua">
-            <h1>Aliquam</h1>
+               <div class="colored-block bg-aliquam">
+            <h2>Aliquam</h2>
             <p>ipsum dolor sit amet</p>
                 </div>
             </div>    
         </div>
         <div class="col-7">
            <div class="tempus-pict">
-                <div class="colored-block bg-purple">
-                    <h1>Tempus</h1>
+                <div class="colored-block bg-tempus">
+                    <h2>Tempus</h2>
                     <p>feugiat amet tempus</p> 
                 </div>
             </div>
@@ -54,30 +54,36 @@
     <div class="row">
         <div class="col-7">
           <div class="magna-pict">
-           <div class="colored-block bg-rose"> 
-            <h1>Magna</h1>
+           <div class="colored-block bg-magna"> 
+            <h2>Magna</h2>
             <p>lorem etiam nullam</p>
             </div>
             </div>
         </div>
         <div class="col-5">
-           <div class="colored-block bg-peach">
-            <h1>Ipsum</h1>
-            <p>nisl sed aliquam</p>
+          <div class="ipsum-pict">
+            <div class="colored-block bg-ipsum">
+                <h2>Ipsum</h2>
+                <p>nisi sed aliquam</p>
             </div>
+        </div>
         </div>
     </div>
     <div class="row">
         <div class="col-5">
-            <div class="colored-block bg-grey">
-            <h1>Consequat</h1>
-            <p>ipsum dolor sit amet</p>
+           <div class="consequat-pict">
+                <div class="colored-block bg-consequat">
+                <h2>Consequat</h2>
+                <p>ipsum dolor sit amet</p>
+                </div>
             </div>
-            </div>
+        </div>
             <div class="col-7">
-                <div class="colored-block bg-green">
-                    <h1>Etiam</h1>
-                    <p>feugiat amet tempus</p>
+               <div class="etiam-pict">
+                    <div class="colored-block bg-etiam">
+                        <h2>Etiam</h2>
+                        <p>feugiat amet tempus</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,7 +91,7 @@
         <div class="row">
            <div class="col-12">
             <div class="colored-block bg-smokyblue">
-                <h1>Massa libero</h1>
+                <h2>Massa libero</h2>
                 <p class="no-upper">Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
             </div>
           </div>
@@ -95,17 +101,17 @@
             <div class="col-7">
                <div class="colored-block">
                    <form action="#" method="post">
-                       <div class="field name-field">
+                       <div class="field-top">
                        <label for="name">Name</label>
                        <input type="text" name="name" id="name">
                        </div>
-                       <div class="field email-field">
+                       <div class="field-top">
                           <label for="email">Email</label>
                            <input type="text" name="email" id="email">
                        </div>
-                       <div class="field message-field">
+                       <div class="field-message">
                         <label for="message">Message</label>
-                         <textarea name="message" id="message" rows="8" cols="70"></textarea>  
+                         <textarea name="message" id="message" rows="8"></textarea>  
                        </div>
                        <ul class="actions">
                           <li>
@@ -120,7 +126,27 @@
             </div>
             <div class="col-5">
                 <div class="colored-block">
-                    <section class="contacts"></section>
+                    <section class="feedback">
+                        <div class="contacts">
+                            <div class="icons"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                            <h2>Email</h2>
+                        <a href="#">information@untitled.tld</a>
+                        </div>
+                    
+                        <div class="contacts">
+                         <div class="icons"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                            <h2>Phone</h2>
+                            <span>(000) 000-0000 x12387</span>
+                        </div>
+                        
+                        <div class="contacts">
+                         <div class="icons"><i class="fa fa-home" aria-hidden="true"></i></div>  
+                            <h2>Address</h2>
+				            <span>1234 Somewhere Road #5432<br>
+				            Nashville, TN 00000<br>
+				            United States of America</span>  
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
@@ -128,6 +154,13 @@
     <div class="row">
             <div class="col-12">
             <footer class="colored-block">
+             <ul class="social">
+                 <li></li>
+                 <li></li>
+                 <li></li>
+                 <li></li>
+                 <li></li>
+             </ul>
              social pict, copyright   
             </footer>
             </div>

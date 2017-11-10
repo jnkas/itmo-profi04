@@ -11,6 +11,7 @@ body {
 
 }
 
+
 /*Header Styles*/
 
 .header {
@@ -55,16 +56,23 @@ body {
     float:right;
 }
 
+.menu button:hover {
+    cursor: pointer;
+}
+
+.menu button:focus {
+    outline:none;
+}
+
 .menu a {
     display:block;
     text-decoration: none;
 }
 
 
-a .menu:hover{
-    color: #8af0f0;
-    text-decoration: none:
-    background: #8af0f0;
+.menu-text:hover{
+    color:#8af0f0;
+    
 }
 
 
@@ -83,6 +91,7 @@ a .menu:hover{
     text-transform: uppercase;
     font-size:10px;
     letter-spacing: 3px;
+    transition:color 1s ease 0.2s;
 }
 
 .menu-container {
@@ -125,6 +134,8 @@ a .menu:hover{
     border-bottom: 1px solid white;
 }
 
+
+
 .close {
     color: white;
     font-size: 35px;
@@ -161,6 +172,8 @@ a .menu:hover{
 
 .bg-aqua {
     background: rgba(114,246,246,0.7);
+    transition:background 1s ease 0.2s;
+
 }
 
 .bg-aqua-pic {
@@ -178,6 +191,7 @@ a .menu:hover{
 
 .bg-purple {
      background: rgba(155, 89, 182, 0.7);
+    transition:background 1s ease 0.2s;
 }
 
 .bg-purple-pic {
@@ -188,6 +202,7 @@ a .menu:hover{
 
 .bg-orange {
     background: rgba(254, 158, 72, 0.7);
+    transition:background 1s ease 0.2s;
 }
 
 .bg-orange-pic {
@@ -197,6 +212,7 @@ a .menu:hover{
 
 .bg-yellow {
     background: rgba(241, 241, 96, 0.7);
+    transition:background 1s ease 0.2s;
 }
 
 .bg-yellow-pic {
@@ -206,6 +222,7 @@ a .menu:hover{
 
 .bg-blue {
     background: rgba(41, 128, 185, 0.7);
+    transition:background 1s ease 0.2s;
 }
 
 .bg-blue-pic {
@@ -216,6 +233,7 @@ a .menu:hover{
 
 .bg-green {
     background: rgba(22, 160, 133, 0.7);
+    transition:background 1s ease 0.2s;
 }
 
 .bg-green-pic {
@@ -276,6 +294,7 @@ a .menu:hover{
     margin: 10px 0;
     color:white;
     text-decoration: none;
+    transition:color 1s ease 0.2s, border 1s ease 0.2s;
 }
 
 a .button:hover {
@@ -301,8 +320,15 @@ a .button:hover {
 }
 
 
-.input-name, .input-email {
-    padding: 5px 0 5px 20px;
+.input-name {
+    padding: 0.3em 0 0.3px 1.1em;
+    min-width:50%;
+    float:left;
+    
+}
+
+.input-email {
+    padding: 0.3em 0 0.3em 0;
     min-width:50%;
     float:left;
     
@@ -310,18 +336,18 @@ a .button:hover {
 
 
 .input-message {
-     padding: 5px 20px;
+     padding: 0.3em 1em;
 }
 
 .input-message textarea {
-    height:120px;
+    height:10em;
     min-width:87%;
-    width:385px;
+    width:21em;
     background: #1e283f;
     border:none;
     font-size:12px;
     color:white;
-    padding: 5px 5px;
+    padding: 0.3em 0.5em;
 }
 
 input[type=text] {
@@ -329,7 +355,7 @@ input[type=text] {
     border:none;
     font-size:12px;
     color:white;
-    padding: 5px 10px;
+    padding: 0.7em 0.5em;
     width:68%;
 }
 
@@ -341,6 +367,7 @@ input[type=submit] {
     text-transform: uppercase;
     font-size:11px;
     letter-spacing: 2px;
+    transition:background 1s ease 0.2s;
 }
 
 input[type=submit]:hover{
@@ -356,6 +383,7 @@ input[type=reset] {
     text-transform: uppercase;
     font-size:11px;
     letter-spacing: 2px;
+    transition: color 1s ease 0.2s, border 1s ease 0.2s;
 }
 
 input[type=reset]:hover {
@@ -374,7 +402,206 @@ input[type=reset]:hover {
     padding: 10px 20px;
 }
 
+/* Contacts */
+.contacts {
+    padding: 50px 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height:334.4px;
+}
+
+.email {
+    font-size:1em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    padding: 0.2em 0 0 0.7em;
+    display:block;
+    width:90%;
+    float:left;
+    
+    
+    
+}
+
+.email::after {
+    clear:both;
+    content: '';
+    display:block;
+    visibility: hidden;
+    
+}
+
+.email+a, .address {
+    color: rgba(212, 212, 212, 0.5);
+    font-size:0.9em;
+    text-decoration: underline;
+    text-decoration-style:dotted;
+    float:left;
+    padding-left:0.8em;
+    transition:color 1s ease 0.2s;
+    
+    
+}
+
+.email+a:hover {
+    color: #8af0f0;
+    text-decoration: none;
+}
+
+.email-icon::before {
+    font-family: FontAwesome;
+    content: "\f0e0";
+    font-size:1.2em;
+    float:left;
+    color: #1e283f;
+    padding: 0 0 0.1em 0.3em;
+    
+}
+
+.phone-icon::before {
+    font-family: FontAwesome;
+    content: "\f095";
+    font-size:1.2em;
+    float:left;
+    color: #1e283f;
+    padding: 0 0 0.1em 0.4em;
+    
+}
 
 
+.address-icon::before {
+    font-family: FontAwesome;
+    content: "\f015";
+    font-size:1.2em;
+    float:left;
+    color: #1e283f;
+    padding: 0 0 0.1em 0.4em;
+       
+}
+
+.circle {
+    background-color: white;
+    border-radius: 100%;
+    display:inline-block;
+    height:2em;
+    width:2em;
+    line-height:2em;
+    float:left;
+    
+    
+   
+}
+
+/* Social */
+.social {
+    display:flex;
+    justify-content: flex-start;
+}
+
+.social a {
+    color:#1e283f;
+    text-decoration: none;
+}
+
+.twitter-icon::before {
+    font-family: FontAwesome;
+    content: "\f099";
+    font-size:1.2em;
+    
+    
+    
+}
+
+.face-icon::before {
+    font-family: FontAwesome;
+    content: "\f09a";
+    font-size:1.2em;
+    
+    
+}
+
+.insta-icon::before {
+    font-family: FontAwesome;
+    content: "\f16d";
+    font-size:1.2em;
+    
+    
+}
+
+.git-icon::before {
+    font-family: FontAwesome;
+    content: "\f09b";
+    font-size:1.2em;
+   
+    
+}
+
+.linked-icon::before {
+    font-family: FontAwesome;
+    content: "\f0e1";
+    font-size:1.2em;
+   
+    
+}
+
+a.icon {
+    background-color: white;
+    border-radius: 100%;
+    display:inline-block;
+    height:2em;
+    width:2em;
+    line-height:2em;
+    text-align:center;
+    margin-right:1.5em;
+   
+}
 
 
+/* Copywright */
+
+ul.copy {
+    padding-left: 0;
+}
+ul.copy li {
+    list-style-type: none;
+    float: left;
+    font-size: 0.8em;
+    color: rgba(212, 212, 212, 0.5);
+    display:inline;
+    padding: 0 0.3em;
+}
+
+ul.copy li a {
+    color: rgba(212, 212, 212, 0.5);
+    text-decoration: underline;
+    text-decoration-style:dotted;
+    transition:color 1s ease 0.2s;
+}
+
+ul.copy li a:hover {
+    color: #8af0f0;
+    text-decoration: none;
+}
+
+ul.copy li:after {
+    content: " | ";
+    color: rgba(212, 212, 212, 0.5);
+}
+
+ul.copy li:last-child:after {
+    content: none;
+}
+
+span.htmls-footer {
+    text-transform: uppercase;
+}
+
+/* Mobile Version */
+
+@media all and (max-width: 800px) {
+
+    /**/
+
+}

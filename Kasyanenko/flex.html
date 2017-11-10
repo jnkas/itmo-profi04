@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+     
+<!--    Flexbox    -->     
+    <style>
+        .flex-line{
+            display: flex;
+        }        
+        .flex-line--first{
+            max-width: 340px;
+        }
+        .f-box { 
+            border: 1px solid;
+            width: 140px;
+        }
+
+        .flex-shrink-3 { 
+          flex-shrink: 3; 
+        }
+        
+        .flex-shrink-1 { 
+          flex-shrink: 1; 
+        }
+        
+        .hide {
+            display: none;
+        }
+    </style> 
+         
+    <h1>flex-shrink - при сжатии определяет, насколько сильно может сжаться элемент</h1>
+    <div class="flex-line flex-line--first">
+        <div class="f-box flex-shrink-3">
+            <p>Значение flex-shrink = 3 </p>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>        
+        <div class="f-box flex-shrink-3">
+            <p>Значение flex-shrink = 3</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores laboriosam consequatur accusamus ipsum placeat ad delectus, aspernatur veniam, iste doloribus dolore explicabo quae. Nam tenetur, adipisci voluptatum deleniti fugit esse!</p>
+        </div>        
+        <div class="f-box flex-shrink-1">
+            <p>Значение flex-shrink = 1 </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum porro dignissimos deleniti placeat quia accusantium esse dolor omnis blanditiis explicabo.</p>
+        </div>        
+        <div class="f-box flex-shrink-3">
+            <p>Значение flex-shrink = 3 </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quam natus minima soluta recusandae eius. Fugiat dolorem, cum est. Aspernatur accusantium.</p>
+        </div>
+    </div> 
+      
+    <style>
+        .flex-line--second{
+            width: 100%;
+            max-width: 100%;
+            flex-basis: 100%;
+        }
+        .flex-grow-3 { 
+          flex-grow: 3; 
+        }
+        
+        .flex-grow-1 { 
+          flex-grow: 1; 
+        }
+        
+    </style>    
+           
+    <h1>flex-grow - при расширении определяет, насколько сильно может увеличиться элемент</h1>
+    <div class="flex-line flex-line--second">
+        <div class="f-box flex-grow-1">
+            <p>Значение flex-grow = 1 </p>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>        
+        <div class="f-box flex-grow-3">
+            <p>Значение flex-grow = 3</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores laboriosam consequatur accusamus ipsum placeat ad delectus, aspernatur veniam, iste doloribus dolore explicabo quae. Nam tenetur, adipisci voluptatum deleniti fugit esse!</p>
+        </div>        
+        <div class="f-box flex-grow-1">
+            <p>Значение flex-grow = 1 </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum porro dignissimos deleniti placeat quia accusantium esse dolor omnis blanditiis explicabo.</p>
+        </div>        
+        <div class="f-box flex-grow-1">
+            <p>Значение flex-grow = 1 </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quam natus minima soluta recusandae eius. Fugiat dolorem, cum est. Aspernatur accusantium.</p>
+        </div>
+    </div>
+</body>
+</html>
