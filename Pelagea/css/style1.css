@@ -13,10 +13,17 @@ body {
     float: left;
 }
 
-.colored-block {
+.block {
     padding: 50px 0 50px 50px;
-    background-color: #322048;
+    background-color: #322048; 
     color: #ffffff;
+}
+
+.bg-darkblue h1 {
+    margin-top: 4em;
+    margin-right: 6em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid white;
 }
 
 h1, 
@@ -26,12 +33,14 @@ h2 {
 
 .bg-darkblue {
     background-color: rgba(42, 47, 74, 0.75);
+    height: 75vh;
+    background-size: cover;
 }
 
 .top-block-pict {
     background-image: url('../images/banner.jpg');
     background-size: cover;
-}
+    }
 
 .bg-aliquam {
     background-color: rgba(111, 195, 225, 0.8);
@@ -86,15 +95,57 @@ h2 {
     background-image: url("../images/pic06.jpg");
 }
 
+.bg-etiam,
+.bg-ipsum,
+.bg-magna,
+.bg-tempus,
+.bg-consequat,
+.bg-aliquam
+{
+    height: 50vh;
+    background-size: cover;
+}
+
+.colored-block:hover {
+    background: none;
+}
+
 .bg-smokyblue {
-background: #242943;    
+    background: #242943;
+    height: 60vh;
+}
+
+a.button {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    margin: 2em 0;
+    padding: 0.5em 0.7em;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    text-align: center;
+    letter-spacing: 0.2em;
+}
+
+a.button span {
+    font-size: 1.6em;
+    }
+
+.button:hover {
+    color: aquamarine;
+    border: 2px solid aquamarine;
 }
 
 p {
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
 }
 
-.no-upper {
+p.no-upper {
+    font-size: 1em;
+    letter-spacing: normal;
     text-transform: none;
 }
 
@@ -176,9 +227,11 @@ p {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3)
 }
 
-.form {
+.form, 
+section.feedback {
     display: block;
     margin: auto;
+    padding: 1em;
 }
 
 .field-top {
@@ -198,12 +251,12 @@ input[type="text"] {
     background: #242943;
     border: none;
     height: 2.75em;
-    width: 85%;
+    width: 90%;
 }
 
 textarea#message {
     display: block;
-    width: 100%;
+    width: 95%;
     background: #242943;
     border: none;
 }
@@ -221,18 +274,29 @@ label {
     margin-bottom: 0.5em;
 }
 
-.icons {
-    display: inline-block;
+.contacts {
+    margin-top: 0.5em;
+    margin-bottom: 2em;
     position: relative;
-    background-color: #fff;
-    border-radius: 100%;
-    width: 2.5em;
-    height:2.5em;
+    padding: 0.5em 0.5em 1em 5em;
 }
 
-.icons > .fa {
-    color: #242943;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+.contacts h2 {
+    padding: 0;
+    margin: 0;
 }
+
+.icons {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 1em;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 2em;
+    height:2em;
+    color: #242943;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2em;
+    }
