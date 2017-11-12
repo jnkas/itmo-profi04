@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Домашка №1</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+	<h1>HomeWork #1</h1>
+
+	<h2>Задача 1</h2>
+	<p>Из трех данных чисел выбрать наименьшее.</p>
+	<i>Решение:</i><br>
+	<script type="text/javascript">
+		//задаем пределы
+		var min = -100;
+		var max = 100;
+
+		//определяем случайным образом 3 целых числа из заданых пределов
+		var randNum1 = Math.floor(Math.random() * (max - min + 1)) + min;
+		var randNum2 = Math.floor(Math.random() * (max - min + 1)) + min;
+		var randNum3 = Math.floor(Math.random() * (max - min + 1)) + min;
+
+		//определенные числа
+		document.write("Первое число: ", randNum1);
+		document.write("<br>Второе число: ", randNum2);
+		document.write("<br>Третье число: ", randNum3, "<br><br>");
+
+		//находим минимальное значение с помощью метода Math.min
+		var valueMin1 = Math.min(randNum1,randNum2,randNum3);
+		document.write("Минимальное число определенное с помощью метода Math.min: ", valueMin1, "<br>");
+
+		//находим минимальное значение с помощью условного оператора if
+		document.write("С помощью условного оператора if определено ");
+		if ((randNum1 < randNum2) && (randNum1 < randNum3)) {
+			//var valueMin1 = randNum1;
+			document.write("минимальное число: ", randNum1);
+		} else if ((randNum2 < randNum1) && (randNum2 < randNum3)) {
+			document.write("минимальное число: ", randNum2);
+		} else if ((randNum3 < randNum1) && (randNum3 < randNum2)) {
+			document.write("минимальное число: ", randNum3);
+		} else { //похоже несколько цифр с одинаковым минимальным значением
+			if (randNum1 == randNum2) {
+				document.write("несколько чисел с минимальным значением: ", randNum1);
+			} else if (randNum2 == randNum3) {
+				document.write("несколько чисел с минимальным значением: ", randNum2);
+			} else if (randNum3 == randNum1) {
+				document.write("несколько чисел с минимальным значением: ", randNum3);
+			}
+		}
+	</script>
+	
+	<hr><h2>Задача 2</h2>
+	<p>Дано целое число, лежащее в диапазоне от -999 до 999.</p>
+	<p>Вывести строку - словесное описание данного числа вида:</p>
+	<ul>
+		<li>"отрицательное двузначное число",</li>
+		<li>"нулевое число", </li>
+		<li>"положительное однозначное число" и т.д.</li>
+	</ul>
+	<i>Решение:</i><br>
+	<script type="text/javascript">
+		//задаем пределы
+		var min1 = -999;
+		var max1 = 999;
+
+		//определяем случайным образом чиссло в заданных пределах
+		var randNum = Math.floor(Math.random() * (max1 - min1 + 1)) + min1;
+
+		if (randNum == 0) {
+			document.write(randNum, "нулевое число");
+
+		} else if (randNum < 0) {
+			document.write(randNum, " - отрицательное ");
+			if ((randNum/100 >= 1) || (randNum/100 <= -1)) {
+				document.write("трехзначное число");
+			} else if ((randNum/10 >= 1) || (randNum/10 <= -1)) {
+				document.write("двузначное число");
+			} else {
+				document.write("однозначное число");
+			}
+
+		} else if (randNum > 0) {
+			document.write(randNum, " - положительное ");
+			if ((randNum/100 >= 1) || (randNum/100 <= -1)) {
+				document.write("трехзначное число");
+			} else if ((randNum/10 >= 1) || (randNum/10 <= -1)) {
+				document.write("двузначное число");
+			} else {
+				document.write("однозначное число");
+			}
+		}
+	</script>
+	<hr><h2>Задача 3</h2>
+	<p>Дано целое число в диапазоне 0 - 9.</p>
+
+	<p>Вывести строку - название соответствующей цифры на русском языке (0 - "ноль", 1 - "один", 2 - "два", ...).</p>
+	<i>Решение:</i><br>
+	<script type="text/javascript">
+		//задаем пределы
+		var min2 = 0;
+		var max2 = 9;
+
+		//определяем случайным образом чиссло в заданных пределах
+		var randNum2 = Math.floor(Math.random() * (max2 - min2 + 1)) + min2;
+		document.write(randNum2, " - это ")
+		if (randNum2 == 0) {
+			document.write("ноль");
+		} else if (randNum2 == 1) {
+			document.write("один");
+		} else if (randNum2 == 2) {
+			document.write("два");
+		} else if (randNum2 == 3) {
+			document.write("три");
+		} else if (randNum2 == 4) {
+			document.write("четыре");
+		} else if (randNum2 == 5) {
+			document.write("пять");
+		} else if (randNum2 == 6) {
+			document.write("шесть");
+		} else if (randNum2 == 7) {
+			document.write("семь");
+		} else if (randNum2 == 8) {
+			document.write("восемь");
+		} else if (randNum2 == 9) {
+			document.write("девять");
+		} else {
+			document.write("что-то пошло не так");
+		}
+	</script>
+	
+	<hr><h2>Задача 4</h2>
+	<p>Дано целое число в диапазоне 1 - 5.</p>
+	<p>Вывести строку - словесное описание соответствующей оценки:</p> 
+	<ul>
+		<li>1 - "плохо",</li>
+		<li>2 - "неудовлетворительно",</li>
+		<li>3 - "удовлетворительно",</li>
+		<li>4 - "хорошо",</li>
+		<li>5 - "отлично".</li>
+	</ul>
+	<i>Решение:</i><br>
+	<script type="text/javascript">
+		//задаем пределы
+		var min3 = 1;
+		var max3 = 5;
+
+		var randNum3 = Math.floor(Math.random() * (max3 - min3 + 1)) + min3;
+
+		if (randNum3 == 1) {
+			document.write(randNum3, " - \"плохо\"");
+		} else if (randNum3 == 2) {
+			document.write(randNum3, " - \"неудовлетворительно\"");
+		} else if (randNum3 == 3) {
+			document.write(randNum3, " - \"удовлетворительно\"");
+		} else if (randNum3 == 4) {
+			document.write(randNum3, " - \"хорошо\"");
+		} else if (randNum3 == 5) {
+			document.write(randNum3, " - \"отлично\"");
+		} else {
+			document.write("что-то пошло не так");
+		}
+	</script>
+	<hr><h2>Задача 5</h2>
+	<p>Проверить истинность высказывания:</p>
+
+	<p>"Среди трех данных целых чисел есть хоть бы одна пара совпадающих".</p>
+
+<p>Требуется вывести логическое значение True, если:</p>
+	<ul>
+		<li>приведенное высказывание для предложенных исходных данных является истинным,</li>
+		<li>и значение False в противном случае.</li>
+	</ul>
+	<i>Решение:</i><br>
+	<script type="text/javascript">
+		var resultat;
+
+		//задаем пределы
+		var min4 = 1;
+		var max4 = 3;
+
+		var randNum4 = Math.floor(Math.random() * (max4 - min4 + 1)) + min4;
+		var randNum5 = Math.floor(Math.random() * (max4 - min4 + 1)) + min4;
+		var randNum6 = Math.floor(Math.random() * (max4 - min4 + 1)) + min4;
+
+		document.write("Первое число: ", randNum4, "<br>");
+		document.write("Второе число: ", randNum5, "<br>");
+		document.write("Третье число: ", randNum6, "<br>");
+
+		if ((randNum4 == randNum5)||(randNum4 == randNum6)) {
+			resultat = true;
+		} else if ((randNum5 == randNum4)||(randNum5 == randNum6)){
+			resultat = true;
+		} else if ((randNum6 == randNum4)||(randNum6 == randNum5)){
+			resultat = true;
+		} else {
+			resultat = false;
+		}
+		document.write(resultat);
+	</script>
+	</div>
+</body>
+</html>
