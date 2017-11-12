@@ -19,6 +19,90 @@ body {
     color: #ffffff;
 }
 
+.header {
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    background: #322048;
+}
+
+.logo {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    width: 80%;
+    float: left;
+    cursor: pointer;
+}
+
+.logo span {
+    color: #322048;
+    background: #fff;
+    padding: 2px;
+    letter-spacing: 3px;
+}
+
+.logo:hover {
+    color: aquamarine; 
+}
+
+.logo span:hover {
+    background-color: aquamarine;
+} 
+
+.menu {
+    text-align: right;
+  }
+
+.menu button {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    background: #322048;
+    border: none;
+}
+
+.menu button:hover {
+    color: aquamarine;
+}
+
+
+.menu-container {
+    background: rgba(36, 41, 67, 0.9);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.menu-container ul {
+    padding-left: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    list-style-type: none;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    
+}
+
+.menu-container a {
+    color: #fff;
+    width: 100%;
+    display: inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+}
+
 .bg-darkblue h1 {
     margin-top: 4em;
     margin-right: 6em;
@@ -26,9 +110,21 @@ body {
     border-bottom: 2px solid white;
 }
 
-h1, 
+/*h1, 
 h2 {
     display: block;
+}*/
+
+p {
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    }
+
+p.no-upper {
+    font-size: 1em;
+    letter-spacing: normal;
+    text-transform: none;
 }
 
 .bg-darkblue {
@@ -49,7 +145,6 @@ h2 {
 .aliquam-pict {
     background-image: url('../images/pic01.jpg');
     background-size: cover;
-    
 }
 
 .bg-tempus {
@@ -104,6 +199,7 @@ h2 {
 {
     height: 50vh;
     background-size: cover;
+    cursor: pointer;
 }
 
 .colored-block:hover {
@@ -113,19 +209,25 @@ h2 {
 .bg-smokyblue {
     background: #242943;
     height: 60vh;
+    min-height: 300px;
 }
 
-a.button {
-    display: block;
+a.get-started,
+input[type="reset"],
+input[type="submit"]
+{
+    display: inline-block;
     text-decoration: none;
     color: #ffffff;
     border: 2px solid #ffffff;
     margin: 2em 0;
-    padding: 0.5em 0.7em;
+    padding: 0.7em 0.8em;
     text-transform: uppercase;
     font-size: 0.8em;
     text-align: center;
     letter-spacing: 0.2em;
+    background-color: #242943;
+    cursor: pointer;
 }
 
 a.button span {
@@ -137,94 +239,13 @@ a.button span {
     border: 2px solid aquamarine;
 }
 
-p {
-    font-size: 0.7em;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+input[type="submit"] {
+    color: #242943;
+    background-color: #fff;
 }
 
-p.no-upper {
-    font-size: 1em;
-    letter-spacing: normal;
-    text-transform: none;
-}
-
-.header {
-    padding: 15px;
-    position: fixed;
-    width: 100%;
-    background: #322048;
-}
-
-.logo {
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #fff;
-    width: 80%;
-    float: left;
-}
-
-.logo span {
-    color: #322048;
-    background: #fff;
-    padding: 3px;
-    letter-spacing: 2px;
-}
-
-.logo:hover {
-    color: aquamarine;    
-}
-
-.menu {
-    text-align: right;
-  }
-
-.menu button {
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #fff;
-    background: #322048;
-    border: none;
-}
-
-.menu button:hover {
-    color: aquamarine;
-}
-
-
-.menu-container {
-    background: rgba(36, 41, 67, 0.9);
-    position: fixed; 
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: none;
-}
-
-.menu-container ul {
-    padding-left: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    list-style-type: none;
-    width: 100%;
-    max-width: 300px;
-    margin: auto;
-    transform: translate(-50%, -50%);
-    
-}
-
-.menu-container a {
-    color: #fff;
-    width: 100%;
-    display: inline-block;
-    padding: 10px 0;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+input[type="submit"]:hover {
+    background-color: aquamarine;
 }
 
 .form, 
@@ -264,33 +285,47 @@ textarea#message {
 ul.actions > li {
     list-style: none;
     text-decoration: none;
-    padding: 10px;
+    margin-right: 25px;
+    padding: 0;
+    display:inline-block;
     }
 
 label {
     display: block;
     text-transform: uppercase;
-    margin-top: 1em;
+    margin-top: 2em;
     margin-bottom: 0.5em;
 }
 
 .contacts {
-    margin-top: 0.5em;
-    margin-bottom: 2em;
+/*    margin-top: 0.5em;*/
+    margin-bottom: 1em;
     position: relative;
     padding: 0.5em 0.5em 1em 5em;
 }
 
 .contacts h2 {
     padding: 0;
+    margin-bottom: 0.7em;
+}
+
+.contacts a {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px dotted;
+    display: inline-block;
     margin: 0;
+}
+
+.contacts a:hover {
+    color: aquamarine;
 }
 
 .icons {
     display: inline-block;
     position: absolute;
-    top: 0;
-    left: 1em;
+    top: 0.2em;
+    left: 1em; 
     background-color: #fff;
     border-radius: 100%;
     width: 2em;
@@ -300,3 +335,42 @@ label {
     vertical-align: middle;
     line-height: 2em;
     }
+
+ul.social{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+}
+
+.footer-top:after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 0;
+    clear: both;
+}
+
+.social > li {
+    display: block;
+    float: left;
+    }
+
+.social > li > a {
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 100%;
+    color: #242943;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0.5em; 
+}
+
+
+.copyright {
+    
+}
