@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5 - Check that 2 numbers of 3 are equal</title>
+</head>
+<body>
+    <script type="text/javascript">
+        number1 = parseInt(prompt("Введите целое число 1"));
+        number2 = parseInt(prompt("Введите целое число 2"));
+        number3 = parseInt(prompt("Введите целое число 3"));
+        console.log("Вы ввели числа: ", number1, number2, number3);
+        // Проверка на число
+        if (isNaN(number1) || isNaN(number2) || isNaN(number3)){
+             alert("Нужно ввести числа");
+        }
+        else {
+            if (number1==number2 || number1==number3 || number2==number3) {
+                alert("Среди чисел есть совпадения");
+                result = true;
+                
+            }
+            else {
+                alert("Среди чисел нет совпадений");
+                result = false;
+            }
+            console.log(result);
+        }
+    </script>
+</body>
+</html>
