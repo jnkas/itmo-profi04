@@ -1,74 +1,63 @@
-body {
-	background: #000 url(img/bg.jpg) no-repeat fixed left bottom/* фон */
+
+body{
+  margin: 0;
+  box-sizing: border-box;
+  background: url(img/grn.jpeg);
 }
-
-
-
 
 /*---------------------------Верхнее меню----------------------------*/
-.logo{
-	width: 80px;
-	height: 80px;
-	position: absolute;
-	padding-left: 10%;
-
-}
 .menu-top ul {
 background: rgba(0,0,0,0.1);/* Цвет фона меню и его прозрачность*/
-overflow: hidden;/* элемент во всю ширину*/
-padding-left: 30%;/*Отступ меню слева*/
+overflow: hidden; 
+margin: 0;
+background: rgba(0, 0, 0, 0.53);
 
 }
 .menu-top li {
 list-style: none;/* убираем маркеры списка*/
-float: left;/* начало списка*/
-font-family: impact, Times New Roman ;/* стиль текста*/
+float: right;/* начало списка*/
+font-family: Times New Roman ;/* стиль текста*/
 font-size: 20px;/*Размер шрифта*/
-
-
+vertical-align:middle;
+text-align: center;
 }
-
 
 .menu-top a {
 text-decoration: none;/*Убираем подчеркивание ссылок*/
 display: block;/*закрепляем отступы*/
 padding: 1em;
-color: #434141;
+color: rgba(255, 255, 255, 0.61);
+position: relative;
 }
+.menu-top{
 
+}
 /*---------------------------Основная часть ----------------------------*/
+.onepage{
+  position: fixed;
+/*  background: url(img/grn.jpeg); */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  height: 1000px;
+  opacity: 0.9;
+
 
 
 }
+.lotos{}
 
-}
-
-.hexagon {
+.lotos{
+  margin-top: 150px;
+  background: url(img/lotos2.png);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: top;
   position: relative;
-  width: 173px; 
-  height: 99.88px;
-  background-color: rgba(0,0,0,0.3);
-  margin: 49.94px 0;
-}
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
 
-.hexagon:before,
-.hexagon:after {
-  content: "";
-  position: absolute;
-  width: 0;/*Tреугольник */
-  border-left: 86.5px solid transparent;/*Tреугольник */
-  border-right: 86.5px solid transparent;/*Tреугольник */
-}
 
-.hexagon:before {
-  bottom: 100%;/*Tреугольник */
-  border-bottom: 49.94px solid rgba(0,0,0,0.3);/*верхний треугольник */
 }
-
-.hexagon:after {
-  top: 100%;
-  width: 0;
-  border-top: 49.94px solid rgba(0,0,0,0.3);/*Нижний треугольник*/
-}
-p{position: bottom;}
-
