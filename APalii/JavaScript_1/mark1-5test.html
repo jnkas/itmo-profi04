@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <!	
+
+
+<script>
+function fat(elem) {
+var f = document.getElementById('f');
+elem.value = elem.value.replace(/[^\d]/g, '');
+if(elem.value >= 35 && elem.value <= 120)
+f.innerHTML = "";
+else
+f.innerHTML = "Введите значение от 35 до 100";
+}
+</script>
+
+<p class="type1">
+<input name="fat_" onkeyup="fat(this)"/> Толщина пакета, мкм
+<div id="f"></div>
+</p>
+ 
+</body>
+</html>
