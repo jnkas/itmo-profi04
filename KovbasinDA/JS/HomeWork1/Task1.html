@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS_HomeWork1_Task1</title>
+</head>
+<body>
+    <h1>
+        <script>
+            var stringNum;
+            var arrNum;
+            var minNum;
+            stringNum = prompt("Введите положительные числа для сравнения через пробел:");
+            if (stringNum.search(/[a-zа-яё]/i) == -1) {
+                arrNum = stringNum.match(/\d{1,}\.?\d{0,}/g);
+                minNum = arrNum[0];
+                for (var i = 0; i < arrNum.length; i++) {
+                    if (minNum > arrNum[i]) {
+                        minNum = arrNum[i];
+                    }
+                }
+                document.write("Массив ваших чисел:");
+                document.write(arrNum);
+                document.write("<br>Минемальное из введенных чисел:");
+                document.write(minNum);
+            }
+            else
+            {
+                alert("Неверный ввод строки! Проверьте что строка состоит только из положительных цифр и пробелов.");
+            }
+        </script>
+    </h1>
+</body>
+</html>
