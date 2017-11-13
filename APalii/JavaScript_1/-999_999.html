@@ -9,46 +9,47 @@
 		var a = prompt("prego entere alle -999 dalle 999");
 		a = parseInt(a);
 		if ( !isNaN(a) ){
-		if (a===0) {
-			alert ("null")
-		} 
-		else if (a > 0) {
-			if  (a > 999) {
-				alert ("our of range, pls enter alle -999 dalle 999")
-				}
-			else {	
-			if (a < 999 && a > 99) {
-				alert ("3 digit positive")
-				} 
-			else {
-				if (a < 100 && a > 9) {
-					alert ("2 digit positive")
-				} 
-				else{
-					alert ("1 digit positive")	
-				}		 
-			}		 
-		} 
-		}
-		else{
-			if  (a < 999) {
-				alert ("our of range, pls enter alle -999 dalle 999")
-				}
-			else {	
-			if (a > -999 && a < -99) {
-				alert ("3 digit negative")
+			if (a===0) {
+				alert ("null")
 			} 
-			else{
-				if (a > -100 && a < -9) {
-					alert ("2 digit negative")
+			else if (a > 0) {
+				if  (a > 999) {
+					alert ("our of range, pls enter alle -999 dalle 999")
+				}
+				else {	
+					if (a < 999 && a > 99) {
+						alert ("3 digit positive")
+					} 
+					else {
+						if (a < 100 && a > 9) {
+							alert ("2 digit positive")
+						} 
+						else{
+							alert ("1 digit positive")	
+						}		 
+					}		 
 				} 
-				else {
-					alert ("1 digit negative")	
-				}		 
+			}
+			else{
+				if  (a < 999) {
+					alert ("our of range, pls enter alle -999 dalle 999")
+				}
+				else {	
+					if (a > -999 && a < -99) {
+						alert ("3 digit negative")
+					} 
+					else{
+						if (a > -100 && a < -9) {
+							alert ("2 digit negative")
+						} 
+						else {
+							alert ("1 digit negative")	
+						}		 
+					}
+				}
 			}
 		}
-		}
-		}else{
+		else{
 			alert("pls enter didit values");
 			}		
 				  
