@@ -8,25 +8,26 @@
 	<script type="text/javascript">
 		var a = prompt("prego entere alle 1 dalle 5");
 			//verify value 1-5
+		a = parseInt(a); //определение переменной как числовой				
 		if (a >= 1 && a <= 5){
-			if (a==1) {
+			if (a===1) {
 				alert ("плохо");
 				} 
-			else if (a==2) {
+			else if (a===2) {
 				alert ("неудовлетворительно");
 				} 
-			else if (a==3) {
+			else if (a===3) {
 				alert ("удовлетворительно")
 				} 
-			else if (a==4) {
+			else if (a===4) {
 				alert ("хорошо")
 				} 
-			else if (a==5) {
+			else if (a===5) {
 				alert ("отлично")
 				} 
 			} 
 		else {
-			alert ("Incorrect value!");
+			alert ("Value out of predefined reange!");
 			}
 	</script>
 </body>

@@ -6,22 +6,26 @@
 </head>
 <body>
 	<script type="text/javascript">
-		var a = prompt("pls enter 1st digit");
+	    var a = prompt("pls enter 1st digit");
 		var b = prompt("pls enter 2nd digit");
-		var c = prompt("pls enter 3st digit");
-		if ((a <= b) & (a <= c)) {
-			alert  (a)
-		}
-			else if ((a >= b) & (b <= c)) {
-				alert (b)
-			}	
-			else if ((a >= c) & (b >= c)) {
-				alert (c)
-			}
-			else {
-		// finito
-				alert("finito!");
-			} 	
+		var c = prompt("pls enter 3st digit"); 
+			      a = parseInt(a);
+				  b = parseInt(b);
+				  c = parseInt(c); 
+				  if ( !isNaN(a) && !isNaN(b) && !isNaN(c) ){
+				  
+			      if ((a <= b) && (a <= c)) {
+					    alert  (a)
+				  }
+				  if ((a >= b) && (b <= c)) {
+						alert (b)
+				  }
+				  if ((a >= c) && (b >= c)) {
+						alert (c)
+				  }   		
+                  }else{
+				     alert("No digit");
+				  }				  
 	</script>
 </body>
 </html>

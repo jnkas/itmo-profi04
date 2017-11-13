@@ -6,43 +6,35 @@
 </head>
 <body>
 	<script type="text/javascript">
-		var a = prompt("prego entere alle 1 dalle 9");
+		var a = prompt("prego entere alle 0 dalle 9");
+		a = parseInt(a);	
 
-
-		if (a==0) {
-			alert ("null")
-			}
-		else if (a==1) {
-			alert ("uno")
-			}
-		else if (a==2) {
-			alert ("due")
-			}
-		else if (a==3) {
-			alert ("tre")
-			}
-		else if (a==4) {
-			alert ("quatro")
-			}
-		else if (a==5) {
-		alert ("cinque")
-			}
-		else if (a==6) {
-		alert ("sei")
-			}
-		else if (a==7) {
-		alert ("sette")
-			}
-		else if (a==8) {
-		alert ("otto")
-			}
-		else if (a==9) {
-		alert ("nove")
-			} 
-		else {
-		alert ("Incorrect value!");}
-			
-			
+		switch(a){
+		
+		    case 0: alert("null");
+			        break;
+			case 1: alert("uno");
+			        break;
+			case 2: alert("duo");
+			        break;
+			case 3: alert("tre");
+			        break;
+			case 4: alert("quatro");
+			        break;
+			case 5: alert("cinque");
+			        break;
+			case 6: alert("sei");
+			        break;
+			case 7: alert("sette");
+			        break;
+			case 8: alert("otto");
+			        break;
+			case 9: alert("nove");
+			        break;
+			default:
+                    alert("Value out of range");
+                    break;							
+		}
 	</script>
 </body>
 </html>
