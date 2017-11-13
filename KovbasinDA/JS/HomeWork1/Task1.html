@@ -12,7 +12,7 @@
             var minNum;
             stringNum = prompt("Введите положительные числа для сравнения через пробел:");
             if (stringNum.search(/[a-zа-яё]/i) == -1) {
-                arrNum = stringNum.match(/\d+\.?\d+/g);
+                arrNum = stringNum.match(/\d{1,}\.?\d{0,}/g);
                 minNum = arrNum[0];
                 for (var i = 0; i < arrNum.length; i++) {
                     if (minNum > arrNum[i]) {
