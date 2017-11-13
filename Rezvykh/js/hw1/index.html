@@ -33,21 +33,12 @@
 
 		//находим минимальное значение с помощью условного оператора if
 		document.write("С помощью условного оператора if определено ");
-		if ((randNum1 < randNum2) && (randNum1 < randNum3)) {
-			//var valueMin1 = randNum1;
+		if ((randNum1 <= randNum2) && (randNum1 <= randNum3)) {
 			document.write("минимальное число: ", randNum1);
-		} else if ((randNum2 < randNum1) && (randNum2 < randNum3)) {
+		} else if ((randNum2 <= randNum1) && (randNum2 <= randNum3)) {
 			document.write("минимальное число: ", randNum2);
-		} else if ((randNum3 < randNum1) && (randNum3 < randNum2)) {
+		} else {
 			document.write("минимальное число: ", randNum3);
-		} else { //похоже несколько цифр с одинаковым минимальным значением
-			if (randNum1 == randNum2) {
-				document.write("несколько чисел с минимальным значением: ", randNum1);
-			} else if (randNum2 == randNum3) {
-				document.write("несколько чисел с минимальным значением: ", randNum2);
-			} else if (randNum3 == randNum1) {
-				document.write("несколько чисел с минимальным значением: ", randNum3);
-			}
 		}
 	</script>
 	
@@ -73,9 +64,9 @@
 
 		} else if (randNum < 0) {
 			document.write(randNum, " - отрицательное ");
-			if ((randNum/100 >= 1) || (randNum/100 <= -1)) {
+			if (randNum/100 <= -1) {
 				document.write("трехзначное число");
-			} else if ((randNum/10 >= 1) || (randNum/10 <= -1)) {
+			} else if (randNum/10 <= -1) {
 				document.write("двузначное число");
 			} else {
 				document.write("однозначное число");
@@ -83,9 +74,9 @@
 
 		} else if (randNum > 0) {
 			document.write(randNum, " - положительное ");
-			if ((randNum/100 >= 1) || (randNum/100 <= -1)) {
+			if (randNum/100 >= 1) {
 				document.write("трехзначное число");
-			} else if ((randNum/10 >= 1) || (randNum/10 <= -1)) {
+			} else if (randNum/10 >= 1) {
 				document.write("двузначное число");
 			} else {
 				document.write("однозначное число");
@@ -178,7 +169,7 @@
 
 		//задаем пределы
 		var min4 = 1;
-		var max4 = 3;
+		var max4 = 4;
 
 		var randNum4 = Math.floor(Math.random() * (max4 - min4 + 1)) + min4;
 		var randNum5 = Math.floor(Math.random() * (max4 - min4 + 1)) + min4;
@@ -188,11 +179,7 @@
 		document.write("Второе число: ", randNum5, "<br>");
 		document.write("Третье число: ", randNum6, "<br>");
 
-		if ((randNum4 == randNum5)||(randNum4 == randNum6)) {
-			resultat = true;
-		} else if ((randNum5 == randNum4)||(randNum5 == randNum6)){
-			resultat = true;
-		} else if ((randNum6 == randNum4)||(randNum6 == randNum5)){
+		if ((randNum4 == randNum5)||(randNum5 == randNum6)||(randNum6 == randNum4)) {
 			resultat = true;
 		} else {
 			resultat = false;
