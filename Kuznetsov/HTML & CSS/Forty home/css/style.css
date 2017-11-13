@@ -1,11 +1,12 @@
 /*
 Common
+________________________________________________________________________________
 */
 
 * {
     box-sizing: border-box;
-    /*margin: 0;
-    padding: 0;*/
+    /*margin: 0;*/
+    padding: 0;
 }
 
 body {
@@ -41,6 +42,7 @@ h1 {
 
 /*
 Header
+________________________________________________________________________________
 */
 
 .header {
@@ -184,6 +186,7 @@ Header
 
 /*
 Banner
+________________________________________________________________________________
 */
 
 .bg-block.banner {
@@ -244,6 +247,7 @@ Banner
 
 /*
 Aliquam
+________________________________________________________________________________
 */
 
 .bg-block.aliquam {
@@ -251,9 +255,11 @@ Aliquam
 
 }
 
+
 .colored-block.bg-aqua {
     background: rgba(119, 188, 213, 0.9);
     padding: 25% 45% 0 13%;
+    transition: background 0.2s ease-in-out 0s;
 }
 
 .colored-block.bg-aqua:hover {
@@ -263,6 +269,7 @@ Aliquam
 
 /*
 Tempus
+________________________________________________________________________________
 */
 
 .bg-block.tempus {
@@ -273,6 +280,7 @@ Tempus
 .colored-block.bg-purple {
     background: rgba(124, 117, 178, 0.9);
     padding: 18% 63% 0 10%;
+    transition: background 1s ease-in-out 0s;
 }
 
 .colored-block.bg-purple:hover {
@@ -282,6 +290,7 @@ Tempus
 
 /*
 Magna
+________________________________________________________________________________
 */
 
 .bg-block.magna {
@@ -292,6 +301,7 @@ Magna
 .colored-block.bg-orange {
     background: rgba(228, 146, 137, 0.9);
     padding: 18% 63% 0 10%;
+    transition: background 1s ease-in-out 0s;
 }
 
 .colored-block.bg-orange:hover {
@@ -301,6 +311,7 @@ Magna
 
 /*
 Ipsum
+________________________________________________________________________________
 */
 
 .bg-block.ipsum {
@@ -310,6 +321,7 @@ Ipsum
 .colored-block.bg-yellow {
     background: rgba(208, 165, 127, 0.9);
     padding: 25% 55% 0 13%;
+    transition: background 1s ease-in-out 0s;
 }
 
 .colored-block.bg-yellow:hover {
@@ -319,6 +331,7 @@ Ipsum
 
 /*
 Consequat
+________________________________________________________________________________
 */
 
 .bg-block.consequat {
@@ -328,6 +341,7 @@ Consequat
 .colored-block.bg-blue {
     background: rgba(138, 159, 213, 0.9);
     padding: 25% 45% 0 13%;
+    transition: background 1s ease-in-out 0s;
 }
 
 .colored-block.bg-blue:hover {
@@ -337,6 +351,7 @@ Consequat
 
 /*
 Etiam
+________________________________________________________________________________
 */
 
 .bg-block.etiam {
@@ -346,6 +361,7 @@ Etiam
 .colored-block.bg-green {
     background: rgba(121, 175, 150, 0.9);
     padding: 18% 63% 0 10%;
+    transition: background 1s ease-in-out 0s;
 }
 
 .colored-block.bg-green:hover {
@@ -355,11 +371,12 @@ Etiam
 
 /*
 Massa Libero
+________________________________________________________________________________
 */
 
 .colored-block.dark {
     background: #2a2f4a;
-    padding: 50px 80px;
+    padding: 4% 6%;
 }
 
 .maslib h1 {
@@ -368,7 +385,7 @@ Massa Libero
 
 .maslib p {
     letter-spacing: 1px;
-    margin: 40px 0;
+    margin: 3.4% 0;
     line-height: 200%;
 }
 
@@ -388,11 +405,13 @@ Massa Libero
 
 /*
 Footer
+________________________________________________________________________________
 */
 
 .colored-block.form {
     height: 660px;
     border: 1px dotted rgba(212, 212, 255, 0.1);
+    overflow: visible;
 }
 
 .form .content p {
@@ -403,20 +422,20 @@ Footer
 
 .content.name {
 
-    padding: 50px 20px 0 60px;
-    margin-bottom: 30px;
+    padding: 13% 5% 0 15%;
+    margin-bottom: 8%;
 }
 
 .content.email {
 
-    padding: 50px 60px 0 20px;
-    margin-bottom: 30px;
+    padding: 13% 15% 0 5%;
+    margin-bottom: 8%;
 }
 
 .content.message {
 
-    padding: 0 50px 0 60px;
-    margin-bottom: 50px;
+    padding: 0 8% 0 8%;
+    margin-bottom: 6%;
 }
 
 textarea {
@@ -444,7 +463,6 @@ textarea {
 }
 
 .buttons [type="submit"] {
-    width: ;
     background: #fff;
     color: rgb(36, 41, 67);
     letter-spacing: 3px;
@@ -453,7 +471,6 @@ textarea {
 }
 
 .buttons [type="reset"] {
-    width: ;
     color: #fff;
     background-color: rgb(36, 41, 67);
     letter-spacing: 3px;
@@ -467,7 +484,7 @@ textarea {
 .cntct-ph,
 .cntct-ad {
     height: 220px;
-    padding: 30px 0 0 60px;
+    padding: 5% 0 0 11%;
     border: 1px dotted rgba(212, 212, 255, 0.1);
 }
 
@@ -485,7 +502,7 @@ textarea {
 }
 
 .cntct-em a {
-    margin-left: 60px;
+    margin-left: 12%;
     color: #fff;
     text-decoration: none;
 }
@@ -505,7 +522,7 @@ textarea {
 }
 
 .cntct-ph p {
-    margin-left: 60px;
+    margin-left: 12%;
 }
 
 .cntct-ad h3::before {
@@ -522,7 +539,7 @@ textarea {
 }
 
 .cntct-ad p {
-    margin-left: 60px;
+    margin-left: 12%;
 }
 
 .cntct h3 {
@@ -539,10 +556,11 @@ textarea {
 
 /*
 Bottom
+________________________________________________________________________________
 */
 
 .colored-block.bottom {
-    padding: 80px 0 0 60px;
+    padding: 5% 0 0 4.5%;
     height: 250px;
 }
 
@@ -568,7 +586,6 @@ Bottom
 }
 
 .bottom p {
-    padding-top: 50px;
     font-size: 13px;
     color: rgba(244, 244, 255, 0.2);
     letter-spacing: 1px;
@@ -587,6 +604,7 @@ Bottom
 
 /*
 Modal
+________________________________________________________________________________
 */
 
 .menu-container:target {
@@ -616,11 +634,25 @@ a.close:hover {
 }
 
 
+@media all and (max-width: 768px) {
+    
+}
+
+@media all and (max-width: 991px) {
+    
+}
+
+
+
+
+
 
 
 
 /*
-Отсюда начинаются стили для лендинга
+Landing-page
+________________________________________________________________________________
+________________________________________________________________________________
 */
 
 .bg-lighter {
