@@ -33,9 +33,9 @@
 
 		//находим минимальное значение с помощью условного оператора if
 		document.write("С помощью условного оператора if определено ");
-		if ((randNum1 <= randNum2) && (randNum1 <= randNum3)) {
+		if (randNum1 <= randNum2 && randNum1 <= randNum3) {
 			document.write("минимальное число: ", randNum1);
-		} else if ((randNum2 <= randNum1) && (randNum2 <= randNum3)) {
+		} else if (randNum2 <= randNum1 && randNum2 <= randNum3) {
 			document.write("минимальное число: ", randNum2);
 		} else {
 			document.write("минимальное число: ", randNum3);
@@ -179,7 +179,7 @@
 		document.write("Второе число: ", randNum5, "<br>");
 		document.write("Третье число: ", randNum6, "<br>");
 
-		if ((randNum4 == randNum5)||(randNum5 == randNum6)||(randNum6 == randNum4)) {
+		if (randNum4 == randNum5 || randNum5 == randNum6 || randNum6 == randNum4) {
 			resultat = true;
 		} else {
 			resultat = false;
