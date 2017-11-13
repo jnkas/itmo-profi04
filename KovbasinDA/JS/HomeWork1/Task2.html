@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS_HomeWork1_Task2</title>
+</head>
+<body>
+   <script>
+        var digitTest;
+        digitTest = +prompt("Введите число больше -1000 но меньше 1000:");
+        if ( digitTest > -1000 && digitTest <= -100 ) {
+            alert("Трехзначное отрицательное число.");
+        }
+        else if (digitTest > -100 && digitTest <= -10) {
+            alert("Двузначное отрицательное число.");
+        }
+        else if (digitTest > -10 && digitTest < 0) {
+            alert("Однозначное отрицательное число.");
+        }
+        else if (digitTest > 0 && digitTest < 10) {
+            alert("Однозначное положительное число.");
+        }
+        else if (digitTest >= 10 && digitTest < 100) {
+            alert("Двузначное положительное число.");
+        }
+        else if (digitTest >= 100 && digitTest < 1000) {
+            alert("Трехзначное положительное число.");
+        }
+        else if (digitTest === 0) {
+            alert("Ноль.");
+        }
+        else {
+            alert("Введенное число лежит вне диапазона!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS_HomeWork1_Task5</title>
+</head>
+<body>
+    <script>
+        var digit1;
+        var digit2;
+        var digit3;
+        alert("Проверим три чисела на совпадение.");
+        digit1 = prompt("Введите первое число");
+        if (/-?\d{1,}\.?\d{0,}/.test(digit1)) {
+            digit2 = prompt("Введите второе число");
+            if (/-?\d{1,}\.?\d{0,}/.test(digit2)) {
+                digit3 = prompt("Введите третье число");
+                if (/-?\d{1,}\.?\d{0,}/.test(digit3)) {
+                    alert((digit1 === digit2 || digit1 === digit3 || digit2 === digit3));
+                }
+                else {
+                    alert("Вы неверно ввели число!");
+                }
+            }
+            else {
+                alert("Вы неверно ввели число!");
+            }
+        }
+        else {
+            alert("Вы неверно ввели число!");
+        }
+    </script>
+</body>
+</html>

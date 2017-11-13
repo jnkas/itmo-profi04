@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS_HomeWork1_Task3</title>
+</head>
+<body>
+    <script>
+        var digitTest;
+        digitTest = prompt("Введите целое число от 0 до 9:");
+        if (/\d/.test(digitTest)) {
+            switch (+digitTest) {
+                case 0:
+                    alert("Ноль");
+                    break;
+                case 1:
+                    alert("Один");
+                    break;
+                case 2:
+                    alert("Два");
+                    break;
+                case 3:
+                    alert("Три");
+                    break;
+                case 4:
+                    alert("Четыре");
+                    break;
+                case 5:
+                    alert("Пять");
+                    break;
+                case 6:
+                    alert("Шесть");
+                    break;
+                case 7:
+                    alert("Семь");
+                    break;
+                case 8:
+                    alert("Восемь");
+                    break;
+                case 9:
+                    alert("Девять");
+                    break;
+                default:
+                    alert("Значение введено неверно!");
+            }
+        }
+        else {
+            alert("Вы неверно ввели значение!");
+        }
+    </script>
+</body>
+</html>
