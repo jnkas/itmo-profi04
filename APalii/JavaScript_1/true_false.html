@@ -9,8 +9,15 @@
 		var a = prompt("pls enter 1st digit");
 		var b = prompt("pls enter 2nd digit");
 		var c = prompt("pls enter 3st digit");
+		a = parseInt(a);
+		b = parseInt(b);
+		c = parseInt(c); 
+		if ( !isNaN(a) && !isNaN(b) && !isNaN(c) ){
 		alert ((a == b) || (a == c) || (b == c));
 		console.log ((a == b) || (a == c) || (b == c));
+		}else{
+			alert("pls enter digit values");
+			}			
 	</script>
 </body>
 </html>	
