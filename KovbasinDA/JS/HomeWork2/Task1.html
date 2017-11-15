@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork2_Task1</title>
+</head>
+<body>
+    <script>
+        var xValue, yValue;
+        xValue = +prompt("Введите x:");
+        yValue = +prompt("Введите y:");
+        alert("По условию в X должно быть меньшее значение а в Y большее.");
+
+        if (xValue < yValue) {
+            alert("X=" + xValue + " Y=" + yValue);
+        } else if (xValue === yValue) {
+            alert("Числа равны.");
+        } else {
+            var temp = xValue;
+            xValue = yValue;
+            yValue = temp;
+            alert("X=" + xValue + " Y=" + yValue);
+        }
+    </script>
+</body>
+</html>

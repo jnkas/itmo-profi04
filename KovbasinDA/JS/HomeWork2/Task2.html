@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork2_Task2_KovbasinD.A.</title>
+</head>
+<body>
+    <script>
+        var promptPoint1, promptPoint2, promptPoint3, arrPoint1, arrPoint2, arrPoint3, arrLenght = [];
+        var x12, y12, z12, x13, y13, z13, x23, y23, z23;
+
+        promptPoint1 = prompt("Введите через пробел координаты x,y,z 1 точки треугольника:");
+        promptPoint2 = prompt("Введите через пробел координаты x,y,z 2 точки треугольника:");
+        promptPoint3 = prompt("Введите через пробел координаты x,y,z 3 точки треугольника:");
+        
+        arrPoint1 = promptPoint1.split(" ", 3);
+        arrPoint2 = promptPoint2.split(" ", 3);
+        arrPoint3 = promptPoint3.split(" ", 3);
+
+        x12 = Math.pow((arrPoint1[0] - arrPoint2[0]), 2);
+        y12 = Math.pow((arrPoint1[1] - arrPoint2[1]), 2);
+        z12 = Math.pow((arrPoint1[2] - arrPoint2[2]), 2);
+        x13 = Math.pow((arrPoint1[0] - arrPoint3[0]), 2);
+        y13 = Math.pow((arrPoint1[1] - arrPoint3[1]), 2);
+        z13 = Math.pow((arrPoint1[2] - arrPoint3[2]), 2);
+        x23 = Math.pow((arrPoint2[0] - arrPoint3[0]), 2);
+        y23 = Math.pow((arrPoint2[1] - arrPoint3[1]), 2);
+        z23 = Math.pow((arrPoint2[2] - arrPoint3[2]), 2);
+
+        arrLenght[0] = x12 + y12 + z12;
+        arrLenght[1] = x13 + y13 + z13;
+        arrLenght[2] = x23 + y23 + z23;
+
+        function checkTriangle() {
+            return Math.max.apply(null, arrLenght) === arrLenght[0] + arrLenght[1] + arrLenght[2] - Math.max.apply(null, arrLenght);
+        }
+
+        if (checkTriangle()) {
+            alert("Треугольник является прямоугольным.");
+        } else {
+            alert("Треугольник не является прямоугольным!");
+        }
+
+
+
+    </script>
+</body>
+</html>
