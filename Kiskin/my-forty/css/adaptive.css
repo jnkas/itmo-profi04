@@ -1,0 +1,600 @@
+/*Мобильное вертикальное расположение*/
+
+@media all and (min-width: 320px) and (max-width: 460px) {
+    
+    /*Grid*/
+    
+    .row {
+    width: 100%;
+    margin: 0;
+    }
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12 {
+        float: left;
+        width: 100%;
+    }
+
+    .row:after {
+        content: "";
+        display:block;
+        height: 0;
+        clear: both;
+    }
+
+    #center-block {
+        margin-right: 15%;
+        width: auto;
+    }
+    
+    .right-container {
+        color: #4c5575;
+        background-color: #202845;
+        width: 100%;
+        font-size: 10px;
+        text-transform: uppercase;
+        padding: 5px 0 10px 4px;
+        margin: 0;
+    }
+ 
+    /*Style*/
+    
+    div h1 {
+        border-bottom: 1px solid white;
+        padding: 0 0 20px 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        width: 100%;
+    }
+    
+      div p {
+        font-size: 12px;
+        font-weight: lighter;
+        margin-top: 20px;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    
+    .button {
+        color: white;
+        width: 100px;
+        display: inline-block;
+        padding: 6px 0 5px 5px; 
+        text-decoration: none;
+        border: 1px solid white;
+        font-size: 10px;
+        margin-top: 0;
+        height: 25px;
+    }
+    
+    .coloured-block {
+        padding: 80px 0 80px 50px;
+        color: white;
+    }
+    
+    .form-block-1 {
+        height: 500px;
+        background: #202845;
+        border-bottom: 1px solid #4c5575;
+        padding: 35px 30px 0 0;
+        float: left;
+    }
+
+    .form-block-2 {
+        height: 140px;
+        background: #202845;
+        border-bottom: 1px solid #4c5575;
+        border-left: 1px solid #4c5575;
+        padding: 35px 100px 35px 50px;
+        color: white;
+    }
+
+    .form-block-3 {
+        height: 150px;
+        background: #202845;
+        border-bottom: 1px solid #4c5575;
+        border-left: 1px solid #4c5575;
+        padding: 35px 100px 35px 50px;
+        color: white;
+    }
+
+    .margin {
+        margin-top: 5px;
+    }
+
+    .name {
+        width: 77%;
+        height: 70px;
+        margin-top: 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .email {
+        width: 77%;
+        height: 70px;
+        margin-top: 10px;
+        margin-left: 50px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .massage {
+        width: 77%;
+        height: 180px;
+        margin-top: 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .submit {
+        width: 200px;
+    }
+
+    #name {
+        width: 100%;
+        height: 30px;
+        background: #49516f;
+        border: none;
+        display: inline-block;
+        text-decoration: none;
+        border-color: #9bf1ff;
+        color: white;
+        margin-top: 5px;
+    }
+
+    #email {
+        width: 100%;
+        height: 30px;
+        background: #49516f;
+        border: none;
+        display: inline-block;
+        text-decoration: none;
+        border-color: #9bf1ff;
+        color: white;
+        margin-top: 5px;
+    }
+
+    #massage {
+        width: 100%;
+        height: 170px;
+        background: #49516f;
+        border: none;
+        display: inline-block;
+        text-decoration: none;
+        border-color: #9bf1ff;
+        color: white;
+        padding-left: 7px;
+        padding-top: 7px;
+        margin-top: 5px;
+    }
+
+    #submit {
+        color: #202845;
+        background-color: white;
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+        text-transform: uppercase;
+        padding: 0;
+        float: left;
+        border: none;
+        border-radius: 0;
+    }
+
+    #clear {
+        color: white;
+        background-color: #202845;
+        width: 100px;
+        height: 30px;
+        margin-left: 5%;
+        font-size: 10px;
+        text-transform: uppercase;
+        padding: 0;
+        float: left;
+        border: 1px solid white;
+        border-radius: 0;
+    }
+}
+
+/*Горизоньальное мобильное*/
+
+@media all and (min-width: 461px) and (max-width: 700px) {
+    
+    /*Grid*/
+    
+    .row {
+        width: 100%;
+        margin: 0;
+        }
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12 {
+        float: left;
+        width: 100%;
+    }
+    
+    #col-adap-6 {
+        float: left;
+        width: 50%;
+    }
+
+    .row:after {
+        content: "";
+        display:block;
+        height: 0;
+        clear: both;
+    }
+
+    #center-block {
+        margin: 0;
+        max-width: none;
+        width: none;
+    }
+    
+    .right-container {
+        color: #4c5575;
+        background-color: #202845;
+        width: 100%;
+        font-size: 10px;
+        text-transform: uppercase;
+        padding: 5px 0 10px 4px;
+        margin: 0;
+    }
+ 
+    /*Style*/
+    
+    div h1 {
+        border-bottom: 1px solid white;
+        padding: 0 0 20px 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        width: 111%;
+    }
+    
+    div p {
+        font-size: 12px;
+        font-weight: lighter;
+        margin-top: 20px;
+        width: 111%;
+        padding-bottom: 10px;
+    }
+    
+    .button {
+        color: white;
+        width: 100px;
+        display: inline-block;
+        padding: 6px 0 5px 5px; 
+        text-decoration: none;
+        border: 1px solid white;
+        font-size: 10px;
+        margin-top: 0;
+        height: 25px;
+    }
+    
+    .coloured-block {
+        padding: 70px 0 80px 50px;           
+        color: white;
+    }
+    
+    .form-block-1 {
+        height: 500px;
+        background: #202845;
+        border-bottom: 1px solid #4c5575;
+        padding: 35px 50px 0 0;
+        float: left;
+    }
+
+    .form-block-2 {
+        height: 140px;
+        background: #202845;
+        border-bottom: 1px solid #4c5575;
+        border-left: 1px solid #4c5575;
+        padding: 35px 100px 35px 50px;
+        color: white;
+    }
+
+    .form-block-3 {
+        height: 150px;
+        background: #202845;
+        border-bottom: 1px solid #4c5575;
+        border-left: 1px solid #4c5575;
+        padding: 35px 100px 35px 50px;
+        color: white;
+    }
+
+    .margin {
+        margin-top: 5px;
+    }
+
+    .name {
+        width: 90%;
+        height: 70px;
+        margin-top: 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .email {
+        width: 90%;
+        height: 70px;
+        margin-top: 10px;
+        margin-left: 50px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .massage {
+        width: 90%;
+        height: 180px;
+        margin-top: 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .submit {
+        width: 200px;
+    }
+
+    #name {
+        width: 100%;
+        height: 30px;
+        background: #49516f;
+        border: none;
+        display: inline-block;
+        text-decoration: none;
+        border-color: #9bf1ff;
+        color: white;
+        margin-top: 5px;
+    }
+
+    #email {
+        width: 100%;
+        height: 30px;
+        background: #49516f;
+        border: none;
+        display: inline-block;
+        text-decoration: none;
+        border-color: #9bf1ff;
+        color: white;
+        margin-top: 5px;
+    }
+
+    #massage {
+        width: 100%;
+        height: 170px;
+        background: #49516f;
+        border: none;
+        display: inline-block;
+        text-decoration: none;
+        border-color: #9bf1ff;
+        color: white;
+        padding-left: 7px;
+        padding-top: 7px;
+        margin-top: 5px;
+    }
+
+    #submit {
+        color: #202845;
+        background-color: white;
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+        text-transform: uppercase;
+        padding: 0;
+        float: left;
+        border: none;
+        border-radius: 0;
+    }
+
+    #clear {
+        color: white;
+        background-color: #202845;
+        width: 100px;
+        height: 30px;
+        margin-left: 5%;
+        font-size: 10px;
+        text-transform: uppercase;
+        padding: 0;
+        float: left;
+        border: 1px solid white;
+        border-radius: 0;
+    }
+}
+
+/*Планшетное горизонтальное*/
+
+@media all and (min-width: 701px) and (max-width: 1200px) {
+    
+    /*Grid*/
+    
+    .row {
+        width: 100%;
+        margin: 0;
+    }
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12 {
+        float: left;
+    }
+
+    .col-1 {
+        width: 8.33%
+    }
+    .col-2 {
+        width: 16.66%
+    }
+    .col-3 {
+        width: 25%
+    }
+    .col-4 {
+        width: 33.33%
+    }
+    .col-5 {
+        width: 41.65%
+    }
+    .col-6 {
+        width: 50%
+    }
+    .col-7 {
+        width: 58.33%
+    }
+    .col-8 {
+        width: 66.64%
+    }
+    .col-9 {
+        width: 75%
+    }
+    .col-10 {
+        width: 83.30%
+    }
+    .col-11 {
+        width: 91.63%
+    }
+    .col-12 {
+        width: 100%
+    }
+
+    .row:after {
+        content: "";
+        display:block;
+        height: 0;
+        clear: both;
+    }
+    
+    /*Style*/
+    
+    .form-block-1 {
+        height: 440px;
+        background: #202845;
+        border-bottom: 1px solid #4c5575;
+        padding: 40px 50px 50px 50px;
+    }
+
+    .form-block-2 {
+        height: 140px;
+        background: #202845;
+        border-bottom: 1px solid #4c5575;
+        border-left: 1px solid #4c5575;
+        padding: 40px 100px 40px 50px;
+        color: white;
+    }
+
+    .form-block-3 {
+        height: 150px;
+        background: #202845;
+        border-bottom: 1px solid #4c5575;
+        border-left: 1px solid #4c5575;
+        padding: 35px 100px 35px 50px;
+        color: white;
+    }
+
+    .margin {
+        margin-top: 5px;
+    }
+
+    .name {
+        width: 83.5%;
+        height: 70px;
+        margin-left: 50px;
+        margin-top: 20px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .email {
+        width: 83.5%;
+        height: 70px;
+        margin-left: 40px;
+        margin-top: 20px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .massage {
+        width: 95%;
+        height: 180px;
+        margin-left: 50px;
+        margin-bottom: 40px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .submit {
+        margin-left: 50px;
+        width: 200px;
+    }
+
+    .clear {
+    }
+
+    #name {
+        width: 90%;
+        height: 30px;
+        background: #49516f;
+        border: none;
+        display: block;
+        text-decoration: none;
+        border-color: #9bf1ff;
+        color: white;
+        padding-left: 7px;
+        margin-top: 5px;
+    }
+
+    #email {
+        width: 90%;
+        height: 30px;
+        background: #49516f;
+        border: none;
+        display: block;
+        text-decoration: none;
+        border-color: #9bf1ff;
+        color: white;
+        padding-left: 7px;
+        margin-top: 5px;
+    }
+
+    #massage {
+        width: 90%;
+        height: 170px;
+        background: #49516f;
+        border: none;
+        display: block;
+        text-decoration: none;
+        border-color: #9bf1ff;
+        color: white;
+        padding-left: 7px;
+        padding-top: 7px;
+        margin-top: 5px;
+    }
+}
