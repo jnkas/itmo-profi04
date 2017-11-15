@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Таблица умножения</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var tableStart = "<table style=\"font-family:Arial\"><tr>";
+        
+        // Первый ряд, цифры от 1 до 10
+        var counter1 = 0;
+        var number1 = 1;
+        while (counter1 < 10) {
+            tableStart += "<td style=\"border:1px solid red; width: 40px; height: 40px; text-align:center;\">" + number1 + "</td>"
+            counter1 ++
+            number1 ++
+        }
+        tableStart += "</tr>";
+        
+        // Заполняем таблицу
+        var multiplier = 2;
+        while (multiplier < 11) {
+            tableStart += "<tr>";
+            var counter2 = 0;
+            var number2 = 1;
+            
+            // Заполняем строки
+            while (counter2 < 10) {
+                tableStart += "<td style=\"border:1px solid aqua; width: 40px; height: 40px; text-align:center;\">" + number2 * multiplier + "</td>";
+                counter2 ++;
+                number2 ++;
+            }
+            tableStart += "</tr>";
+        multiplier ++;
+        }
+        
+        // Закрываем таблицу
+        tableStart += "</table>";
+        document.write(tableStart);
+    </script>
+</body>
+</html>
