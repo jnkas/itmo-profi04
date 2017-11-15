@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание № 2</title>
+</head>
+<body>
+    <div style="margin: 100px; 
+               padding: 30px; 
+               background-color: green; 
+               border: 2px solid black;
+               text-align: center;
+               font-size: 20px;">
+        <script>
+            var someNumber = parseInt(prompt("Введите целое число в диапазоне от -999 до 999"));
+            
+            if (someNumber >= 100 && someNumber < 1000) {
+                document.write("Это трехзначное положительное число");
+                }
+            else if (someNumber >= 10 && someNumber < 100) {
+                document.write("Это двухзначное положительное число");
+            } 
+            else if (someNumber > 0 && someNumber < 10) {
+                document.write("Это однозначное положительное число");
+            }
+            else if (someNumber > -10 && someNumber < 0) {
+                document.write("Это однозначное отрицательное число");
+            } 
+            else if (someNumber > -100 && someNumber <= -10) {
+                document.write("Это двухзначное отрицательное число");
+            }
+            else if (someNumber > -1000 && someNumber <= -100) {
+                document.write("Это трехзначное отрицательное число");
+            } 
+            else if (someNumber === 0) {
+                document.write("Это ноль");
+            }
+            else {
+                alert("Мы так не договаривались!");
+            }
+            
+        </script>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание № 5</title>
+</head>
+<body>
+   <div style="margin: 100px;
+      padding: 30px;
+      background-color: green; 
+      border: 2px dotted black;
+      text-align: center;
+      font-size: 20px;">
+      
+      <script>
+          alert("Проверка трех целых чисел на наличие хотя бы одной пары совпадающих: \n" + "найдено совпадение - true \n" + "нет совпадений - false")
+          var a = + prompt("Введите первое число");
+          var b = + prompt("Введите второе число");
+          var c = + prompt("Введите третье число");
+                    
+              if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
+                    document.write(a === b || b === c || c === a);
+              } else {
+                    alert("Предполагалось, что в проверке задействованы только целые числа.")    
+              }
+      </script>
+       
+   </div>
+    
+</body>
+</html>
