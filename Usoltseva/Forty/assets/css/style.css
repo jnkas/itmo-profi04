@@ -1,0 +1,396 @@
+* {
+box-sizing:border-box;
+}
+
+body {
+    color: #fff;
+    background: #1e2138;
+    font-family: Arial;
+	10px;
+}
+span {
+	margin: 10px;
+}
+
+.colored-block {
+    padding: 50px 0 50px 50px;
+}
+
+.bg-aqua-pic {
+    background-image: url(../../images/pic01.jpg);
+    background-size: cover;
+}
+
+.bg-purple-pic {
+    background-image: url(../../images/pic02.jpg);
+    background-size: cover;
+}
+
+.bg-orange-pic {
+    background-image: url(../../images/pic03.jpg);
+    background-size:cover;
+}
+
+.bg-yellow-pic {
+    background-image: url(../../images/pic04.jpg);
+    background-size: cover;
+}
+
+.bg-amethyst-pic {
+    background-image: url(../../images/pic05.jpg);
+    background-size: cover;
+}
+
+.bg-emerald-pic {
+    background-image: url(../../images/pic06.jpg);
+    background-size: cover;
+}
+
+
+.bg-aqua {
+    background: rgba(90, 195, 230, 0.80);
+}
+.bg-purple {
+    background-color: rgba(156, 39, 176, 0.70);
+}
+.bg-orange {
+    background-color: rgba(244, 67, 54, 0.70);
+}
+.bg-yellow {
+    background-color: rgba(230, 126, 34, 0.70);
+}
+.bg-amethyst {
+    background-color: rgba(155, 89, 182, 0.70);
+}
+.bg-emerald {
+    background-color: rgba(46, 204, 113, 0.70);
+}
+.bg-darkgrey {
+    background-color: rgba(53, 57, 81, 0.70);
+}
+
+.bg-aqua:hover, .bg-purple:hover, .bg-orange:hover, .bg-yellow:hover, .bg-amethyst:hover, .bg-emerald:hover {
+    background: none;
+}
+
+h2 {
+    border-bottom: 1px solid white;
+    width: 200px;
+    max-width:80%;
+    overflow:hidden;
+}
+
+.header {
+    position: fixed;
+    padding: 20px;
+    width: 100%;
+    background: #1e2138;
+    margin: -10px;
+}
+.logo {
+   font-size: 18px;
+    text-transform:uppercase;
+    color: #fff;
+    width: 80%;
+    float: left;
+}
+
+.menu button {
+    background: #1e2138;
+    border: none;
+    float:right;
+}
+
+.menu button:hover {
+    cursor: pointer;
+}
+
+.menu button:focus {
+    outline:none;
+}
+
+.menu-bar{
+    display:block;
+    width:20px;
+    height:1.5px;
+    border-radius:2px;
+    background: white;
+    margin: 4px;
+}
+
+.bar-first {
+	margin: 0 4px;
+}
+.menu {
+    text-align: right;
+    padding:10px;
+    background: #1e2138;
+    float:left;
+    width: 20%; 
+	text-transform: uppercase;
+	margin: -5px;
+}
+
+.menu-container:target {
+    display:block;
+}
+
+.menu-container {
+    background: rgba(36, 41, 67, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+	
+    display: none; /*потом мы это уберем с ява-скриптом, либо можно сделать трюк с CSS*/
+    
+}
+
+.menu-container ul {
+    padding-left: 0;
+    
+    /*совокупность этих свойств позиционирует элемент четко посредине*/
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    /*конец совокупоности*/
+    
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    list-style-type: none;
+    
+}
+
+.menu-container a{
+    color: #fff;
+    width: 100%;
+    display: inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+
+a:hover {
+    background: white;
+	color: black;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+.start {
+	border: 1px solid white;
+	padding: 5px;
+	font-size: 11px;
+	margin-top: 20px;
+}
+
+
+.data-block {
+   
+    padding: 50px 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height:334.4px;
+}
+}
+
+
+.personal-block {
+    padding: 50px 0 50px 50px;
+    text-transform:uppercase;
+}
+
+
+
+
+
+
+
+
+
+.form {
+    margin:auto;
+    width: 90%;
+    padding: 10px 0;
+}
+
+input {
+	background: #1e283f;
+	border:none;
+}
+
+.input-name {
+    padding: 0.3em 0 0.3px 1.1em;
+    min-width:50%;
+    float:left;
+    
+}
+
+
+.input-email {
+    padding: 0.3em 0 0.3em 0;
+    min-width:50%;
+    float:left;
+    
+}
+
+
+.input-message {
+     padding: 0.3em 1em;
+}
+
+.input-message textarea {
+    height:10em;
+    min-width:87%;
+    width:21em;
+    border:none;
+	background: #1e283f;
+    font-size:12px;
+    color:white;
+    padding: 0.3em 0.5em;
+}
+
+
+.form p {
+    text-transform: uppercase;
+    font-size:12px;
+}
+
+.form-buttons {
+    padding: 10px 20px;
+}
+
+input[type=submit] {
+    background: white;
+    border:none;
+    padding:10px 10px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-size:11px;
+    letter-spacing: 2px;
+    transition:background 1s ease 0.2s;
+}
+
+input[type=submit]:hover{
+    background: #8af0f0;
+    cursor: pointer;
+}
+
+input[type=reset] {
+    background: #2a354e;
+    color:white;
+    border: 2px solid white;
+    padding:10px 10px;
+    text-transform: uppercase;
+    font-size:11px;
+    letter-spacing: 2px;
+    transition: color 1s ease 0.2s, border 1s ease 0.2s;
+}
+
+input[type=reset]:hover {
+    border: 2px solid #8af0f0;
+    cursor: pointer;
+    color: #8af0f0;
+}
+
+
+
+
+.data-block {
+    padding: 50px 30px;
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    height:334.4px;
+}
+
+
+
+
+
+
+.email-icon::before {
+    font-family: FontAwesome;
+    content: "\f0e0";
+    font-size:1.2em;
+    float:left;
+    color: #1e283f;
+    padding: 0 0 0.1em 0.3em;
+    
+}
+
+.phone-icon::before {
+    font-family: FontAwesome;
+    content: "\f095";
+    font-size:1.2em;
+    float:left;
+    color: #1e283f;
+    padding: 0 0 0.1em 0.4em;
+    
+}
+
+
+.address-icon::before {
+    font-family: FontAwesome;
+    content: "\f015";
+    font-size:1.2em;
+    float:left;
+    color: #1e283f;
+    padding: 0 0 0.1em 0.4em;
+       
+}
+
+.icon-bg {
+    background-color: white;
+    border-radius: 100%;
+    display:inline-block;
+    height:2.5em;
+    width:2.5em;
+    line-height:2.5em;
+    float:left;
+}
+
+
+
+
+
+.social {
+    display:flex;
+    justify-content: flex-start;
+}
+
+.social a {
+    color:#1e283f;
+    text-decoration: none;
+}
+
+ul.copyright {
+    padding-left: 0;
+}
+ul.copyright li {
+    list-style-type: none;
+    float: left;
+    font-size: 0.8em;
+    color: rgba(212, 212, 212, 0.5);
+    display:inline;
+    padding: 0 0.3em;
+    content: " | ";
+    color: rgba(212, 212, 212, 0.5);
+}
+
+ul.copyright li:last-child:after {
+    content: none;
+}

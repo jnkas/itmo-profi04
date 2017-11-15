@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2 - Describe -999-999 Number</title>
+</head>
+<body>
+    <script type="text/javascript">
+        number = parseInt(prompt("Введите целое число от -999 до 999"));
+        if (isNaN(number)) {
+            alert("Нужно ввести число");
+        }
+        else {
+            console.log("Вы ввели число", number);
+            // Проверка правильности числа из диапазона
+            if (number > 999 || number < -999) {
+                alert("Вы ввели число за пределами диапазона");
+            }
+            else {
+                // Проверка положительных чисел
+                if (number > 0) {
+                    if (number < 10) {
+                        alert((number)+" - положительное однозначное число");
+                    }
+                    else if (number < 100) {
+                        alert((number)+" - положительное двузначное число");
+                    }
+                    else {
+                        alert((number)+" - положительное трехзначное число");
+                    }
+                }
+                // Проверка отрицательных чисел
+                else if (number < 0) {
+                    if (number > - 10) {
+                        alert((number)+"- отрицательное однозначное число");
+                    }
+                    else if (number > - 100) {
+                        alert((number)+" - отрицательное двузначное число");
+                    }
+                    else {
+                        alert((number)+" - отрицательное трехзначное число");
+                    }
+                }
+               // Ноль
+                else {
+                    alert((number) + " - ноль")
+                }
+            }
+        }
+    </script>
+</body>
+</html>

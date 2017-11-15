@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+            var a =
+                parseInt(prompt("Задайте чило в диапозоне от -999 до 999:"));
+                
+                    if ((a>= -999) && (a<= -100))
+                            {
+                            alert("Вы ввели отрцательное трехзначное число");
+                            alert(a);
+                    }else if ((a>= -99) && (a<= -10))
+                            {
+                            alert("Вы ввели отрцательное двухзначное число");
+                            alert(a);
+                    }else if ((a>= -9) && (a<= -1))
+                            {
+                            alert("Вы ввели отрцательное однозначное число");
+                            alert(a);
+                    }else if (a === 0)
+                            {
+                            alert("Вы ввели ноль");
+                            alert(a);
+                    }else if ((a>=1) && (a<=9))
+                            {
+                            alert("Вы ввели однозначное положительное число");
+                            alert(a);
+                    }else if ((a>=10) && (a<= 99))
+                            {
+                            alert("Вы ввели двухзначное положительное число");
+                            alert(a);
+                    }else if ((a>=100) && (a<=999))
+                            {
+                            alert("Вы ввели трехзначное положительное число");
+                            alert(a);
+                    }else{
+                            alert("Вы ввели чиcло вне диапазона!");
+                            alert(a);
+                            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,680 @@
+/*
+Common
+________________________________________________________________________________
+*/
+
+* {
+    box-sizing: border-box;
+    /*margin: 0;*/
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+
+}
+
+h1 {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+    line-height: 200%;
+}
+
+.bg-block {
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+
+}
+
+.colored-block {
+    color: #fff;
+    height: 100%;
+    background-color: rgb(36, 41, 67);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+
+
+/*
+Header
+________________________________________________________________________________
+*/
+
+.header {
+    background: rgba(42, 47, 74, 0.7);
+    padding: 1.6%;
+    position: fixed;
+    width: 100%;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 4px;
+
+    /*    width: 60%;*/
+    /*    float: left;*/
+}
+
+.logo span {
+    color: rgba(42, 47, 74, 1);
+    background: #fff;
+    padding: 4px;
+}
+
+.menu {
+    /*    float: right;*/
+    /*    width: 20%;*/
+}
+
+.menu,
+.btn {
+    /*    text-align: right;*/
+}
+
+.menu .btn button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    vertical-align: middle;
+}
+
+.btn i {
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.menu-container {
+    background: rgba(36, 41, 67, 0.98);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    display: none;
+}
+
+.menu-container ul {
+    padding-left: 0;
+    /*padding-top: 100px;*/
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    list-style-type: none;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-container li > a {
+    color: #fff;
+    width: 100%;
+    display: inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 300%;
+}
+
+.menu-container li:nth-child(4) a {
+    border-bottom: none;
+}
+
+.menu-container li > button {
+    width: 100%;
+    margin: 10px 0;
+    height: 55px;
+}
+
+.menu-container li:nth-child(5) button {
+    background: #fff;
+    border: 2px solid #fff;
+}
+
+.menu-container li:nth-child(6) button {
+    background: rgba(36, 41, 67, 1);
+    border: 2px solid #fff;
+}
+
+.menu-container li:nth-child(5) a {
+    color: rgba(36, 41, 67, 1);
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.menu-container li:nth-child(6) a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+
+
+/*
+Banner
+________________________________________________________________________________
+*/
+
+.bg-block.banner {
+    background-image: url('../images/banner.jpg');
+    height: 85vh;
+}
+
+.colored-block.banner {
+    background-color: rgba(36, 41, 67, 0.8);
+    padding: 11% 0 4% 0;
+}
+
+/*
+.content {
+    margin: auto;
+}
+*/
+
+.content.banner {
+    margin: auto 5%;
+}
+
+.content.banner h1 {
+    font-size: 55px;
+    width: 100%;
+    min-width: 320px;
+}
+
+.content.banner p {
+    width: 40%;
+    min-width: 320px;
+    display: inline-block;
+    letter-spacing: 3px;
+    line-height: 150%;
+    font-size: 12px;
+    padding: 5px 10px 0 0;
+    margin: 0;
+}
+
+.content.banner a {
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 15px 30px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 100%;
+}
+
+.content.banner a > span {
+    font-size: 25px;
+    vertical-align: -15%;
+}
+
+
+/*
+Aliquam
+________________________________________________________________________________
+*/
+
+.bg-block.aliquam {
+    background-image: url('../images/pic01.jpg');
+
+}
+
+
+.colored-block.bg-aqua {
+    background: rgba(119, 188, 213, 0.9);
+    padding: 25% 45% 0 13%;
+    transition: background 0.2s ease-in-out 0s;
+}
+
+.colored-block.bg-aqua:hover {
+    background: rgba(119, 188, 213, 0.3);
+}
+
+
+/*
+Tempus
+________________________________________________________________________________
+*/
+
+.bg-block.tempus {
+    background-image: url('../images/pic02.jpg');
+
+}
+
+.colored-block.bg-purple {
+    background: rgba(124, 117, 178, 0.9);
+    padding: 18% 63% 0 10%;
+    transition: background 1s ease-in-out 0s;
+}
+
+.colored-block.bg-purple:hover {
+    background: rgba(124, 117, 178, 0.3);
+}
+
+
+/*
+Magna
+________________________________________________________________________________
+*/
+
+.bg-block.magna {
+    background-image: url('../images/pic03.jpg');
+
+}
+
+.colored-block.bg-orange {
+    background: rgba(228, 146, 137, 0.9);
+    padding: 18% 63% 0 10%;
+    transition: background 1s ease-in-out 0s;
+}
+
+.colored-block.bg-orange:hover {
+    background: rgba(228, 146, 137, 0.3);
+}
+
+
+/*
+Ipsum
+________________________________________________________________________________
+*/
+
+.bg-block.ipsum {
+    background-image: url('../images/pic04.jpg');
+}
+
+.colored-block.bg-yellow {
+    background: rgba(208, 165, 127, 0.9);
+    padding: 25% 55% 0 13%;
+    transition: background 1s ease-in-out 0s;
+}
+
+.colored-block.bg-yellow:hover {
+    background: rgba(208, 165, 127, 0.3);
+}
+
+
+/*
+Consequat
+________________________________________________________________________________
+*/
+
+.bg-block.consequat {
+    background-image: url('../images/pic05.jpg');
+}
+
+.colored-block.bg-blue {
+    background: rgba(138, 159, 213, 0.9);
+    padding: 25% 45% 0 13%;
+    transition: background 1s ease-in-out 0s;
+}
+
+.colored-block.bg-blue:hover {
+    background: rgba(138, 159, 213, 0.3);
+}
+
+
+/*
+Etiam
+________________________________________________________________________________
+*/
+
+.bg-block.etiam {
+    background-image: url('../images/pic06.jpg');
+}
+
+.colored-block.bg-green {
+    background: rgba(121, 175, 150, 0.9);
+    padding: 18% 63% 0 10%;
+    transition: background 1s ease-in-out 0s;
+}
+
+.colored-block.bg-green:hover {
+    background: rgba(121, 175, 150, 0.3);
+}
+
+
+/*
+Massa Libero
+________________________________________________________________________________
+*/
+
+.colored-block.dark {
+    background: #2a2f4a;
+    padding: 4% 6%;
+}
+
+.maslib h1 {
+    width: 20%;
+}
+
+.maslib p {
+    letter-spacing: 1px;
+    margin: 3.4% 0;
+    line-height: 200%;
+}
+
+.maslib a {
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 15px 20px;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.maslib a span {
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+/*
+Footer
+________________________________________________________________________________
+*/
+
+.colored-block.form {
+    height: 660px;
+    border: 1px dotted rgba(212, 212, 255, 0.1);
+    overflow: visible;
+}
+
+.form .content p {
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.content.name {
+
+    padding: 13% 5% 0 15%;
+    margin-bottom: 8%;
+}
+
+.content.email {
+
+    padding: 13% 15% 0 5%;
+    margin-bottom: 8%;
+}
+
+.content.message {
+
+    padding: 0 8% 0 8%;
+    margin-bottom: 6%;
+}
+
+textarea {
+    width: 100%;
+}
+
+input,
+textarea {
+    border: none;
+    background: rgba(212, 212, 255, 0.035);
+}
+
+.name input,
+.email input {
+    height: 50px;
+    width: 100%;
+}
+
+.buttons {
+    padding: 0 20px 20px 60px;
+}
+
+.buttons input {
+    font-weight: 700;
+}
+
+.buttons [type="submit"] {
+    background: #fff;
+    color: rgb(36, 41, 67);
+    letter-spacing: 3px;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.buttons [type="reset"] {
+    color: #fff;
+    background-color: rgb(36, 41, 67);
+    letter-spacing: 3px;
+    padding: 20px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+}
+
+
+.cntct-em,
+.cntct-ph,
+.cntct-ad {
+    height: 220px;
+    padding: 5% 0 0 11%;
+    border: 1px dotted rgba(212, 212, 255, 0.1);
+}
+
+.cntct-em h3::before {
+    font-family: FontAwesome;
+    content: "\f0e0";
+    background: #fff;
+    border-radius: 50%;
+    color: rgb(36, 41, 67);
+    display: inline-block;
+    padding: 10px;
+    width: 20px;
+    margin-right: 20px;
+
+}
+
+.cntct-em a {
+    margin-left: 12%;
+    color: #fff;
+    text-decoration: none;
+}
+
+.cntct-ph h3::before {
+    font-family: FontAwesome;
+    content: "\f095";
+    background: #fff;
+    border-radius: 50%;
+    color: rgb(36, 41, 67);
+    display: inline-block;
+    padding: 10px;
+    width: 20px;
+    margin-right: 20px;
+
+
+}
+
+.cntct-ph p {
+    margin-left: 12%;
+}
+
+.cntct-ad h3::before {
+    font-family: FontAwesome;
+    content: "\f015";
+    background: #fff;
+    border-radius: 50%;
+    color: rgb(36, 41, 67);
+    display: inline-block;
+    padding: 10px;
+    width: 20px;
+    margin-right: 20px;
+
+}
+
+.cntct-ad p {
+    margin-left: 12%;
+}
+
+.cntct h3 {
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.cntct a,
+.cntct p {
+    letter-spacing: 1px;
+    line-height: 150%;
+}
+
+
+/*
+Bottom
+________________________________________________________________________________
+*/
+
+.colored-block.bottom {
+    padding: 5% 0 0 4.5%;
+    height: 250px;
+}
+
+.bottom ul {
+    padding-left: 0;
+}
+
+.bottom li {
+    list-style: none;
+    display: inline-block;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    width: 40px;
+    padding: 10px 12px;
+    margin-right: 20px;
+}
+
+.bottom li i {
+    font-family: FontAwesome;
+    color: rgb(36, 41, 67);
+    font-size: 16px;
+}
+
+.bottom p {
+    font-size: 13px;
+    color: rgba(244, 244, 255, 0.2);
+    letter-spacing: 1px;
+}
+
+.bottom span {
+    margin: 0 7px;
+}
+
+.bottom a {
+    color: rgba(244, 244, 255, 0.2);
+}
+
+
+
+
+/*
+Modal
+________________________________________________________________________________
+*/
+
+.menu-container:target {
+    display: block;
+}
+
+a.close {
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+    line-height: 100%;
+    font-size: 20px;
+
+}
+
+a.close:hover {
+    font-weight: 800;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+@media all and (max-width: 768px) {
+    
+}
+
+@media all and (max-width: 991px) {
+    
+}
+
+
+
+
+
+
+
+
+/*
+Landing-page
+________________________________________________________________________________
+________________________________________________________________________________
+*/
+
+.bg-lighter {
+    background: #2e3450;
+}
+
+.bg-lightest {
+    background: #333856;
+}
+
+.pic08 {
+    background-image: url('../images/pic08.jpg');
+    height: inherit;
+}
+
+img {
+    width: 100%;
+    float: left;
+}
+
+.img-block {
+    margin: 0;
+    padding: 0;
+    height: 786px;
+}

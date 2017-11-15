@@ -1,23 +1,31 @@
 body{
 	font-family: arial;
+	width: 100vw!important;
+
 }
 
 a{
 	text-decoration: none;
+	color: #252a43;
 }
 
 /*  header*/
 .menu>button{
-	background-color: rgba(128, 128, 128, 0.19);
 	border:none;
 	color: #fff;
+	background: none;
+
+}
+
+.menu-container:target{
+	display: block;
+	pointer-events: auto;
 }
 
 .header{
 	position:fixed;
 	background: rgba(128, 128, 128, 0.19);;
 	padding: 20px;
-	position: fixed;
 	width: 100%;
 }
 
@@ -196,7 +204,7 @@ a{
 
 
 .top-text{
-	width: 500px;
+	max-width: 400px;
 	display: inline-block;
 	margin-top: 2%;
 }
@@ -207,13 +215,14 @@ a{
 	}
 
 .caption-middle{
-	width: 200px;
+	max-width: 300px;
 	margin-top: 100px;
 	border-bottom: 2px solid;
 	padding-bottom: 10px;
 
 }
 .get-started{
+	display: inline-block;
 	border: 1px solid white;
 	padding: 8px 8px 8px 8px;
 	text-decoration: none;
@@ -237,7 +246,8 @@ a{
 	border: 1px solid rgba(42,47,73,1);
 	background: rgba(36,41,67,1);
 	height: 230px;
-	padding: 50px 100px 50px 50px;
+	padding: 50px 100px 50px 25px;
+	color: rgb(37, 42, 67);
 }
 .mail{
 	width: 50px;
@@ -277,7 +287,9 @@ p{
 body > header:nth-child{
 	background-color: green;
 }
-
+.bg-darkSiren2{
+	float: left;
+}
 .bg-darkSiren2>u{
 	color: white;
 	font-family:albertus medium;
@@ -288,7 +300,6 @@ body > header:nth-child{
 	margin-left: 90px;
 	color: #fff;
 	font-family:albertus medium;
-	height: 200px;
 }
 .name{
 	height: 100px;
@@ -379,7 +390,6 @@ body > header:nth-child{
 }
 
 .bg-darkSiren3{
-	height: 200px;
 	background-color: rgb(36,41,67);
 }
 label{
@@ -410,3 +420,35 @@ label{
 .made li+li{
 	border-left: 1px solid #fff;
 }
+
+.flex-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+@media (min-width: 320px)
+and (max-width: 760px){
+
+.logo{
+	display: none;
+}
+
+*{
+	max-width: 760px;
+}
+
+.colored-block{
+	width: 100%;
+}
+}
+
+
+
+/*
+@media all and (max-width: 800px){
+.colored-block{
+	padding: 50px 0 50px 50px;
+	}
+}
+*/

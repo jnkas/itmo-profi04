@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Задание №1</title>
+    </head>
+    <body>
+    
+    <div style="margin: 100px;">
+          <script>
+
+              var x = parseFloat(prompt("Введите первое число"));
+              var y = parseFloat(prompt("Введите второе число"));
+              var z = parseFloat(prompt("Введите третье число"));
+      
+              
+              if ((x <= y && x < z) || (x <= z && x < y)) {
+                    document.write("Наименьшее число: " + x);
+              } else if ((y <= x && y < z) || (y <= z && y < x)) {
+                    document.write("Наименьшее число: " + y); 
+              } else if ((z <= x && z < y ) || (z <= y && z < x)) {
+                    document.write("Наименьшее число: " + z);
+              } else if (x == y && y == z)  {
+                    document.write("Вы издеваетесь? Зачем искать наименьшее среди равных чисел?"); 
+              } else if (isNaN(x) || isNaN(y) || isNaN(z)) {
+                  document.write("Ошибочка вышла! Нужно вводить именно числа, а не что попало. Будьте внимательнее при вводе данных.");
+              }
+              
+              document.write("<br>P.S. О, мой бедный мозг! Ты никогда уже не будешь прежним.");
+           </script> 
+    </div> 
+        
+    </body> 
+          
+</html>

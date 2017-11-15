@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1 - Choose Least</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Ввести 3 числа
+        number1 = parseInt(prompt("Введите число 1"));
+        number2 = parseInt(prompt("Введите число 2"));
+        number3 = parseInt(prompt("Введите число 3"));
+        
+        if (isNaN(number1) || isNaN(number2) || isNaN(number3)) {
+            alert("Нужно ввести числа");
+        }
+        
+        else {
+        
+            console.log("Вы ввели числа: ", number1, number2, number3);
+
+            // Выбрать из чисел наименьшее
+            if ((number1 < number2) && (number1 < number3)) {
+                prompt("Наименьшее число: ", number1);
+                console.log("Наименьшее число: ", number1);
+                }
+             else if ((number2 < number1) && (number2 < number3)) {
+                prompt("Наименьшее число: ", number2);
+                console.log("Наименьшее число: ", number2);
+                }
+            else {
+                alert("Наименьшее число: "+(number3));
+                console.log("Наименьшее число: ", number3);
+            }
+        }
+           
+    </script>
+</body>
+</html>

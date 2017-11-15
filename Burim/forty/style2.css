@@ -3,16 +3,12 @@
     background: #34495e;
     color: white;
     min-height: 300px;
-/*    Добавил по вопросу 3*/
 }
-.bg-picture{
-    background: url('../28/pic01.jpg');
-    background-size: cover;
-    background-position: center;
-    }
-/*После изменения в html по hover меняется цвет*/
-.bg-aqua:hover{
-    color: aquamarine;
+
+.bg-aqua {
+background-color: aquamarine;
+background: url(pic01.jpg);
+    
 }
 .bg-purple{ 
     background-color: #9b59b6;
@@ -119,4 +115,10 @@ h2 {
     text-underline-position: right;
     padding-bottom: 25px;
     border-bottom: 1px solid white;
+}
+@media all and (max-width: 800px){
+    .colored-block {
+    background: red;
+    color: #000;
+}
 }

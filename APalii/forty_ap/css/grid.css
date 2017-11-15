@@ -1,0 +1,175 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+}
+.row {
+	width: 100%;
+	claer:both;
+}
+.row: after {
+content: "";
+display: block;
+height: 0;
+clear: both;
+}
+.row: before {
+content: "&#169;";
+}
+
+
+
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+	float: left;
+}
+
+
+.col-1 {
+	width: 8.33%;
+}
+.col-2 {
+	width: 16.66%;
+}
+.col-3 {
+	width: 25%;
+}
+.col-4 {
+	width: 33.33%;
+}
+.col-5 {
+	width: 41.66%;
+}
+.col-6 {
+	width: 50%;
+}
+.col-7 {
+	width: 58.33%;
+}
+.col-8 {
+	width: 66.66%;
+}
+.col-9 {
+	width: 75%;
+}
+.col-10 {
+	width: 83.33%;
+}
+.col-11 {
+	width: 91.66%;
+}
+.col-12 {
+	width: 100%;
+}
+.container {
+	width: 1170px;
+	margin: auto;
+}
+
+/*.color-block {
+	padding: 50px  0 50px 50px;
+	background: #322048;
+	color: #fff;
+}
+
+.color-block {
+	padding: 50px 0 50px 50px;
+	background: #124;
+}
+*/
+
+
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+.tablet-col-1, .tablet-col-2, .tablet-col-3, .tablet-col-4, .tablet-col-5, .tablet-col-6, .tablet-col-7, .tablet-col-8, .tablet-col-9, .tablet-col-10, .tablet-col-11, .tablet-col-12 {
+	float: left;
+}
+.tablet-col-1 {
+	width: 8.33%;
+}
+.tablet-col-2 {
+	width: 16.66%;
+}
+.tablet-col-3 {
+	width: 25%;
+}
+.tablet-col-4 {
+	width: 33.33%;
+}
+.tablet-col-5 {
+	width: 41.66%;
+}
+.tablet-col-6 {
+	width: 50%;
+}
+.tablet-col-7 {
+	width: 58.33%;
+}
+.tablet-col-8 {
+	width: 66.66%;
+}
+.tablet-col-9 {
+	width: 75%;
+}
+.tablet-col-10 {
+	width: 83.33%;
+}
+.tablet-col-11 {
+	width: 91.66%;
+}
+.tablet-col-12 {
+	width: 100%;
+}
+}
+
+
+
+
+
+@media all and (min-width: 320px) and (max-width: 767px) {
+
+.mobile-col-1, .mobile-col-2, .mobile-col-3, .mobile-col-4, .mobile-col-5, .mobile-col-6, .mobile-col-7, .mobile-col-8, .mobile-col-9, .mobile-col-10, .mobile-col-11, .mobile-col-12 {
+	float: left;
+}
+
+.mobile-col-1 {
+	width: 8.33%;
+}
+.mobile-col-2 {
+	width: 16.66%;
+}
+.mobile-col-3 {
+	width: 25%;
+}	
+.mobile-col-4 {
+	width: 33.33%;
+}
+.mobile-col-5 {
+	width: 41.66%;
+}
+.mobile-col-6 {
+	width: 50%;
+}
+.mobile-col-7 {
+	width: 58.33%;
+}
+.mobile-col-8 {
+	width: 66.66%;
+}
+.mobile-col-9 {
+	width: 75%;
+}
+.mobile-col-10 {
+	width: 83.33%;
+}
+.mobile-col-11 {
+	width: 91.66%;
+}
+.mobile-col-12 {
+	width: 100%;
+}
+}
+
+
+

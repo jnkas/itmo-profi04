@@ -6,17 +6,18 @@
 	<link rel="stylesheet" href="grid.css">
 	<link rel="stylesheet" href="style2.css">
 	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<div class="header">
-	<div class="logo">
+<div class="header flex-container">
+	<div class="logo flex-block">
 		<span>forty</span> By html5 up
 	</div>
-	<div class="menu">
-	<button><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
+	<div class="menu flex-block">
+	<button><a href="#openModal"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a></button>
 </div>
-	<div class="menu-container">
+	<div id="openModal" class="menu-container">
 		<ul>
 			<li><a href="">home</a></li>
 			<li><a href="">Link</a></li>
@@ -162,10 +163,13 @@
 	<div class="bg-darkSiren2 col-5">
 		<span class="fa fa-envelope fa-2x mail" aria-hidden="true"></span>
 	<h2>Email</h2><u>information@mail.ru</u></div>
+
+	
 	<div class="bg-darkSiren2 col-5">
 		<span class="fa fa-phone fa-2x mail" aria-hidden="true"></span>
-	<h2>Phone</h2><p>+1 305-985-7900
-</p></div>
+	<h2>Phone</h2><p>+1 305-985-7900</p></div>
+
+
 	<div class="bg-darkSiren2 col-5"><span class="fa fa-home fa-2x mail" aria-hidden="true"></span>
 	<h2>Address</h2><p>1450 Brickell Ave Ste 900 
 Miami FL 33131
@@ -173,7 +177,7 @@ United States</p></div>
 
 <div class="row">
 	<div class="col-12">
-		<div class="colored-block bg-darkSiren3 social">
+		<div class="colored-block bg-darkSiren3 social ">
 			<i class="fa fa-twitter" aria-hidden="true"></i>
 			<i class="fa fa-facebook" aria-hidden="true"></i>
 			<i class="fa fa-instagram" aria-hidden="true"></i>

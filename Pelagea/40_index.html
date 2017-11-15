@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <meta name="viewport" content="width-device=width, initial-scale=1.0">
+
 </head>
 <body>
    <section class="header">
@@ -29,13 +31,13 @@
               <div class="block bg-darkblue"> 
                     <h1>Hi, my name is Forty</h1>
                     <p>A responsive site template designed by html5 up<br> and released under the creative commons.</p>
-                    <div class="col-2"><a href="#" class="button">Get started<span>&#8594;</span></a></div>
+                    <a href="#" class="button get-started">Get started<span>&#8594;</span></a>
                 </div>
                 </div>
               </div>  
         </div>
         <div class="row">
-        <div class="col-5">
+        <div class="col-5 mobile-col-4">
            <div class="aliquam-pict">
                <div class="block colored-block bg-aliquam">
             <h2>Aliquam</h2>
@@ -43,7 +45,7 @@
                 </div>
             </div>    
         </div>
-        <div class="col-7">
+        <div class="col-7 mobile-col-8">
            <div class="tempus-pict">
                 <div class="block colored-block bg-tempus">
                     <h2>Tempus</h2>
@@ -53,7 +55,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-7">
+        <div class="col-7 mobile-col-8">
           <div class="magna-pict">
            <div class="block colored-block bg-magna"> 
             <h2>Magna</h2>
@@ -61,7 +63,7 @@
             </div>
             </div>
         </div>
-        <div class="col-5">
+        <div class="col-5 mobile-col-4">
           <div class="ipsum-pict">
             <div class="block colored-block bg-ipsum">
                 <h2>Ipsum</h2>
@@ -71,7 +73,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-5">
+        <div class="col-5 mobile-col-4">
            <div class="consequat-pict">
                 <div class="block colored-block bg-consequat">
                 <h2>Consequat</h2>
@@ -79,7 +81,7 @@
                 </div>
             </div>
         </div>
-            <div class="col-7">
+            <div class="col-7 mobile-col-8">
                <div class="etiam-pict">
                     <div class="block colored-block bg-etiam">
                         <h2>Etiam</h2>
@@ -94,13 +96,12 @@
             <div class="block bg-smokyblue">
                 <h2>Massa libero</h2>
                 <p class="no-upper">Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-                <div class="col-2"><a href="#" class="button">Get started<span>&#8594;</span></a></div>
+                <a href="#" class="button get-started">Get started<span>&#8594;</span></a></div>
             </div>
-          </div>
         </div>
         
         <div class="row">
-            <div class="col-7">
+            <div class="col-7 mobile-col-8">
                <div class="block">
                    <form action="#" method="post">
                        <div class="field-top">
@@ -113,20 +114,20 @@
                        </div>
                        <div class="field-message">
                         <label for="message">Message</label>
-                         <textarea name="message" id="message" rows="8"></textarea>  
+                         <textarea name="message" id="message" rows="9"></textarea>  
                        </div>
                        <ul class="actions">
                           <li>
                            <input type="submit" value="send message">
                            </li>
                        <li>
-                           <input type="reset" value="clear">
+                           <input type="reset" class="button" value="clear">
                        </li>
                        </ul>
                    </form>
                </div>
             </div>
-            <div class="col-5">
+            <div class="col-5 mobile-col-4">
                 <div class="block">
                     <section class="feedback">
                         <div class="contacts">
@@ -154,18 +155,27 @@
         </div>
         
     <div class="row">
-            <div class="col-12">
+        <div class="col-12">
             <footer class="block">
-             <ul class="social">
-                 <li></li>
-                 <li></li>
-                 <li></li>
-                 <li></li>
-                 <li></li>
-             </ul>
-             social pict, copyright   
+                <div class="footer-top">
+                     <ul class="social">
+                     <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                     </ul>
+                 </div>
+             
+             <div class="footer-bottom">
+                <ul class="copyright">
+                <li>© Untitled</li>
+                <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+                <li>Demo Images: <a href="https://unsplash.com">Unsplash</a></li>
+                </ul>
+             </div>
             </footer>
-            </div>
+        </div>
     </div>
     
 </body>

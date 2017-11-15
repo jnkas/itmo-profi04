@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3 - Describe 0-9 Number</title>
+</head>
+<body>
+    <script type="text/javascript">
+        number = parseInt(prompt("Введите целое число от 0 до 9"));
+        console.log("Вы ввели число", number);
+        // Проверка на число
+        if (isNaN(number)){
+             alert("Нужно ввести число");
+        }
+        else {
+            // Проверка правильности числа из диапазона
+            if (number < 0 || number > 9) {
+                alert("Вы ввели число за пределами диапазона");
+            }
+            else {
+                // Вывод описания числа
+                if (number == 0) {
+                    alert((number)+" - ноль");
+                }
+                 else if (number == 1) {
+                    alert((number)+" - один");
+                }
+                 else if (number == 2) {
+                    alert((number)+" - два");
+                }
+                 else if (number == 3) {
+                    alert((number)+" - три");
+                }
+                 else if (number == 4) {
+                    alert((number)+" - четыре");
+                }
+                 else if (number == 5) {
+                    alert((number)+" - пять");
+                }
+                 else if (number == 6) {
+                    alert((number)+" - шесть");
+                }
+                 else if (number == 7) {
+                    alert((number)+" - семь");
+                }
+                 else if (number == 8) {
+                    alert((number)+" - восемь");
+                }
+                else {
+                    alert((number)+" - девять");
+                }
+            }
+        }
+       
+    </script>
+</body>
+</html>

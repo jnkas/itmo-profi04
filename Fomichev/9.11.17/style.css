@@ -1,0 +1,84 @@
+body{
+	background: grey;
+}
+.cub{
+	background: gold;
+	width: 200px;
+	height: 200px;
+	margin: 100px;
+	/*transition: background,transform 4s linear 0s;*/
+	animation: myFirstExample 1s ease 0s;
+/*	animation-iteration-count: infinite; */
+}
+
+p{
+	margin: 30px;
+	padding-top: 60px;
+	transition: transform 4s linear 0s;
+}
+
+.cub:hover{
+	transform:rotate(45deg);
+	transition: all 4s cubic-bezier(0, 1.54, 0.95, -0.78) 0s;
+	background: rgba(220, 165, 29, 0.89);
+
+}
+
+
+.cub:hover >p{
+	padding-top: 45px;
+	font-size: 20px;
+	transform: rotate(-45deg);
+	transition: all 4s linear 0s;
+	}
+
+input:focus{
+	box-shadow: 10px 10px 10px black;
+	padding-top: 45px;
+	font-size: 20px;
+}
+@keyframes myFirstExample{
+	0%{
+		width: 100px;
+		height: 100px;
+}
+
+	100%{
+		width: 400px;
+		height: 400px;
+	}
+}
+
+.clock{
+	width: 300px;
+	height: 300px;
+	background: #fff;
+	border-radius: 50%;
+	border: 1px solid black;
+	position: relative;
+
+}
+.arrow{
+	position: absolute;
+	width: 50%;
+	height: 5px;
+	background: black;
+	top: 50%;
+	left: 50%;
+	animation: moveArrow 60s linear 0s;
+	transform-origin: 0;
+/*	animation-iteration-count: infinite;
+*/	transform-origin: 0 0 2.5px;
+}
+/*.clock:hover >.arrow{
+	transform: rotate(90deg);
+	transform-origin: 0;
+	animation-iteration-count: infinite;
+	transition: all 15s linear 0s;
+}*/
+@keyframes moveArrow {
+	from{
+	transform: rotate(270deg);}
+	to{
+		transform: rotate(630deg);
+	}}

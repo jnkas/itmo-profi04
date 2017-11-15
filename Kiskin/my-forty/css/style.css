@@ -1,0 +1,439 @@
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/pt-sans-v9-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('PT Sans'), local('PTSans-Regular'),
+       url('../fonts/pt-sans-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/pt-sans-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/pt-sans-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/pt-sans-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/pt-sans-v9-latin-regular.svg#PTSans') format('svg'); /* Legacy iOS */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: PT Sans;
+}
+
+.column {
+    background: green;
+    width: 33.33%;
+    border: 1px solid;
+    float: left;
+}
+
+.col {
+    width: 280px;
+    word-wrap: break-word;
+}
+
+/*Стили тэгов*/
+
+div h1 {
+    border-bottom: 1px solid white;
+    padding: 0 0 20px 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 95%;
+}
+
+div h3 {
+    font-weight: normal;
+    border-bottom: 1px solid white;
+    padding: 0 0 10px 0;
+    width: 20vw;
+    margin-bottom: 5px;
+    text-transform: none;
+}
+
+div h4 {
+    font-weight: normal;
+    padding: 0 0 10px 0;
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+div h5 {
+    font-size: 10px;
+    font-weight: lighter;
+    margin: 20px 40px 20px 0;
+    padding-right: 10px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+div h6 {
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+div h7 {
+    font-size: 8px;
+    font-weight: lighter;
+    margin: 0;
+    width: 100%;
+}
+
+div h8 {
+    font-size: 17px;
+    font-weight: 800;
+}
+
+div p {
+    font-size: 12px;
+    font-weight: lighter;
+    margin-top: 20px;
+}
+
+div a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/*Стили элементов*/
+
+.info {
+    font-size: 90%;
+    font-weight: lighter;
+    line-height: 140%;
+}
+
+.one {
+    clear: left;
+}
+
+div i {
+    margin-left: 5px;
+}
+
+.i {
+    font-size: 15px;
+    background-color: #ffffff;
+    border-radius: 100%;
+    color: #242943;
+    display: inline-block;
+    text-align: center;
+    height: 2em;
+    line-height: 2em;
+    width: 2em;
+}
+
+.fa-envelope {
+    content: "\f0e0";
+    margin:  0;
+}
+
+.fa-phone {
+    content: "\f095";
+    margin: 0;   
+}
+
+.fa-home {
+    content: "\f015";
+    margin: 0;
+}
+
+/*Оформление блоков*/
+
+.coloured-block {
+    padding: 100px 0 100px 50px;
+    color: white;
+}
+
+.coloured-block-contacts {
+    padding: 50px 0 50px 50px;
+    color: white;
+}
+
+.foto-1 {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+}
+
+.foto-2 {
+    background-image: url(../images/pic01.jpg);
+    background-size: cover;
+}
+
+.foto-3 {
+    background-image: url(../images/pic02.jpg);
+    background-size: cover;
+}
+
+.foto-4 {
+    background-image: url(../images/pic03.jpg);
+    background-size: cover;
+}
+
+.foto-5 {
+    background-image: url(../images/pic04.jpg);
+    background-size: cover;
+}
+
+.foto-6 {
+    background-image: url(../images/pic05.jpg);
+    background-size: cover;
+}
+
+.foto-7 {
+    background-image: url(../images/pic06.jpg);
+    background-size: cover;
+}
+
+.bg-0 {
+    background-color: rgba(32, 40, 69, 0.9);  
+}
+
+.bg-1 {
+    background: rgba(122, 192, 216, 0.9);
+}
+
+.bg-2 {
+    background: rgba(126, 119, 180, 0.9);
+}
+
+.bg-3 {
+    background: rgba(215, 134, 126, 0.9);
+}
+
+.bg-4 {
+    background: rgba(215, 172, 133, 0.9);
+}
+
+.bg-5 {
+    background: rgba(126, 151, 206, 0.9);
+}
+
+.bg-6 {
+    background: rgba(121, 175, 150, 0.9);
+}
+
+.bg-7 {
+    background: #1f3a57  
+}
+
+.bg-8 {
+    background: #202845;
+}
+
+.border-1 {
+    border-bottom: 1px solid white;
+}
+
+/*Наплыв*/
+
+.bg-1:hover {
+    background-color: transparent;
+    transition: 1.2s linear;
+}
+
+.bg-2:hover {
+    background-color: transparent;
+    transition: 1.2s linear;
+}
+
+.bg-3:hover {
+    background-color: transparent;
+    transition: 1.2s linear;
+}
+
+.bg-4:hover {
+    background-color: transparent;
+    transition: 1.2s linear;
+}
+
+.bg-5:hover {
+    background-color: transparent;
+    transition: 1.2s linear;
+}
+
+.bg-6:hover {
+    background-color: transparent;
+    transition: 1.2s linear;
+}
+
+/*Стиль кнопок*/
+
+div button {
+    color: #fff;
+    text-decoration: none;
+    user-select: none;
+    background: none;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    padding: 3px 0 0 0;
+}
+
+.button {
+    color: white;
+    width: 100px;
+    display: inline-block;
+    padding: 6px 0 5px 5px; 
+    text-decoration: none;
+    border: 1px solid white;
+    font-size: 10px;
+    margin-top: 18px;
+    height: 25px;
+}
+
+button:hover {
+    color: aqua;
+}
+
+.button:hover {
+    color: aqua;
+    border: 1px solid aqua;
+}
+
+/*Стили формы*/
+
+.form-block-1 {
+    height: 440px;
+    background: #202845;
+    border-bottom: 1px solid #4c5575;
+    padding: 40px 50px 50px 50px;
+}
+
+.form-block-2 {
+    height: 140px;
+    background: #202845;
+    border-bottom: 1px solid #4c5575;
+    border-left: 1px solid #4c5575;
+    padding: 40px 100px 40px 50px;
+    color: white;
+}
+
+.form-block-3 {
+    height: 150px;
+    background: #202845;
+    border-bottom: 1px solid #4c5575;
+    border-left: 1px solid #4c5575;
+    padding: 35px 100px 35px 50px;
+    color: white;
+}
+
+.margin {
+    margin-top: 5px;
+}
+
+.name {
+    width: 100%;
+    height: 70px;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.email {
+    width: 100%;
+    height: 70px;
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.massage {
+    width: 102.7%;
+    height: 180px;
+    margin-left: 50px;
+    margin-bottom: 40px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.submit {
+    margin-left: 50px;
+    width: 200px;
+}
+
+.clear {
+}
+
+#name {
+    width: 90%;
+    height: 30px;
+    background: #49516f;
+    border: none;
+    display: block;
+    text-decoration: none;
+    border-color: #9bf1ff;
+    color: white;
+    padding-left: 7px;
+    margin-top: 5px;
+}
+
+#email {
+    width: 90%;
+    height: 30px;
+    background: #49516f;
+    border: none;
+    display: block;
+    text-decoration: none;
+    border-color: #9bf1ff;
+    color: white;
+    padding-left: 7px;
+    margin-top: 5px;
+}
+
+#massage {
+    width: 90%;
+    height: 170px;
+    background: #49516f;
+    border: none;
+    display: block;
+    text-decoration: none;
+    border-color: #9bf1ff;
+    color: white;
+    padding-left: 7px;
+    padding-top: 7px;
+    margin-top: 5px;
+}
+
+#submit {
+    color: #202845;
+    background-color: white;
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 0;
+    float: left;
+    border: none;
+    border-radius: 0;
+}
+
+#clear {
+    color: white;
+    background-color: #202845;
+    width: 100px;
+    height: 30px;
+    margin-left: 5%;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 0;
+    float: left;
+    border: 1px solid white;
+    border-radius: 0;
+}
+
+#submit:hover {
+    color: #202845;
+    background-color: aqua;
+}
+
+#clear:hover {
+    color: aqua;
+    border: 1px solid aqua;
+}

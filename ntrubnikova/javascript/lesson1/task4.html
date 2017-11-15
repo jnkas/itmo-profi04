@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4 - Marks</title>
+</head>
+<body>
+    
+<script type="text/javascript">
+        number = parseInt(prompt("Введите целое число от 1 до 5"));
+        console.log("Вы ввели число", number);
+        // Проверка на число
+        if (isNaN(number)){
+             alert("Нужно ввести число");
+        }
+        else {
+            
+                // Проверка правильности числа из диапазона
+                if (number < 1 || number > 5) {
+                    alert("Вы ввели число за пределами диапазона");
+                }
+                else {
+                    // Вывод описания числа
+                    if (number == 1) {
+                        alert((number)+" - плохо");
+                    }
+                     else if (number == 2) {
+                        alert((number)+" - неудовлетворительно");
+                    }
+                     else if (number == 3) {
+                        alert((number)+" - удовлетворительно");
+                    }
+                     else if (number == 4) {
+                        alert((number)+" - хорошо");
+                    }
+                     else {
+                        alert((number)+" - отлично");
+                    }
+
+                }
+        
+            }
+        
+    </script>
+</body>
+</html>

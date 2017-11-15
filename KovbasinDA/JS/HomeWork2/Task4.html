@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork2_Task4_KovbasinD.A.</title>
+</head>
+<body>
+    <script>
+        var promptLength, promptUnits;
+        promptLength = +prompt("Введите длинну отрезка:");
+        promptUnits = +prompt("Введите единицы измерения отрезка(1 — дециметр, 2 — километр, \n" +
+            "3 — метр, 4 — миллиметр, 5 — сантиметр):");
+
+        switch (promptUnits) {
+            case 1:
+                promptLength = promptLength/10;
+                alert(promptLength);
+                break;
+            case 2:
+                promptLength = promptLength*1000;
+                alert(promptLength);
+                break;
+            case 3:
+                alert(promptLength);
+                break;
+            case 4:
+                promptLength = promptLength/1000;
+                alert(promptLength);
+                break;
+            case 5:
+                promptLength = promptLength/100;
+                alert(promptLength);
+                break;
+            default:
+                alert("Неверно выбранны единицы измерения!")
+        }
+    </script>
+</body>
+</html>
