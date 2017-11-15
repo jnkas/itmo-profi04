@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork2_Task5_KovbasinD.A.</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script>
+    var promptMultRow, prompMultCol, stringResult, rowTabl, colTabl, startRow, endRow, startCol, endCol;
+    stringResult = "";  //Переменная для конечного результата.
+    startRow = "<tr>";  //запишем начало и конец тегов в переменные, для удобства.
+    endRow = "</tr>";
+    startCol = "<td>";
+    endCol = "</td>";
+    rowTabl = 1;
+    colTabl = 1;
+
+    alert("Выведем таблицу умножения согласно строкам и столбцам.");
+    promptMultRow = +prompt("Введите количество строк:");
+    prompMultCol = +prompt("Введите количество столбцов:");
+
+    //Создаем начало таблицы и верхную шапку.
+    stringResult += "<table>" + startRow + startCol + endCol;
+        while (colTabl <= prompMultCol) {
+        stringResult += "<td class='infoBlockTabl'>Mножитель:" + colTabl + endCol;
+        colTabl++;
+    }
+    stringResult += endRow;
+
+    //Создание самой таблицы.
+    while (rowTabl <= promptMultRow) {
+        colTabl = 1;
+        stringResult += startRow + "<td class='infoBlockTabl'>Mножитель:" + rowTabl + endCol; // Добавляем левую шапку.
+        while (colTabl <= prompMultCol) {
+            stringResult += startCol + rowTabl*colTabl + endCol;
+            colTabl++;
+        }
+        stringResult += endRow;
+        rowTabl++;
+    }
+
+    stringResult += "</table>";
+    document.write(stringResult);
+</script>
+</body>
+</html>

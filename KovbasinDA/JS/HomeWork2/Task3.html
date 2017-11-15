@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork2_Task3_KovbasinD.A.</title>
+</head>
+<body>
+    <script>
+        var promptMonth;
+        promptMonth = +prompt("Введите номер месяца(от 1 до 12):");
+
+        switch (promptMonth) {
+            case 12:
+            case 1:
+            case 2:
+                alert("Сезон - зима.");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                alert("Сезон - весна.");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                alert("Сезон - лето.");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                alert("Сезон - осень.");
+                break;
+            default:
+                alert("Значение введено неверно!");
+        }
+    </script>
+</body>
+</html>
