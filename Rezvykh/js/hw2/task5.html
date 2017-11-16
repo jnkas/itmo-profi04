@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Вывести используя (document.write) таблицу умножения чисел до 10.</p>
+	<script>
+		var table = "<table>";
+		var y = 1;
+		var x = 1;
+		while (y <= 10) {
+			table = table + "<tr>"; 
+			while (x <= 10) {
+				table = table + "<td>" + y*x + "</td>";
+				x++;
+			}
+			table = table + "</tr>"; 
+			y++;
+			x = 1;
+		}
+		table += "</table>";
+		document.write(table);
+	</script>
+</body>
+</html>
