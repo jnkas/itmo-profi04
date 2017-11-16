@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Перераспределить значения переменных X и Y так, чтобы в X оказалось меньшее из этих значений, а в Y — большее. </p>
+	<script type="text/javascript">
+		var x, y;
+		var X = prompt("Введите значение X");
+		X = parseInt(X);
+		var Y = prompt("Введите значение Y");
+		Y = parseInt(Y);
+		//проверка, что у нас есть 2 числа
+		if (Number.isInteger(X) == true && Number.isInteger(Y) == true) {
+			if (X > Y) {
+				x = X;
+				y = Y;
+
+				X = y;
+				Y = x;
+				document.write("поменяли занчение переменных: X = ", X ,"; Y = ", Y );
+
+			} else {
+				document.write("значения переменных остались неизменными");
+			}
+		} else {
+			alert("ошибка ввода");
+		}
+	</script>
+</body>
+</html>
