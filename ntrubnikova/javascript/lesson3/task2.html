@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Удвоить символ в строке</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var string = prompt("Введите строку");
+        var symbol = prompt("Укажите символ, который нужно найти и удвоить в строке, с учетом регистра");
+        
+        var rep = new RegExp(symbol,'g'); //Регистр учитывается
+        var doublesymbol = symbol + symbol;
+        if (string.match(symbol) != null){
+            var newstring = string.replace(rep,doublesymbol);
+            alert(newstring);
+        }
+        else {
+            alert("Символ в строке не найден");
+        }
+    </script>
+</body>
+</html>

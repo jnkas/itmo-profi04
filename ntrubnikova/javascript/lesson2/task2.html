@@ -7,9 +7,9 @@
 <body>
     <script type="text/javascript">
         //Координаты сторон треугольника
-        var point1 = [10,10];
-        var point2 = [20,45];
-        var point3 = [15,25];
+        var point1 = [0,0];
+        var point2 = [0,10];
+        var point3 = [10,10];
         var result
         
         //Длина первой стороны
@@ -28,18 +28,19 @@
         
         //Является ли треугольник прямоугольным, опеределяем гипотенузу
         if (length1 > length2 && length1 > length3) {
-            var result = ((Math.pow(length2),2) + Math.pow(length3, 2) == Math.pow(length1, 2)) ? "Треугольник является прямоугольным" : "Треугольник не является прямоугольным";
+            var result = (Math.round(Math.pow(length2,2)) + Math.round(Math.pow(length3, 2)) == Math.round(Math.pow(length1, 2))) ? "Треугольник является прямоугольным" : "Треугольник не является прямоугольным";
         }
+        
         else if (length2 > length1 && length2 > length3) {
-            var result = ((Math.pow(length1),2) + Math.pow(length3, 2) == Math.pow(length2, 2)) ? "Треугольник является прямоугольным" : "Треугольник не является прямоугольным";
+            var result = Math.round((Math.pow(length1,2)) + Math.round(Math.pow(length3, 2)) == Math.round(Math.pow(length2, 2))) ? "Треугольник является прямоугольным" : "Треугольник не является прямоугольным";
         }
         
         else if (length3 > length1 && length3 > length2) {
-            var result = ((Math.pow(length1),2) + Math.pow(length2, 2) == Math.pow(length3, 2)) ? "Треугольник является прямоугольным" : "Треугольник не является прямоугольным";
+            var result = Math.round((Math.pow(length1,2)) + Math.round(Math.pow(length2, 2)) == Math.round(Math.pow(length3, 2))) ? "Треугольник является прямоугольным" : "Треугольник не является прямоугольным";
         }
         
         else {
-            console.log("Здесь я не знаю, что проверять, скорее всего будет какая-то ошибка");
+            console.log("Ошибка");
         }
         
         alert(result);
