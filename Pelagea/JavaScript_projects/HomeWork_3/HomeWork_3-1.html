@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа №3. Задание 1</title>
+</head>
+<body>
+    <script>
+        var str = prompt("Введите любое целое число");
+        var result = str.match(/\d/g);
+        console.log(result); // на всякий случай проверяю
+        var sum = 0;
+        for (i=0; i < result.length; i++) {
+        sum = sum + +result[i];}
+        console.log('Сумма цифр данного числа: ' +sum);
+    </script>
+</body>
+</html>
