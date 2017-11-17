@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork3_Task1_KovbasinD.A.</title>
+</head>
+<body>
+    <script>
+        var promptValue, arrValue = [], result = 0;
+        promptValue = prompt("Введите целое число:");
+
+        if (/\D/.test(promptValue)) {
+            alert("Неверный ввод строки!");
+        } else {
+            arrValue = promptValue.match(/\d/g);
+            for (i = 0; i < arrValue.length; i++)
+            {
+                result += parseInt(arrValue[i]);
+            }
+            /*var result = arrValue.reduce(function (sum, current) {
+                return sum + parseInt(current);
+            });*/
+            alert("Сумма всех чисел:" + result);
+        }
+    </script>
+</body>
+</html>
