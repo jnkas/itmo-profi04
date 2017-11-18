@@ -7,7 +7,7 @@
 <body>
     <script type="text/javascript">
         var password = prompt("Введите пароль");
-        if (password.length < 8 || password.match(/\d{2,}/g) == null || password.match(/[a-z]/g) == null || password.match(/[A-Z]/g) == null || password.match(/[\!\$\#\%]/g) == null) {
+        if (password.length < 8 || password.match(/\d+.?\d+/g) == null || password.match(/[a-z]/g) == null || password.match(/[A-Z]/g) == null || password.match(/[\!\$\#\%]/g) == null) {
             alert("Пароль должен быть не менее 9 символов и содержать: \n - не менее 2х цифр \n - латинские буквы верхнего и нижнего регистра \n - символы !, $, #, %");
         }
         else {
