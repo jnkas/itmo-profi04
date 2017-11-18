@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа №3. Задание 3</title>
+</head>
+<body>
+   <script>
+       var password = prompt("Введите пароль, отвечающий следующим условиям: \n" +"длина от 9 символов \n" + "буквы лат. алфавита верхнего и нижнего регистра \n" + "более двух цифр\n" + "обязательно наличие одного из неалфавитных символов");
+       var digitsCheck = /\d.*\d.*\d/;
+       var special = /[^\d\sA-Z]/gi;
+       var lettersSmall = /[a-z]*/;
+       var lettersCapital = /[A-Z]*/;
+       
+       if ((password.length >= 9) && (password.search(digitsCheck) != -1) && (password.search(special) != -1) && (password.search(lettersSmall) != -1)) {
+           alert("Пароль соответствует требованиям");
+       } else {
+           alert("Пароль не отвечает условиям")
+       }
+    </script>
+    
+</body>
+</html>
