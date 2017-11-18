@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа № 2. Задание 1</title>
+</head>
+<body>
+    <script>
+    alert("Значения переменных X и Y надо перераспределить: \n в X - меньшее, в Y - большее.");
+        var x = parseFloat(prompt("Введите значение переменной X"));
+        var y = parseFloat(prompt("Введите значение переменной Y"));
+        switch(x === y){
+            case true:
+                document.write("Значения X и Y равны.");
+                break;
+            case false:
+                if (x < y) {
+                    document.write("X = " + x + " Y = " + y);
+                } else if (x > y) {
+                    var trick = x;
+                    x = y;
+                    y = trick;
+                    document.write("X = " + x + " Y = " + y);
+                }
+        }
+    </script>    
+</body>
+</html>
