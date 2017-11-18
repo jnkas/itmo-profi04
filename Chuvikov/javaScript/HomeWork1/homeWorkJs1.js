@@ -1,24 +1,25 @@
 //numeroUno
-/*
-var x = prompt ("Please enter X:");
+
+/*var x = prompt ("Please enter X:");
 var y = prompt ("Please enter Y:");
 var z = prompt ("Please enter Z:");
-if (x<y && x<z) 
+if (+(x)<+(y) && +(x)<+(z)) 
     alert(x+" is minimum");
-else if (y<x && y<z)
+else if (+(y)<+(x) && +(y)<+(z))
     alert (y+" is minimum");
-else if (z<x && z<y)
+else if (+(z)<+(x) && +(z)<+(y))
     alert (z+" is minimum");
-else if (x==y && y==z)
+else if (+(x)===+(y) && +(y)===+(z))
     alert("Kommunizm");
 else
     alert("Mistake detected!")
-    */
+*/
 
 //numeroDuo
 /*
 var x = prompt ("Please enter X (between at -999 to 999):");
-if (x==0) 
+x===+(x);
+if (x===0) 
     alert("This null");
 else if (x>0 && x<10)
     alert ("Положительное однозначное число");
@@ -104,13 +105,13 @@ switch(x){
 */
 
 //numeroLast
-
+/*
 var x=6;
 var y=97;
 var z=6;
-if (x==y || x==z || y==z) 
+if (x===y || x===z || y===z) 
     document.write(true);
 else
     document.write(false); 
-
+*/
 //честно говоря последнее задание не очень хорошо понял, это может быть причиной неверного его решения 
