@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Дана строка, изображающая целое число. Вывести сумму цифр этого числа. </p>
+	<script>
+		var int = prompt("Введите целое число");
+		var res = 0;
+		var arrInt = int.split('');
+
+		arrInt.forEach(function(item) {
+			res += parseInt(item);
+		});
+		alert("сумма цифр числа: " + res);
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Зима, Весна, Лето, Осень</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var month = parseInt(prompt("Введите порядковый номер месяца: \n 1 - январь \n 2 - февраль \n 3 - март \n 4 - апрель \n 5 - май \n 6 - июнь \n 7 - июль \n 8 - август \n 9 - сентябрь \n 10 - октябрь \n 11 - ноябрь \n 12 - декабрь"));
+        if (month < 1 || month > 12 || isNaN(month)) {
+            alert("Вы ввели некорректный номер месяца");
+        }
+        else {
+            switch(month) {
+                case 12:
+                case 1:
+                case 2:
+                    alert("Зима");
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    alert("Весна");
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    alert("Лето");
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    alert("Осень");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

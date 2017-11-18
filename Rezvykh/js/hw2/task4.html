@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>4. Единицы длины пронумерованы следующим образом:</p>
+	<ul>
+		<li>1 — дециметр,</li>
+		<li>2 — километр,</li>
+		<li>3 — метр,</li>
+		<li>4 — миллиметр,</li>
+		<li>5 — сантиметр.</li>
+	</ul> 
+	<p>Дан номер единицы длины и длина отрезка L в этих единицах (вещественное число). Вывести длину данного отрезка в метрах.</p>
+	<script>
+		var length = prompt("введите единицу длины и ее значение через запятую, например \"1, 10\"");
+		console.log(length);
+
+		var arrLength = length.split(',');
+		console.log(arrLength);
+
+		if (arrLength[0] == 1) {
+			res = 0.1 * arrLength[1]
+			alert(res + "м.")
+		} else if (arrLength[0] == 2) {
+			res = 1000 * arrLength[1]
+			alert(res + "м.")
+		} else if (arrLength[0] == 3) {
+			res = 1 * arrLength[1]
+			alert(res + "м.")
+		} else if (arrLength[0] == 4) {
+			res = 0.001 * arrLength[1]
+			alert(res + "м.")
+		} else if (arrLength[0] == 5) {
+			res = 0.01 * arrLength[1]
+			alert(res + "м.")
+		} else {
+			alert("неверно введены данные")
+		}
+	</script>
+	
+</body>
+</html>

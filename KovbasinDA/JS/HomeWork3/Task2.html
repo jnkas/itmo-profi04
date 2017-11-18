@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork3_Task2_KovbasinD.A.</title>
+</head>
+<body>
+    <script>
+        var promptString, symbolForChang, symbolChang;
+        promptString = prompt("Введите строку:");
+        symbolForChang = prompt("Введите что мы ищем в строке:");
+        symbolChang = prompt("Введите на что мы меняем:");
+        var regexp = new RegExp(symbolForChang, "g");
+        promptString = promptString.replace(regexp, symbolChang);
+        alert("Ваша строка:" + promptString);
+    </script>
+</body>
+</html>

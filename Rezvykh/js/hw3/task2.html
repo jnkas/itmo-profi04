@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Дана строка S и символ C. Удвоить каждое вхождение символа C в строку S.</p>
+	<script>
+		var newS = "";
+		var S = prompt("Введите строку");
+		var C = prompt("Введи символ");
+		var arrS = S.split('');
+
+		arrS.forEach(function(item) {
+			if (item == C) {
+				newS += item + C;
+			} else {
+				newS += item;
+			}
+		});
+		alert("новая строка: " + newS);
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Прямоугольный треугольник</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //Координаты сторон треугольника
+        var point1 = [0,0];
+        var point2 = [0,10];
+        var point3 = [10,10];
+        var result
+        
+        //Длина первой стороны
+        var length1 = Math.sqrt(Math.pow(Math.abs(point1[0] - point2[0]), 2) + Math.pow(Math.abs(point1[1] - point2[1]),2));
+        
+        //Длина второй стороны
+        var length2 = Math.sqrt(Math.pow(Math.abs(point2[0] - point3[0]), 2) + Math.pow(Math.abs(point2[1] - point3[1]),2));
+        
+        //Длина третьей стороны
+        var length3 = Math.sqrt(Math.pow(Math.abs(point1[0] - point3[0]), 2) + Math.pow(Math.abs(point1[1] - point3[1]),2));
+        
+        //Длина трех сторон
+        console.log(length1);
+        console.log(length2);
+        console.log(length3);
+        
+        //Является ли треугольник прямоугольным, опеределяем гипотенузу
+        if (length1 > length2 && length1 > length3) {
+            var result = (Math.round(Math.pow(length2,2)) + Math.round(Math.pow(length3, 2)) == Math.round(Math.pow(length1, 2))) ? "Треугольник является прямоугольным" : "Треугольник не является прямоугольным";
+        }
+        
+        else if (length2 > length1 && length2 > length3) {
+            var result = Math.round((Math.pow(length1,2)) + Math.round(Math.pow(length3, 2)) == Math.round(Math.pow(length2, 2))) ? "Треугольник является прямоугольным" : "Треугольник не является прямоугольным";
+        }
+        
+        else if (length3 > length1 && length3 > length2) {
+            var result = Math.round((Math.pow(length1,2)) + Math.round(Math.pow(length2, 2)) == Math.round(Math.pow(length3, 2))) ? "Треугольник является прямоугольным" : "Треугольник не является прямоугольным";
+        }
+        
+        else {
+            console.log("Ошибка");
+        }
+        
+        alert(result);
+    </script>
+</body>
+</html>

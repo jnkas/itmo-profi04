@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>X and Y</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var x = parseFloat(prompt("Введите число 1"));
+        var y = parseFloat(prompt("Введите число 2"));
+        if (isNaN(x) || isNaN(y)) {
+            alert ("Вы ввели некорректные значения");
+        }
+        else {
+            console.log("x = ",(x));
+            console.log("y = ",(y));
+            if (x > y) {
+                x = x + y;
+                y = x - y;
+                x = x - y;
+            };
+            console.log("теперь x = ",x);
+            console.log("теперь y = ",y);
+        }
+    </script>
+</body>
+</html>

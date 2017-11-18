@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Домашняя работа № 2. Задание 3</title>
+        </head>
+    <body>
+        <div style="margin: 100px;
+                   font-style: italic;
+                   font-size: 20px;">
+            <script>
+                var monthSeason = parseInt(prompt("Каждому месяцу присвоен порядковый номер от 1 до 12:\n" + "1 - Январь, 2 - Февраль и т.д.\n" + "Проверим соответствие этих номеров временам года.\n" + "Введите положительное целое число от 1 до 12." ));
+                switch(monthSeason) {
+                    
+                    case 12:
+                    case 1:
+                    case 2:    
+                        document.write("Зима!.. Крестьянин, торжествуя, На дровнях обновляет путь;");
+                        break;
+                    case 3:
+                    case 4:
+                    case 5:
+                        document.write("Весна, весна на улице, Весенние деньки! Как птицы, заливаются Трамвайные звонки.");
+                        break;
+                    case 6:
+                    case 7:
+                    case 8:    
+                        document.write("Лето! Я изжарен, как котлета. Время есть, а денег нету, Но мне на это наплевать.");
+                        break;
+                    case 9:
+                    case 10:
+                    case 11:    
+                        document.write("Осень, ты напомнила душе о самом главном. Осень, я опять лишен покоя.");
+                        break;
+                    
+                    default:
+                        alert("Кажется, что-то пошло не так.");
+                }
+            </script> 
+        </div>
+    </body> 
+</html>

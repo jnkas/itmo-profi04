@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Домашняя  работа № 2. Задание 4</title>
+        </head>
+    <body>    
+        <div style="margin: 100px;
+                    font-size: 20px;">     
+            <script>
+                var ourLength = parseFloat(prompt("Введите длину отрезка"));
+                var metricUnit = +prompt("Введите номер единицы измерения — число от 1 до 5:\n" + " 1 — дециметр,\n 2 — километр,\n 3 — метр,\n 4 — миллиметр,\n 5 — сантиметр.");
+                switch(metricUnit) {
+                case 1:
+                    document.write("Длина отрезка составляет " + (ourLength*0.1) + " м");
+                    break;
+                case 2:
+                    document.write("Длина отрезка составляет " + (ourLength*1000) + " м");
+                    break;
+                case 3: 
+                    document.write("Длина отрезка составляет " + ourLength + " м");
+                    break;
+                case 4:
+                    document.write("Длина отрезка составляет " + (ourLength*0.001) + " м");
+                    break;
+                case 5:
+                    document.write("Длина отрезка составляет " + (ourLength*0.01) + " м");
+                    break;
+                default: 
+                    document.write("Похоже, где-то ошибка. Перезагрузите страницу и введите данные снова.");
+            }    
+            </script>
+        </div>
+      </body> 
+      
+</html>

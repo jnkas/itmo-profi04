@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meter</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var measurement = parseInt(prompt("Выберите единицу длины: \n 1 - дециметр \n 2 - километр \n 3 - метр \n 4 - миллиметр \n 5 - сантиметр"));
+        var result;
+        if (isNaN(measurement) || measurement < 0 || measurement > 5) {
+            alert("Вы ввели некорректную единицу длины");
+        }
+        else {
+            var length = parseFloat(prompt("Укажите длину"));
+            if (isNaN(length) || length <= 0) {
+                alert("Вы ввели некорректную длину");
+                }
+            else {
+                switch(measurement) {
+                    case 1:
+                        result = length * 0.1;
+                        break;
+                    case 2:
+                        result = length / 1000;
+                        break;
+                    case 3:
+                        result = length;
+                        break;
+                    case 4:
+                        result = length * 0.001;
+                        break;
+                    case 5:
+                        result = length * 0.01;
+                        break;
+                };
+                alert("Длина отрезка: "+result+" метров");
+            }
+        };
+    </script>
+</body>
+</html>

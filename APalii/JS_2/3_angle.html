@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// Enter coordinates for  ABC points
+		var point_a = (prompt("Enter coordinates point A in following format X,Y,Z ")).split(",");
+		var point_b = (prompt("Enter coordinates point B in following format X,Y,Z ")).split(",");
+		var point_c = (prompt("Enter coordinates point C in following format X,Y,Z ")).split(",");
+		
+		for (i=0 ; i<3; i++) {
+			point_a[i]=parseInt(point_a[i]); //determine var as Integer
+			point_b[i]=parseInt(point_b[i]); //determine var as Integer
+			point_c[i]=parseInt(point_c[i]); //determine var as Integer
+		}
+		console.log (point_a[0]);
+		 
+		
+		/*var ax = parseFloat(prompt("Enter coordinates point for AX "));
+		var ay = parseFloat(prompt("Enter coordinates point for AY "));
+		var az = parseFloat(prompt("Enter coordinates point for AZ "));
+		var bx = parseFloat(prompt("Enter coordinates point for BX "));
+		var by = parseFloat(prompt("Enter coordinates point for BY "));
+		var bz = parseFloat(prompt("Enter coordinates point for BZ "));
+		var cx = parseFloat(prompt("Enter coordinates point for CX "));
+		var cy = parseFloat(prompt("Enter coordinates point for CY "));
+		var cz = parseFloat(prompt("Enter coordinates point for CZ ")); */
+		
+		var gip   // gipotenuza?
+		var pif   // sum of squares of the legs 
+		
+		//Create string array 
+		//	var point = Array(2 => point_ax);
+		//console.log (point_a.split(","));
+		console.log (point_a);
+		//var arr_a = point_a(',');
+		//var arr_b = point_b(',');
+		//var arr_c = point_c(',');
+		
+		
+		
+		// Length calculation
+		var ab_length = Math.sqrt(Math.pow((point_b[0]-point_a[0]),2) + Math.pow((point_b[1]-point_a[1]),2) + Math.pow((point_b[2]-point_a[2]),2));
+			console.log (ab_length);
+		var bc_length = Math.sqrt(Math.pow((point_c[0]-point_b[0]),2) + Math.pow((point_c[1]-point_b[1]),2) + Math.pow((point_c[2]-point_b[2]),2));
+			console.log (bc_length);
+		var ca_length = Math.sqrt(Math.pow((point_a[0]-point_c[0]),2) + Math.pow((point_a[1]-point_c[1]),2) + Math.pow((point_a[2]-point_c[2]),2));
+			console.log (ca_length);
+		
+		// Length calculation
+		//var ab_length = Math.sqrt(Math.pow((bx-ax),2) + Math.pow((by-ay),2) + Math.pow((bz-az),2));
+			//console.log (ab_length);
+		//var bc_length = Math.sqrt(Math.pow((cx-bx),2) + Math.pow((cy-by),2) + Math.pow((cz-bz),2));
+			//console.log (bc_length);
+		//var ca_length = Math.sqrt(Math.pow((ax-cx),2) + Math.pow((ay-cy),2) + Math.pow((az-cz),2));
+			//console.log (ca_length);
+		
+		
+		
+		// Looking for lonegest side
+
+		
+		if ((ab_length >= bc_length) && (ab_length >= ca_length) )  {
+			var pif = Math.sqrt(Math.pow(bc_length,2)+Math.pow(ca_length,2)); 			
+			gip = ab_length;
+			alert  ("ab_length is longest one")
+		}
+		if ((ab_length <= bc_length) && (bc_length >= ca_length)) {
+			var pif = Math.sqrt(Math.pow(ab_length,2)+Math.pow(ca_length,2)); 
+			gip = bc_length;
+			alert ("bc_length is longest one")
+		}
+		if ((ab_length <= ca_length) && (bc_length <= ca_length)) {
+			var pif = Math.sqrt(Math.pow(ab_length,2)+Math.pow(bc_length,2)); 
+			gip = ca_length;
+			alert ("ca_length is longest one");
+		}   		
+		else{
+			alert(" not possibile");
+		}			
+			alert ("Longest side = "+gip+" ");
+		
+		if (pif == gip) {
+			alert ("Right triangle");
+		}
+		else {
+			alert ("Regular triangle");
+		}
+		
+		
+		
+		
+		
+	
+				
+	</script>
+</body>
+</html>

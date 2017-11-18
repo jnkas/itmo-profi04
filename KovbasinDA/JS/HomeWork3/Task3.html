@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork3_Task3_KovbasinD.A.</title>
+</head>
+<body>
+    <script>
+        var promptString;
+
+        while (logicTestPass() !== 0) {
+            promptString = prompt("Введите пароль:");
+
+            /*Проверка на отмену ввода пароля*/
+            if (promptString === null) {
+                break;
+            }
+
+            /*Вывод определенного сообщения согласно результату проверки logicTestPass()*/
+            switch (logicTestPass()) {
+                case 1:
+                    alert("Вы ввели меньше 9 символов. Попробуйте снова.");
+                    break;
+                case 2:
+                    alert("Вы не ввели латинские буквы верхнего регистра. Попробуйте снова.");
+                    break;
+                case 3:
+                    alert("Вы не ввели латинские буквы нижнего регистра. Попробуйте снова.");
+                    break;
+                case 4:
+                    alert("Пароль не содержит один из символов: !, $, #, %. Попробуйте снова.");
+                    break;
+                case 5:
+                    alert("Пароль содержит меньше 2 цифр, попробуйте снова.");
+                    break;
+                case 0:
+                    alert("Пароль удовлетворяет заданным требованиям!");
+            }
+        }
+
+        /*Функция проверки выполнения заданных условий ввода*/
+        function logicTestPass() {
+            if (/.{9,}/.test(promptString) !== true) {
+                return 1;
+            }
+            if (/[A-Z]/.test(promptString) !== true) {
+                return 2;
+            }
+            if (/[a-z]/.test(promptString) !== true) {
+                return 3;
+            }
+            if (/[!$#%]/.test(promptString) !== true) {
+                return 4;
+            }
+            if (testPromptDigit()) {
+                return 5;
+            } else {
+                return 0;
+            }
+
+        }
+
+        /*Функция проверки на наличие в строке цифр, если больше 2 вернем false*/
+        function testPromptDigit() {
+            if (/\d/.test(promptString)) {
+                var arrDig = promptString.match(/\d/g);
+                return (arrDig.length <= 2);
+            } else {
+                return true;
+            }
+        }
+
+
+    </script>
+</body>
+</html>

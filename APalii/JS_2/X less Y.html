@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var x = prompt("pls enter X value");
+		var y = prompt("pls enter Y value");
+		var z
+		x = parseInt(x);
+		y = parseInt(y);
+		if  (!isNaN(x) && !isNaN(y)) {
+			if (x < y){
+				alert ("No need to change. X is already smaller value!!!");
+			}
+			else {
+				z = x, x = y , y = z;
+				alert ("Now X is a smaller value and = "+ x +". Y is a bigger value and = "+ y + " ");
+				
+				console.log(x);
+				console.log(y);
+				console.log(z);
+			}
+		}
+		else{
+			alert("pls enter digit values");
+		}			
+	</script>
+</body>
+</html>	

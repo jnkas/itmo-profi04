@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа № 2. Задание № 2</title>
+</head>
+<body>
+   <div style="margin: 100px;
+      padding: 30px;
+      background-color: green; 
+      border: 2px dotted black;
+      text-align: center;
+      font-size: 20px;">
+      
+      <script>
+          alert("Проверим, является ли треугольник прямоугольным: \n" + "да - true \n" + "нет - false")
+          var Ax = + prompt("Введите координату вершины А по оси х");
+          var Ay = + prompt("Введите координату вершины А по оси y");
+          var Bx = + prompt("Введите координату вершины B по оси x");
+          var By = + prompt("Введите координату вершины B по оси y");
+          var Cx = + prompt("Введите координату вершины C по оси x");
+          var Cy = + prompt("Введите координату вершины C по оси y");
+         /*Через любые три точки можно провести плоскость, следовательно, для треугольника ось z не принципиальна, и можно установить, является ли треугольник прямоугольным, пользуясь только осями х и у, а ось z обнулить.  */
+          if (!isNaN(Ax) && !isNaN(Ay) && !isNaN(Bx) && !isNaN(By) && !isNaN(Cx) && !isNaN(Cy)) {
+             /*var AB = Math.sqrt(Math.pow((Bx-Ax),2) + Math.pow((By-Ay),2)); 
+             var BC = Math.sqrt(Math.pow((Cx-Bx),2) + Math.pow((Cy-By),2));
+             var AC = Math.sqrt(Math.pow((Cx-Ax),2) + Math.pow((Cy-Ay),2));
+              console.log(Math.pow(AB,2)); 
+              console.log(Math.pow(BC,2));
+              console.log(Math.pow(AC,2));
+              Вся эта ерундень и возведением в степень, а потом извлечением корня (согласно формуле нахождения сторон треугольника по координатам вершин) оказалась избыточна - нафига извлекать, если потом придется возводить опять (уже для проверки по теореме старины Пифагора). К тому же из-за дополнительной операции увеличивались отклонения в стопицтоттысячных знаках после запятой, что не давало в итоге равенства. В общем, чем проще - тем лучше. Берем сразу квадраты сторон.
+             */ 
+              var AB2 = Math.pow((Bx-Ax),2) + Math.pow((By-Ay),2);
+              var BC2 = Math.pow((Cx-Bx),2) + Math.pow((Cy-By),2);
+              var AC2 = Math.pow((Cx-Ax),2) + Math.pow((Cy-Ay),2);
+              /*console.log(AB2);
+              console.log(BC2);
+              console.log(AC2); проверочка */
+             document.write(AB2 + BC2 === AC2 || AB2 + AC2 === BC2 || BC2 + AC2 === AB2);
+           } else {
+             alert("Oops!")    
+           }
+      </script>
+       
+   </div>
+    
+</body>
+</html>
