@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove Min and Max - Без Сортировки</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var array = [12,4,3,10,1,20];
+        console.log("Массив:",array.toString());
+        for (var i = 0; i < array.length; i++) {
+            var min = i;
+            var max = i;
+            for (var j = 1; j < array.length; j++) {
+                if (array[j] < array[min]) {
+                    min = j;
+                }
+                if (array[j] > array[max]) {
+                    max = j;
+                }
+            }
+        }
+        console.log("Наименьшее значение:",array[min]);
+        console.log("Наибольшее значение:",array[max]);
+        delete array[min];
+        delete array[max];
+        console.log("Массив без наименьшего и наибольшего значений",array.toString());
+    </script>
+</body>
+</html>
