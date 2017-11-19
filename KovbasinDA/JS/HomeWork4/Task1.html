@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork4_Task1_KovbasinD.A.</title>
+    <style>
+        h1 {
+            border-bottom: 2px solid gray;
+        }
+
+        #resultInput {
+            margin-top: 20px;
+            background: #bfbfbf;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <h1>Форма сложения массивов.</h1>
+            <h3>Введите, разделяя элементы запятыми, два массива. Переключателями установите куда хотите поместить второй массив.
+            <br>Можете установить в поля ввода массивы по умолчанию.
+            </h3>
+            </div>
+        <div>
+            <label for="inpArrFirst">Массив1: </label><input type="text" id="inpArrFirst">
+            <label for="inpArrSecondary">Массив2: </label><input type="text" id="inpArrSecondary">
+            <input name="radioPosition" type="radio" value="inStart" id="radInStart" checked="checked"><label for="radInStart">в начало</label>
+            <input name="radioPosition" type="radio" value="inEnd" id="radInEnd"><label for="radInEnd">в конец</label>
+            <input type="checkbox" id="arrDefault"><label for="arrDefault">Массивы по умолчанию.</label>
+            <button id="startButton">Выполнить</button>
+        </div>
+        <div>
+            <label for="resultInput">Результирующий массив: </label><input type="text" readonly id="resultInput">
+        </div>
+    </div>
+
+    <script>
+        var arrFirst, arrSecondary, arrResult, input1Element, input2Element;
+        input1Element = document.getElementById("inpArrFirst");
+        input2Element = document.getElementById("inpArrSecondary");
+
+        document.getElementById("startButton").onclick = obtainingVariables;
+        document.getElementById("arrDefault").onclick = appropArrDefault;
+
+        /*Функция преобразования value элемента в массив*/
+        function inputConvert(currString) {
+            var tempArr = [];
+            tempArr = currString.value.split(",");
+            return tempArr;
+        }
+
+        /*Функция устанавливающая массивы по умолчанию, по переключению checkbox*/
+        function appropArrDefault() {
+            if (document.getElementById("arrDefault").checked === true) {
+                input1Element.value = [12,4,3,10,1,20];
+                input2Element.value = [-3,-7,-100,-33];
+            } else {
+                input1Element.value = "";
+                input2Element.value = "";
+            }
+        }
+
+        /*Функция объединяющая массивы*/
+        function obtainingVariables() {
+            var tempString ="";
+
+            /*Проверяем куда следует поместить второй массив в начало или конец первого массива*/
+            if (document.getElementById("radInStart").checked === true) {
+                arrFirst = inputConvert(input1Element);
+                arrSecondary = inputConvert(input2Element);
+            }
+            if (document.getElementById("radInEnd").checked === true) {
+                arrFirst = inputConvert(input2Element);
+                arrSecondary = inputConvert(input1Element);
+            }
+
+            arrResult = arrFirst.concat(arrSecondary);
+            document.getElementById("resultInput").value = arrResult;
+        }
+    </script>
+</body>
+</html>
