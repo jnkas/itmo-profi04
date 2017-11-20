@@ -1,0 +1,52 @@
+<html>
+	<head></head>
+	<body>
+		<script type="text/javascript">
+				
+			var path = prompt("Enter any number");
+			
+			//Формируем регулярное выражение для нечёткого поиска в виде строки
+			var regString = "";
+			var pathOfReg;
+			
+			var i = 0, j;
+			while(i < path.length){ 
+				//Каждая итерация цикла создает symbol for  регулярного выражения
+				pathOfReg = ""; 				
+				console.log(pathOfReg);
+				j = 0;
+				while(j < path.length){
+					//Каждая итерация цикла собирает по одному симолу кусочка регулярного выражения
+					if (i == j) {
+						pathOfReg += ".";
+						console.log(pathOfReg);
+					} else {
+						pathOfReg += path[j];
+					}
+					j++;
+				}
+				
+				regString += pathOfReg;
+				console.log(regString);
+				
+				if(i != path.length - 1){
+					regString += "|";
+				}
+				console.log(regString);
+				i++;
+			}
+			
+			//Создаем регулярное выражение
+			var regExp = new RegExp(regString, "ig")
+			console.log(regString);
+			
+			if(regExp.test(str)){
+				alert("Совпадение найдено: " + str.match(regExp));
+			} else {
+				alert("Совпадение не найдено");
+			}
+			
+		</script>
+		<footer></footer>
+	</body>
+</html>

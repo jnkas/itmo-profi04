@@ -6,11 +6,11 @@
 <body>
 <script type="text/javascript">
 	function f(){
-     	var i = parseInt(prompt ("Please enter one of the measure length 0-dm, 1-km, 2-m, 3-mm, 4-sm")); // mesure of lengh
+     	var i = parseInt(prompt ("Please enter one of the measure length 1-dm, 2-km, 3-m, 4-mm, 5-sm")); // mesure of lengh
 		var a = parseInt(prompt ("Please enter length in indicated measure of length")); //length
-		var arr = [0.1,1000,1,0.001,0.01];
+		var arr = [0,0.1,1000,1,0.001,0.01];
 			console.log((arr[parseInt(i)])*a);
-			alert ("Calculated length " + (arr[parseInt(i)])*a + " meters");
+			alert ("Calculated length " + arr[parseInt(i)]*a + " meters");
     }
   </script>
   <input type="button" value="clickme" onclick="f();" />
