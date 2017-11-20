@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork4_Task3_KovbasinD.A.</title>
+    <style>
+        .forFlex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .firstLine {
+            margin-bottom: 5px;
+
+        }
+
+        h1 {
+            border-bottom: 2px solid gray;
+        }
+
+        #inputPos {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="forFlex">
+    <div class="header">
+        <h1>Удаление элементов из массива.</h1>
+        <h3>Введите в поле ввода массив целых чисел, через запятую.</h3>
+    </div>
+    <div class="firstLine">
+        <label for="inputMain">Введите массив:</label><input type="text" id="inputMain">
+        <input type="checkbox" id="inputTempArr"><label for="inputTempArr">Массив по умолчанию.</label>
+    </div>
+    <div>
+        <label for="inputPos">Номер удаляемого элемента:</label><input type="text" id="inputPos">
+        <button id="buttonDelCertain">Delete</button>
+        <button id="buttonDelMinMax">Delete min & max</button>
+    </div>
+</div>
+
+<script>
+    var arrTest, arrTemp, posMin, posMax;
+    arrTest = [];
+    posMin = 0;
+    posMax = 0;
+    arrTemp = [12,4,3,10,1,20];
+    currInput = document.getElementById("inputMain");
+    currInputIndex = document.getElementById("inputPos");
+
+    document.getElementById("inputTempArr").onclick = setTemplateArr;
+    document.getElementById("buttonDelMinMax").onclick = deleteMinMax;
+    document.getElementById("buttonDelCertain").onclick = deleteIndexArr;
+
+    /*Установка по checkbox в input массива по умолчанию*/
+    function setTemplateArr() {
+        if (document.getElementById("inputTempArr").checked === true) {
+            document.getElementById("inputMain").value = arrTemp;
+        } else {
+            document.getElementById("inputMain").value = "";
+        }
+    }
+
+    /*Удаление минимального и максимального значений из массива в input и возврат результата обратно*/
+    function deleteMinMax() {
+        arrTest = currInput.value.split(",");
+        for (var i = 0; i < arrTest.length; i++) {
+            if (parseInt(arrTest[i]) < parseInt(arrTest[posMin])) posMin = i;
+        }
+        arrTest.splice(posMin, 1);
+        for (var j = 0; j < arrTest.length; j++) {
+            if (parseInt(arrTest[j]) > parseInt(arrTest[posMax])) posMax = j;
+        }
+        arrTest.splice(posMax, 1);
+        document.getElementById("inputMain").value = arrTest;
+        posMin = 0;
+        posMax = 0;
+    }
+
+    /*Удаление из массива в первом input, по номеру индекса во втором input*/
+    function deleteIndexArr() {
+        arrTest = currInput.value.split(",");
+        arrTest.splice(parseInt(currInputIndex.value),1);
+        document.getElementById("inputMain").value = arrTest;
+    }
+</script>
+</body>
+</html>
