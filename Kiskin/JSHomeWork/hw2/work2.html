@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        
+        alert("Программа, позволяющая определить является ли треугольник пряямоугольным, ипользую коррдинаты вершин XYZ!")
+        
+        var x1 =
+            parseInt(prompt("Задайте корринату X вершины A:"));
+        var y1 =
+            parseInt(prompt("Задайте корринату Y вершины A:"));
+        var z1 =
+            parseInt(prompt("Задайте корринату Z вершины A:"));
+        
+        var x2 =
+            parseInt(prompt("Задайте корринату X вершины B:"));
+        var y2 =
+            parseInt(prompt("Задайте корринату Y вершины B:"));
+        var z2 =
+            parseInt(prompt("Задайте корринату Z вершины B:"));
+        
+        var x3 =
+            parseInt(prompt("Задайте корринату X вершины C:"));
+        var y3 =
+            parseInt(prompt("Задайте корринату Y вершины C:"));
+        var z3 =
+            parseInt(prompt("Задайте корринату Z вершины C:"));
+        
+        var ab = Math.sqrt((Math.pow(x1, 2) - Math.pow(x2, 2))+(Math.pow(y1, 2) - Math.pow(y2, 2))+(Math.pow(z1, 2) - Math.pow(z2, 2)));
+        var ac = Math.sqrt((Math.pow(x1, 2) - Math.pow(x3, 2))+(Math.pow(y1, 2) - Math.pow(y3, 2))+(Math.pow(z1, 2) - Math.pow(z3, 2)));
+        var bc = Math.sqrt((Math.pow(x2, 2) - Math.pow(x3, 2))+(Math.pow(y2, 2) - Math.pow(y3, 2))+(Math.pow(z2, 2) - Math.pow(z3, 2)));
+        
+//    (РАВЕНСТВО) && (ФОРМУЛА ПИФАГОРА)
+        
+        if (((ab>ac>bc) || (ab>bc>ac)) && (Math.pow(ab, 2)=Math.pow(ac, 2)+Math.pow(bc, 2)))
+            {
+                alert("Треуголник с вершинами:\nвершина A "+x1+";"+y1+";"+z1+"\nвершина B "+x2+";"+y2+";"+z2+"\nвершина C "+x3+";"+y3+";"+z3+"\nПрямоугольный!");
+                
+        }else if (((ac>ab>bc) || (ac>bc>ab)) && (Math.pow(ac, 2)=Math.pow(ab, 2)+Math.pow(bc, 2)))
+            {
+                alert("Треуголник с вершинами:\nвершина A "+x1+";"+y1+";"+z1+"\nвершина B "+x2+";"+y2+";"+z2+"\nвершина C "+x3+";"+y3+";"+z3+"\nПрямоугольный!");
+                
+        }else if (((bc>ac>ab) || (bc>ab>ac)) && (Math.pow(bc, 2)=Math.pow(ac, 2)+Math.pow(ab, 2)))
+            {
+                alert("Треуголник с вершинами:\nвершина A "+x1+";"+y1+";"+z1+"\nвершина B "+x2+";"+y2+";"+z2+"\nвершина C "+x3+";"+y3+";"+z3+"\nПрямоугольный!");
+                
+        }else{
+                alert("Треуголник с вершинами:\nвершина A "+x1+";"+y1+";"+z1+"\nвершина B "+x2+";"+y2+";"+z2+"\nвершина C "+x3+";"+y3+";"+z3+"\nНе является прямоугольным!"); 
+        }
+
+    </script>
+</body>
+</html>

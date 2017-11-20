@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Крестики-нолики</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var area = [null, 1, 0, 1, null, 1, null, 0, null];
+        var table = "<table style=\"font-family:Tahoma\"><tr>";
+        var field;
+        for (var i = 0;  i < 9; i++) {
+            //Рисуем крестик или нолик
+            if (area[i] == null) {
+                field = "";
+            }
+            else if (area[i] == 1) {
+                field = "X";
+            }
+            else {
+                field = "0";
+            }
+            //Делаем перенос строки
+            if (i!=0 && i%3 == 0) {
+                table += "</tr><tr>";
+            }
+            //Рисуем ячейку;
+            table += "<td style=\"border:1px solid green; width: 40px; height: 40px; text-align:center;\">" + "<span style=\"color:red;font-weight:600\">" + field + "</span>" + "</td>"
+        }
+        //Закрываем таблицу
+        table +="</table>";
+        document.write(table);    
+    </script>
+</body>
+</html>

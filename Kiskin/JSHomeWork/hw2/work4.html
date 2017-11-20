@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        
+        var unit =
+            parseInt(prompt("Задайте единицу измерения длины отрезка L:\n1 - децеметр \n2 - километр \n3 - метр \n4 - миллиметр \n5 - сантиметр"));
+        
+        var length = parseInt(prompt("Задайте длину отрезка L в выбранных величинах дллины:"));
+        
+        var metr = "";
+        
+        switch(unit)
+            {
+                case 1:
+                    metr=length*10;
+                    alert("Длина отрезка L в метрах: "+metr);
+                    break;
+                    
+                case 2:
+                    metr=length/1000;
+                    alert("Длина отрезка L в метрах: "+metr);
+                    break;
+                    
+                case 3:
+                    metr=length;
+                    alert("Длина отрезка L в метрах: "+metr);
+                    break;
+                    
+                case 4:
+                    metr=length*1000;
+                    alert("Длина отрезка L в метрах: "+metr);
+                    break;
+                    
+                case 5:
+                    metr=length*100;
+                    alert("Длина отрезка L в метрах: "+metr);
+                    break;
+                    
+                case unit: 
+                    unit<1;
+                    unit>5;
+                    alert("Вы ввели незапрограммированную единицу измерения!");
+                    break;
+            }
+        
+    </script>
+</body>
+</html>

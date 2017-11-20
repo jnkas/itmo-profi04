@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа № 4. Задание 3</title>
+</head>
+<body>    
+      <script>
+          /*Насколько я поняла задание, сортировать массив не обязательно, главное - удалить элементы с max и min значениями. Значит, можно наити индексы этих элементов подобно тому, как в классе искали значения min и max, и удалить элементы, обратишвшись по индексу.  */
+       var arr = [12,4,3,10,1,20];
+       var indexOfMin = 0, indexOfMax = 0;
+       for (var i = 1; i< arr.length; i++) {
+           if (arr[i] < arr[indexOfMin]) {
+               indexOfMin = i;
+               }
+           
+           if (arr[i] > arr[indexOfMax]); {
+               indexOfMax = i;
+           }
+       }
+          /*console.log(arr[indexOfMin]);
+          console.log(arr[indexOfMax]);*/
+          delete arr[indexOfMin];
+          delete arr[indexOfMax];
+          console.log(arr);
+          
+    </script> 
+     
+</body>
+</html>

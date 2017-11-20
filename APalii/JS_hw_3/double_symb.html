@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<script>
+	//Ex : find sum of the digits from enterd number 
+	var my_str = prompt("Please enter any word");
+	//var symb = prompt("Please enter any word");
+	var symb = prompt("Please enter any letters from intially entered word").split('');
+	//var symb = new Array("s","u");
+	
+	for (i = 0; i < symb.length; i++){    
+		my_str = my_str.replace(new RegExp(symb[i],'g'), symb[i]+symb[i]);	
+    }
+	console.log(my_str);
+	
+	</script>
+</body>
+
+</html>
