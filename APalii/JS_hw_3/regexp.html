@@ -18,13 +18,14 @@
 		
 	var str = prompt("Введите пароль");
 	
-	var regExp1 = /\w{9}/g;
+	var regExp1 = /\w/g;
 	var regExp2 = /[a-z]+/;
 	var regExp3 = /[A-Z]+/;
-	var regExp4 = /\d{2,}/;	
+	var regExp4 = /\d+/g;	
 	var regExp5 = /[\!|\$|\#|\%]{1}/;	
+
+	//(str.match(regExp1).length >= 9)&&regExp2.test(str)&&regExp3.test(str)&&(str.match(regExp4).length >= 2)&&regExp5.test(str)
 	
-	if (regExp1.test(str)&&regExp2.test(str)&&regExp3.test(str)&&regExp4.test(str)&&regExp5.test(str))
 	{
 		alert("Пароль введён правильно!");
 	} else {
