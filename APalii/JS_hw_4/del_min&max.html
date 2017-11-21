@@ -1,0 +1,55 @@
+<html>
+<head></head>
+<body>
+
+<p>
+Задан массив  - [12,4,3,10,1,20]. Удалить из него наименьшее и наибольшее значение.
+</p>
+
+
+<script type="text/javascript">
+	//del min and max massive elements 
+	var a = [12,4,3,10,1,20];
+	var b ;
+	var b = a.concat();
+	
+	
+	
+	
+	//Переменные для хранения мин и макс значения
+	var min = a[0];
+	var max = a[0];
+	
+	for(var i = 1; i < a.length; i++)
+	{
+		if (a[i] > max)
+		{
+			max = a[i];
+			max_i=i;
+			/*delete a[i];*/
+		}
+		
+		
+		if (a[i] < min)
+		{
+			min = a[i];
+			min_i=i;
+		}
+		
+	}
+	delete a[min_i];
+	delete a[max_i];
+	
+	
+	console.log('Исходный массив: ' + b);
+	console.log('Массив после удалений: ' + a.toString());
+	console.log('Минимальное значение: ' + min);
+	console.log('Максимальное значение: ' + max);
+	console.log(max_i);
+	console.log(min_i);
+	
+	
+</script>
+</body>
+<footer></footer>
+</html>
