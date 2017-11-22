@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа № 2. Задание 5</title>
+    <style>
+        table {
+            font-size: 14px;
+            border-collapse: collapse;
+            text-align: center;
+            }
+        
+        th, td:first-child {
+            background: #AFCDE7;
+            color: white;
+            padding: 10px 20px;
+            }
+        
+        th, td {
+            border-style: solid;
+            border-width: 0 1px 1px 0;
+            border-color: white;
+            }
+        
+            td {
+            background: #D8E6F3;
+            }
+    </style>
+</head>
+<body>
+    <div style = "margin: 100px;">
+       <script>
+       var i = 1;
+       var muliplyTable = "<table><tr><th>X</th>";
+           for (i=1; i<=10; i++) {
+               muliplyTable += "<th>" + i + "</th>";
+           } 
+        muliplyTable += "</tr>";
+           for (i=1; i<=10; i++) {
+           muliplyTable += "<tr><td>" + i + "</td>";    
+              for (var j = 1; j<=10; j++) {
+              muliplyTable += "<td>" + i*j +"</td>";
+            }
+       }
+       muliplyTable += "</tr></table>";
+       document.write(muliplyTable);                  
+       </script>
+    </div> 
+</body>
+</html>

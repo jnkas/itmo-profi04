@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork4_Task4_KovbasinD.A.</title>
+</head>
+<body>
+
+    <div>
+        <h1>Гномья сортировка.</h1>
+        <h3>Введите массив целых чисел через запятую. <a href="https://ru.wikipedia.org/wiki/%D0%93%D0%BD%D0%BE%D0%BC%D1%8C%D1%8F_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0">Описание алгоритма</a></h3>
+    </div>
+    <div>
+        <label for="inputArrSort">Введите массив:</label><input type="text" id="inputArrSort">
+        <input type="radio" name="sortArr" id="checkSort1" checked="checked"><label for="checkSort1">возрастание</label>
+        <input type="radio" name="sortArr" id="checkSort2"><label for="checkSort2">убывание</label>
+        <input type="checkbox" id="checkTemp"><label for="checkTemp">Массив по умолчанию</label>
+        <button id="buttonSort">Сортировать</button>
+    </div>
+
+    <script>
+        var i, j, arrSort, swichSort, currInput;
+        i = 1;
+        j = 2;
+        arrSort = [];
+        arrTemp = [12,4,3,10,1,20];
+        currInput = document.getElementById("inputArrSort");
+
+        document.getElementById("checkTemp").onclick = setTemplateArr;
+        document.getElementById("buttonSort").onclick = sortArr;
+
+        /*Функция установки массива по умолчанию*/
+        function setTemplateArr() {
+            if (document.getElementById("checkTemp").checked === true) {
+                document.getElementById("inputArrSort").value = arrTemp;
+            } else {
+                document.getElementById("inputArrSort").value = "";
+            }
+        }
+
+        /*Функция выполнения алгоритма сортировки, проверка направления сортировки, создание массива из строки*/
+        function sortArr() {
+            arrSort = currInput.value.split(",");
+            if (document.getElementById("checkSort1").checked === true) swichSort = true;
+            if (document.getElementById("checkSort2").checked === true) swichSort = false;
+
+            /*Алгоритм гномьей сортировки*/
+            while (i < arrSort.length) {
+                if ((parseInt(arrSort[i - 1]) < parseInt(arrSort[i])) === swichSort) {
+                    i = j;
+                    j = j + 1;
+                } else {
+                    var temp;
+                    temp = arrSort[i - 1];
+                    arrSort[i - 1] = arrSort[i];
+                    arrSort[i] = temp;
+
+                    i = i - 1;
+                    if (i === 0) {
+                        i = j;
+                        j = j + 1;
+                    }
+                }
+            }
+
+            document.getElementById("inputArrSort").value = arrSort; //возвращаем отсортированный массив в Input
+            i = 1;
+            j = 2;
+        }
+    </script>
+</body>
+</html>

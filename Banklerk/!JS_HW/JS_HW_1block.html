@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HoweWork_1</title>
+</head>
+<body>
+	<style>
+	body {
+		background-color: whitesmoke;
+	}
+	.button	{
+		margin-top: 30px;
+		height: 50px;
+		width: 150px;
+		background-color: #888;
+		text-align: center;
+		line-height: 50px;
+		cursor: pointer;
+	}
+</style>
+<p>1. Из трех данных чисел выбрать наименьшее.</p>
+<div class="button" id="work1">Запустить код</div>
+<p>2. Дано целое число, лежащее в диапазоне от -999 до 999.<br/>
+Вывести строку - словесное описание данного числа вида "отрицательное двузначное число", "нулевое число", "положительное однозначное число" и т.д.</p>
+<div class="button" id="work2">Запустить код</div>
+<p>3. Дано целое число в диапазоне 0 - 9. Вывести строку - название соответствующей цифры на русском языке (0 - "ноль", 1 - "один", 2 - "два", ...)</p>
+<div class="button" id="work3">Запустить код</div>
+<p>4. Дано целое число в диапазоне 1 - 5.<br/> Вывести 
+строку - словесное описание соответствующей оценки (1 - "плохо", 2 - "неудовлетворительно", 3 - "удовлетворительно", 4 - "хорошо", 	5 - "отлично").</p>
+<div class="button" id="work4">Запустить код</div>
+<p>5. Проверить истинность высказывания: "Среди трех данных целых чисел есть хоть бы одна пара совпадающих".<br/> Требуется вывести логическое значение True, если приведенное высказывание для предложенных исходных данных является истинным, и значение False в противном случае."
+</p>
+<div class="button" id="work5">Запустить код</div>
+
+<!-- HoweWork_1 -->
+<script type="text/javascript">
+	document.getElementById('work1').onclick = function work1() { 
+		var a = parseInt(prompt("Введите первое число:"));
+		var b = parseInt(prompt("Введите второе число:"));
+		var c = parseInt(prompt("Введите третье число:"));
+		if ((a <= b) && (a <= c)) {
+			alert("Наименьшее число " + a);
+		}
+		else if ((a>=b) && (b<=c)) {
+			alert("Наименьшее число " + b);			 
+		}
+		else if ((a >= c) && (b >= c)) {
+			alert("Наименьшее число " + c);
+		}
+	}
+	document.getElementById('work2').onclick = function work2() {
+		var x = parseInt(prompt("Введите число от -999 до 999:"));
+		var text = ((x>= -999) && (x<= -100)) ? alert("Вы ввели отрцательное трехзначное число") : ((x>= -99) && (x<= -10)) ? alert("Вы ввели отрцательное двухзначное число") : ((x>= -9) && (x<= -1)) ? alert("Вы ввели отрцательное однозначное число") : (x === 0) ? alert("Вы ввели ноль") : ((x>=1) && (x<=9)) ? alert("Вы ввели однозначное положительное число") : ((x>=10) && (x<= 99)) ? alert("Вы ввели двухзначное положительное число") : ((x>=100) && (x<=999)) ? alert("Вы ввели трехзначное положительное число") : alert("Указанное значение не релевантно!");          
+	}
+	document.getElementById('work3').onclick = function work3() {
+		var x =	parseInt(prompt("Введите число от 0-9:"));
+		var text = (x === 0) ? alert("Ноль") : (x === 1) ? alert("Один") : (x === 2) ? alert("Два") : (x === 3) ? alert("Три") : (x === 4) ? alert("Четыре") : (x === 5) ? alert("Пять") : (x === 6) ? alert("Шесть") : (x === 7) ? alert("Семь") : (x === 8) ? alert("Восемь") : (x === 9) ? alert("Девять") : alert("Указанное значение не релевантно!");
+	}
+	document.getElementById('work4').onclick = function work4() {
+		var x = parseInt(prompt("Введите число от 1-5:"));		
+		var text = (x===1) ? alert("плохо") : (x===2) ? alert("неуд") : (x===3) ? alert("удовл") : (x===4) ? alert("хорошо") : (x===5) ? alert("отлично") : alert("Указанное значение не релевантно!");
+	}
+	document.getElementById('work5').onclick = function work5() {
+		var a = parseInt(prompt("Введите перое чиcло:"));
+		var b = parseInt(prompt("Введите второе число:"));
+		var c = parseInt(prompt("Введите третье число:"));
+		var text = (!isNaN(a) && !isNaN(b) && !isNaN(c)) ? alert ( a == b || a == c || b == c) : alert("Указанное значение не релевантно!"); 
+	}
+</script>
+</body>
+</html>

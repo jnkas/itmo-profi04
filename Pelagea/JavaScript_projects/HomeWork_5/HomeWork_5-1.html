@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа № 5. Задание 1</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+	/*Задача Написать функцию которой передается объект - студент а она 
+	выводит его содержимое.*/
+	
+	var objStudent = {
+		name: "John",
+		lastname: "Doe",
+		age: 23,
+        interests: [
+            "chicks",
+            "cars",
+            "games",
+            "rock"
+        ],
+        placeOfStudy: "SPbGU"		
+	};
+	
+	function logObject(obj) {
+		console.log("Объект: студент");
+		for (var key in objStudent)
+            if (typeof objStudent[key] == "object" && obj[key].length > 0)
+		{
+			console.log("Свойство " + key + " содержит массив из " + objStudent[key].length + " элементов");
+			for (var i = 0; i < objStudent[key].length; i++)
+			{
+				console.log("Элемент №" + i + " содержит: " + objStudent[key][i]);
+			}
+		} else {
+			console.log("Свойство " + key + " содержит " + objStudent[key]);
+		}	
+	}
+	
+	logObject(objStudent);
+</script>
+</body>
+</html>

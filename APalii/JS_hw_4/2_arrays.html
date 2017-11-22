@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<p>
+Заданы два массива 
+A = [ 12, 4, 3, 10, 1, 20 ]  B = [-3, -7, -100, -33] необходимо их<br>
+ объединить в один массив C добавив массив B в конец(в начало) A. 
+</p>
+
+	<script type="text/javascript">
+		
+		
+		
+		var arr_a = [12,4,3,10,1,20];
+		var arr_b = [-3,-7,-100,-33];
+		var arr_c = new Array();
+		var arr_d = new Array();
+		var arr_c = arr_a.concat(arr_b);
+		var arr_d = arr_b.concat(arr_a);
+		
+		
+		/*	for (var i = 0; i < arr_a.length; i++) {
+			var curr = arr_a[i];
+			arr_b.push(curr);
+			arr_c = arr_b;
+
+		}*/
+		console.log(arr_c);
+		alert ("Array C where A in front of B " + arr_c + " ");
+		console.log(arr_d);
+		alert ("Array D where B in front of A " + arr_d + " ");
+	</script>
+</body>
+</html>	

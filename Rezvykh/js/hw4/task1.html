@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Заданы два массива:</p>
+	<ul>
+		<li>A = [ 12, 4, 3, 10, 1, 20 ]</li>
+		<li>B = [-3, -7, -100, -33]</li>
+	</ul>   
+<p>Необходимо их объединить в один массив C добавив массив B в конец(в начало) A. </p>
+	<script>
+		var arrA = [12, 4, 3, 10, 1, 20];
+		var arrB = [-3, -7, -100, -33];
+
+		//добавляем массив в конец
+		var arrNew1 = arrA.concat(arrB);
+		console.log(arrNew1);
+
+		//добавляем в начало массива
+		var arrNew2 = arrA;
+		arrB = arrB.reverse();
+		for (i = 0; i < arrB.length; i++) {
+			arrNew2.unshift(arrB[i]);
+		}
+		console.log(arrNew2);
+	</script>
+</body>
+</html>

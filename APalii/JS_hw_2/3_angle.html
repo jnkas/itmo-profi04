@@ -10,13 +10,15 @@
 		var point_a = (prompt("Enter coordinates point A in following format X,Y,Z ")).split(",");
 		var point_b = (prompt("Enter coordinates point B in following format X,Y,Z ")).split(",");
 		var point_c = (prompt("Enter coordinates point C in following format X,Y,Z ")).split(",");
+		var gip = ""; // gipotenuza?
+		var pif = "";// sum of squares of the legs 
 		
 		for (i=0 ; i<3; i++) {
 			point_a[i]=parseInt(point_a[i]); //determine var as Integer
 			point_b[i]=parseInt(point_b[i]); //determine var as Integer
 			point_c[i]=parseInt(point_c[i]); //determine var as Integer
 		}
-		console.log (point_a[0]);
+			console.log (point_a[0]);
 		 
 		
 		/*var ax = parseFloat(prompt("Enter coordinates point for AX "));
@@ -29,8 +31,7 @@
 		var cy = parseFloat(prompt("Enter coordinates point for CY "));
 		var cz = parseFloat(prompt("Enter coordinates point for CZ ")); */
 		
-		var gip   // gipotenuza?
-		var pif   // sum of squares of the legs 
+
 		
 		//Create string array 
 		//	var point = Array(2 => point_ax);
@@ -64,17 +65,17 @@
 
 		
 		if ((ab_length >= bc_length) && (ab_length >= ca_length) )  {
-			var pif = Math.sqrt(Math.pow(bc_length,2)+Math.pow(ca_length,2)); 			
+			pif = Math.sqrt(Math.pow(bc_length,2)+Math.pow(ca_length,2)); 			
 			gip = ab_length;
 			alert  ("ab_length is longest one")
 		}
 		if ((ab_length <= bc_length) && (bc_length >= ca_length)) {
-			var pif = Math.sqrt(Math.pow(ab_length,2)+Math.pow(ca_length,2)); 
+			pif = Math.sqrt(Math.pow(ab_length,2)+Math.pow(ca_length,2)); 
 			gip = bc_length;
 			alert ("bc_length is longest one")
 		}
 		if ((ab_length <= ca_length) && (bc_length <= ca_length)) {
-			var pif = Math.sqrt(Math.pow(ab_length,2)+Math.pow(bc_length,2)); 
+			pif = Math.sqrt(Math.pow(ab_length,2)+Math.pow(bc_length,2)); 
 			gip = ca_length;
 			alert ("ca_length is longest one");
 		}   		
