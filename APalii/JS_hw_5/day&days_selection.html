@@ -1,0 +1,32 @@
+<html>
+<head></head>
+<body>
+
+<p>
+4 Напишите функцию (), которая в зависимости от переданных <br>
+в нее целочисленных аргументов "количество дней", будет выводить <br>
+слово "день" в нужно форме ("если передали - 1, то 1 день", <br>
+"если передали - 3, то 3 дня" и т.д).     <br>
+</p>
+
+<script type="text/javascript">
+
+	function days(r){
+		if (r==1)
+		console.log(r + " день");
+		
+		else if (r >= 2 && r <= 4)
+		console.log(r + " дня");
+		
+		else if (r >= 5 && r <= 20)
+		console.log(r + " дней");
+		
+		else
+		console.log("out of range");	
+	}
+	console.log(days(55));
+	
+</script>
+</body>
+<footer></footer>
+</html>

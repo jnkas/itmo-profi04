@@ -1,0 +1,35 @@
+<html>
+<head></head>
+<body>
+
+<p>
+3 Написать отдельную функцию, которая выводит пользователю <br>
+заданное число чисел Фибоначчи. <br>
+(например, первых 8 чисел Фибоначчи:  1, 1, 2, 3, 5, 8, 13, 21). <br>
+Заданное число передается функции в качестве аргумента. <br>
+Про числа Фибоначчи: https://ru.wikipedia.org/wiki/Числа_Фибоначчи<br>
+</p>
+
+<script type="text/javascript">
+	
+
+	function fib(r){
+		var arr_f = [0,1];
+		for(i = 2; i <= r; i++) {
+			arr_f[i] = arr_f[i-1]+arr_f[i-2];
+		}		
+		return arr_f;
+	}
+	console.log(fib(8));
+	var arr_res = fib(8);
+	
+	console.log(arr_res);
+	console.log(arr_res[2]);
+	arr_res.splice(0,1); //del "0 "element from array "fib"
+	console.log(arr_res);
+	
+		
+</script>
+</body>
+<footer></footer>
+</html>

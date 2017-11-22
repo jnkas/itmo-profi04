@@ -1,0 +1,41 @@
+<html>
+<head></head>
+<body>
+
+<p>
+Массивы, циклы, условия:
+
+2 Заданы два массива A и B необходимо их объединить 
+в один массив C так, чтобы в массиве остались уникальные 
+(неповторяющиеся) элементы. 
+Например: A = [1,2], B = [2,3] получим С = [1, 2, 3].
+</p>
+
+<script type="text/javascript">
+	
+	var a = [6, 74, 59];
+	var b = [7, 74, 44];
+	var c = new Array();
+	var dob_i;  //index of element in array "a"  to be deleted
+
+	for( i = 0; i < a.length; i++){	
+		for(j = 0; j < b.length; j++){
+			if(a[i] == b[j]) dob_i=i; // find equal arrays elements between 2 arrays
+		}
+	}
+
+	a.splice(dob_i, 1); //del elementt from array "a"
+	console.log(a);
+	console.log(b);
+	var c = a.concat(b); // concatenate 2 arrays
+	console.log(c);
+	function compareNumeric(a, b) {
+		if (a > b) return 1;
+		if (a < b) return -1;
+}	c.sort(compareNumeric); // sort array from small to big 
+	console.log(c);
+	
+</script>
+</body>
+<footer></footer>
+</html>
