@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Непересекающиеся элементы двух массивов</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var arrA = [1,2,3,4,5,12];
+        var arrB = [4,5,6,7,8,12];
+        var arrC = arrA.concat(arrB);
+        
+        // Убираем повторяющиеся элементы
+        for (i = 0; i < arrC.length; i++) {
+            for (j = i+1; j < arrC.length; j++) {
+                if (arrC[i] === arrC[j]) {
+                    arrC.splice(j,1);
+                }
+            }
+        }
+        
+        // Функция сортировки массива
+        function sortNumber(a, b) {
+            return a - b;
+        }
+        // Выводим массив
+        console.log(arrC.sort(sortNumber));
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Дни</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function myDays(n) {
+            var word = "";
+            var number = n.toString().slice(-1);
+            
+            // Выбираем слово
+            if (n > 4 && n < 21) {
+                word = "дней";
+            }
+            
+            else if (n < 5 || n > 20) {
+                switch(number) {
+                    case "1":
+                        word = "день";
+                        break;
+                    case "2":
+                    case "3":
+                    case "4":
+                        word = "дня"; 
+                        break;
+                }
+            }
+            
+            var string = n + " " + word;
+            return string;
+        }
+        
+        // Выводим сообщение
+        alert(myDays(parseInt(prompt("Введите целое число"))));
+    </script>
+</body>
+</html>

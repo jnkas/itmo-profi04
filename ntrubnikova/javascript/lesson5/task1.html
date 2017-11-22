@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вернуть содержимое студента</title>
+</head>
+<body>
+   <script type="text/javascript">
+       var student = {
+           firstname: "Peter",
+           lastname: "Smirnov",
+           age: 18,
+           university: "ITMO",
+           interests: ["football", "drinking", "cats in Internet", "grandma"]           
+       }
+       function object(obj) {
+           for (var prop in obj) {
+               console.log("Свойство: " + prop + "\nЗначение: " + obj[prop]);
+           }
+       }
+       object(student);
+    </script>
+</body>
+</html>
