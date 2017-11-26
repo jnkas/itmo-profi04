@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var mas1 = [1, 2];
+        var mas2 = [2, 3];
+        var mas3;
+        function union_mas(mas1, mas2) {
+            mas3 = mas1.concat(mas2);
+            mas3.sort();
+            var mas = [mas3[0]];
+            for (var i = 1; i < mas3.length; i++) {
+                if (mas3[i] != mas3[i - 1]) {
+                    mas.push(mas3[i]);
+                }
+            }
+            return mas;
+        }
+        alert(union_mas(mas1, mas2));
+
+    </script>
+
+</body>
+
+</html>

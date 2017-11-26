@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--
+---------------------------------
+Построить объект студент:
+- свойства: Имя, Фамилия, Возраст, 
+Интересы (в виде массива), Место обучения.
+- метод выводящий в консоль биографическую 
+справку в виде, например: «Иван Петров. 21 год. 
+Интересы: программирование, музыка, аниме. Учится в ИТМО.
+
+
+---------------------------------  
+-->
+  
+   <script>
+       
+       var student = {
+           name:"",
+           lastname:"",
+           age:21,
+           interests:[],
+           training:"",
+       }
+       
+       function biogSpravka(){
+           console.log(this.name + " " + this.lastname + "." + " Возраст:"+ this.age + " год." + "Учиться в " +this.training +"."+ "Интересы: " + this.interests );
+       }
+student.name="Иван";
+student.lastname="Петров";
+student.age=21;
+student.interests=["программирование","аниме","музыка"];
+student.training="ИТМО";
+student.spravka=biogSpravka;
+       
+       biogSpravka();
+       student.spravka();
+      
+//Иван Петров. Возраст:21 год.Учиться в ИТМО.Интересы: программирование,аниме,музыка       
+   </script>
+    
+</body>
+</html>

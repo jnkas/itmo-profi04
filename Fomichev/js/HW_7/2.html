@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--
+-------------------------------------
+Подключить стороннюю библиотеку 
+для построения графиков.
+Построить график функции y = f(x):
+y = 5/x, при x>=1;
+y = x*x – 4*x, при x<1.
+Шаг варьирования x равен 0.01 
+и интервал варьирования -5 < x < 5.
+Расчёт функции y = f(x) 
+реализовать в виде отдельной функции.
+  ------------------------------------
+-->
+   <script src="plotly-latest.min.js"></script>
+   <div id="placeholder" style="width: 480px;height: 400px;"></div>
+   
+   <script>
+       function f(x){
+           if(x>=1){
+               return 5/x;} 
+           else (x<1) 
+               return x*x-4*x;}
+       
+       
+       var line1={
+           x:[],
+           y:[],
+           type:"scatter"
+       };
+       var x;
+       for(var i=-500;i<500;i++){
+           x= i/100;
+           line1.x.push(x);
+           line1.y.push(f(x));
+       }
+       var data=[line1];
+       Plotly.newPlot("placeholder",data);
+       
+       
+    </script>
+    
+    
+</body>
+</html>
+
+

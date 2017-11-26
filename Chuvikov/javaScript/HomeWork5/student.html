@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+   <script  type="text/javascript">
+    var student = {
+        firstname:"John", 
+        secondname:"Johnov", 
+        age:98, 
+        hobby:["soccer","poker","kicker"],
+        study:"MIT"
+    }
+       
+    function show(obj){
+    for(var val in obj){
+       alert("Свойство: "+val+" Значение: "+obj[val]);
+    }
+    }
+    show(student);
+    
+    </script>
+    
+</body>
+</html>
