@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        
+        var password = prompt("Придумайте пароль: \nПароль должен соответствовать следующим правилам:\n- длина не менее 9 символов;\n- должен содержит обязательно английские буквы верхнего и нижнего регистра;\n- должен содержит более двух цифр;\n- должен содержит обязательно один из неалфавитных символов.");
+        
+        switch (true)
+            {
+                case password.length < 9:
+                    alert("Ваш пароль менее 9 символов!");
+                    break;
+                    
+                case (password.match(/\d/g)).length < 3:
+                    alert("Ваш пароль должен содержать не менее 2 числовых символов 0-9!");
+                    break;
+                    
+                case (password.match(/[A-Z]/g)).length < 1:
+                    alert("В вашем пароле отсутствуют заглавные символы A-Z!");
+                    break;
+                    
+                case (password.match(/[a-z]/g)).length < 1:
+                    alert("В вашем пароле отсутствуют строчные символы a-z!");
+                    break;
+                    
+                case (password.match(/[\!\$\#\%]/g)).length < 1:
+                    alert("Ваш пароль должен содержать неалфавитные символы $, %, !, #!");
+                    break
+            }
+        
+        alert("Ваш пароль соответствует требованиям безопасности!");
+        
+    </script>
+</body>
+</html>
