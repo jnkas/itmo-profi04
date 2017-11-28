@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа № 7. Задание 2</title>
+</head>
+<body>
+   <script type = "text/javascript" src="plotly-latest.min.js"></script>
+   <div id="placeholder" style="width: 480px; height: 400px;"></div>
+       <script>
+   function f(x) {
+       if (x<1) {
+           return x * x - 4*x;
+        } else if (x >= 1) {
+            return 5/x;
+        }
+   }
+       var line1 = {
+        x:[],
+        y:[],
+           type: 'scatter'
+   };
+       for (var i = -500; i<=500; i++) {
+           x=i/100;
+           line1.x.push(x);
+           line1.y.push(f(x));
+       }
+       var data = [line1];
+       Plotly.newPlot('placeholder', data);
+        </script>
+</body>
+</html>

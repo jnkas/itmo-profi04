@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа № 7. Задание 1</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+	var objStudent = {
+		name: "",
+		lastname: "",
+		age: 23,
+        interests: [
+            ],
+        placeOfStudy: ""		
+	};
+	
+	    objStudent.name = "Иван";
+        objStudent.lastname = "Петров";
+        objStudent.age = 23;
+        objStudent.interests = ["программирование", " музыка", " аниме"];
+        objStudent.placeOfStudy = "ИТМО";
+        objStudent.info = logObjInfo;
+        
+        
+        function logObjInfo() {
+            console.log(this.name + " " + this.lastname + ". " + this.age + " года" + ". " + "Интересы: " + this.interests + ". " + "Учится в " + this.placeOfStudy + ".");
+        }
+        objStudent.info();
+</script>
+</body>
+</html>
