@@ -1,0 +1,45 @@
+<html>
+<head></head>
+<body>
+
+<p>
+1 Построить объект студент:<br>
+- свойства: Имя, Фамилия, Возраст, <br>
+Интересы (в виде массива), Место обучения.<br>
+- метод выводящий в консоль биографическую <br>
+справку в виде, например: «Иван Петров. 21 год. <br>
+Интересы: программирование, музыка, аниме. Учится в ИТМО.<br>
+</p>
+
+<script type="text/javascript">
+	
+	var printx;
+	var objStudent = {
+		name: "Ivan",
+		lastname: "Ivanov",
+		age: 30,
+		Interests: ['music','free_time','sport','cinema','JS'],
+		Studing_place: ['ITMO',' Bonch&B'],
+		printx: function (){
+		
+		console.log(objStudent.name + objStudent.lastname + "." + objStudent.age + " years" + ".");
+		console.log( "Intersts: " + objStudent.Interests + "." + " Study in " + objStudent.Studing_place + "." );
+		for (var i = 0; i < objStudent[key].length; i++)
+				{
+						console.log("Ячейка " + i + " массива " + key + " содержит " + objStudent[key][i]);
+								
+								
+				}
+		
+		
+	}
+	}
+	objStudent.printx();
+	console.log(objStudent.name + objStudent.lastname + "." + objStudent.age + " years" + ".");
+	console.log( "Intersts: " + objStudent.Interests + "." + " Study in " + objStudent.Studing_place + "." );
+	
+	
+</script>
+</body>
+<footer></footer>
+</html>
