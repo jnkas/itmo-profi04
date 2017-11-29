@@ -1,0 +1,41 @@
+<html>
+<head></head>
+<body>
+<p> Замыкания: <br>
+2 Сделайте функцию, каждый вызов который будет генерировать случайные числа <br>
+от 1 до 100, но так, чтобы они не повторялись, пока не будут перебраны все <br>
+числа из этого промежутка. Решите задачу через замыкания - в замыкании должен <br>
+хранится массив чисел, которые уже были сгенерированы функцией. <br> </p>
+<script type="text/javascript">
+
+function makeCounter() {
+  var currentCount = [];
+
+  return function() { // (**)
+    
+	var min=1, max=100;
+	var random = (Math.floor(Math.random() * (max - min + 1)) + min);
+	//console.log(random);
+	if (currentCount.indexOf(random) === -1){
+	currentCount[currentCount.length]=random;
+	}
+	
+	//currentCount.length;
+
+	return currentCount;
+  };
+}
+
+var counter = makeCounter(); // (*)
+
+// каждый вызов увеличивает счётчик и возвращает результат
+var arr = [];
+while (arr.length < 100) {
+	arr = counter();
+}
+console.log(arr);
+
+</script>
+</body>
+<footer></footer>
+</html>

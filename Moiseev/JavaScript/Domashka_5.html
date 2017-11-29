@@ -1,0 +1,61 @@
+
+//2 задание
+<!--
+<!DOCTYPE html>
+<html>
+     <head>
+          </head>   
+                <body>
+                    <script>
+                    var A = [1,2,45]
+                    var B =  [2,3,49] 
+                     function SortArr(A,B)            
+                        {
+                            var N = A.length, M = B.length, C = [];
+ 
+                        for (var i=0, j=0, k=0; k<N+M; k++)       
+                         { if (i==N){ C[k] = B[j++]; continue; } 
+                           if (j==M){ C[k] = A[i++]; continue; }
+                           C[k] = (A[ i ]<B[j]) ? A[i++] : B[j++];
+                             }
+
+                            for (var i=1, j=C[0], k=1; i<N+M; i++)  
+                         { if (C[ i ] !== j)                     
+                            { C[k++] = C[ i ]; j = C[ i ]; }
+                             } 
+                            C.length = k;
+                               
+                            return C;
+                            console.log(C);
+                            
+                                }
+                    </script>
+           
+   
+                   </body>
+
+</html>-->
+//4 задание
+
+<!DOCTYPE html>
+<html>
+     <head>
+          </head>   
+                <body>
+                    <script>
+                   var numDay = + prompt("...");
+                        function daysReturn(n){
+                            if (n===1){
+                                alert(n+"день");
+                                
+                            }else if (n>=2 && n<=4){
+                                alert(n+"день");
+                            }
+                        }
+                        daysReturn(numDay);
+                    </script>
+           
+   
+                   </body>
+
+</html>-->

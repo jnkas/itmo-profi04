@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork7_Task1_KovbasinD.A.</title>
+</head>
+<body>
+    <script>
+        var student = {
+            name: "Дмитрий",
+            surname: "Ковбасин",
+            age: 32,
+            interests: ["футбол","волейбол","серфинг"],
+            academy: "ИТМО",
+            biography: function () {
+                console.log(this.name + " " + this.surname + ". " + this.age + " года" + ".");
+                console.log("Интересы: " + this.interests + ".");
+                console.log("Учится в " + this.academy + ".");
+            }
+        };
+
+        student.biography();
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+<!--
+// задание 1 
+
+Факториал числа 4 с помощью рекурсии
+
+<!DOCTYPE html>
+<html>
+     <head>
+          </head>   
+                <body>
+                    <script>
+                  var factorial = function(number) {
+                      if (number <= 0) {
+                          return 1;  
+                      } else {
+                          return (number * factorial(number - 1));
+                      }
+                  }
+                        console.log(factorial(4));
+                    </script>
+                   </body>
+</html>
+-->
+
+
+<!--
+// задание 2
+
+
+<html>
+     <head>
+          </head>   
+                <body>
+                    <script>
+                  var generate = (function() {
+                      return function () {
+                       var arr = [];
+                       var num;
+                       function rand(min,max) {
+                           return Math.floor(Math.random() * (max-min+1)) + min;
+                       }
+                      
+                           while (arr.length < 100){
+                              num = rand (1, 100);
+                               if (arr.length == 0){
+                                   arr.push(num);
+                                   
+                               }
+                               var pr = true;
+                               for (var i=0; i< arr.length; i++){
+                                   if (arr[i] == num ){
+                                       pr = false;
+                                       break;
+                                   }                               
+                           }
+                               if (pr) {
+                                   arr.push(num);
+                                   }
+                       } 
+                       return arr;
+                   }
+                  }());
+                        alert(generate());
+                        console.log(generate());
+                        console.log(generate());
+                        console.log(generate().sort(function(a,b){return a-b;}));
+                        
+                   
+                    </script>
+                   </body>
+</html>-->
