@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork7_Task4_KovbasinD.A.</title>
+</head>
+<body>
+    <script src="MyLib/myLib.js"></script>
+    <script>
+        var minValue, maxValue, averageArr, arrClone;
+        var arrTest = [1,5,7,12,3,21,45,32,1,69,33];
+
+        minValue = myLibForArr.minValue(arrTest);
+        maxValue = myLibForArr.maxValue(arrTest);
+        averageArr = myLibForArr.averageValue(arrTest);
+        arrClone = myLibForArr.cloneArr(arrTest);
+
+        console.log("Минимальное значение в текущем массиве: " + minValue);
+        console.log("Максимальное значение в текущем массиве: " + maxValue);
+        console.log("Среднее арифметическое текущего массива: " + averageArr);
+        console.log("Клонированный массив: " + arrClone);
+    </script>
+</body>
+</html>
