@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Домашняя работа № 7. Задание 1</title>
+    <title>Домашняя работа № 7. Задание 1 - версия 1.1</title>
 </head>
 <body>
-    
+   /* добавила join, чтобы интересы выводились нормальной строчкой с пробелами, которые не надо заранее в массив вставлять. */ 
     <script type="text/javascript">
 	var objStudent = {
 		name: "",
@@ -19,13 +19,13 @@
 	    objStudent.name = "Иван";
         objStudent.lastname = "Петров";
         objStudent.age = 23;
-        objStudent.interests = ["программирование", " музыка", " аниме"];
+        objStudent.interests = ["программирование", "музыка", "аниме"];
         objStudent.placeOfStudy = "ИТМО";
         objStudent.info = logObjInfo;
         
         
         function logObjInfo() {
-            console.log(this.name + " " + this.lastname + ". " + this.age + " года" + ". " + "Интересы: " + this.interests + ". " + "Учится в " + this.placeOfStudy + ".");
+            console.log(this.name + " " + this.lastname + ". " + this.age + " года" + ". " + "Интересы: " + this.interests.join(', ') + ". " + "Учится в " + this.placeOfStudy + ".");
         }
         objStudent.info();
 </script>

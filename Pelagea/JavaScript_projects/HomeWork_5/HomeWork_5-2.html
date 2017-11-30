@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа № 5. Задание 2</title>
+</head>
+<body>
+ <script>    
+    /* Пыталась с помощью учебника и разобранного в классе задания "вкурить" способ объединить только неповторяющиеся элементы из двух массивов (с помощью функции, превращающей элементы массива в свойства объекта, которые, как известно, должны быть уникальны). Массивы-то объединились, как бы теперь это и в голове уложить? :) */
+     
+     function noDouble(arr) {
+        var obj = {};
+        for (var i = 0; i < arr.length; i++) {
+             obj[arr[i]] = 0;
+         }
+         return Object.keys(obj);
+     } 
+     
+     var arrA = [2,4,2,3,78,25];
+     var arrB = [25,3,2,4,5,77];
+     var arrC = arrA.concat(arrB);
+          
+     console.log(noDouble(arrC));
+    </script> 
+       
+</body>
+</html>
