@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork8_Task1_KovbasinD.A.</title>
+    <style>
+        .mainDiv {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            height: 500px;
+        }
+
+        span {
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mainDiv">
+        <div>
+            <span id="hourSpan"></span>
+            <span class="pointSpan">: </span><span id="minuteSpan"></span>
+            <span class="pointSpan">: </span><span id="secondSpan"></span>
+        </div>
+    </div>
+
+    <script>
+
+        function getTime() {
+            var s1, s2, s3, sColon;
+            sColon = [];
+            var timeArrForStr = [];
+            s1 = document.getElementById("hourSpan");
+            s2 = document.getElementById("minuteSpan");
+            s3 = document.getElementById("secondSpan");
+            sColon = document.getElementsByClassName("pointSpan");
+            var currDate = new Date();
+            var formatterHour = new Intl.DateTimeFormat ("ru", {
+                hour: "numeric",
+                minute: "numeric",
+                second: "numeric"
+            });
+
+            timeArrForStr = formatterHour.format(currDate).split(":");
+
+            s1.innerText = timeArrForStr[0];
+            s2.innerText = timeArrForStr[1];
+            s3.innerText = timeArrForStr[2];
+            s1.style.color = "red";
+            s2.style.color = "blue";
+            s3.style.color = "green";
+            if (sColon[0].style.visibility === "visible") {
+                sColon[0].style.visibility = "hidden";
+                sColon[1].style.visibility = "hidden";
+            } else {
+                sColon[0].style.visibility = "visible";
+                sColon[1].style.visibility = "visible";
+            }
+
+        }
+
+        setInterval(getTime, 1000);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork8_Task2_KovbasinD.A.</title>
+    <style>
+        .mainDiv {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainDiv">
+        <div id="newDivProd1"></div>
+        <div id="newDivProd2"></div>
+    </div>
+    <script src="lib/cardProduct.js"></script>  <!--Подгружаем объект с методом для создания карточки товара-->
+
+    <script>
+
+        //Задаем параметры 1 товара и вызываем метод вывода.
+        currProduct.vendorCode = "1123";
+        currProduct.nameProd = "BMW M760Li xDrive V12 Excellence";
+        currProduct.price = "4540000";
+        currProduct.currency = "руб.";
+        currProduct.foto = "images/BMW7.jpg";
+        currProduct.descriptionProd = "3.7c. Именно за столько разгоняется новый флагман BMW M760Li xDrive до 100 км/ч." +
+            " Это первый автомобиль компании, в котором используется новейший 12-цилиндровый бензиновый " +
+            "двигатель с технологией M Performance TwinPower Turbo. При рабочем объеме в 6,6 литра силовой " +
+            "агрегат M Performance, развивает максимальную мощность 610 л.с. при 5500 об мин и максимальный" +
+            " крутящий момент 800 Нм при 1500 об/мин, при этом средний расход топлива составляет 12,6 л/100 км.",
+
+        currProduct.cardProduct("newDivProd1");
+
+        //Задаем параметры 2 товара и вызываем метод вывода.
+        currProduct.vendorCode = "1235";
+        currProduct.nameProd = "BMW 340i xDrive";
+        currProduct.price = "2380000";
+        currProduct.currency = "руб.";
+        currProduct.foto = "images/BMW3.jpg";
+        currProduct.descriptionProd = "Разносторонний характер, объединяющий в себе разнообразные идеи и цели:" +
+            " спортивный дизайн, восхитительная динамика и просторный салон нового BMW 3 серии Гран Туризмо " +
+            "являются основой уникальной концепции автомобиля. Подобная купе линия крыши подчеркивает " +
+            "узнаваемый уникальный дизайн. Новый BMW 3 серии Гран Туризмо: выразительный, " +
+            "разносторонний, восхитительный."
+
+        currProduct.cardProduct("newDivProd2");
+    </script>
+</body>
+</html>
