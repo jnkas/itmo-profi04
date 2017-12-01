@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#time {
+			font-size: 50px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<p>1. Создать функцию которая выводит время в html и обновляет значения каждую секунду. Время выводить в формате чч:мм:cc, при этом часы, минуты и секунды отобразить разными цветами.</p>
+	<p id="time"></p>
+
+	<script>
+		function nowTime(el) {
+			var time = new Date();
+
+			if (time.getHours() < 10) {
+				hour = "<span style='color:red;'>0" + time.getHours() + "</span>";
+			} else {
+				hour = "<span style='color:red;'>" + time.getHours() + "</span>";
+			}
+			if (time.getMinutes() < 10) {
+				minut = "<span style='color:green;'>0" + time.getMinutes() + "</span>";
+			} else {
+				minut = "<span style='color:green;'>" + time.getMinutes() + "</span>";
+			}
+			if (time.getSeconds() < 10) {
+				second = "<span style='color:blue;'>0" + time.getSeconds() + "</span>";
+			} else {
+				second = "<span style='color:blue;'>" + time.getSeconds() + "</span>";
+			}
+			 el.innerHTML = hour + ":" + minut + ":" + second;
+		}
+
+		var i = 0;
+		var timer;
+		var elem = document.getElementById("time");
+
+		 
+	    setInterval(function(){
+	      nowTime(elem);
+	    },1000);
+			
+		</script>
+	
+</body>
+</html>

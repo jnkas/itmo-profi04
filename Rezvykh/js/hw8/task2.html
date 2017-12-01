@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="task2.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 class="display-3">Дз8 - задача 2</h1>
+			<p class="lead">
+		2. Создать объект «Товар» включающий:
+- свойства, такие как фото, артикул, описание и т.п.;
+- метод, которому при вызове передается id пустого div элемента и в этот html элемент данный метод создаст и внесёт все необходимые html элементы, стили, и содержание для отображения всей информации хранящихся в свойствах объекта о данном товаре. Дизайн оформления информации в html о товаре – это ваше творчество.
+			</p>
+		</div>
+	</div>
+	<div id="itemDiv"></div>
+
+	<script type="text/javascript">
+		var item = {
+			name: "Плавающая лампа для бассейнов BestWay Solar-Float Lamp",
+			articul: "58111",
+			descroption: "<p>Лампа Bestway 58111 это универсальный фонарик, для бассейна или сада.</p><p>Этот аксессуар очень прост и надежен в использовании. Он заряжается от солнца. И включается автоматически с наступлением вечера. Лампу необязательно даже вынимать из бассейна, если он у вас расположен на открытом воздухе. Днем она подпитается солнечными лучами, чтобы отдать этот свет ночью. Заряда батареи хватает примерно на 8 часов.</p>",
+			price: 299,
+			stock: 21,
+			features: {
+				weight: 0.3,
+				brend: "Bestway",
+				contry: "China"
+			},
+			images: {
+				img1: "img/img1.jpg",
+				img2: "img/img2.jpg"
+			}
+		}
+		shop.itemData("itemDiv", item);
+	</script>
+	</div>
+</body>
+</html>

@@ -22,8 +22,7 @@
 				console.log("произвольное число " + randNum);
 				return randNum;
 			}
-
-			return function() {
+			return function fn() {
 				var num = numR();
 				console.log("присволили " + num);
 				var a = true;
@@ -37,8 +36,10 @@
 				if (a == true) {
 					arr.push(num);
 					return arr;
+				} else {
+					return
 				}
-				return arr;
+				return fn();
 			}
 		}
 
