@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork8_Task3_KovbasinD.A.</title>
+    <style>
+        .bodyTrafficLight {
+            background: black;
+            height: 140px;
+            width: 140px;
+        }
+
+        .glassTrafficLight {
+            height: 140px;
+            width: 140px;
+            border-radius: 70px;
+            background: grey;
+        }
+    </style>
+</head>
+<body>
+<div class="bodyTrafficLight">
+    <div class="glassTrafficLight" id="redGlass"></div>
+</div>
+<div class="bodyTrafficLight" >
+    <div class="glassTrafficLight" id="yellowGlass"></div>
+</div>
+<div class="bodyTrafficLight">
+    <div class="glassTrafficLight" id="greenGlass"></div>
+</div>
+
+    <script>
+
+        var timer = setInterval(changeGlassTraffic(), 2000);
+        timer();
+
+        /*Переключаем цвет светофора*/
+        function changeGlassTraffic() {
+            var stateGlass = 1; //Переменная определяющая цвет
+            var currMovState;
+            return function () {
+                if (stateGlass === 1) {
+                    document.getElementById("redGlass").style.backgroundColor = "red";
+                    document.getElementById("yellowGlass").style.backgroundColor = "grey";
+                    currMovState = stateDown; //Меняем движение вниз.
+                    stateGlass = currMovState(stateGlass);
+                } else if (stateGlass === 2) {
+                    document.getElementById("redGlass").style.backgroundColor = "grey";
+                    document.getElementById("yellowGlass").style.backgroundColor = "yellow";
+                    document.getElementById("greenGlass").style.backgroundColor = "grey";
+                    stateGlass = currMovState(stateGlass);
+                } else if (stateGlass === 3) {
+                    document.getElementById("yellowGlass").style.backgroundColor = "grey";
+                    document.getElementById("greenGlass").style.backgroundColor = "green";
+                    currMovState = stateUp; //Меняем движение вверх.
+                    stateGlass = currMovState(stateGlass);
+                }
+
+            }
+        }
+
+        function stateDown(state) {
+            return ++state;
+        }
+
+        function stateUp(state) {
+            return --state;
+        }
+    </script>
+</body>
+</html>
