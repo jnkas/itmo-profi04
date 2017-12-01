@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Текущее время</title>
+</head>
+<body>
+   <p id = "timer" style = "font-size:90px; text-align:center"></p>
+    <script type="text/javascript">
+        
+        function setTime() {
+            var date = new Date;
+            var hours = date.getHours();
+            hours = hours > 9 ? hours : '0' + hours;
+            var minutes = date.getMinutes();
+            minutes = minutes > 9 ? minutes : '0' + minutes;
+            var seconds = date.getSeconds();
+            seconds = seconds > 9 ? seconds : '0' + seconds;
+            
+            //Собираем время
+            var time = "<span id = hours style = \"color:red\">" + hours + "</span>:" + "<span id = minutes style = \"color:green\">" + minutes + "</span>:" + "<span id = seconds style = \"color:blue\">" + seconds + "</span>";
+            
+            //Рисуем время на страничке
+            var drawTime = document.getElementById("timer");
+            drawTime.innerHTML = time;
+        }
+        
+        //Вызываем функцию
+        setInterval(setTime,1000);
+    </script>
+</body>
+</html>

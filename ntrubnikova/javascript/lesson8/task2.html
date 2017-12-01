@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Товар</title>
+</head>
+<body>
+   <div id = "products">
+       
+   </div>
+    <script type="text/javascript">
+        var product = {
+            photo: "images/product1.jpg",
+            article: "12345",
+            name: "Игрушка детская, собачка",
+            description: "Для самых маленьких, от 1 до 3 лет.",
+            
+            load() {
+                var loadProduct = document.getElementById("products");
+                
+                var title = "<h2 style =\"color: #0277bd; font-family:Arial; text-transform: uppercase;\">" + this.name + "</h2>";
+                
+                var description = "<p style = \" font-family: Arial; color: #0297b0;\">" + this.description + "</p>";
+                
+                var image = "<p><img src =\"" + this.photo + "\" alt = \"Собачка\" height = 30% width = 30%> </p>";
+                
+                var result = title + description + image;
+                loadProduct.innerHTML = result;
+            }
+        }
+    product.load();
+    </script>
+</body>
+</html>
