@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta charset="UTFta charset="UTF-8">
+	<title>Document</title>
+	
+<style type="text/css">
+	.hours {
+		color:green;
+	} 
+
+	.minutes {
+		color:red;
+	} 
+	.seconds {
+		color:blue;
+	} 
+</style>
+
+
+</head>
+<body>
+<p>
+1. Создать функцию которая выводит время <br>
+в html и обновляет значения каждую секунду.  <br>
+Время выводить в формате чч:мм:cc, при этом  <br>
+часы, минуты и секунды отобразить разными цветами.	<br>
+</p>
+
+
+<div id="sTimer"></div>
+ 
+ <script type="text/javascript">
+function Timer(){
+	var rTime = new Date();
+	var hh = rTime.getHours();
+	var mm = rTime.getMinutes();
+	var ss = rTime.getSeconds();
+    var tt = document.getElementById("sTimer");
+    tt.innerHTML = "<span class='hours'>" + hh + "</span>:<span class='minutes'>" + mm + "</span>:<span class='seconds'>" + ss + "</span>";
+}
+setInterval(Timer, 1000);
+
+</script>
+</body>
+<footer></footer>
+</html>

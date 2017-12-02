@@ -13,11 +13,11 @@ function calc_math(x){
     return y;  
 }
 
-describe("task_03 calc_math_numbers_from_string", function(){
+describe("task_01 calc_math_numbers_from_string", function(){
  
 	var input_x='4';
 	var result = 2.25;
-    var msg = "Вывести сумму цифр этого числа: " + input_x + " результат "+ result;
+    var msg = "Вывести результат выполнения функции: " + input_x + " результат "+ result;
     it(msg, function(){
         var rez = calc_math(input_x);
         expect(rez).toBe(2.25);

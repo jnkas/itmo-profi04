@@ -1,0 +1,107 @@
+<html>
+<head>
+<meta charset="UTFta charset="UTF-8">
+	<title>Document</title>
+	
+<style type="text/css">
+	.hours {
+		color:green;
+	} 
+
+	.minutes {
+		color:red;
+	} 
+	.seconds {
+		color:blue;
+	} 
+	.divt {
+		display: inline-block;
+		font-size: 20px;
+		line-height: 30px;
+		}
+	.divt h2 {
+
+	    margin-bottom: 60.9;
+		background-color: lightgrey;
+		border-radius: 3px;
+	}	
+</style>
+
+
+</head>
+<body>
+<p>
+2. Создать объект «Товар» включающий: <br>
+- свойства, такие как фото, артикул, описание и т.п.;<br>
+- метод, которому при вызове передается  id пустого div элемента и в этот html элемент данный <br>
+метод создаст и внесёт все необходимые html элементы, стили, <br>
+и содержание для отображения всей информации хранящихся в свойствах объекта о данном товаре.<br>
+ Дизайн оформления информации в html о товаре – это ваше творчество.	<br>
+</p>
+
+
+<div id="good"></div>
+
+
+	
+ <script type="text/javascript">
+
+
+		
+"ede"	
+
+
+
+var objGood = {
+	image:"src ='Mouse_sm.jpg'",
+	descr:"8 keys, led",
+	color:"red/grey",
+	interface :"USB",
+	price:"20E",
+	sellingId:"330589",
+	propList: function(test) {
+		document.getElementById(test).innerHTML = "<div class = 'divt'>" + "<img " + this.image + ">" + "</div>" + "<div class = 'divt'>" + "<h2>" + "Product description" + "</h2>" + "<ul>" + "<li>" + " Tech spec: " + this.descr + "</li>" + "<li>" + "Color: "  + this.color + "</li>" + "<li>" + " Interface: " + this.interface + "</li>" + "<li>" + " Price: " + this.price + "</li>" + "<li>" + "Product: # " + this.sellingId + "</li>" + "</ul>" + "</div>"; 
+			
+
+	} 
+
+};  
+
+objGood.propList("good");
+
+
+
+
+/*    
+function eShop(prop){
+	console.log("Объект prop:");
+		for (var key in prop)
+		{
+			console.log("Свойство массива " + key + " содержит " + prop[key]);
+			document.getElementById("good").innerHTML = key + " содержит " + prop[key];		
+		}
+		
+}
+eShop(begin()); */
+
+
+
+
+/*
+	var node = document.getElemetById("good");
+	node.setAttribute("class", "node-container")
+	fd.style.border = "2px solid red"
+
+	var fChild = node.fistChild // <strong>
+	var lChild = node.lastChild // text node
+	lChild.parentNode // укажет на узел р
+	lChild.nodeType // тип узла
+
+}
+setInterval(eShop, 1000000);
+*/
+
+</script>
+</body>
+<footer></footer>
+</html>
