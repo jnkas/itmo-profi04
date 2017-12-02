@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.grey {
+			background-color: grey;
+			width :60px;
+			height: 60px;
+			padding: 1px;
+		
+			}
+		.red {
+			align-items: center;
+			background-color: red;
+			border-radius: 50%;
+			
+			width :50px;
+			height: 50px;
+			margin: 5px;
+			margin-color: white;
+			}
+		.dark_red {
+			align-items: center;
+			background-color: #4d0000;
+			border-radius: 50%;
+			
+			width :50px;
+			height: 50px;
+			margin: 5px;
+			margin-color: white;
+			}	
+
+		.yellow {
+			align-items: center;
+			background-color: yellow;
+			border-radius: 50%;
+			
+			width :50px;
+			height: 50px;
+			margin: 5px;
+			margin-color: white;
+		}
+		.dark_yellow {
+			align-items: center;
+			background-color: #808000;
+			border-radius: 50%;
+			
+			width :50px;
+			height: 50px;
+			margin: 5px;
+			margin-color: white;	
+		}
+		.green {
+			align-items: center;
+			background-color: lightgreen;
+			border-radius: 50%;
+			
+			width :50px;
+			height: 50px;
+			margin: 5px;
+			margin-color: white;
+		}
+		.dark_green {
+			align-items: center;
+			background-color: darkgreen;
+			border-radius: 50%;
+			
+			width :50px;
+			height: 50px;
+			margin: 5px;
+			margin-color: white;
+		}
+
+	</style>
+
+
+</head>
+<body>
+<!-- 3. Создать светофор (красный, желтый, 
+зелёный). Переключать цвет у светофора 
+через каждые 2 сек сверху вниз и снизу вверх. -->
+
+	<div id = "red" class = "grey">
+		<div class = "dark_red"></div>
+	</div>
+	<div id = "yellow" class = "grey">
+		<div class = "dark_yellow"></div>
+	</div>
+	<div id = "green" class = "grey">
+		<div class = "dark_green"></div>
+	</div>
+		
+	<script type="text/javascript">
+	function createCounter(a){
+		var i = 0;
+		return function (){
+			switch(i){
+				case 0:
+			        document.getElementById("yellow").innerHTML = "<div class = 'dark_yellow'>" + "</div>";
+					document.getElementById("red").innerHTML = "<div class = 'red'>" + "</div>";
+			        break;
+			    case 1:
+			        document.getElementById("red").innerHTML = "<div class = 'dark_red'>" + "</div>";
+					document.getElementById("yellow").innerHTML = "<div class = 'yellow'>" + "</div>";
+			        break;
+			    case 2:
+			        document.getElementById("yellow").innerHTML = "<div class = 'dark_yellow'>" + "</div>";
+					document.getElementById("green").innerHTML = "<div class = 'green'>" + "</div>";
+			        break;
+			    case 3:
+			        document.getElementById("green").innerHTML = "<div class = 'dark_green'>" + "</div>";
+					document.getElementById("yellow").innerHTML = "<div class = 'yellow'>" + "</div>";
+			        break;			        			            
+			}
+			i=(i+1)%4;
+		}
+	}
+	function myFunction() {
+    	setInterval(function(){ console.log(counter()); 
+    }, 2000);
+	}	
+	var counter = createCounter();
+	myFunction();
+	</script>
+</body>
+</html>

@@ -32,8 +32,7 @@
 		},
 		
 		clone_arr:function(arr_d){
-			var clone = "";
-			clone = arr_d;
+			var clone = arr_d.concat();
 			return clone;
 		},
 
