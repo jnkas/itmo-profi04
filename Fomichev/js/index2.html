@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--
+  Есть три вершины. Координаты X, Y, Z заданы как целые числа. Нужно определить - является ли треугольник с заданными 
+координатами прямоугольным.
+-->
+   
+   
+   <script>
+    var vertexOne, vertexTwo, vertexThree=[];
+    
+    var vertOne, vertTwo, vertThree;
+    var l1,l2,l3;
+       
+    vertOne=prompt('Введите через пробел координаты первой точки(x, y, z) как в примере ниже','1 3 5');
+    vertTwo=prompt('Введите через пробел координаты второй точки(x, y, z) как в примере ниже','1 3 5');
+    vertThree=prompt('Введите через пробел координаты третей точки(x, y, z) как в примере ниже','1 3 5');
+                     
+    vertexOne = vertOne.split(' ',3);
+    vertexTwo = vertTwo.split(' ',3);
+    vertexThree = vertThree.split(' ',3);
+       
+    l1=Math.pow(vertexTwo[0]-vertexOne[0],2)+Math.pow(vertexTwo[1]-vertexOne[1],2);
+       
+    l2=Math.pow(vertexThree[0]-vertexTwo[0],2)+ Math.pow(vertexThree[1]-vertexTwo[1],2);
+       
+    l3=Math.pow(vertexThree[0]-vertexOne[0],2)+Math.pow(vertexThree[1]-vertexOne[1],2);
+       
+       
+    if(l1>l2 && l1>l3){
+        if(l1===l2+l3){
+            alert('Прямоугольный');
+        }else{alert("Не прямоугольный");}}
+    
+    else if(l2>l1 && l2>l3){
+        if(l2===l1+l3){
+            alert('Прямоугульный');
+        } else{
+            alert('Не прямоуголный');
+        }}
+    else{
+        if(l3==l1+l2){
+            alert('Прямоугольный');
+        } else{alert('Не прямоугольный');}}
+            
+    
+    </script>
+   
+    
+</body>
+</html>

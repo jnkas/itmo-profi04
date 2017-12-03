@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--   Перераспределить значения переменных X и Y так, чтобы в X оказалось меньшее из этих значений, а в Y — большее.-->
+<script>
+ var numX;
+ var numY;
+    numX = +prompt('Введите первое число(x)');
+    numY = +prompt('Введите второе число(y)');
+    
+    if(numX > numY){
+        var temp = numX;
+        numX = numY;
+        numY = temp;
+        alert('x='+ numX + ' y='+ numY);
+        
+    }else if(numX === numY){
+        alert("Числа равны");
+    }else {
+        alert('x='+ numX + ' y='+ numY);
+    }
+    
+    
+    
+    
+</script>
+   
+    
+</body>
+</html>
