@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Клавиатура</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+    <textarea id="write" rows="6" cols="60"></textarea>
+	    <ul id="keyboard">
+            <li id="192">`</li>
+            <li id="49">1</li>
+            <li id="50">2</li>
+            <li id="51">3</li>
+            <li id="52">4</li>
+            <li id="53">5</li>
+            <li id="54">6</li>
+            <li id="55">7</li>
+            <li id="56">8</li>
+            <li id="57">9</li>
+            <li id="48">0</li>
+            <li id="189">-</li>
+            <li id="187">=</li>
+            <li class="delete lastitem" id="46">delete</li>
+            <li id="9">tab</li>
+            <li id="81">q</li>
+            <li id="87">w</li>
+            <li id="69">e</li>
+            <li id="82">r</li>
+            <li id="84">t</li>
+            <li id="89">y</li>
+            <li id="85">u</li>
+            <li id="73">i</li>
+            <li id="79">o</li>
+            <li id="80">p</li>
+            <li id="219">[</li>
+            <li id="221">]</li>
+            <li id="220">\</li>
+            <li class="capslock" id="20">caps lock</li>
+            <li id="65">a</li>
+            <li id="83">s</li>
+            <li id="68">d</li>
+            <li id="70">f</li>
+            <li id="71">g</li>
+            <li id="72">h</li>
+            <li id="74">j</li>
+            <li id="75">k</li>
+            <li id="76">l</li>
+            <li id="186">:</li>
+            <li id="222">'</li>
+            <li id="13" class="return">return</li>
+            <li id="161" class="left-shift">shift</li>
+            <li id="90">z</li>
+            <li id="88">x</li>
+            <li id="67">c</li>
+            <li id="86">v</li>
+            <li id="66">b</li>
+            <li id="78">n</li>
+            <li id=77>m</li>
+            <li id="188">,</li>
+            <li id=190>.</li>
+            <li id="191">/</li>
+            <li class="right-shift lastitem" id="162">shift</li>
+            <li class="space" id="32">&nbsp;</li>
+	    </ul>
+    </div>
+    <script type="text/javascript">
+        //Нажать
+        document.addEventListener("keydown",myHandler,false);
+        
+        function myHandler(e) {
+            //Tab
+            if (e.keyCode === 9) {
+                    e.preventDefault();
+                }
+            
+            //Все клавиши
+            var key = document.getElementById(e.keyCode);
+            
+            //Правый и левый Shift
+            if (e.keyCode === 16) {
+                if (e.location === 1) {
+                    var key = document.getElementById("161");
+                    }
+                if (e.location === 2) {
+                    var key = document.getElementById("162");
+                    }
+            }
+            //Меняем цвет
+            key.style.backgroundColor = "black";
+            key.style.color = "white";
+            var text = document.getElementById("write");
+            if (e.keyCode === 32) {
+                text.innerHTML = "Вы нажали: пробел";
+            }
+            else {
+                text.innerHTML = "Вы нажали: " + key.innerText;
+            }
+            //console.log(key);
+        }
+        
+        //Отпустить
+        document.addEventListener("keyup",clearColor,false)
+        
+        function clearColor(e) {
+            var key = document.getElementById(e.keyCode);
+            
+            //Правый и левый Shift
+            if (e.keyCode === 16) {
+                if (e.location === 1) {
+                    var key = document.getElementById("161");
+                    }
+                if (e.location === 2) {
+                    var key = document.getElementById("162");
+                    }
+            }
+            
+            key.style.backgroundColor = "white";
+            key.style.color = "black";
+        }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        button {
+            width:100px;
+            height:50px;
+            background: wheat;
+            font-family: Arial;
+            font-size: 20;
+            font-weight: bold;
+            border: 1px solid brown;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <button id="button">0</button>
+    
+    <script type="text/javascript">
+        button.addEventListener("click",buttonHandler,false);
+        
+        function buttonHandler(e) {
+            var counter = parseInt(e.target.innerText);
+            counter++;
+            e.target.innerText = counter;
+        }
+    </script>
+</body>
+</html>
