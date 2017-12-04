@@ -24,6 +24,7 @@
 			this.age = age;
 			this.gender = gender;
 			this.hobby = hobby;
+
 			this.toString = function(){
 				return "Human: " + name + "Age: " + age + " years. Sex: " + gender + ". Hobbies: " + hobby + ".";
 			};
@@ -36,59 +37,25 @@
 		function Student(name, age, gender, hobby,univercity){
 			Human.call(this, name, age, gender, hobby);
 			this.univercity = univercity;
+			
 			this.toString = function(){
-				return "Student: " + name + "Age: " + age + " years. Sex: " + gender + ". Hobbies: " + hobby + ". Studying in " + univercity + ".";
+				return "Student: " + name + "Age: " + age + " years. Sex: " + gender + ". Hobbies: " + hobby + ". Studying in " + univercity + ".";//1st var
+
+				//return (new Human(this.name, this.age, this.gender, this.hobby)).toString() + " Studying in " + univercity + ".";
+				//2nd var
 			};
 		}
 
-
-
-
-
 		var human = new Human("Ivan ", 20, " male ", new Array("sport ", "progr "));
-		alert(human);
+		//alert(human);
+		console.log(human.toString());
 		alert("Пользователь совершенно летний: " + (human >= 18?"Да":"Нет"));
-		var student = new Student("Ivan ", 20, " male ", new Array("sport ", "progr "), "ITMO");
-		alert(student);
+
+		var student = new Student("Petr ", 25, " male ", new Array("pay_game ", "ski "), "ITMO");
+		//alert(student);
+		console.log(student.toString());
 
 
-//			this.get = function(){
-/*				return this.name + " " + this.price;
-			}
-		}			
-		 function Basket() {
-		 	var store = [];
-		 	var sum = 0;
-		 	var quan = 0;
-		 	this.set = function(name, price) {
-		 		store[store.length] = new Goods(name,price);
-		 		sum += price;
-		 		quan++;
-		 	};
-		 	this.getQuantity = function(){
-		 			return quan;
-		 	}		
-		 	this.getSumm = function(){
-		 			return sum;
-		 	}	
-		 	this.printx = function(){
-		 		for(i = 0; i < store.length; i++){
-		 			console.log(store[i].get());
-				}		 			
-				console.log(quan + "\n" + sum);
-		 	}		
-		 }		
-		var basket = new Basket();
-		good1 = new Goods("jacket",44);
-		//Goods("jacket",44);
-		//Goods("shirts",55);
-		basket.set("boots",71);
-		basket.set("bootz",701);
-		basket.set("shoes",731);
-		console.log(basket.getQuantity());
-		console.log(basket.getSumm());
-		console.log(good1);
-		basket.printx(); */
 		
 	</script>
 </body>
