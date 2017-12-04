@@ -1,0 +1,96 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<p>
+	2. Создать шаблон объектов «Человек». <br>
+Свойства «Имя», «Возраст», «Пол», «Интересы». <br>
+Метод преобразования к строке вида: «Человек: <br>
+Иван. Возраст: 25 лет. Пол: м. Интересы: <br>
+музыка, программирование.» <br>
+Создать шаблон объектов «Студент». <br>
+Свойства от наследованные от шаблона объектов <br>
+«Человек» и добавить «Институт».<br>
+Переопределить метод преобразования к строке  <br>
+вида: «Студент: Иван. Возраст: 25 лет. Пол: м. <br>
+Интересы: музыка, программирование. <br>
+Обучается в ИТМО.»  <br>
+</p>
+
+	<script>
+		function Human(name, age, gender, hobby){
+			this.name = name;
+			this.age = age;
+			this.gender = gender;
+			this.hobby = hobby;
+			this.toString = function(){
+				return "Human: " + name + "Age: " + age + " years. Sex: " + gender + ". Hobbies: " + hobby + ".";
+			};
+			
+			this.valueOf = function(){
+				return age;
+			};
+			//console.log(age);
+		}	
+		function Student(name, age, gender, hobby,univercity){
+			Human.call(this, name, age, gender, hobby);
+			this.univercity = univercity;
+			this.toString = function(){
+				return "Student: " + name + "Age: " + age + " years. Sex: " + gender + ". Hobbies: " + hobby + ". Studying in " + univercity + ".";
+			};
+		}
+
+
+
+
+
+		var human = new Human("Ivan ", 20, " male ", new Array("sport ", "progr "));
+		alert(human);
+		alert("Пользователь совершенно летний: " + (human >= 18?"Да":"Нет"));
+		var student = new Student("Ivan ", 20, " male ", new Array("sport ", "progr "), "ITMO");
+		alert(student);
+
+
+//			this.get = function(){
+/*				return this.name + " " + this.price;
+			}
+		}			
+		 function Basket() {
+		 	var store = [];
+		 	var sum = 0;
+		 	var quan = 0;
+		 	this.set = function(name, price) {
+		 		store[store.length] = new Goods(name,price);
+		 		sum += price;
+		 		quan++;
+		 	};
+		 	this.getQuantity = function(){
+		 			return quan;
+		 	}		
+		 	this.getSumm = function(){
+		 			return sum;
+		 	}	
+		 	this.printx = function(){
+		 		for(i = 0; i < store.length; i++){
+		 			console.log(store[i].get());
+				}		 			
+				console.log(quan + "\n" + sum);
+		 	}		
+		 }		
+		var basket = new Basket();
+		good1 = new Goods("jacket",44);
+		//Goods("jacket",44);
+		//Goods("shirts",55);
+		basket.set("boots",71);
+		basket.set("bootz",701);
+		basket.set("shoes",731);
+		console.log(basket.getQuantity());
+		console.log(basket.getSumm());
+		console.log(good1);
+		basket.printx(); */
+		
+	</script>
+</body>
+<footer></footer>
+</html>

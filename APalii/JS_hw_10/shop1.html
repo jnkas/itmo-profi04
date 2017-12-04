@@ -1,0 +1,65 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<p>
+	1. Создать шаблон объектов «Товар».<br>
+Свойства товара «Имя» и «Цена».<br>
+Создать шаблон объектов «Корзина товаров».<br> 
+Приватные свойства объекта:<br>
+- Массив товаров;<br>
+- Количество товаров;<br>
+- Сумма товаров.<br>
+Методы объекта:<br>
+- Добавить товар;<br>
+- Вернуть сумму товара;<br>
+- Вернуть количество товара.<br>
+</p>
+
+	<script>
+		function Goods(name,price) {
+			this.name = name;
+			this.price = price;
+			this.get = function(){
+				return this.name + " " + this.price;
+			}
+		}			
+		 function Basket() {
+		 	var store = [];
+		 	var sum = 0;
+		 	var quan = 0;
+		 	this.set = function(name, price) {
+		 		store[store.length] = new Goods(name,price);
+		 		sum += price;
+		 		quan++;
+		 	};
+		 	this.getQuantity = function(){
+		 			return quan;
+		 	}		
+		 	this.getSumm = function(){
+		 			return sum;
+		 	}	
+		 	this.printx = function(){
+		 		for(i = 0; i < store.length; i++){
+		 			console.log(store[i].get());
+				}		 			
+				console.log(quan + "\n" + sum);
+		 	}		
+		 }		
+		var basket = new Basket();
+		good1 = new Goods("jacket",44);
+		//Goods("jacket",44);
+		//Goods("shirts",55);
+		basket.set("boots",71);
+		basket.set("bootz",701);
+		basket.set("shoes",731);
+		console.log(basket.getQuantity());
+		console.log(basket.getSumm());
+		console.log(good1);
+		basket.printx();
+		
+	</script>
+</body>
+<footer></footer>
+</html>
