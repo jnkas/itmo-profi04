@@ -13,13 +13,18 @@
     Заданное число передается функции в качестве аргумента. */
 
         function fib(n) {
-        var arrFib = [1, 1];
-        for (var i = 2; i < n; i++) {
-        arrFib[i] = arrFib[i-2]+arrFib[i-1];
-        }
+            var arrFib = [1,1];
+            var n;   
+            if (n === 1) {  // Update: дописала на случай, если n = 1
+                return 1;
+            } else {
+            for (var i = 2; i < n; i++) {
+            arrFib[i] = arrFib[i-2]+arrFib[i-1];
+            }
         return arrFib;
+            }
         }
-        console.log(fib(8)); 
+        console.log(fib(+prompt("Введите количество чисел Фибоначчи"))); 
     </script>
 </body>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа № 5. Задание 4</title>
+</head>
+<body>
+    <script>
+// вроде нормально работает в пределах года 
+
+	function daysCount(n){
+		if ((n===1) || ((n % 10===1) && (n != 11) && (n != 111) && (n != 211) && (n != 311)))
+		console.log(n + " день");
+        
+        else if ((n >= 111 && n <= 114) || (n >= 211 && n <= 215) || (n >= 311 && n <=315))
+        console.log(n + " дней");    
+            
+		else if ((n >= 5 && n <= 20) || (n % 10 >= 5 && n % 10 <=9) || (n % 10 === 0))
+		console.log(n + " дней");
+        
+        else if ((n >= 2 && n <= 4) || ((n > 20) && (n % 10 >=2 && n % 10 <= 4)))
+		console.log(n + " дня");
+		
+	}
+	console.log(daysCount(0));
+    console.log(daysCount(1));
+    console.log(daysCount(2));
+    console.log(daysCount(3));
+    console.log(daysCount(4));
+    console.log(daysCount(5));
+    console.log(daysCount(6));
+    console.log(daysCount(7));
+    console.log(daysCount(8));
+    console.log(daysCount(9));
+    console.log(daysCount(10)); 
+    console.log(daysCount(11)); 
+    console.log(daysCount(12));
+    console.log(daysCount(15));
+    console.log(daysCount(20));
+    console.log(daysCount(21)); 
+    console.log(daysCount(23)); 
+    console.log(daysCount(29));
+    console.log(daysCount(30));
+    console.log(daysCount(35));
+    console.log(daysCount(44));
+    console.log(daysCount(77));
+    console.log(daysCount(82)); 
+    console.log(daysCount(101));
+    console.log(daysCount(111));
+    console.log(daysCount(114));
+    console.log(daysCount(123)); 
+    console.log(daysCount(365));    
+	
+</script>    
+</body>
+</html>
