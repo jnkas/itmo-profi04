@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--   Дана строка, изображающая целое число. Вывести сумму цифр этого числа.-->
+<script>
+    var stroca, summElemStroc;
+    var summElemStroc = 0;
+    
+    stroca = +prompt('Введите строку','333');
+    
+    var massElement = String(stroca).split('');
+    
+
+    for(var i=0;i < massElement.length;i++){
+           summElemStroc = summElemStroc + parseInt(massElement[i]); 
+        }
+   
+    alert(summElemStroc);
+    
+</script>
+    
+</body>
+</html>
