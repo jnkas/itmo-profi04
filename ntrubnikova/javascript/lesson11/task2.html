@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Студент</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //Шаблон человека
+        function Man(name,age,gender,interests){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.interests = interests;
+        }
+        Man.prototype.toString = function(){
+                return "Человек: " + this.name + ".\nВозраст: " + this.age + ".\nПол: " + this.gender + ".\nИнтересы: " + this.interests + ".";
+            }
+        
+        //Шаблон студента
+        function Student(name,age,gender,interests,uni){
+            Man.call(this,name,age,gender,interests);
+            this.uni = uni;
+        }
+        
+        Student.prototype.toString = function(){
+                return "Студент: " + this.name + ".\nВозраст: " + this.age + ".\nПол: " + this.gender + ".\nИнтересы: " + this.interests + ".\nОбучается в: " + this.uni + ".";
+            }
+        
+        Student.prototype.__proto__ = Man.prototype;
+        
+        //Студент
+        var interests = ["музыка"," футбол"," Игра Престолов"];
+        var student1 = new Student("Иван",18,"М",interests,"ИТМО");
+        alert(student1);
+    </script>
+</body>
+</html>
