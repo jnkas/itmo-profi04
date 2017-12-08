@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p> 2. Используя смешанное наследование: <br>
+Создать шаблон объектов «Человек».<br>
+Свойства «Имя», «Возраст», «Пол», «Интересы». <br>
+Метод преобразования к строке вида: «Человек: <br>
+Иван. Возраст: 25 лет. Пол: м. Интересы: <br>
+музыка, программирование.» <br>
+Создать шаблон объектов «Студент». <br>
+Свойства от наследованные от шаблона объектов  <br>
+«Человек» и добавить «Институт». <br>
+Переопределить метод преобразования к строке вида:  <br>
+«Студент: Иван. Возраст: 25 лет. Пол: м. Интересы: <br>
+музыка, программирование. Обучается в ИТМО.» <br>
+	</p>
+
+<script>
+
+	function Human(name,age,gender,interests){
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+		this.interests = interests;
+	};
+	Human.prototype.toString = function(){
+		return "Human: " + this.name+", Age: " + this.age + " years , Sex: " + this.gender + ", Interests: " + this.interests + ".";
+	};
+	function Student(name,age,gender,interests,univercity){
+		Human.call(this,name,age,gender,interests);
+		this.univercity = univercity;
+	};
+	Student.prototype.toString = function(){
+		return "Student: " + this.name + ". Age: " + this.age + " years. Sex: " + this.gender+". Interests: " + this.interests + ". Study in " + this.univercity + ".";
+	};
+	Student.prototype.__proto__ =Human.prototype;
+
+
+	var human = new Human("Ivan ", 20, " male ", new Array("sport", " progr "));
+	//alert(human);
+	console.log(human.toString());
+	alert("Пользователь совершенно летний: " + (human >= 18?"Да":"Нет"));
+
+	var student = new Student("Petr ", 25, " male ", new Array("play_game ", "ski "), "ITMO");
+	//alert(student);
+	console.log(student.toString());
+
+		
+	</script>
+
+
+
+</body>
+</html>
