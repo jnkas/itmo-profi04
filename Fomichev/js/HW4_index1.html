@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #cont1, #cont2{
+        width: 200px;
+        height: 100px;
+        background-color: antiquewhite;
+        float: left;
+        text-align: center
+        }
+        #cont0{
+            width: 400px;
+            height: 80px;
+            background-color: chocolate;
+            text-align: center;
+            padding-top: 3px;
+        }
+        #result{
+            width: 400px;
+            height: 80px;
+            background-color: chocolate;
+            text-align: center;
+            padding-top: 50px;
+            float: left;
+        }
+        #text{
+            width: 200px;
+           
+        }
+        
+    </style>
+</head>
+<body>
+<!--
+  Заданы два массива 
+A = [ 12, 4, 3, 10, 1, 20 ] 
+B = [-3, -7, -100, -33] 
+необходимо их объединить в один массив C добавив массив B в конец (в начало) A. 
+   
+-->
+<div id="cont0">
+    <p> Заданы два массива 
+A = [ 12, 4, 3, 10, 1, 20 ] 
+B = [-3, -7, -100, -33] 
+необходимо их объединить в один массив C добавив массив B в конец (в начало) A. </p>
+    
+</div>
+<div id="cont1">
+<p>В начало</p>
+<input type="radio" id="input1" name="one">
+</div>
+<div id="cont2">
+<p>В конец</p>
+<input type="radio" id="input2" name="one">
+</div>
+<div id="result">
+    <input type="text" id="text">
+    <button id="butt"> Результат</button>
+</div>
+<script>
+    
+    var mass1= [12,4,3,10,1,20];
+    var mass2=[-3,-7,-100,-33];
+    
+    var mass3 = mass1.concat(mass2);
+    console.log(mass3);
+
+    document.getElementById("butt").onclick = start;
+    
+function start(){
+   if (document.getElementById('input1').checked === true){
+       
+       var mass3 = mass1.concat(mass2);
+       document.getElementById('text').value = mass3;
+   }
+    else if(document.getElementById('input2').checked === true){
+       var mass3 = mass2.concat(mass1);
+       document.getElementById('text').value = mass3;
+        
+    }
+   else{
+       alert('выберите куда добавить массив');
+   }
+}
+</script>
+    
+</body>
+</html>
