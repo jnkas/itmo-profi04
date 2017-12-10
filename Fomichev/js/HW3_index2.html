@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--   Дана строка S и символ C. Удвоить каждое вхождение символа C в строку S.-->
+    
+<script>
+    var stroca, simvol, result;
+//    
+//    
+    stroca = prompt("введите строку");
+    simvol = prompt('Введите символ котоый удвоить');
+    
+ 
+   var rep = new RegExp(simvol,'g'); 
+        var doublesymbol = simvol + simvol;
+        if (stroca.match(simvol) != null){
+            var newstroca = stroca.replace(rep,doublesymbol);
+            alert(newstroca);
+        }
+        else {
+            alert("Символа в строке нет");
+        }
+    
+  
+</script>
+</body>
+</html>
+
+
+
+
