@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.button {
+			width: 4em;
+			height:20px;
+			background-color: green;
+			border-radius: 3px;
+
+		}
+	</style>
+</head>
+<body>
+<p>
+	2. Реализовать счётчик нажатий на кнопку: Дана кнопка внутри неё <br>
+записана цифра. При клике на кнопку – её значение должно <br>
+увеличиваться на единицу.
+</p>
+
+<div class= "button" type="button" id="button" onClick="doSomething()"> <p id="number">0</p> </div>
+
+
+<script type="text/javascript">
+	//var counter = 1;
+	//function doSomething(element) {
+		
+		//if(var i = 0; i < 20 ; i++)
+	//	counter = onclick+counter;
+	//console.log(onclick);	
+	//console.log	(counter);
+	//}
+//document.getElementById('button').onclick = doSomething
+
+var add = (function (){
+	var counter = 0;
+	return function () {return counter +=1;}
+		console.log(i);	
+		})();
+	
+	function doSomething(){
+		document.getElementById("number").innerHTML = add();
+	}
+	 
+	// console.log(counter());
+	// console.log(counter());
+	// console.log(counter());
+
+
+
+</script>
+	
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--
+   Проверить что введенный пароль удовлетворяет следующим условиям сложности:
+- длинна от 9 символов;
+- содержит обязательно английские буквы верхнего и нижнего регистра;
+- содержит более двух цифр;
+- содержит обязательно один из неалфавитных символов (например, !, $, #, %).
+-->
+  
+<script>
+    var password = prompt('введите пароль');
+    
+    
+    var digits = /\d.*\d.*\d/;
+    var special = /[^\d\sA-Z]/gi;
+    var small = /[a-z]*/;
+  
+    
+     if ((password.length >= 9) && (password.search(digits) != -1) && (password.search(special) != -1) && (password.search(small) != -1)) {
+           alert("Пароль соответствует");
+       } else {
+           alert("Пароль не соответствует")
+       }
+    
+</script>
+   
+    
+</body>
+</html>

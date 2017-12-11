@@ -1,0 +1,63 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<p>
+	2. Создать шаблон объектов «Человек». <br>
+Свойства «Имя», «Возраст», «Пол», «Интересы». <br>
+Метод преобразования к строке вида: «Человек: <br>
+Иван. Возраст: 25 лет. Пол: м. Интересы: <br>
+музыка, программирование.» <br>
+Создать шаблон объектов «Студент». <br>
+Свойства от наследованные от шаблона объектов <br>
+«Человек» и добавить «Институт».<br>
+Переопределить метод преобразования к строке  <br>
+вида: «Студент: Иван. Возраст: 25 лет. Пол: м. <br>
+Интересы: музыка, программирование. <br>
+Обучается в ИТМО.»  <br>
+</p>
+
+	<script>
+		function Human(name, age, gender, hobby){
+			this.name = name;
+			this.age = age;
+			this.gender = gender;
+			this.hobby = hobby;
+
+			this.toString = function(){
+				return "Human: " + name + "Age: " + age + " years. Sex: " + gender + ". Hobbies: " + hobby + ".";
+			};
+			
+			this.valueOf = function(){
+				return age;
+			};
+			//console.log(age);
+		}	
+		function Student(name, age, gender, hobby,univercity){
+			Human.call(this, name, age, gender, hobby);
+			this.univercity = univercity;
+			
+			this.toString = function(){
+				return "Student: " + name + "Age: " + age + " years. Sex: " + gender + ". Hobbies: " + hobby + ". Studying in " + univercity + ".";//1st var
+
+				//return (new Human(this.name, this.age, this.gender, this.hobby)).toString() + " Studying in " + univercity + ".";
+				//2nd var
+			};
+		}
+
+		var human = new Human("Ivan ", 20, " male ", new Array("sport ", "progr "));
+		//alert(human);
+		console.log(human.toString());
+		alert("Пользователь совершенно летний: " + (human >= 18?"Да":"Нет"));
+
+		var student = new Student("Petr ", 25, " male ", new Array("pay_game ", "ski "), "ITMO");
+		//alert(student);
+		console.log(student.toString());
+
+
+		
+	</script>
+</body>
+<footer></footer>
+</html>

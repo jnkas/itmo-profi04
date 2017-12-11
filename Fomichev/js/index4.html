@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--
+   Единицы длины пронумерованы следующим образом: 
+1 — дециметр, 2 — километр, 
+3 — метр, 4 — миллиметр, 5 — сантиметр. Дан номер единицы длины и длина отрезка L в этих единицах (вещественное число). 
+Вывести длину данного отрезка в метрах.
+-->
+   
+<script>
+    var elementData, recRes;
+    var arrUnit= [];
+   
+    
+    elementData = prompt('Введите длину отрезка и единицу измерения через пробел 1—дециметр, 2—километр,3—метр, 4—миллиметр, 5—сантиметр:');
+    
+    arrUnit = elementData.split(' ',2);
+    var unit = +arrUnit[1];
+    
+    switch (unit) {
+        case 1:
+            recRes = arrUnit[0];
+            recRes = recRes/10;
+            alert(recRes +'m.');
+            break;
+            
+        case 2:
+            recRes = arrUnit[0]*1000;
+            alert(recRes+'m.');
+            break;
+            
+        case 3:
+            recRes = arrUnit[0];
+            alert(recRes+'m.');
+            break;
+            
+        case 4:
+            recRes = arrUnit[0]/1000;
+            alert(recRes+'m.');
+            break;
+            
+        case 5:
+            recRes = arrUnit[0]/100;
+            alert(recRes+'m.');
+            break;
+            
+            default:
+                alert("Неверно выбранны единицы измерения!")
+        
+     
+    };
+    
+    
+    
+    
+</script>
+    
+</body>
+</html>

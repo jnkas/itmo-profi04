@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Товар, корзина, prototype</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //Шаблон товара
+        function Product(name,price){
+            this.name = name;
+            this.price = price;
+        }
+        
+        //Шаблон корзины товаров
+        function Basket(){
+            this.products = [];
+            this.count = this.products.length;
+            this.sum;
+        }
+        
+        //Методы
+        //Добавить
+        Basket.prototype.add = function(product){
+                this.products.push(product);
+            }
+        //Рассчитать стоимость
+        Basket.prototype.calculateCost = this.calculateCost = function(){
+                sum = 0;
+                for (var i = 0; i < this.products.length; i++) {
+                    sum += this.products[i].price;
+                }
+                return sum;
+            }
+        //Подсчитать количество
+        Basket.prototype.countProducts = function(){
+                return this.products.length;
+            }
+        //Перечислить товары
+        Basket.prototype.listProducts = function(){
+                var names = [];
+                for (var i = 0; i < this.products.length; i++){
+                    names.push(this.products[i].name);
+                }
+                return names;
+            }
+        
+        //Товары
+        var product1 = new Product("яблоко",100);
+        var product2 = new Product("груша",200);
+        
+        //Корзина
+        var myBasket = new Basket;
+        myBasket.add(product1);
+        myBasket.add(product2);
+        var cost = myBasket.calculateCost();
+        var list = myBasket.listProducts();
+        var count = myBasket.countProducts();
+        console.log("\Товаров в корзине: " + count + "\nТовары: " + list + "\nСтоимость товаров: " + cost);
+        
+    </script>
+</body>
+</html>

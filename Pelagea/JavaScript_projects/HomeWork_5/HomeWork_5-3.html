@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа № 5. Задание 3</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+	/*Написать отдельную функцию, которая выводит пользователю 
+    заданное число чисел Фибоначчи. 
+    Например, первых 8 чисел Фибоначчи:  1, 1, 2, 3, 5, 8, 13, 21). 
+    Заданное число передается функции в качестве аргумента. */
+
+        function fib(n) {
+            var arrFib = [1,1];
+            var n;   
+            if (n === 1) {  // Update: дописала на случай, если n = 1
+                return 1;
+            } else {
+            for (var i = 2; i < n; i++) {
+            arrFib[i] = arrFib[i-2]+arrFib[i-1];
+            }
+        return arrFib;
+            }
+        }
+        console.log(fib(+prompt("Введите количество чисел Фибоначчи"))); 
+    </script>
+</body>
+</html>

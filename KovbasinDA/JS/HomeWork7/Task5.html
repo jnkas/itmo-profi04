@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork7_Task5_KovbasinD.A.</title>
+    <style>
+        .mainDiv {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            border-bottom: 2px solid gray;
+        }
+        input {
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mainDiv">
+        <h1>Шифрование строки методом Цезаря.</h1>
+        <h3>Для шифрования используйте латинские, строчные символы и пробел. Для сдвигов целые числа.</h3>
+        <label for="inpKey">Введите количество сдвигов: </label><input id="inpKey" type="text">
+        <label for="inpString1">Введите строку для шифрования: </label><input id="inpString1" type="text">
+        <button id="mainButton" style="margin-top: 10px">Transform</button>
+    </div>
+
+    <script>
+            var strInput, keyMove, arrTemplate;
+            keyMove = 0;
+            strInput = "";
+            arrTemplate = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t",
+            "u","v","w","x","y","z"," "]; // Шаблонный массив сравнения. При желании можно дополнить.
+
+            document.getElementById("mainButton").onclick = startProgram; /*Вызов функции выполнения программы по
+            клику*/
+
+            /*Получаем и устанавливаем значения input, вызываем функцию шифрования.*/
+            function startProgram() {
+                keyMove = document.getElementById("inpKey").value;
+                strInput = document.getElementById("inpString1").value;
+                var a = "";
+                a = encryptionString(parseInt(keyMove), strInput);
+                document.getElementById("inpString1").value = a;
+            }
+            
+            /*Функция шифрования даных. Получаем на вход число сдвигов (keyM) и строку для шифрования (strInp).
+            обратно получаем зашифрованную строку.*/
+            function encryptionString(keyM, strInp) {
+                var arrTemporary = [];
+                arrTemporary = strInp.split("");
+                return arrTemporary.reduce(function (currString, item) {
+                    var tempCharValue = "";
+                    for (var i = 0; i < arrTemplate.length; i++) {
+                        if (item === arrTemplate[i]) {
+                            i = i + keyM;
+                            if (i > (arrTemplate.length - 1)) {
+                                while (i > (arrTemplate.length - 1)) {
+                                    i = i - (arrTemplate.length);
+                                }
+                            }
+                            if (i < 0) {
+                                while (i < 0) {
+                                    i = i + (arrTemplate.length);
+                                }
+                            }
+                            tempCharValue = arrTemplate[i];
+                            i = arrTemplate.length;
+                        }
+                    }
+                    return currString + tempCharValue;
+                }, "")
+            }
+
+            /*Хватает недоработок в плане проверки на получаемые значения из строки, если надо могу доработать*/
+    </script>
+</body>
+</html>

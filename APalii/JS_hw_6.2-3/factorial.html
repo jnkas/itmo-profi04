@@ -1,0 +1,37 @@
+<html>
+<head></head>
+<body>
+<p>
+Рекурсия:<br>)
+
+1 Написать функцию вычисляющую факториал числа с использованием рекурсии.<br>
+Факториал числа - это число, умноженное на себя минус один, затем на себя <br>
+минус два и так далее, до единицы. Обозначаетс n!<br>
+Определение факториала можно записать как: n! = n * (n - 1) * (n - 2) * ...*1<br>
+</p>
+
+
+
+<script type="text/javascript">
+	//Пример Расчёт факториала с использованием рекурсии
+	function factorial(n){
+		/*var result = 1;
+		for(var i = 1; i < n; i++){
+			result=factorial(n-1)*n;
+		}
+		return result;
+		*/
+	
+		if(n > 1){
+			return n * factorial(n-1);
+		}
+		else{
+			return 1;
+		}	
+	}
+	
+	console.log(factorial(3));
+</script>
+</body>
+<footer></footer>
+</html>

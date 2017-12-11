@@ -1,0 +1,23 @@
+
+#svetofor {
+	margin:20px;
+	border: 1px solid #000;
+	width: 115px;
+}
+.red, .yellow, .green {
+	height: 100px;
+	width: 100px;
+	background: #ccc;
+	border-radius: 50%;
+	border: 1px solid #000;
+	margin: 5px;
+}
+.red.active {
+	background-color: red;
+}
+.yellow.active {
+	background-color: yellow;
+}
+.green.active {
+	background-color: green;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>
+4 Напишите функцию (), которая в зависимости от переданных 
+в нее целочисленных аргументов "количество дней", будет выводить 
+слово "день" в нужно форме ("если передали - 1, то 1 день", 
+"если передали - 3, то 3 дня" и т.д). </p>
+
+<script>
+	var numDay = +prompt("введите число дней");
+
+	function daysReturn(n) {
+		var mes = "";
+		if (n <= 20) {
+			if (n === 1 || n === 21) {
+				mes = n + " день";
+			} else if (n===0 || (n > 5 && n <= 20)) {
+				mes = n + " дней";
+			} else {
+				mes = n + " дня";
+			}
+		} else {
+			mes = "введеное число больше 20";
+		}
+		return(console.log(mes));
+	}
+	daysReturn(numDay);
+
+</script>
+	
+</body>
+</html>

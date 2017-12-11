@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>
+		2 Сделайте функцию, каждый вызов который будет генерировать случайные числа 
+от 1 до 100, но так, чтобы они не повторялись, пока не будут перебраны все 
+числа из этого промежутка. Решите задачу через замыкания - в замыкании должен 
+хранится массив чисел, которые уже были сгенерированы функцией.  
+	</p>
+	<script>
+		function randNum() {
+			var arr = [];
+
+			function numR() {
+				var min = 0;
+				var max = 100;
+				var randNum = +Math.floor(Math.random() * (max - min + 1)) + min;
+				console.log("произвольное число " + randNum);
+				return randNum;
+			}
+			return function fn() {
+				var num = numR();
+				console.log("присволили " + num);
+				var a = true;
+				for (var i = 0; i < arr.length; i++) {
+					if (num === arr[i]) {
+						a = false;
+					}
+				}
+				console.log(a);
+
+				if (a == true) {
+					arr.push(num);
+					return arr;
+				} else {
+					return
+				}
+				return fn();
+			}
+		}
+
+		var resnum = randNum();
+		console.log(resnum());
+		console.log(resnum());
+		console.log(resnum());
+		console.log(resnum());
+		console.log(resnum());
+		console.log(resnum());
+		console.log(resnum());
+		console.log(resnum());
+		console.log(resnum());
+		console.log(resnum());
+		console.log(resnum());
+		console.log(resnum());
+		console.log(resnum());
+		console.log(resnum());
+	</script>
+	
+</body>
+</html>

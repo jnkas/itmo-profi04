@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа № 6. Задание 1</title>
+</head>
+<body>
+    <script>
+        var n = +prompt("Введите неотрицательное целое число.");
+        function fact(n) {
+            if (n===1) {
+                return 1;
+            } else if (n > 1) {
+                return n*fact(n-1);
+            }
+        }
+        document.write("Факториал числа " + n + " равен " + fact(n));
+    </script>    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork9_Task1_KovbasinD.A.</title>
+    <style>
+        #mainDiv {
+            height: 312px;
+            width: 312px;
+            display: block;
+            float: left;
+        }
+
+        #mainDiv div {
+            height: 32%;
+            width: 32%;
+            border: 1px solid white;
+            display: block;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainDiv">
+        <div id="1" style="background-color: grey"></div>
+        <div id="2" style="background-color: grey"></div>
+        <div id="3" style="background-color: grey"></div>
+        <div id="4" style="background-color: grey"></div>
+        <div id="5" style="background-color: grey"></div>
+        <div id="6" style="background-color: grey"></div>
+        <div id="7" style="background-color: grey"></div>
+        <div id="8" style="background-color: grey"></div>
+        <div id="9" style="background-color: grey"></div>
+    </div>
+
+    <script>
+        mainDiv.addEventListener("click", changeColor, false);
+        
+        function changeColor(e) {
+            if (e.target.style.backgroundColor === "grey") {
+                e.target.style.backgroundColor = "green";
+            } else if (e.target.style.backgroundColor === "green") {
+                e.target.style.backgroundColor = "grey";
+            }
+            console.log(e.target.id);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWok7_Task2_KovbasinD.A.</title>
+</head>
+<body>
+<script type="text/javascript" src="lib/plotly-latest.min.js"></script>
+<div id="placeholder" style="width: 480px;height: 400px;"></div>
+<script type="text/javascript">
+    var line1 = {
+        x:[],
+        y:[],
+        type:'scatter'
+    };
+
+    function fun(x) {
+        if ( x >= 1) return 5/x;
+        if ( x < 1)  return x*x - 4*x;
+    }
+
+    var x;
+    for (var i = -500; i <= 500; i++) {
+        x=i/100;
+        line1.x.push(x);
+        line1.y.push(fun(x));
+    }
+
+    var data=[line1];
+    Plotly.newPlot('placeholder',data);
+</script>
+</body>
+</html>

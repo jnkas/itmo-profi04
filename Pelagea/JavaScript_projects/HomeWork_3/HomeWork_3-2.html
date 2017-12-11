@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа № 3. Задание 2</title>
+</head>
+<body> 
+     <script>
+         // Пробую сделать функцию для удвоения символа в строке
+         function doubleSymbInStr(string, symbol) { 
+             var string = prompt("Введите строку");
+             var symbol = prompt("Укажите содержащийся в строке символ, который нужно удвоить");
+             var toDouble = new RegExp(symbol, 'g');
+             var double = new Array(3).join(symbol);
+             var result = string.replace(toDouble, double);
+             if (~string.indexOf(symbol)) {
+                 alert("Удвоив все " + "'" + symbol + "'" + " получим: " + result);
+             } else {
+                 alert("Такого символа не было в исходной строке.")
+             }
+         }
+             
+         doubleSymbInStr();    
+    </script>   
+</body>
+</html>

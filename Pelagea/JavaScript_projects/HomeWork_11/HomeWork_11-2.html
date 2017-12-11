@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя работа № 11. Задание 2</title>
+</head>
+<body>
+   <script>
+       // Студент со"смешанным наследованием" от человека (по схеме)
+       function Human(name, age, gender, interests){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.interests = interests;
+       };
+            Human.prototype.toString = function(){
+                return "Человек: " + this.name + "." + "\n Возраст: " + this.age + ".\n Пол: " + this.gender + "." + "\n Интересы: " + this.interests.join(', ') + ".";
+        };
+        
+       function Student(name, age, gender, interests, placeOfStudy){
+            Human.call(this, name, age, gender, interests);
+            this.placeOfStudy = placeOfStudy;
+       };
+            Student.prototype.toString = function(){
+                return "Студент: " + this.name + "." + "\nВозраст: " + this.age + "." + "\nПол: " + this.gender + "." + "\nИнтересы: " + this.interests.join(', ') + "." + "\nОбучается в: " + this.placeOfStudy + ".";
+        };
+       Student.prototype.__proto__ = Human.prototype;
+        
+        var interests = ["программирование", "музыка", "аниме"];
+        var student1 = new Student("Иван", 25, "М", interests, "ИТМО");
+        alert(student1);
+            
+   </script>
+    
+</body>
+</html>

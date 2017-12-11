@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork9_Task2_KovbasinD.A.</title>
+    <style>
+        .mainDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #buttonCounter {
+            height: 40px;
+            width: 100px;
+            background: greenyellow;
+            border: 2px solid darkgreen;
+            font-size: 30px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="mainDiv">
+    <button id="buttonCounter">0</button>
+</div>
+
+    <script>
+        buttonCounter.onclick = funcCounter();
+
+        function funcCounter() {
+            var countValue = 0;
+            return function () {
+                countValue++;
+                buttonCounter.innerText = countValue;
+            }
+        }
+    </script>
+</body>
+</html>

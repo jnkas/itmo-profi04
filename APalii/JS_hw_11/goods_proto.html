@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p> 1. Используя прототипы: <br>
+Создать шаблон объектов «Товар». <br>
+Свойства товара «Имя» и «Цена». <br>
+Создать шаблон объектов «Корзина товаров».  <br>
+Cвойства объекта: <br>
+- Массив товаров; <br>
+- Количество товаров; <br>
+- Сумма товаров. <br>
+Методы объекта: <br>
+- Добавить товар; <br>
+- Вернуть сумму товара; <br>
+- Вернуть количество товара. <br>
+	</p>
+
+<script>
+		function Goods(name,price) {
+			this.name = name;
+			this.price = price;
+		}
+		Goods.prototype.prod = function() {
+			return this.name + " " + this.price
+ 		};			
+		
+		function Basket() {
+		 	this.goods = [];
+		 	this.sum = 0;
+		 	this.quan = 0;
+		}
+		Basket.prototype.store = function(good){
+			this.goods[this.goods.length] = good;
+		};
+		Basket.prototype.view = function(){
+			for(i = 0; i < this.goods.length; i++){
+				console.log(this.goods[i].prod());   // show prod-s in basket
+			}
+		};		 		
+		Basket.prototype.summ = function() {
+	   		for(i = 0; i < this.goods.length; i++){
+				this.sum +=this.goods[i].price;
+					     	}
+	     //console.log(this.sum); => to console.log(bask1.sum); for outside of Func
+		};
+
+		Basket.prototype.quam = function() {
+	    	this.quan +=this.goods.length;
+	    	//console.log(this.quan);   => console.log(bask1.quan); for ouside of Func
+	  	};	
+
+		//var basket = new Basket("jacketz",77);
+		var good1 = new Goods("jacket",44);
+		var good2 = new Goods("shirt", 50);
+
+		console.log(good1.prod());
+		console.log(good2.prod());
+
+
+
+
+		// Goods("jacket",44);
+		// Goods("shirts",55);
+		//var good3 = new Basket(("boots",71), );
+		//var Basket = new Basket([good1,goods], 0, 0);
+		var bask1 = new Basket(); // for added products in Basket
+		bask1.store(good1);
+		bask1.store(good2);
+		bask1.view();
+		bask1.summ();
+		bask1.quam();
+		console.log(bask1.goods);
+		console.log(bask1.sum);
+		console.log(bask1.quan);
+
+		//Basket.sum();
+		// new Basket.store("bootz",701);
+		// new Basket.store("shoes",731);
+		// console.log(Basket.prototype.quam());
+		// console.log(Basket.prototype.sum());
+
+
+		// basket.printx();
+		
+	</script>
+
+
+
+</body>
+</html>

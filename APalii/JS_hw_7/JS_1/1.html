@@ -1,0 +1,44 @@
+<html>
+<head></head>
+<body>
+
+<p>
+4 Написать свою подключаемую js библиотеку для работы с массивом, хранящим целые числа.<br>
+Библиотека должна обладать следующими методами:<br>
+- поиск минимального элемента в переданном массиве;<br>
+- поиск максимально элемента в переданном массиве;<br>
+- расчет среднего арифметического значения элементов переданного массива;<br>
+- создание копии (клонирование) переданного массива.<br>
+</p>
+<script src="myUtils.js"></script>
+<script type="text/javascript">
+	//Задача Библиотека методов
+	var arr = [1,2,7,4,5,6];
+	
+	console.log(arr.join(","));
+	var max = myUtils.seek_max(arr);
+	console.log(max);
+	
+	var arr_b = [3,7,4,5,6];
+	
+	console.log(arr_b.join(","));
+	var min = myUtils.seek_min(arr_b);
+	console.log(min);
+	
+	var arr_c = [2,4,4,6,8];
+	
+	console.log(arr_c.join(","));
+	var average = myUtils.average_calc(arr_c);
+	console.log(average);
+	
+	var arr_d = [2,6,9,6,15];
+	
+	console.log(arr_d.join(","));
+	var clone = myUtils.clone_arr(arr_d);
+	console.log(clone);
+		
+	
+</script>
+</body>
+<footer></footer>
+</html>
