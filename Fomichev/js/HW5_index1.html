@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--
+   Построить объект студент со свойствами: Имя, Фамилия, Возраст, Интересы (в виде массива), Место обучения.
+Написать отдельную функцию, которой передается объект студент, а она выводит его содержимое.
+   
+-->
+   
+   
+<script>
+var student = {
+    name :"Иван",
+    lastname: "Иванов",
+    age: 20,
+    univesity: "ITMO",
+    interests: ['music','sport', 'programming']
+}    
+    function object(obj){
+        for (var el in obj){
+            console.log('Св-во:'+ el +'\nЗначение: '+ obj[el]);
+        }
+    }
+    object(student);
+</script>
+    
+</body>
+</html>
