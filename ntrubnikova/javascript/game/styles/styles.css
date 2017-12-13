@@ -1,20 +1,18 @@
 body,html {
     margin:0;
 }
-.container {
-    
-}
+
 
 #header {
-    
-    width: 54%;
+    position: relative;
+    width: 420px;
     margin: 0 auto;
     background-color:white;
     height: 80px;
 }
 
 #game {
-    width: 50%;
+    width: 420px;
     margin: 0 auto;
     position: relative;
 }
@@ -53,7 +51,7 @@ body,html {
     font-family: Arial;
     font-size: 18px;
     color: sandybrown;
-    margin: 10px 0 10px 23px;
+    margin: 10px 0 10px 5px;
 }
 
 button {
