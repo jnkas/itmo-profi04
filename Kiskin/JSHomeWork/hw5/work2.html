@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var a = [2, 2, 3];
+        var b = [3, 4, 4, 5];
+        var c = {};
+        var d = [];
+        
+        for(var i = 0; i < a.length; i++){
+            c[a[i]] = 0;        
+        }
+        
+        for(var i = 0; i < b.length; i++){
+            c[b[i]] = 0;
+        }
+        
+        for(var j in c){
+            d.push(j);
+            b[a[0]] = 0;
+        }
+        
+        alert(d);
+    </script>
+</body>
+</html>

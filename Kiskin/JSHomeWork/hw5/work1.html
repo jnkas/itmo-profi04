@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var student = {
+            name: "Константин",
+            family: "Константинов",
+            age: 20,
+            interes: [
+                    "music",
+                    "eat",
+                    "vodka",
+                    "examen",
+            ],
+            study: "IFMO"
+        };
+        
+          function info(obj) {
+		      console.log("Студент:");
+                for (var key in student)
+                    if (typeof student[key] == obj[key].length > 0){
+                        console.log(key + ":");
+                    } else {
+                        console.log(key + ": " + student[key]);
+                    }	
+           }
+
+	       info(student);
+
+    </script>
+</body>
+</html>
