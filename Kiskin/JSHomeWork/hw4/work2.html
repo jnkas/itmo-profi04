@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<style>
+			td {
+				height: 20px;
+				width: 20px;
+				background-color: green;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+//			var aGamePlace = 
+//				[1,0,null,1,0,null,null,null,0];
+            alert('Игра "Крестики-Нолики v.1.0" \nПравила:\n- вам будет предложено ввести 9 символов поочередно (0-8) \n- 1 крестик\n- 0 нолик\n- кнопка "Отмена" тоже нолик\n- после чего вы увидете результат')
+            
+            var aGamePlace = (function addGame() {
+
+                var num = [];
+                
+                for(var i=0; i < 9; i++) {
+                    num[i] = +prompt('Введите 1, 0', + i);
+                    alert(num);
+                };
+            return num;
+            }());
+            
+			var aOutView = [];
+			
+			for(var j=0; j<aGamePlace.length; j++){
+				if(aGamePlace[j] === null){
+					aOutView.push(" ");
+				} else if (aGamePlace[j] === 1){
+					aOutView.push("X");
+				} else if (aGamePlace[j] === 0){
+					aOutView.push("O");
+				}			
+			}
+			
+			var gamePlaceHTML = "<table>" +
+				"<tr>" +
+					"<td>" + aOutView[0] + "</td>" +
+					"<td>" + aOutView[1] + "</td>" +
+					"<td>" + aOutView[2] + "</td>" +
+				"</tr><tr>" +
+					"<td>" + aOutView[3] + "</td>" +
+					"<td>" + aOutView[4] + "</td>" +
+					"<td>" + aOutView[5] + "</td>" +
+				"</tr><tr>" +
+					"<td>" + aOutView[6] + "</td>" +
+					"<td>" + aOutView[7] + "</td>" +
+					"<td>" + aOutView[8] + "</td>" +
+				"</tr>" +
+				"</table>";
+				document.write(gamePlaceHTML);
+                
+		</script>
+	</body>
+</html>

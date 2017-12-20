@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        
+       var numDay = +(prompt("Укажите количество дней от 1 до 100: "));
+       
+       function dayReturn(n){
+           if(n === 1 || n === 21 || n === 31 || n === 41 || n === 51 || n === 61 || n === 71 || n === 81 || n === 91){
+               alert(n + ' день');
+           }else if((n >= 2 && n <= 4) || (n >= 22 && n <= 24) || (n >= 32 && n <= 34) || (n >= 42 && n <= 44) || (n >= 52 && n <= 54) || (n >= 62 && n <= 64) || (n >= 72 && n <= 74) || (n >= 82 && n <= 84) || (n >= 92 && n <= 94)){
+               alert(n + ' дня');
+           }else if((n >= 5 && n <= 20) || (n >= 25 && n <= 30) || (n >= 35 && n <= 40) || (n >= 45 && n <= 50) || (n >= 55 && n <= 60) || (n >= 65 && n <= 70) || (n >= 75 && n <= 80) || (n >= 85 && n <= 90) || (n >= 95 && n <= 100)){
+               alert(n + ' дней');
+           }
+       }
+       
+       alert(dayReturn(numDay));
+    </script>
+</body>
+</html>

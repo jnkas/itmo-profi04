@@ -1,0 +1,81 @@
+body,html {
+    margin:0;
+}
+
+
+#header {
+    position: relative;
+    width: 420px;
+    margin: 0 auto;
+    background-color:white;
+    height: 80px;
+}
+
+#game {
+    width: 420px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.game img {
+    visibility: hidden;
+    vertical-align: middle;
+}
+
+#gameOver {
+    border: 1px solid bisque;
+}
+
+.game p{
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial;
+    font-size: 29px;
+    text-align: center;
+    color: crimson;
+    margin-top: 0;
+}
+
+#gameName {
+    text-align: center;
+    font-family: Arial;
+    font-size: 25px;
+    color: saddlebrown;
+    margin: 10px 0 10px 0;
+}
+
+#attempts {
+    float: left;
+    font-family: Arial;
+    font-size: 18px;
+    color: sandybrown;
+    margin: 10px 0 10px 5px;
+}
+
+button {
+    float: right;
+    margin: 10px 0;
+    color: white;
+    border-radius: 4px;
+    background-color: sandybrown;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: 0;
+    height: 25px;
+    visibility: hidden;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+table td {
+    padding: 2px;
+    background-color: bisque;
+}
+
+table td:hover {
+    cursor:pointer;
+}
+

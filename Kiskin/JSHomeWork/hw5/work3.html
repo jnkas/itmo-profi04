@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var x = +prompt("Задайте положительное число:");
+        
+        function fib(x){
+            var arr = [1,1];
+            if(x === 1){
+                return 1;
+            }else{
+                for(var i = 2; i < x; i++){
+                    arr[i] = arr[i-2] + arr[i-1];
+                }
+        return arr;
+            }
+        }
+        
+        alert(fib(x));
+    </script>
+</body>
+</html>

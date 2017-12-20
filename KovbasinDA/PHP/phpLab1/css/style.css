@@ -1,0 +1,19 @@
+#day-calender {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+h1 {
+    display: block;
+}
+
+img {
+    height: 500px;
+}
+
+p {
+    display: block;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Race_v.1.0</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div id="mainDiv">
+        <canvas id="spaceField" width="800" height="400"></canvas>
+    </div>
+
+    <script src="JS/startMenu.js"></script>
+    <script src="JS/jsLogic.js"></script>
+
+    <script>
+        startMenu.showMainMenu();
+        document.onkeydown = function (e) {
+            if (e.keyCode === 13) {
+                startGame.showGame();
+            }
+        }
+    </script>
+</body>
+</html>
