@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var num = +prompt("Введите положительное число:");
+        function fact(num){
+            if(num >= 2) {
+                return num * fact(num - 1);
+            }else if(num === 0 || num === 1){
+                return 1;
+            }
+        }
+        alert("Факториал введенного числа " + num + ": " + fact(num));
+    </script>
+</body>
+</html>
