@@ -1,0 +1,25 @@
+html {
+    padding: 10px;
+}
+#date {
+    font-family: Arial;
+    font-size: 40px;
+    color: red;
+    margin-right: 20px;
+}
+
+#title {
+    font-family: Arial;
+    font-size: 20px;
+    color: blue;
+}
+
+#text {
+    font-family: Arial;
+    font-size: 18px;
+    color: gray;
+}
+
+img {
+}
+
