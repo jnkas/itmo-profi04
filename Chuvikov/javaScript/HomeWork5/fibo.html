@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fibo</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var fibo = [1, 1];
+        
+        function funcFibo(n) {
+            var x=0;
+            for (var i = 2; i < n; i++) {
+                x=fibo[i-1]+fibo[i-2];
+                fibo.push(x);
+                }
+            return fibo;
+        }
+
+        var res=+prompt("Введите число чисел Фибоначчи, которое Вы желаете увидеть: ");
+        res=funcFibo(res);
+        alert("Ваш результат: "+ res);
+
+    </script>
+
+</body>
+
+</html>

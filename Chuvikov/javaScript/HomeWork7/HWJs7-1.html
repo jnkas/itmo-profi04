@@ -1,0 +1,50 @@
+<!-- это вариант №1 первого задания, но он не вполне удовлетворяет условиям, поэтому ниже вариант №2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student</title>
+</head>
+<body>
+    <script>
+    var student = new Object();
+student.name = "Иван";
+student.surname = "Петров"; 
+student.age = 21; 
+student.hobby = "Программирование", "музыка", "аниме";
+student.university = "ИТМО";
+        for(var key in student){
+          console.log (student[key]); 
+        }
+
+    
+    </script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+
+<body>
+    <script>
+        var student = new Object();
+        student.name = "Иван";
+        student.surname = "Петров";
+        student.age = 21;
+        student.hobby = "Программирование", "музыка", "аниме";
+        student.university = "ИТМО";
+        
+            console.log( student.name + " " + student.surname + ". "+ student.age + " год" + ". " + "Интересы: " + student.hobby + ". " + "Учится в " + student.university);
+ 
+
+
+    </script>
+</body>
+
+</html>
+<!-- вот второй вариант вроде получше

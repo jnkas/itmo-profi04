@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>days</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var day = +prompt("Количество дней (от 0 до 9) - ");
+
+        function days() {
+
+            if (day === 0 || 5 || 6 || 7 || 8 || 9) {
+                return ('дней');
+            } else if (day === 1) {
+                return ('день');
+
+            } else if (day === 2 || 3 || 4) {
+                return ('дня');
+
+            } else {
+                alert("Что это еще такое???");
+            }
+        }
+
+        alert(day + " " + days());
+
+    </script>
+
+</body>
+
+</html>

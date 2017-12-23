@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Часы</title>
+    <style>
+        .hours {
+            color: red;
+        }
+
+        .min {
+            color: green;
+        }
+
+        .sec {
+            color: blue;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Часы на JavaScript</h1>
+    <br>
+    <div id="timer" style="text-align:center; font-size:1000%;">
+    </div>
+
+    <script type="text/javascript">
+        function wr_hours() {
+            var time = new Date();
+            var timeD = document.getElementById("timer");
+            var sec = time.getSeconds();
+            var min = time.getMinutes();
+            var hours = time.getHours();
+            if (hours < 10) {
+                hours = "0" + hours;
+            };
+            if (min < 10) {
+                min = "0" + min;
+            };
+            if (sec < 10) {
+                sec = "0" + sec;
+            };
+
+            timeD.innerHTML = " Время " + "<span class='hours'>" + hours + "</span>" + ":" + "<span class='min'>" + min + "</span>" + ":" + "<span class='sec'>" + sec + "</span>";
+
+        }
+
+        wr_hours();
+        setInterval(wr_hours, 1000);
+    </script>
+
+</body>
+</html>
+
+
+
+
+
