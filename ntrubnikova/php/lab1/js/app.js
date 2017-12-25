@@ -3,9 +3,10 @@ var day = date.getDate();
 var month = date.getMonth();
 month = month + 1;
 if ((String(day)).length == 1)
-    day = '0' + day;
+    {day = '0' + day;}
 if ((String(month)).length == 1)
-    month = '0' + month;
+    {month = '0' + month;}
+
 
 var myDate = day + '.' + month + '.' + date.getFullYear();
 
@@ -20,14 +21,14 @@ request.done(function( obj ) {
     var date = obj.date;
     var title = obj.title;
     var description = obj.description;
-    console.log(date, title, description);
+    console.log(myDate, title, description);
     //Создать DIVы
     var divDate = "<div id=\"date\"></div>";
     var divTitle = "<div id=\"title\"></div>";
     var divText = "<div id=\"text\"></div>";
     var divImg = "<div><img src=\"img\\" + myDate + ".png\"></div>";
     $("#day-calender").append(divDate);
-    $("#date").html(date);
+    $("#date").html(myDate);
     $("#day-calender").append(divTitle);
     $("#title").html(title);
     $("#day-calender").append(divText);
