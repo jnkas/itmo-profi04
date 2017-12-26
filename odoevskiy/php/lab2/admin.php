@@ -1,4 +1,5 @@
 <?php
+
 echo 
 
 '<meta charset="utf-8">
@@ -42,4 +43,5 @@ echo
 	<div><input class="button" type="submit" value="Отправить"></div>
 	</form>
 </body>'
+	
 ?>
