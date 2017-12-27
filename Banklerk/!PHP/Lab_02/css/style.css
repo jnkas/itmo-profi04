@@ -1,0 +1,41 @@
+#day-calender {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+fieldset {
+    border: solid black 2px;
+    background-color: #FFB841;
+}
+
+input {
+    width: 100%;
+}
+
+h1
+{
+    width: max-content;
+    padding: 10px;
+
+    color: #525252;
+    border: 2px dotted #525252;
+    border-radius: 5px;
+}
+
+img {
+    height: 500px;
+}
+
+p {
+    display: block;
+}
+
+#day-calender form {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+#day-calender form label {
+    display: block;
+}
