@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+main {
+    margin: auto;
+    width: max-content;
+}
+
+a {
+    text-decoration: none;
+}
+
+div#day-calendar {
+    display: inline-block;
+    width: 600px;
+/*    float: left;*/
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
+}
+
+#day-calendar h1 {
+    color: #525252;
+    border: 2px dotted #525252;
+    border-radius: 5px;
+    width: max-content;
+    padding: 10px;
+    margin: 20px auto 20px auto;
+}
+
+#day-calendar p {
+    font-size: 20px;
+
+}
+#day-calendar img {
+    margin: auto;
+    box-shadow: 0 0 10px 5px rgba(128, 128, 128, 1);
+    height: 50vh;
+    
+}
+
+#admin_page fieldset {
+    width: 50vw;
+    padding: 20px;
+}
+
+#admin_page label,
+#admin_page input {
+    display: block;
+    margin: 10px 0;
+}
+
+#admin_page input[type="text"], 
+#admin_page textarea {
+    width: 90%;
+}
+
+#admin_page textarea {
+    height: 80px;
+}
+
+div.cal_table {
+    display: inline-block;
+    width: 200px;
+    float: right;
+}
+
+.cal_table table {
+    border-collapse: collapse;
+}
+
+.cal_table td {
+    border: 1px solid black;
+    border-radius: 20%;
+    padding: 2px 5px 5px 2px;
+}
+
+div.list {
+    border: 2px dotted gray;
+    border-radius: 3px;
+    margin: 20px auto;
+    width: 800px;
+    padding: 10px;
+}
+
+.list img {
+    height: 100px;
+}
