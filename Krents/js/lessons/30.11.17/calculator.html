@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            font-size: 20px;
+        }
+
+        td {
+            border: 1px solid black;
+            margin: 2px;
+            text-align: center;
+            padding: 5px;
+            width: 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<script>
+    window.onload = function () {
+        var elements = document.getElementsByTagName('td');
+        for (var i = 0, il = elements.length; i < il; i++) {
+            elements[i].onclick = clickHandler;
+        }
+
+        function clickHandler(event) {
+            var inputField = document.getElementsByTagName('input')[0],
+                operations = ['*', '-', '+', '/', '='];
+            var string = inputField.value,
+                newSymbol = event.target.innerHTML;
+            var variable = null, variable2 = null;
+            switch (newSymbol) {
+                case 'C':
+                    inputField.value = '';
+                    break;
+                case '=':
+                    inputField.value  = eval(inputField.value);
+                    break;
+                default:
+                    inputField.value += event.target.innerHTML;
+                    break;
+
+            }
+        }
+    }
+
+</script>
+<input type="text" disabled>
+<table>
+    <tr>
+        <td>C</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>*</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>3</td>
+        <td>3</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>.</td>
+        <td>=</td>
+        <td>+</td>
+    </tr>
+</table>
+</body>
+</html>

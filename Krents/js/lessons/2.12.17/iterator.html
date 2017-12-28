@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var right = 3;
+    var left = 0;
+    var iterator = new Iterator(left, right);
+    var iteratorTwo = new IteratorChild(left, right);
+    console.log( iterator.nextStep());
+    console.log( iteratorTwo.dualIterate());
+    console.log( iteratorTwo.dualIterate());
+    console.log( iteratorTwo.dualIterate());
+    console.log( iteratorTwo.dualIterate());
+    console.log( iteratorTwo.dualIterate());
+    console.log( iteratorTwo.dualIterate());
+    console.log( iteratorTwo.dualIterate());
+    console.log( iteratorTwo.dualIterate());
+    function Iterator(left, right) {
+        this._left = left;
+        this._right = right;
+        var curr = left;
+
+        this.nextStep = function () {
+            if (this._left < this._right && curr !== this._right) {
+                return curr++;
+            }
+            else if (this._left > this._right && curr !== this._right) {
+                return curr--;
+            }
+            return curr;
+
+        };
+        this.getCurr = function () {
+            return curr;
+        };
+    }
+
+    function IteratorChild(left, right) {
+        Iterator.call(this, left, right);
+
+        this.dualIterate = function () {
+            if (this.getCurr() === this._right) {
+                var temp = this._left;
+                this._left = this._right;
+                this._right = temp;
+            }
+            return this.nextStep();
+        }
+    }
+</script>
+</body>
+</html>

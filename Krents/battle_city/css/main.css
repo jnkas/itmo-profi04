@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+.element {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    background-image: url("../img/sprites.png");
+    background-size: 1080px 691.2px;
+    float: left;
+    /*position:relative;*/
+    position: absolute;
+}
+
+.brick {
+    background-position: -692px 0;
+}
+
+.brick-half-top {
+    background-position: -865px 0;
+}
+
+.brick-half-left {
+    background-position: -822px 0;
+}
+.base {
+    background-position: -822px -86px;
+}
+
+.stone {
+    background-position: -692px -45px;
+}
+.game-over {
+    width: 200px;
+    background-position: -692px -45px;
+}
+
+.stone-half-top {
+    background-position: -865px -45px;
+}
+
+.bullet {
+    height: 20px;
+    width: 20px;
+}
+
+.bullet-top {
+    background-position: -865px -275px;
+}
+
+.bullet-left {
+    background-position: -890px -270px;
+}
+
+.bullet-bottom {
+    background-position: -910px -275px;
+}
+
+.bullet-right {
+    background-position: -925px -270px;
+}
+
+.player-tank-top-1 {
+    background-position: 0 -2px;
+}
+
+.player-tank-top-2 {
+    background-position: -43px -2px;
+}
+
+.player-tank-left-1 {
+    background-position: -89px -2px;
+}
+
+.player-tank-left-2 {
+    background-position: -132px -2px;
+}
+
+.player-tank-bottom-1 {
+    background-position: -173px -2px;
+}
+
+.player-tank-bottom-2 {
+    background-position: -216px -2px;
+}
+
+.player-tank-right-1 {
+    background-position: -256px -2px;
+}
+
+.player-tank-right-2 {
+    background-position: -300px -2px;
+}
+
+.enemy-fast-tank-top-1 {
+    background-position: 0 -2px;
+}
+
+.enemy-fast-tank-top-2 {
+    background-position: -43px -2px;
+}
+
+.enemy-fast-tank-left-1 {
+    background-position: -89px -2px;
+}
+
+.enemy-fast-tank-left-2 {
+    background-position: -132px -2px;
+}
+
+.enemy-fast-tank-bottom-1 {
+    background-position: -173px -2px;
+}
+
+.enemy-fast-tank-bottom-2 {
+    background-position: -216px -2px;
+}
+
+.enemy-fast-tank-right-1 {
+    background-position: -256px -2px;
+}
+
+.enemy-fast-tank-right-2 {
+    background-position: -300px -2px;
+}
+
+.crush-1{
+    background-position: -695px -350px;
+}
+.crush-2{
+    background-position: -735px -350px;
+}
+.crush-3{
+    background-position: -778px -350px;
+}
+
+#field {
+    display: block;
+    position: fixed;
+    margin: 0 30%;
+    height: 520px;
+    width: 520px;
+    background-color: black;
+}

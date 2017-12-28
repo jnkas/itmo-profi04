@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pattern</title>
+    <!--<link rel="stylesheet" href="css/drag.css">-->
+    <script src="../../global/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<input type="text" style="display: none" id="textInput">
+<span id="countLeft">15</span>
+
+<script>
+    $('#textInput')
+        .fadeIn(1000)
+        .on('keyup', function () {
+            $('#countLeft').text(15 - this.value.length);
+        })
+        .on('keydown', function (e) {
+            let inputValue = e.keyCode;
+            if (((inputValue >= 65 && inputValue <= 120) || (inputValue >= 48 && inputValue <= 57) ) && this.value.length > 14) {
+                return false;
+            }
+        })
+
+</script>
+</body>
+</html>

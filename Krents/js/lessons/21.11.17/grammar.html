@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grammar</title>
+    <script src="../../global/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<script>
+    var isWord = false;
+    var k = 1;
+    var vowels = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я'],
+        cons = ['б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ь'];
+    while (!isWord) {
+        var
+            countChars = Math.floor(Math.random() * 3 + 3),
+            trigger = Math.floor(Math.random() * 2 + 1),
+            newWord = '';
+
+        for (var i = 0; i < countChars; i++) {
+            if (trigger) {
+                newWord += vowels[Math.floor(Math.random() * vowels.length)];
+            }
+            else {
+                newWord += cons[Math.floor(Math.random() * cons.length)];
+            }
+            trigger = !trigger;
+        }
+
+//        console.log(newWord);
+        isWord = checkIsWord(newWord);
+        k++;
+    }
+    console.log('Адекватное слово по мнению Яндекса найдена при попытке №' + k);
+    console.log('Слово: ' + newWord);
+    console.log("Проверить можно тут: http://speller.yandex.net/services/spellservice.json/checkText?text=" + newWord);
+
+    function checkIsWord(word) {
+        var isWord = false;
+        $.ajax({
+            type: 'GET',
+            async: false,
+            url: 'http://speller.yandex.net/services/spellservice.json/checkText?text=' + word,
+            success: function (response) {
+                if (response[0] !== undefined && response[0].s !== undefined && response[0].s[0] && response[0].s[0].toLowerCase() === word) {
+                    isWord = true;
+                }
+            }
+        });
+
+        return isWord;
+    }
+</script>
+</body>
+</html>

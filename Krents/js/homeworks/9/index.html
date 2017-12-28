@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1 with Prompt</title>
+    <script src="../../global/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="../../global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/keyboard.css">
+</head>
+<body>
+
+
+<h1>
+    Task 8
+</h1>
+<p id="clock">
+    <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+</p>
+<div class="button-block">
+    <button class="btn btn-default" onclick="promptFunctions.first()">Задание 1</button>
+    <button class="btn btn-default" onclick="promptFunctions.second()">Задание 2</button>
+    <button class="btn btn-default" onclick="promptFunctions.third()">Задание 3</button>
+
+    <div id="htmlExecute">
+
+    </div>
+</div>
+
+<div id="container">
+    <textarea id="write" rows="6" cols="60" disabled></textarea>
+    <ul id="keyboard">
+        <li class="symbol"><span class="off">`</span></li>
+        <li class="symbol"><span class="off">1</span></li>
+        <li class="symbol"><span class="off">2</span></li>
+        <li class="symbol"><span class="off">3</span></li>
+        <li class="symbol"><span class="off">4</span></li>
+        <li class="symbol"><span class="off">5</span></li>
+        <li class="symbol"><span class="off">6</span></li>
+        <li class="symbol"><span class="off">7</span></li>
+        <li class="symbol"><span class="off">8</span></li>
+        <li class="symbol"><span class="off">9</span></li>
+        <li class="symbol"><span class="off">0</span></li>
+        <li class="symbol"><span class="off">-</span></li>
+        <li class="symbol"><span class="off">=</span></li>
+        <li class="delete">delete</li>
+        <li class="tab">tab</li>
+        <li class="letter">q</li>
+        <li class="letter">w</li>
+        <li class="letter">e</li>
+        <li class="letter">r</li>
+        <li class="letter">t</li>
+        <li class="letter">y</li>
+        <li class="letter">u</li>
+        <li class="letter">i</li>
+        <li class="letter">o</li>
+        <li class="letter">p</li>
+        <li class="symbol"><span class="off">[</span></li>
+        <li class="symbol"><span class="off">]</span></li>
+        <li class="symbol"><span class="off">\</span></li>
+        <li class="capslock">caps lock</li>
+        <li class="letter">a</li>
+        <li class="letter">s</li>
+        <li class="letter">d</li>
+        <li class="letter">f</li>
+        <li class="letter">g</li>
+        <li class="letter">h</li>
+        <li class="letter">j</li>
+        <li class="letter">k</li>
+        <li class="letter">l</li>
+        <li class="symbol"><span class="off">;</span></li>
+        <li class="symbol"><span class="off">'</span></li>
+        <li class="return">return</li>
+        <li class="shift">shift</li>
+        <li class="letter">z</li>
+        <li class="letter">x</li>
+        <li class="letter">c</li>
+        <li class="letter">v</li>
+        <li class="letter">b</li>
+        <li class="letter">n</li>
+        <li class="letter">m</li>
+        <li class="symbol"><span class="off">,</span></li>
+        <li class="symbol"><span class="off">.</span></li>
+        <li class="symbol"><span class="off">/</span></li>
+        <li class="shift">shift</li>
+        <li class="space">&nbsp;</li>
+    </ul>
+</div>
+</body>
+</html>

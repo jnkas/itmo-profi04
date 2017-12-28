@@ -1,0 +1,45 @@
+
+div {
+    display: block;
+}
+
+.button-block {
+    margin: 20px auto;
+    width: max-content;
+}
+
+h1{
+    text-align: center;
+}
+
+#htmlExecute {
+    margin: 30px auto;
+    background-color: #ddd;
+    border: 2px solid #777;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+
+.result-block {
+    display: none;
+    margin-top: 50px;
+}
+
+.form-group {
+    width: 200px;
+    float: left;
+}
+.one-number {
+    float: none;
+}
+
+.numbers-list {
+    margin-right: 73px;
+    display: none;
+}
+
+
+#result{
+    color: #58000b;
+}

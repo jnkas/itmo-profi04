@@ -1,0 +1,59 @@
+
+div {
+    display: block;
+}
+
+.button-block {
+    margin: 20px auto;
+    width: max-content;
+}
+
+
+h1, #clock {
+    text-align: center;
+}
+
+#htmlExecute {
+    margin: 30px auto;
+    background-color: #ddd;
+    border: 2px solid #777;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+
+
+.result-block {
+    display: none;
+    margin-top: 50px;
+}
+
+.one-goods {
+    width: 250px;
+    padding: 25px;
+    /*float: left;*/
+}
+
+.goods-image {
+    width: 200px;
+    height: 200px;
+}
+
+.goods-title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.goods-desc {
+    margin: 20px 0;
+    font-style: italic;
+    font-family: FANTASY;
+}
+
+.goods-price {
+    position: absolute;
+    margin-left: 180px;
+    color: green;
+    font-size: 20px;
+}
+

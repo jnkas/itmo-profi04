@@ -1,0 +1,89 @@
+
+div {
+    display: block;
+}
+
+.button-block {
+    margin: 20px auto;
+    width: max-content;
+}
+
+#clock {
+    display: none
+}
+
+h1, #clock {
+    text-align: center;
+}
+
+#htmlExecute {
+    margin: 30px auto;
+    background-color: #ddd;
+    border: 2px solid #777;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+
+#hours {
+    color: red;
+}
+
+#minutes {
+    color: green;
+}
+
+#seconds {
+    color: blue;
+}
+
+.result-block {
+    display: none;
+    margin-top: 50px;
+}
+
+.one-goods {
+    width: 250px;
+    padding: 25px;
+    /*float: left;*/
+}
+
+.goods-image {
+    width: 200px;
+    height: 200px;
+}
+
+.goods-title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.goods-desc {
+    margin: 20px 0;
+    font-style: italic;
+    font-family: FANTASY;
+}
+
+.goods-price {
+    position: absolute;
+    margin-left: 180px;
+    color: green;
+    font-size: 20px;
+}
+
+.traffic-light {
+    width: 100px;
+    height: 300px;
+    /*border: 1px solid black;*/
+    background-color: #0f0f0f;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.circle{
+    background-color: #737373;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions</title>
+</head>
+<body>
+<script>
+    var n = 1,
+        m = 6,
+        testObj = {
+            name: 'Test',
+            title: 'Test Title',
+            array: [
+                1,
+                {
+                    name: '123'
+                }
+            ]
+        };
+
+    console.log(sum(n, m));
+    getObjectContent(testObj);
+
+    function sum(n, m) {
+        var sum = 0;
+        for (var i = n; i <= m; i++) {
+            sum += i;
+        }
+        return sum;
+    }
+
+    function getObjectContent(obj) {
+        for (var i in obj) {
+            if (typeof obj[i] === 'object') {
+                console.log('\t' + i + ':');
+                getObjectContent(obj[i])
+            }
+            else {
+                console.log(i + ': ' + obj[i]);
+            }
+        }
+    }
+</script>
+</body>
+</html>

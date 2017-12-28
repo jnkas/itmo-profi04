@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js test</title>
+</head>
+<body>
+<script>
+    var salary = parseInt(prompt('Введите свой оклад'));
+    var workDays = parseInt(prompt('Введите количество рабочих дней'));
+    var workedDays = parseInt(prompt('Введите количество отработанных дней'));
+    if (isNaN(salary) || isNaN(workDays) || isNaN(workedDays)) {
+        alert('Нужно вводить числа');
+    }
+
+    alert('Вы получите: ' + parseFloat(salary / workDays * workedDays * 0.87).toFixed(2));
+</script>
+</body>
+</html>

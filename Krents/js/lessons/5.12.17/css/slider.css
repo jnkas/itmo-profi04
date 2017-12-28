@@ -1,0 +1,26 @@
+.container {
+    width: 800px;
+    height: 400px;
+    padding: 0;
+}
+
+.image-slider-wrapper {
+    overflow: hidden;
+}
+
+.image_slider {
+    position: relative;
+    overflow: hidden;
+    height: max-content;
+    padding: 0;
+    left: 0px;
+    width: max-content;
+}
+
+.image_slider li {
+    position: relative;
+    max-width: 100%;
+    float: left;
+    list-style: none;
+    left: 0;
+}

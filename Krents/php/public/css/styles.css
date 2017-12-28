@@ -1,0 +1,96 @@
+body * {
+    display: inline-block;
+}
+
+#myCalendar {
+    height: 200px;
+}
+
+.clear {
+    clear: both;
+}
+
+.current-date {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    float: left;
+}
+
+.current-day {
+    font-size: 120px;
+}
+
+.current-month {
+    font-size: 40px;
+}
+
+.current-event {
+    float: left;
+    width: 880px;
+    margin: 20px 50px;
+    padding: 20px;
+    border: 2px solid green;
+    border-radius: 20px;
+}
+
+.current-event-title {
+    font-size: 25px;
+}
+
+.current-event-img {
+    margin: 20px 0;
+}
+
+.current-event-img img {
+    max-width: 800px;
+}
+
+.current-event-desc {
+    color: #999;
+}
+
+.admin-form {
+    width: 400px;
+    margin: 20px;
+}
+
+#calendar {
+    width: 400px;
+    float: left;
+}
+
+.filter {
+    float: left;
+    width: 400px;
+}
+
+.filter form {
+    width: 350px;
+    margin-top: 30px;
+    float: left;
+}
+
+#calendar tr {
+    width: 100%;
+}
+
+#calendar td {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.check-date {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.current-event-daily {
+    padding: 20px 0;
+}
+.current-event-daily +.current-event-daily {
+    border-top: 1px solid gray;
+}
