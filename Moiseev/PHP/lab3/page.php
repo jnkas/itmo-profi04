@@ -1,35 +1,21 @@
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
-    <title>Admin</title>
+    <title>my-calendar.ru</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!--    <script src="js/app.js"></script>-->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
-
-    <?php
-    echo '<form action="handler.php" method="POST">
-        <fieldset>
-            <legend>Заполните поля для внесения информации в базу</legend>
-            
-            <label for="my_date">Выберите дату</label>
-            <input type="date" name="date" id="my_date">
-            
-            <label for="my_header">Введите заголовок события</label>
-            <input type="text" name="header" id="my_header">
-            
-            <label for="my_desc">Введите описание события</label>
-            <textarea name="desc" id="my_desc"></textarea>
-            
-            <input type="submit" value="Отправить">
-        </fieldset>
-    </form>';
     
-    ?>
-    <?php
+    <main>
+        
+        <div id="day-calendar" class="page">
+<?php
 //    Функция генерации календаря
 function draw_calendar($month,$year){
 //  Начало таблицы
@@ -99,7 +85,18 @@ $calendar.= '<p>'.$result['event_name'].'</p>';
 }
 echo '<h2>Февраль 2017</h2>';
 echo draw_calendar(02,2017);
+             echo '<a href="index.php">Вернуться к календарю</a><br><br>';
+        echo $output_str;
+    };
+    createDayEvent();
  ?>
+        
+        
+    </div>
+        
+    </main>
+    
+
 </body>
 
 </html>
