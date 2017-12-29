@@ -1,0 +1,39 @@
+html {
+    padding: 10px;
+}
+
+#container {
+    display: table;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#day-calendar {
+    display: flex;
+    flex-direction: column;
+}
+
+#date {
+    font-family: Arial;
+    font-size: 45px;
+    color: darkred;
+    
+}
+
+#title {
+    font-family: Arial;
+    font-size: 30px;
+    color: firebrick;
+}
+
+#text {
+    font-family: Arial;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+img {
+    padding: 10px 0;
+}
+
