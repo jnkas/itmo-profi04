@@ -1,0 +1,92 @@
+body {
+    font-family: sans-serif;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin:20px 0 20px 0;
+}
+#event {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+#eventDate {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color:beige;
+    width: max-content;
+    padding: 10px;
+}
+#content {
+    margin-left: 10px;
+}
+
+p {
+    font-size: 15px;
+    margin: auto;  
+}
+img {
+    padding-top: 10px;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+/* admin */
+fieldset {
+    width: 50%;
+    padding: 20px;
+}
+label, input {
+    display: block;
+    margin: 15px 0;
+}
+input[type="text"], textarea {
+    width: 70%;
+}
+textarea {
+    height: 100px;
+    resize: none;
+    overflow: auto;   
+}
+
+
+
+div.calendar {
+    /*display: inline-block;*/
+    width: 200px;
+    float: right;
+}
+
+.calendar table {
+    border-collapse: collapse;
+}
+
+.calendar td {
+    border: 1px solid black;
+    padding: 3px;
+}
+
+#admin {
+   margin: 20px; 
+}
+
+
+div.list {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 800px;
+    padding: 10px;
+}
+
+.list img {
+    height: 100px;
+}
