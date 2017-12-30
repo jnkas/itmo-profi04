@@ -30,21 +30,23 @@ $form = '
 
 if (!empty($_POST['from']) && !empty($_POST['to'])) {
     $feed = '<div id="feed"><table>';
-    $fromDate = date_format(date_create($_POST['from']), 'd');
-    $toDate = date_format(date_create($_POST['to']), 'd');
     
-    if ($fromDate < $toDate) {
+    $from = new DateTime($_POST['from']);
+    $to = new DateTime($_POST['to']);
+    $to -> modify('+1 day');
+    $interval = DateInterval::createFromDateString('1 day');
+    $period = new DatePeriod($from, $interval, $to);
+    
+    if (strtotime($_POST['to']) - strtotime($_POST['from']) > 0) { 
         $array = [];
         $counter = 0;
-        for ($i = (int)$toDate + 1; $i > (int)$fromDate; $i--) {
-            if ($i < 10) {
-                $file = 'tmpl/0'. $i. '.12.2017.txt';
-                $img = '<img src="img/0'. $i. '.12.2017.png">';
-            }
-            else {
-                $file = 'tmpl/'. $i. '.12.2017.txt';
-                $img = '<img src="img/'. $i. '.12.2017.png">';
-            }
+
+        foreach ($period as $date) {
+            $fileName = $date -> format("d.m.Y");
+            //var_dump ($fileName);
+            $file = 'tmpl/'. $fileName.'.txt';
+            $img = '<img src="img/'. $fileName.'.png">';
+
             $info = file_get_contents($file,FILE_USE_INCLUDE_PATH);
             $event =  explode(";",$info);
             $keys = array('date','title','description');
@@ -54,7 +56,7 @@ if (!empty($_POST['from']) && !empty($_POST['to'])) {
             $counter ++;
         }
     }
-   
+  
     $feed .= '</table></div>';
 };
 
@@ -62,7 +64,7 @@ if (!empty($_POST['from']) && !empty($_POST['to'])) {
 function drawCalendarDays(){
         //Календарь
         $daysUlHtml = '<ul class="days">';
-        for ($i = 1; $i < 32; $i++) {
+        for ($i = 1; $i <= 31; $i++) {
             if ($i < 10) {
                 $day = '0'. $i;
             }
@@ -88,6 +90,7 @@ $calendar='
 	$html = $header. $body. $calendar. $daysUl. '</div>'. $form. $feed. '</body></html>';
 	
 echo $html;
+
 ?>
 
 
