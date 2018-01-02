@@ -54,6 +54,14 @@ body {font-family: Verdana, sans-serif;}
      margin: 5px;
 }
 
+/* Current Month and Year */
+
+#current-month-year {
+    text-align: center;
+    padding: 5px 0;
+    color: darkred;
+}
+
 /* Days (1-31) */
 .days {
     padding: 10px 0;
@@ -134,4 +142,11 @@ table td {
 #feed-title {
     color: firebrick;
     font-size: 18px;
+}
+
+#events-range {
+    text-align: center;
+    margin: 10px;
+    color: darkred;
+    font-weight: bold;
 }

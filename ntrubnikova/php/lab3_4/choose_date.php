@@ -30,13 +30,15 @@ $form = '
 //Лента
 
 if (!empty($_POST['from']) && !empty($_POST['to'])) {
-    $feed = '<div id="feed"><table>';
+    
     
     $from = new DateTime($_POST['from']);
     $to = new DateTime($_POST['to']);
     $to -> modify('+1 day');
     $interval = DateInterval::createFromDateString('1 day');
     $period = new DatePeriod($from, $interval, $to);
+    
+    $feed = '<div id="feed"><div id="events-range">Cобытия с '. date_format($from, 'd.m.Y'). ' по '. date_format($to -> modify('-1 day'), 'd.m.Y'). '</div><table>';
     
     if (strtotime($_POST['to']) - strtotime($_POST['from']) >= 0) { 
         $array = [];
@@ -71,6 +73,7 @@ $body = '<body><div id="calendar-box">
            <form method="post">
                <div id="month-name" class="12">
                <select name="choose-month" class="choose-month" id="choose-month">
+                       <option value="00">Месяц</option>
                        <option value="01">Январь</option>
                        <option value="02" >Февраль</option>
                        <option value="03">Март</option>
@@ -84,8 +87,8 @@ $body = '<body><div id="calendar-box">
                        <option value="11">Ноябрь</option>
                        <option value="12">Декабрь</option>
                    </select>
-                   
                    <select name="choose-year"  class="choose-year">
+                       <option value="2017">Год</option>
                        <option value="2017">2017</option>
                        <option value="2018">2018</option>
                        <option value="2019">2019</option>
@@ -99,7 +102,11 @@ $body = '<body><div id="calendar-box">
     </div>';
 
 function drawCalendarDays(){
-    $daysUlHtml = '<ul class="days">';
+    $months = array ('01'=>'Январь', '02'=>'Февраль', '03'=>'Март', '04'=>'Апрель', '05'=>'Май', '06'=>'Июнь', '07'=>'Июль', '08'=>'Август', '09'=>'Сентябрь', '10'=>'Октябрь', '11'=>'Ноябрь', '12'=>'Декабрь');
+    
+    $currentMonth = $months[$_POST['choose-month']];
+    
+    $daysUlHtml = '<div id="current-month-year">'. $currentMonth. ' '. $_POST['choose-year']. '</div><ul class="days">';
     $month = $_POST['choose-month'];
     $year = $_POST['choose-year'];
     
