@@ -8,6 +8,7 @@ $header= '
             <meta charset="UTF-8">
             <title>Выбрать дату</title>
             <link rel="stylesheet" href="css/calendar.css">
+            <script src="js/jquery.min.js"></script>
         </head>
     ';
     
@@ -37,9 +38,8 @@ if (!empty($_POST['from']) && !empty($_POST['to'])) {
     $interval = DateInterval::createFromDateString('1 day');
     $period = new DatePeriod($from, $interval, $to);
     
-    if (strtotime($_POST['to']) - strtotime($_POST['from']) > 0) { 
+    if (strtotime($_POST['to']) - strtotime($_POST['from']) >= 0) { 
         $array = [];
-        $counter = 0;
 
         foreach ($period as $date) {
             $fileName = $date -> format("d.m.Y");
@@ -49,10 +49,15 @@ if (!empty($_POST['from']) && !empty($_POST['to'])) {
 
             $info = file_get_contents($file,FILE_USE_INCLUDE_PATH);
             $event =  explode(";",$info);
-            $keys = array('date','title','description');
+            array_push($event, $img);
+            $keys = array('date','title','description','image');
             $combined = array_combine($keys,$event);
-            array_push($array, $combined);
-            $feed .= '<tr><td>'. $img. '</td><td id="feed-date">'. $array[$counter]['date']. '</td><td id="feed-title">'. $array[$counter]['title']. '</td><td id="feed-description">'. $array[$counter]['description']. '</td></tr>';
+            array_unshift($array, $combined);
+        }
+        
+        $counter = 0;
+        foreach ($array as $value) {
+            $feed .= '<tr><td>'. $array[$counter]['image']. '</td><td id="feed-date">'. $array[$counter]['date']. '</td><td id="feed-title">'. $array[$counter]['title']. '</td><td id="feed-description">'. $array[$counter]['description']. '</td></tr>';
             $counter ++;
         }
     }
@@ -61,33 +66,72 @@ if (!empty($_POST['from']) && !empty($_POST['to'])) {
 };
 
 //Календарь
+$body = '<body><div id="calendar-box">
+    <div class="month"> 
+           <form method="post">
+               <div id="month-name" class="12">
+               <select name="choose-month" class="choose-month" id="choose-month">
+                       <option value="01">Январь</option>
+                       <option value="02" >Февраль</option>
+                       <option value="03">Март</option>
+                       <option value="04">Апрель</option>
+                       <option value="05">Май</option>
+                       <option value="06">Июнь</option>
+                       <option value="07">Июль</option>
+                       <option value="08">Август</option>
+                       <option value="09">Сентябрь</option>
+                       <option value="10">Октябрь</option>
+                       <option value="11">Ноябрь</option>
+                       <option value="12">Декабрь</option>
+                   </select>
+                   
+                   <select name="choose-year"  class="choose-year">
+                       <option value="2017">2017</option>
+                       <option value="2018">2018</option>
+                       <option value="2019">2019</option>
+                       <option value="2020">2020</option>
+                       <option value="2021">2020</option>
+                       <option value="2022">2020</option>
+                    </select>
+                    <button type="submit" class="set-date">>></button>
+            </div>
+        </form>
+    </div>';
+
 function drawCalendarDays(){
-        //Календарь
-        $daysUlHtml = '<ul class="days">';
-        for ($i = 1; $i <= 31; $i++) {
+    $daysUlHtml = '<ul class="days">';
+    $month = $_POST['choose-month'];
+    $year = $_POST['choose-year'];
+    
+    if (!empty($_POST['choose-month']) && !empty($_POST['choose-year'])) {
+        if (in_array($_POST['choose-month'], array('01', '03', '05','07','08','10','12'), true)) {
+            $endMonth = 31;
+        }
+        else if (($_POST['choose-month']) == '02') {
+            $endMonth = 28;
+        }
+        else {
+            $endMonth = 30;
+        }
+        for ($i = 1; $i <= $endMonth; $i++) {
             if ($i < 10) {
                 $day = '0'. $i;
             }
             else {
                 $day = $i;
             }
-          $daysUlHtml .= '<li><a href="index.php?dt='. $day. '.12.2017">'. $i. '</a></li>';
+          $daysUlHtml .= '<li><a href="index.php?dt='. $day. '.'. $month. '.'. $year. '">'. $i. '</a></li>';
         }  
         $daysUlHtml .= '</ul>';
         return $daysUlHtml;
-    };
+    }
+};
 
 $daysUl = drawCalendarDays();
-$body = "<body><div id=\"calendar-box\">";
-$calendar='
-    <div class="month"> 
-        <ul>
-            <li>Декабрь<br><span style="font-size:18px">2017</span></li>
-        </ul>
-    </div>';
-    
+
+
 //Общее
-	$html = $header. $body. $calendar. $daysUl. '</div>'. $form. $feed. '</body></html>';
+	$html = $header. $body. $calendar. $daysUl. '</div>'. $form. $feed. $script. '</body>'. '</html>';
 	
 echo $html;
 

@@ -19,18 +19,40 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* Month list */
-.month ul {
-    margin: 0;
-    padding: 0;
-}
 
-.month ul li {
+.month {
     color: white;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
 
+#month-name {
+    display: flex;
+    justify-content: center;
+}
+
+.choose-month, .choose-year {
+    background-color: darkred;
+    color: white;
+    font-size: 18px;
+    margin: 5px;
+    width: 100px;
+    text-align-last:center;
+    float: left;
+    border: 1px solid white;
+    height: 30px;
+}
+
+.set-date {
+    width: 40px;
+    background-color: darkred;
+    color: white;
+    border: 1px solid white;
+    margin-right: 0;
+    height: 30px;
+     margin: 5px;
+}
 
 /* Days (1-31) */
 .days {
