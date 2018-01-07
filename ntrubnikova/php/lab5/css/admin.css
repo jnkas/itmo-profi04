@@ -1,0 +1,72 @@
+body {
+    font-family: Arial;
+    background-color: darkgray;
+}
+
+#container {
+    display: table;
+    margin: 0 auto;
+}
+
+input, textarea {
+    margin: 5px 0 10px 0;
+    width: 300px;
+    height: 30px;
+    background-color: gainsboro;
+}
+
+textarea {
+    height: 200px;
+    background-color: gainsboro;
+}           
+
+h2 {
+    padding: 10px 0;
+    margin-bottom: 0;
+    margin: 10px 0;
+    color: darkred;
+}
+
+
+button {
+    background-color: lightgray;
+    color: darkslategray;
+    border-radius: 3px;
+    height: 30px;
+    width: 100px;
+    margin-right: 40px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+/*Footer*/
+
+#footer {
+    margin: 40px 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkred;
+}
+
+#footer li {
+    float: left;
+}
+
+#footer li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    text-decoration: none;
+    font-family: Arial;
+}
+
+#footer li a:hover {
+    background-color: sandybrown;
+    color: darkred;
+}
