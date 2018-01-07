@@ -1,0 +1,26 @@
+#day-calender {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+h1 {
+    display: block;
+}
+
+img {
+    height: 500px;
+}
+
+p {
+    display: block;
+}
+#day-calender form div {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+#day-calender form div label {
+    display: block;
+}
