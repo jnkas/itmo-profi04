@@ -14,16 +14,16 @@
     echo '<form action="handler.php" method="POST">
         <fieldset>
             
-            <label for="newDate">Enter event date</label>
+            <label for="newDate">Введите дату события </label>
             <input type="date" name="date" id="date">
             
-            <label for="newHeader">Enter event header</label>
+            <label for="newHeader">Введите заголовок</label>
             <input type="text" name="header" id="header">
             
-            <label for="newDesc">Enter event description</label>
+            <label for="newDesc">Введите описание события</label>
             <textarea name="descr" id="newDesc"></textarea>
             
-            <input type="submit" value="Submit">
+            <input type="submit" value="Сохранить">
         </fieldset>
     </form>';
     

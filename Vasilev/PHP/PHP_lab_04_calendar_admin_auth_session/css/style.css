@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+body {
+    background-image: url(../img/bg_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+#dayCalendar {
+    margin: 30px auto;
+	padding-top: 30px; 
+	padding-bottom: 30px; 
+    width: 1200px;
+	min-height: 400px;
+    border: 1px solid rgb(153, 153, 186);
+    border-radius: 30px;
+    background-color: rgb(221, 210, 210);
+    background-color: rgba(221, 210, 210, 0.9);
+    
+    overflow: hidden; /*24.12.2017*/
+}
+
+/*24.12.2017*/
+.sidebar {
+    width: 120px;
+	min-height: 100px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 200px;
+    padding: 10px 0;
+    text-align: center;
+    line-height: 1.5;
+	border: 1px solid darkslateblue;
+	background-color: rgb(72, 61, 139);
+	background-color: rgba(72, 61, 139, 0.15);
+}
+
+.sidebar p {
+    color: darkslateblue;
+    font-weight: bold;
+}
+
+.sidebar a {
+    text-decoration: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    background-color:cornsilk;
+}
+.sidebar a:hover {
+    background-color:rgb(221, 210, 210);
+}
+
+form.choose_date {
+    margin-bottom: 30px;
+}
+input[type="submit"]{
+    height: 40px;
+}
+
+
+.content {
+    margin: 0 auto;
+    width: 800px;
+}
+
+.top {
+	overflow: hidden;
+}
+
+.top h1 {
+	float: left;
+	margin-bottom:0;
+}
+
+.row {
+	overflow: hidden;
+}
+
+.date_range {
+	float:right;
+	margin-top: 30px;
+	padding: 3px;
+	border: 1px solid darkslateblue;
+	background-color: rgb(72, 61, 139);
+	background-color: rgba(72, 61, 139, 0.15);
+}
+.date_range span, p{
+	color: darkslateblue;
+    font-weight: bold;
+}
+
+#btn {
+	
+	color: white;
+	background-color: orange;
+}
+
+/*всем элементам этого потомка*/
+/*
+.row:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+	
+}
+*/
+
+.date {
+    float: left;
+    padding-top: 25px;
+    width: 200px;
+}
+
+.heads {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.header {
+    float: right;
+    padding-left: 35px;
+    padding-top: 25px;
+    width: 555px;
+    text-align: left;
+    border-left: 2px solid black;
+}
+
+img {
+    margin: 30px 0;
+    border-radius: 15px;
+}
