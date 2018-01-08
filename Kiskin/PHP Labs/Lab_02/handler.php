@@ -1,23 +1,13 @@
 <?php
-$date = $_POST['date'];
 
-//function formatDate() {
-//
-//    $dd = date.getDate();
-//    $mm = date.getMonth() + 1;
-//    $yyyy = date.getFullYear();
-//
-//  return dd + '.' + mm + '.' + yyyy;
-//}
+header("Content-type: text/html; charset=utf-8");
+header('Refresh: 3; URL = http://localhost/admin.php');
+echo '<head><meta charset="utf-8"></head><body style="font-family: arial; text-transform: uppercase; font-size: 20px;">Происходит запись на сервер.</body>';
+
+$date = $_POST['date'];
+$formDate = $date[8].$date[9].'.'.$date[5].$date[6].'.'.$date[0].$date[1].$date[2].$date[3];
 
 $event = $_POST['header'];
 $subscribe = $_POST['text'];
-file_put_contents('tmpl/'.$date.'.txt', $date.' ; '.$event.' ; '.$subscribe);
-
-$adminPage = 'http://127.0.0.1/admin.php';
-$_GET[$adminPage];
-
-//echo "<pre>";
-//	print_r($_POST);
-//echo "</pre>";
+file_put_contents('tmpl/'.$formDate.'.txt', $formDate.'; '.$event.'; '.$subscribe);
 ?>
