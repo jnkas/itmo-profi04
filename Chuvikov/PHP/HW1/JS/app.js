@@ -1,22 +1,24 @@
-var dt = "22.12.2017";
-
+var today = "2018-01-09";
 
 var request = $.ajax({
-    url:"servicer.php",
-    method:"POST",
-    data: {id: dt},
-    dataType:"json",
-    cache: false
+		url: "servicer.php",
+		method: "POST",
+		data: { id : today },
+		dataType: "json"
 });
 
-request.done(function(obj){
-    console.log(obj);
-    $("#log").html(obj);
+
+request.done(function( msg ) {
+	$("#high").html(msg.dat);
+    $("#img").html('<img src="img/'+today+'.jpg">');
+    $("#middle").html(msg.event);
+    $("#down").html(msg.preview);
 });
 
-request.fail(function(obj){
-    alert("Request failed: " + textStatus);
+
+
+request.fail(function( jqXHR, textStatus ) {
+		alert( "Request failed: " + textStatus );
 });
 
-console.log("script running");
-
+console.log("script complete");
