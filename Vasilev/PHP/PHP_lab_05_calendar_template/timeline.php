@@ -9,7 +9,6 @@
 		$lastDate = date('d.m.Y',$dateLastTime); // 21.12.2017
 
 	//$numbOfDays = $lastDate - $firstDate; //данная формула некорректно считает, если начальная и конечные даты разных годов.
-
 	$numbOfDays = (strtotime($lastDate) - strtotime($firstDate))/(60*60*24); //считаем кол-во дней в диапазона дат.
 
 	$ddFirst = date('d',$dateFirstTime);
