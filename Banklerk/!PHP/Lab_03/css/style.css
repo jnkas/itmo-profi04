@@ -1,0 +1,57 @@
+#day-calender {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border: solid black 2px;
+    background-color: darkseagreen;
+    margin: 5px;
+}
+
+form input {
+    width: 100%;
+}
+
+h1 {
+    display: block;
+}
+
+img {
+    height: 500px;
+}
+
+p {
+    display: block;
+}
+
+#day-calender form div {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+#day-calender form div label {
+    display: block;
+}
+
+#firstMenu {
+    background-color: darkseagreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#firstMenu div:first-child {
+    border: 2px solid black;
+}
+
+#headerFilter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#filterHREF {
+    font-size: 50px;
+}
+
