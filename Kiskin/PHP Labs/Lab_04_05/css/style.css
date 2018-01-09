@@ -1,0 +1,40 @@
+body {
+    font-family: arial;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 40 px;
+    color: white;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 40 px;
+    width: 500px;
+}
+
+.conteinerDT,
+.conteinerCont {
+    float: left;
+}
+
+.conteinerDt {
+    width: 180px;
+    height: 100px;
+    overflow: hidden;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 25px;
+    border: 1px solid red;
+    background-color: red;
+    border-radius: 20px;
+}
+
+.conteinerCont {
+    margin-left: 40px;
+}
+
+.text {
+    width: 500px;
+}

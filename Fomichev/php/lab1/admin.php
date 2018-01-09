@@ -38,6 +38,9 @@ input,textarea{
 		}
 </style>
 <body>
+
+
+
 	<form action="hendler_form.php" method="post">
 	<div><h1>Дата</h1><input name="date" type="date"></div>
 	<div><h1>Событие</h1><input name="event" type="text"></div>
@@ -46,3 +49,7 @@ input,textarea{
 	</form>
 </body>'
 ?>
+
+
+
+

@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    color: whitesmoke;
+    border: 1px dotted whitesmoke;
+    background-color: slategray;
+    width: max-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+p {
+    font-size: 20px;
+
+}
+img {
+    height: 60vh;
+}
+
+fieldset {
+    width: 50vw;
+    padding: 20px;
+}
+
+label, input {
+    display: block;
+    margin: 10px 0;
+}
+
+input[type="text"], textarea {
+    width: 90%;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+    overflow: auto;
+    border-color: lightgray;
+    
+}
