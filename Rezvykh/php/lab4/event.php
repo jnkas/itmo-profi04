@@ -6,7 +6,6 @@ $postId = substr($_GET['id'], 11);
 $fileDataJson = file_get_contents('tmpl/'.$fileName.'.txt', FILE_USE_INCLUDE_PATH);
 $fileDataArray = json_decode($fileDataJson);
 $eventData = (array) $fileDataArray[$postId];
-
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -49,8 +48,6 @@ $eventData = (array) $fileDataArray[$postId];
 			<p><?php  echo $eventData['description']; ?></p>
 			
 		</article>
-
-
 	</div>
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type='text/javascript' src='js/popper.min.js'></script>

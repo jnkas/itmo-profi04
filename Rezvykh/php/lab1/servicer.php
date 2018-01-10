@@ -33,7 +33,6 @@
 			if (file_exists($fileFullPath)) { 
 
 				$fileDataStr = file_get_contents($fileFullPath, FILE_USE_INCLUDE_PATH);
-				//var_dump($fileData);
 
 				//удаляем первый и последний символ
 				$fileDataStr = substr($fileDataStr, 1, -1);
@@ -50,52 +49,7 @@
 			$j++;
 		}
 		$fileDataStrFull .= "]";
-
-		//$fileDataStrFullJson = json_encode ( $fileDataStrFull);
-
-		//$fileDataFullArr = json_encode($fileDataStrFull);
-
-
 		echo $fileDataStrFull;
-
-		//$fileDataStrFullJson = json_encode($fileDataStrFull, JSON_PRETTY_PRINT);
-
-
-
-		//var_dump($fileDataStrFullJson);
-
-
-		//echo $fileDataStrFull;
-
-
-
-		/*if (count($fileDataArray) > 1) {
-
-					foreach ($fileDataArray as $key => $value) {
-
-						$customArray = $value;
-						
-					}
-
-					
-
-				} else {
-					
-				}
-
-		$fileDataArray = json_decode($fileData);
-
-		array_push($arrFullDataEvens, $fileDataArray);
-
-		*/
-
-
-		//$preparedData = json_encode($arrFullDataEvens);
-
-		//var_dump('<pre>');
-		//var_dump($preparedData);
-		//var_dump('</pre>');
-		//echo $preparedData;
 	}
 	
 ?>

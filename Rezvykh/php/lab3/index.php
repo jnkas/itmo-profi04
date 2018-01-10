@@ -159,7 +159,6 @@ function calendarControl($month, $year) {
 				<input type='hidden' id='calDayTo' value='$calDayTo'>"
 				;?>
 				</div>
-
 			</div>
 		</header>
 		<div class="row">

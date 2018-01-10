@@ -55,10 +55,3 @@ $('.calday').on('click', function(){
 	document.cookie = "calDayTo=";
 	console.log($(this).attr('data-date'));
 });
-
-/*$('#cMonth').val(function() {
-	console.log(this);
-	$('option.val(this)').selected();
-})
-
-$("option [value='04']").attr("selected", "selected");*/
