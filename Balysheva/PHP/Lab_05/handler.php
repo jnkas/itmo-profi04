@@ -8,7 +8,7 @@ $img = 'img/' . $curr_date . '.jpg';
 $str = $curr_date . ';' . $header . ';' . $desc . ';' . $img;
 $writing = file_put_contents($file, $str, FILE_USE_INCLUDE_PATH);
 if($writing) {
-    echo 'Успешно записана следующая информация: ' . $str . ' - в файл: ' . 'tplt/' . $curr_date . '.txt<br><a href="admin.php">Вернуться к форме</a>';
+    echo 'Успешно записана следующая информация: ' . $str . ' - в файл: ' . 'tmpl/' . $curr_date . '.txt<br><a href="admin/index.php">Вернуться в админку</a>';
 } else {
     echo 'Что-то пошло не так!';
 };

@@ -51,7 +51,7 @@ generateTable();
                     <input type="date" name="date_to" id="seconr_date">
                     <br>
                     <br>
-                    <button type="submit">Показать</button>
+                    <button type="submit">Показать ленту</button>
                 </form>
         </div>
 

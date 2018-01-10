@@ -36,10 +36,10 @@ if ($_GET['date_from'] !== "" && $_GET['date_to'] !== "") {
             }
         }
     } else {
-        $output_string = "<p>Дата начала периода не может быть позднее даты конца периода!</p>";
+        $output_string = "<p>Начало периода не может быть позже конца периода!</p>";
     }
 } else {
-    $output_string = "<p>Дата не выбрана</p>";
+    $output_string = "<p>Дата не выбрана!</p>";
 }
 echo '<a href="index.php">Вернуться к календарю</a><br><br>';
 echo $output_string . '<br><br>';
