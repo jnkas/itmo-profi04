@@ -10,16 +10,17 @@
 <body>
 
     <?php
-    echo '<form action="handler_form.php" method="POST">
+    echo '<form action="handler.php" method="POST">
         <fieldset>
+            <legend>Заполните поля</legend>
             
             <label for="my_date">Выберите дату</label>
             <input type="date" name="date" id="my_date">
             
-            <label for="my_header">Введите заголовок события</label>
+            <label for="my_header">Введите заголовок</label>
             <input type="text" name="header" id="my_header">
             
-            <label for="my_desc">Введите описание события</label>
+            <label for="my_desc">Введите описание</label>
             <textarea name="desc" id="my_desc"></textarea>
             
             <input type="submit" value="Отправить">
