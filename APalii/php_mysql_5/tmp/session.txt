@@ -1,0 +1,10 @@
+[
+    {
+        "login_name": "alexeip",
+        "password": "1afa148eb41f2e7103f21410bf48346c"
+    },
+    {
+        "login_name": "mikhail",
+        "password": "qwdwqwqd"
+    }
+]	

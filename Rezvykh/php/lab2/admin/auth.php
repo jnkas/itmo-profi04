@@ -1,6 +1,5 @@
 <?php 
 session_start();
-
 $authFile = "auth.txt";
 $sole = "Jljfj948aJdfjsng";
 $message = "";

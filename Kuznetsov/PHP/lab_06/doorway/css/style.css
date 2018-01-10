@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*--- admin.php ----------*/
+
+fieldset#admin_page {
+    width: 600px;
+    margin: 50px 0 0 150px;
+    border-radius: 10px;
+}
+
+#admin_page label,
+#admin_page select,
+#admin_page input[type="text"],
+#admin_page textarea {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+}
+
+#admin_page label {
+    margin-top: 20px;
+}
+
+#admin_page input[type="submit"] {
+    width: 35%;
+    height: 40px;
+    margin: 20px 0 20px 10%;
+    border-radius: 6px;
+    background-color: #008300;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/*--- index.php ----------*/
+
+main#main_page {
+    width: 800px;
+    margin: 100px auto;
+    background: #e3e3e3;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#main_page  h1 {
+    color: #004886;
+}
+
+#main_page  div {
+    display: flex;
+    justify-content: space-around;
+}
+
+#main_page a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#main_page a:hover {
+    text-decoration: underline;
+}
+
+/*--- default.php ----------*/
+
+div#gen_page {
+    width: 800px;
+    background: #e3e3e3;
+    margin: 100px auto;
+    padding-bottom: 10px;
+
+}
+
+#gen_page a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#gen_page a:hover {
+    text-decoration: underline;
+
+}
+
+#gen_page p {
+    border: 1px dotted #ffffff;
+    padding: 15px;
+    margin: 10px;
+}
+
+/*----------------------------------------------------------------------*/
