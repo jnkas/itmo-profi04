@@ -4,13 +4,11 @@ session_start();
 $headerHtml = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><title>Админка</title><link rel='stylesheet' href='../css/bootstrap.min.css' crossorigin='anonymous'><link rel='stylesheet' type='text/css' href='../css/style.css'></head><body>";
 $bottomHtml = "<script type='text/javascript' src='../js/jquery-3.2.1.min.js'></script><script type='text/javascript' src='../js/popper.min.js'></script><script type='text/javascript' src='../js/bootstrap.min.js'></script></body></html></body></html>";
 
-
 if (isset($_SESSION['auth']) and $_SESSION['auth'] == true) {
 	$authBlock = "Привет, " . $_SESSION['username'] . " | <a href='logout.php'>Выход</a>";
 } else {
 	$authBlock = "<a href='index.php'>Вход</a>";
 }
-
 
 $navbarHtml = "
 <div class='container'>
@@ -76,6 +74,9 @@ $authFormHtml = "
 							<input type='password' class='form-control' name='password' placeholder='Пароль'>
 						</div>
 					</div>
+					<div class='alert alert-warning' role='alert'>
+  						Попробуйте логин и пароль: <span class='font-weight-bold'>admin</span>
+  					</div>
 					<div class='form-group row'>
 						<div class='col-sm-10'>
 							<button type='submit' class='btn btn-primary'>Авторизоваться</button>

@@ -1,8 +1,19 @@
-<?php 
+<?php
+if (isset($_COOKIE['calDayFrom'])) {
+	$calDayFrom = $_COOKIE['calDayFrom'];
+} else {
+	setcookie('calDayFrom', date("Y-m-d"));
+	$calDayFrom = $_COOKIE['calDayFrom'];
+}
+if (isset($_COOKIE['calDayTo'])) {
+	$calDayTo = $_COOKIE['calDayTo'];
+} else {
+	$calDayTo = "";
+}
 function calendar($month, $year) {
-
 	$m = intval($month);
 	$y = intval($year);
+	$filePath = "tmpl/";
 	$countDays = cal_days_in_month(CAL_GREGORIAN, $m, $y);
 	$firstDay = "01.$m.$y";
 	$lastDay = "$countDays.$m.$y";
@@ -40,10 +51,10 @@ function calendar($month, $year) {
 			$date1 = str_pad($arrDays[$i][$j], 2, "0", STR_PAD_LEFT);
 
 			$fileName = $y . "-" . $m . "-" . $date1 . '.txt';
-			$fileFullPath = 'tmpl/' . $fileName;
+			$fileFullPath = $filePath . $fileName;
 
 			if (file_exists($fileFullPath)) {
-				$printDate = "<a href='#'>" . $arrDays[$i][$j] . "</a>";
+				$printDate = "<a class='calday' href='#' data-date='" . $y . '-' . $m . '-' . $arrDays[$i][$j] . "'>" . $arrDays[$i][$j] . "</a>";
 			} else {
 				$printDate = $arrDays[$i][$j];
 			}
@@ -52,6 +63,7 @@ function calendar($month, $year) {
 		}
 		$calendarRows .= "</tr>";
 	}
+
 	$calendarHead = "
 	<table class='table'>
 		<thead>
@@ -71,6 +83,34 @@ function calendar($month, $year) {
 	$calendar = "";
 	$calendar .= $calendarHead . $calendarRows . "</tbody></table>";
 	return $calendar;
+}
+
+function calendarControl($month, $year) {
+	$cc = "<div><form action='' method='POST'><select class='custom-select' name='cMonth'>";
+
+	$ccMonth = array("01" => "Январь", "02" => "Февраль", "03" => "Март", "04" => "Апрель", "05" => "Май", "06" => "Июнь", "07" => "Июль", "08" => "Август", "09" => "Сентябрь", "10" => "Октябрь", "11" => "Ноябрь", "12" => "Декабрь");
+	$ccYear = array(2016, 2017, 2018);
+
+	foreach ($ccMonth as $key => $value) {
+		if ($key == $month) {
+			$selectedM = " selected";
+		} else {
+			$selectedM = "";
+		}
+		$cc .= "<option value='$key' $selectedM>$value</option>";
+	}
+	$cc .= "</select><select class='custom-select' name='cYear'>";
+
+	foreach ($ccYear as $value) {
+		if ($value == $year) {
+			$selectedY = " selected";
+		} else {
+			$selectedY = "";
+		}
+		$cc .= "<option value='$value' $selectedY>$value</option>";
+	}
+	$cc .= "</select><button type='submit' class='btn btn-primary'>Выбрать</button></form><input type='hidden' id='cMonth' value='$month'><input type='hidden' id='cYear' value='$year'></div>";
+	return $cc;
 }
 ?>
 <!DOCTYPE html>
@@ -110,7 +150,16 @@ function calendar($month, $year) {
 			<h1>Научный календарь</h1>
 			<div class="form-group  form-control-md">
 				<label>Фильтр мероприятий:</label>
-				<?php echo "<input id='calinput' class='form-control col-lg-3' type='date' name='calendar' value='" . date("Y-m-d") . "'>";?>
+				<div class="row">
+					
+				<?php echo "
+				<div class='col-lg-3'><input id='calinput' class='form-control col' type='date' name='calendar' value='$calDayFrom'></div>
+				<div class='col-lg-3'><input id='calinputTo' class='form-control col' type='date' name='calendarTo' value='$calDayTo'></div>
+				<input type='hidden' id='calDayFrom' value='$calDayFrom'>
+				<input type='hidden' id='calDayTo' value='$calDayTo'>"
+				;?>
+				</div>
+
 			</div>
 		</header>
 		<div class="row">
@@ -120,7 +169,29 @@ function calendar($month, $year) {
 			<aside class="col-4">
 				<div class="row">
 					<h5>Календарь мероприятий:</h5>
-					<?php echo calendar("12", "2017"); ?>
+					<?php 
+					if (isset($_POST['cMonth'])) {
+						$cMonth = $_POST['cMonth'];
+						setcookie('cMonth', $cMonth);
+					} else {
+						if(isset($_COOKIE['cMonth'])) {
+							$cMonth = $_COOKIE['cMonth'];
+						} else {
+							$cMonth = date("m");
+						}
+					}
+					if (isset($_POST['cYear'])) {
+						$cYear = $_POST['cYear'];
+						setcookie('cYear', $cYear);
+					} else {
+						if (isset($_COOKIE['cYear'])) {
+							$cYear = $_COOKIE['cYear'];
+						} else {
+							$cYear = date("Y");
+						}
+					}
+					echo calendarControl($cMonth, $cYear);
+					echo calendar($cMonth, $cYear); ?>
 				</div>
 			</aside>
 		</div>
