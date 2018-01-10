@@ -6,7 +6,8 @@ $.fn.ajaxPost = function() {
 	var request = $.ajax({
 		url: "servicer.php",
 		method: "POST",
-		data: { dateFrom : dt,  dateTo: dtt }
+		data: { dateFrom : dt,  dateTo: dtt },
+		dataType: "json"
 	});
 	 
 	request.done(function( obj ) {
