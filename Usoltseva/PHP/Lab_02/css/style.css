@@ -1,0 +1,45 @@
+body {
+    font-family: Arial;
+}
+#event {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+#eventDate {
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color:beige;
+    width: max-content;
+    padding: 10px;
+}
+#content {
+    margin-left: 10px;
+}
+p {
+    font-size: 15px;
+    margin: auto;  
+}
+img {
+    padding-top: 10px;
+    margin: auto;
+}
+
+
+/* admin */
+fieldset {
+    width: 50%;
+    padding: 20px;
+}
+label, input {
+    display: block;
+    margin: 15px 0;
+}
+input[type="text"], textarea {
+    width: 70%;
+}
+textarea {
+    height: 100px;
+    resize: none;
+    overflow: auto;   
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1 with Prompt</title>
+    <link rel="stylesheet" href="jasmine-2.8.0/jasmine.css">
+    <script src="jasmine-2.8.0/jasmine.js"></script>
+    <script src="jasmine-2.8.0/jasmine-html.js"></script>
+    <script src="jasmine-2.8.0/boot.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script>
+    function f(x) {
+        var y = (Math.round((1 / x) * 100) / 100) + (Math.round((Math.sqrt(x)) * 100) / 100);
+        return y;
+    }
+
+    describe("Высчитываем значение y", function () {
+        var messages = [
+            'If x = 3 then y = 2.06',
+            'If x = 12 then y not to be = 10'
+        ];
+        it(messages[0], function () {
+            var rez = f(3);
+            expect(rez).toBe(2.06);
+        });
+        it(messages[1], function () {
+            var rez = f(12);
+            console.log(rez);
+            expect(rez).not.toBe(10);
+        });
+    });
+</script>
+
+</body>
+</html>

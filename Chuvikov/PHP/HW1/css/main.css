@@ -1,0 +1,14 @@
+.container {
+    padding: 20 px;
+    border: 1;
+    border-radius: 8 px;
+    text-align: center;
+    background-color: aqua;
+    margin: 5 px;
+    }
+.high {
+	font-size: 18;
+	border: 3 px;
+	border-radius: 8 px;
+    
+}

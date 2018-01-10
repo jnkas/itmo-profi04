@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js test</title>
+</head>
+<body>
+<script>
+    window.onload = function() {
+
+        var tableBody = '',
+            i = 0,
+            color;
+        while (i < 20) {
+            color = i % 2 ? 'green' : 'red';
+            i++;
+            tableBody += '<tr style="background-color: ' + color + '">' +
+                '<td>' + i + '</td>' +
+                '<td>' + i * 2 + '</td>' +
+                '</tr>'
+        }
+        console.log(document.getElementById('tableBodyContent'));
+        document.getElementById('tableBodyContent').innerHTML = tableBody;
+    }
+</script>
+
+
+<table>
+    <thead>
+    <tr>
+        <th>№</th>
+        <th>№ * 2</th>
+    </tr>
+    </thead>
+    <tbody id="tableBodyContent">
+
+    </tbody>
+</table>
+</body>
+</html>

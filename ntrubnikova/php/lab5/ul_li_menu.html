@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список - Mustache</title>
+    <style>
+        .list {
+            list-style-type: none;
+            padding: 10px 10px;
+            background-color: darkred;
+            width: 120px;
+            color: white;
+            font-family: Arial;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+        
+        .list li {
+            margin-top: 10px;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <script src="js/mustache.js"></script>
+    <script type="text/javascript">
+        data = {
+            "list": [
+                {"item": "О компании", link: "about.html"},
+                {"item": "Продукты", link: "products.html"},
+                {"item": "Поддержка", link: "support.html"},
+                {"item": "Контакты", link: "contacts.html"},
+            ]
+        };
+
+        template = "<ul class='list'>{{#list}}<li><a href='{{link}}'>{{item}}</a></li>{{/list}}</ul>";
+        result = Mustache.render(template, data);
+        document.write(result);
+    </script>
+</body>
+</html>

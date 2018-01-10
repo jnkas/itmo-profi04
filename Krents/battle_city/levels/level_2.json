@@ -1,0 +1,47 @@
+[
+  {
+    "class": "brick",
+    "left": "200",
+    "top": "40"
+  },
+  {
+    "class": "brick",
+    "left": "200",
+    "top": "80"
+  },
+  {
+    "class": "brick",
+    "left": "200",
+    "top": "120"
+  },
+  {
+    "class": "brick",
+    "left": "200",
+    "top": "160"
+  },
+  {
+    "class": "stone",
+    "left": "240",
+    "top": "140"
+  },
+  {
+    "class": "brick",
+    "left": "280",
+    "top": "40"
+  },
+  {
+    "class": "brick",
+    "left": "280",
+    "top": "80"
+  },
+  {
+    "class": "brick",
+    "left": "280",
+    "top": "120"
+  },
+  {
+    "class": "brick",
+    "left": "280",
+    "top": "160"
+  }
+]

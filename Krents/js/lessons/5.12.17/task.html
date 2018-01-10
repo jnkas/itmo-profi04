@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/taskmanager.js"></script>
+    <link rel="stylesheet" href="../../global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/taskmanager.css">
+</head>
+
+<body>
+<div id="content">
+
+</div>
+<script>
+    var mainDiv = document.getElementById('content');
+    var taskManager = new TaskManager(mainDiv);
+    taskManager.addTask('Первое задание');
+    taskManager.addTask('Второе задание');
+    taskManager.addTask('Третье задание');
+</script>
+</body>
+</html>

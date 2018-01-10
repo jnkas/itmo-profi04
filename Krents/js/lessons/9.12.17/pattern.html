@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pattern</title>
+    <!--<link rel="stylesheet" href="css/drag.css">-->
+    <script src="../../global/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<script>
+    let obj = {
+        value: 0,
+        increment: function () {
+            this.value++;
+            return this;
+        },
+        add: function (num) {
+            this.value += num;
+            return this;
+        },
+        outAlert: function () {
+            alert(this.value);
+            return this;
+        },
+    };
+
+    $(document).ready()
+    obj.increment()
+        .increment()
+        .add(10)
+        .outAlert();
+//        function func(a){
+//            return 1;
+//        }
+//        func(func());
+//        func();
+//        func(0);
+//        func([1,2]);
+
+</script>
+
+</body>
+</html>

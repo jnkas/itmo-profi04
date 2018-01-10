@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RegExp</title>
+</head>
+<body>
+<script>
+    function taskOne() {
+        var phone = '7 (921) 911-51-97';
+        regexp = /\d\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}/ig;
+        console.log(regexp.test(phone))
+    }
+    function taskTwo() {
+        var mail = 'info@ifmo.ru';
+        regexp = /[a-z.]+?@[a-z.]+/ig;
+        console.log(regexp.test(mail))
+    }
+    function taskThree() {
+        var date = ' 31.12.2015';
+        regexp = /[0-3]\d\.[0-1]\d\.[0-3]\d{3}/ig;
+        console.log(regexp.test(date))
+
+    }
+    taskOne();
+    taskTwo();
+    taskThree();
+</script>
+</body>
+</html>

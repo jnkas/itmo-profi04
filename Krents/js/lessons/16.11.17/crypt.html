@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypt</title>
+</head>
+<body>
+<script>
+    var text = prompt('Введите текст'),
+        key = prompt('Введите соль'),
+        i = 0,
+        salt = key.charCodeAt(0),
+        res = '';
+    while (text[i] !== undefined) {
+        res += String.fromCharCode(text.charCodeAt(i) ^ salt);
+        i++;
+    }
+    alert(res);
+    console.log(res);
+</script>
+</body>
+</html>

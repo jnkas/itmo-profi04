@@ -1,0 +1,41 @@
+div {
+    display: block;
+}
+#container{
+    display: none;
+}
+.button-block {
+    margin: 20px auto;
+    width: max-content;
+}
+
+#clock {
+    display: none
+}
+
+h1, #clock {
+    text-align: center;
+}
+
+#htmlExecute {
+    margin: 30px auto;
+    background-color: #ddd;
+    border: 2px solid #777;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+
+.result-block {
+    display: none;
+    margin-top: 50px;
+}
+
+.block {
+    background-color: #777777;
+    height: 250px;
+    width: 250px;
+    margin-bottom: 10px;
+    /*float: left;*/
+}
+

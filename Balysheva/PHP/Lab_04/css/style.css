@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    color: whitesmoke;
+    border: 1px dotted whitesmoke;
+    background-color: slategray;
+    width: max-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+p {
+    font-size: 20px;
+
+}
+img {
+    height: 60vh;
+}
+
+fieldset {
+    width: 50vw;
+    padding: 20px;
+    background-color: ghostwhite;
+}
+
+label, input {
+    display: block;
+    margin: 10px 0;
+}
+input {
+    background-color: gainsboro;
+    border-color: whitesmoke;
+}
+
+input[type="text"], textarea {
+    width: 90%;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+    overflow: auto;
+    background-color: gainsboro;
+    border-color: whitesmoke;
+}
+div.cal_table {
+    display: inline-block;
+    width: 200px;
+    float: right;
+}
+
+.cal_table table {
+    border-collapse: collapse;
+}
+
+.cal_table td {
+    border: 1px solid black;
+    border-radius: 20%;
+    padding: 2px 5px 5px 2px;
+}
+
+div.list {
+    border: 2px dotted gray;
+    border-radius: 3px;
+    margin: 20px auto;
+    width: 800px;
+    padding: 10px;
+}
+
+.list img {
+    height: 100px;
+}

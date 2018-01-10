@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function User(name) {
+        this.name = name === undefined ? 'Аноним' : name;
+
+        this.toString = function () {
+            return 'Имя: ' + this.name;
+        }
+    }
+
+    function UserNew() {
+        this.toString = function () {
+            return 'Имя: ' + this.name;
+        }
+    }
+    function UserNewBind() {
+        this.name = 'BindName';
+        this.toString = function () {
+            return 'Имя: ' + this.name;
+        }.bind(this)
+    }
+
+
+    UserNew.anon = function () {
+        var user = new this();
+        user.name = 'Аноним';
+        return user;
+    };
+
+
+    UserNew.person = function (name) {
+        var user = new this();
+        user.name = name;
+        return user;
+    };
+
+
+    //    var user = new User();
+    //    alert(user);
+    //    var userTwo = new User('Данила');
+    //    alert(userTwo);
+    var userNew = UserNew.person('Test');
+//    alert(userNew);
+
+    var myFunc = userNew.toString;
+    console.log(myFunc());
+    console.log(myFunc.call({'name' : 'TestName'}));
+    var myFunc2 = new UserNewBind().toString;
+    console.log(myFunc2());
+    console.log(myFunc2.call({'name' : 'TestName'}));
+
+</script>
+</body>
+</html>

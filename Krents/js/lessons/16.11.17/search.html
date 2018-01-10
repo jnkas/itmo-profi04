@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+
+<script>
+    var srcText = 'Привет мир';
+    alert('Исходная строка: ' + srcText);
+    var errorStr = prompt('Введите слово с ошибкой для поиска');
+
+    var i = 0;
+    var regTemplate = '';
+    while (errorStr[i] !== undefined) {
+        regTemplate += errorStr.substr(0, i) + '.' + errorStr.substr(i + 1) + '|';
+        i++;
+    }
+    regTemplate = regTemplate.substr(0, regTemplate.length - 1);
+    var regExp = new RegExp(regTemplate, "ig");
+    if (regExp.test(srcText)) {
+        alert('Найдено')
+    }
+    else {
+        alert('Не найдено')
+    }
+
+</script>
+
+</body>
+</html>

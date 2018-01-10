@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+</head>
+<body>
+<script>
+    var human = {
+            name: 'George',
+            email: 'test@test.com',
+            age: 23
+        },
+        window = {
+            width: 200,
+            height: 100,
+            title: 'Title'
+        },
+        slider = {
+            slides: [
+                {
+                    name: 'Slide 1',
+                    image: '/image_1.png'
+                },
+                {
+                    name: 'Slide 2',
+                    image: '/image_2.png'
+                },
+                {
+                    name: 'Slide 3',
+                    image: '/image_3.png'
+                },
+                {
+                    name: 'Slide 4',
+                    image: '/image_4.png'
+                }
+            ]
+        },
+        menu = {
+            '1': 'Shop',
+            '2': 'Profile'
+        };
+
+    for (var prop in human) {
+        console.log(prop + ': ' + human[prop]);
+    }
+</script>
+</body>
+</html>

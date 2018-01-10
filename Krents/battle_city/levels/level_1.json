@@ -1,0 +1,332 @@
+[
+  {
+    "class": "brick",
+    "left": "40",
+    "top": "40"
+  },
+  {
+    "class": "brick",
+    "left": "40",
+    "top": "80"
+  },
+  {
+    "class": "brick",
+    "left": "40",
+    "top": "120"
+  },
+  {
+    "class": "brick",
+    "left": "40",
+    "top": "160"
+  },
+  {
+    "class": "brick-half-top",
+    "left": "40",
+    "top": "200"
+  },
+  {
+    "class": "brick",
+    "left": "40",
+    "top": "340"
+  },
+  {
+    "class": "brick",
+    "left": "40",
+    "top": "380"
+  },
+  {
+    "class": "brick",
+    "left": "40",
+    "top": "420"
+  },
+  {
+    "class": "brick-half-top",
+    "left": "40",
+    "top": "460"
+  },
+  {
+    "class": "brick",
+    "left": "360",
+    "top": "340"
+  },
+  {
+    "class": "brick",
+    "left": "360",
+    "top": "380"
+  },
+  {
+    "class": "brick",
+    "left": "360",
+    "top": "420"
+  },
+  {
+    "class": "brick-half-top",
+    "left": "360",
+    "top": "460"
+  },
+  {
+    "class": "brick",
+    "left": "440",
+    "top": "340"
+  },
+  {
+    "class": "brick",
+    "left": "440",
+    "top": "380"
+  },
+  {
+    "class": "brick",
+    "left": "440",
+    "top": "420"
+  },
+  {
+    "class": "brick-half-top",
+    "left": "440",
+    "top": "460"
+  },
+  {
+    "class": "brick",
+    "left": "120",
+    "top": "340"
+  },
+  {
+    "class": "brick",
+    "left": "120",
+    "top": "260"
+  },
+  {
+    "class": "stone-half-top",
+    "left": "0",
+    "top": "280"
+  },
+  {
+    "class": "stone-half-top",
+    "left": "480",
+    "top": "280"
+  },
+  {
+    "class": "brick",
+    "left": "80",
+    "top": "260"
+  },
+  {
+    "class": "brick",
+    "left": "360",
+    "top": "260"
+  },
+  {
+    "class": "base",
+    "left": "240",
+    "top": "480"
+  },
+  {
+    "class": "brick-half-top",
+    "left": "260",
+    "top": "460"
+  },
+  {
+    "class": "brick-half-left",
+    "left": "280",
+    "top": "480"
+  },
+  {
+    "class": "brick-half-left",
+    "left": "220",
+    "top": "480"
+  },
+  {
+    "class": "brick-half-top",
+    "left": "220",
+    "top": "460"
+  },
+  {
+    "class": "brick",
+    "left": "400",
+    "top": "260"
+  },
+  {
+    "class": "brick",
+    "left": "120",
+    "top": "380"
+  },
+  {
+    "class": "brick",
+    "left": "120",
+    "top": "420"
+  },
+  {
+    "class": "brick-half-top",
+    "left": "120",
+    "top": "460"
+  },
+  {
+    "class": "brick",
+    "left": "120",
+    "top": "40"
+  },
+  {
+    "class": "brick",
+    "left": "120",
+    "top": "80"
+  },
+  {
+    "class": "brick",
+    "left": "120",
+    "top": "120"
+  },
+  {
+    "class": "brick",
+    "left": "120",
+    "top": "160"
+  },
+  {
+    "class": "brick-half-top",
+    "left": "120",
+    "top": "200"
+  },
+  {
+    "class": "brick",
+    "left": "200",
+    "top": "40"
+  },
+  {
+    "class": "brick",
+    "left": "200",
+    "top": "80"
+  },
+  {
+    "class": "brick",
+    "left": "200",
+    "top": "120"
+  },
+  {
+    "class": "brick-half-top",
+    "left": "200",
+    "top": "160"
+  },
+  {
+    "class": "stone",
+    "left": "240",
+    "top": "120"
+  },
+  {
+    "class": "brick",
+    "left": "280",
+    "top": "40"
+  },
+  {
+    "class": "brick",
+    "left": "200",
+    "top": "220"
+  },
+  {
+    "class": "brick",
+    "left": "200",
+    "top": "300"
+  },
+  {
+    "class": "brick",
+    "left": "200",
+    "top": "340"
+  },
+  {
+    "class": "brick",
+    "left": "200",
+    "top": "380"
+  },
+  {
+    "class": "brick",
+    "left": "280",
+    "top": "220"
+  },
+  {
+    "class": "brick",
+    "left": "280",
+    "top": "300"
+  },
+  {
+    "class": "brick",
+    "left": "280",
+    "top": "340"
+  },
+  {
+    "class": "brick",
+    "left": "280",
+    "top": "380"
+  },
+  {
+    "class": "brick",
+    "left": "240",
+    "top": "320"
+  },
+  {
+    "class": "brick",
+    "left": "280",
+    "top": "40"
+  },
+  {
+    "class": "brick",
+    "left": "280",
+    "top": "80"
+  },
+  {
+    "class": "brick",
+    "left": "280",
+    "top": "120"
+  },
+  {
+    "class": "brick-half-top",
+    "left": "280",
+    "top": "160"
+  },
+  {
+    "class": "brick",
+    "left": "360",
+    "top": "40"
+  },
+  {
+    "class": "brick",
+    "left": "360",
+    "top": "80"
+  },
+  {
+    "class": "brick",
+    "left": "360",
+    "top": "120"
+  },
+  {
+    "class": "brick",
+    "left": "360",
+    "top": "160"
+  },
+  {
+    "class": "brick-half-top",
+    "left": "360",
+    "top": "200"
+  },
+  {
+    "class": "brick",
+    "left": "440",
+    "top": "40"
+  },
+  {
+    "class": "brick",
+    "left": "440",
+    "top": "80"
+  },
+  {
+    "class": "brick",
+    "left": "440",
+    "top": "120"
+  },
+  {
+    "class": "brick",
+    "left": "440",
+    "top": "160"
+  },
+  {
+    "class": "brick-half-top",
+    "left": "440",
+    "top": "200"
+  }
+]

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js test</title>
+</head>
+<body>
+<script>
+    var login = prompt('Type your login'),
+        loginSuccess = false;
+    if (login === 'admin') {
+        loginSuccess = prompt('Type your pass') === '123123';
+    }
+    alert(loginSuccess ? 'Welcome' : 'Incorrect login/password');
+</script>
+</body>
+</html>
