@@ -1,0 +1,39 @@
+	#lnk {
+		display: block;
+		text-align: right;
+		margin-top: 13px;
+	}
+	#lnk_a {
+		text-decoration: none;
+		color: gray;
+		padding: 5px 10px;
+		border: 1px solid gray;
+	}
+	#lnk_a:hover {
+		text-decoration: none;
+		color: gray;
+		padding: 5px 10px;
+		border: 1px solid #7eefff;
+	}
+	#adm_form {
+		text-align: center;
+	}
+	#inp {
+		padding: 10px;
+	}
+	#btn {
+		background: none;
+		border: 1px solid gray;
+	}
+	#btn:hover {
+		background: none;
+		border: 1px solid #7eefff;
+	}
+	p {
+		text-align: center;
+		color: gray;
+	}
+	input,
+	select {
+	   width: 400px;
+	}
