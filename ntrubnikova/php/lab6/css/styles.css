@@ -1,0 +1,120 @@
+html {
+    font-family: Arial;
+}
+
+.center {
+    display: table;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.logo p {
+    font-size: 55px;
+    color: dimgray;
+    padding: 5px 0;
+    margin: 5px 0;
+}
+
+.form-header p {
+    font-size: 35px;
+    color: dimgray;
+    margin: 0 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Content */
+.content, .form {
+    font-size: 16px;
+    color: gray;
+    padding-left: 2px;
+}
+
+.form p {
+    margin: 15px 0 5px 0;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    font-size: 14px;
+    padding: 0 2px;
+}
+
+select {
+    width: 308px;
+    height: 35px;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0; 
+}
+
+textarea {
+    width: 300px;
+    height: 200px;
+    padding: 2px;
+}
+
+
+form button {
+    width: 150px;
+    height: 30px;
+    font-size: 14px;
+    background-color: lightgray;
+    color: dimgray;
+    border: 1px solid lightgray;
+    margin: 5px 1px;
+}
+
+/* Style The Dropdown Button */
+.category {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.pages {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.pages a {
+    color: dimgray;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.pages a:hover {
+    background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .pages {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .category {
+    background-color: #3e8e41;
+}
