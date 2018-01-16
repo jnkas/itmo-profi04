@@ -20,45 +20,84 @@ class Vertex {
 class BTree {
     public $root;
     const vertex = [1,4,5,6,7,8,10];
-
-	protected $root = NULL;
-
-	public function isEmpty ()
-	{
-		return is_null($this->root);
-	}
-
-	public function insert ($value)
-	{
-		$node = new BinaryNode($value);
-		$this->insertNode($node, $this->root);
-	}
-
-	protected function insertNode (BinaryNode $node, &$subtree)
-	{
-		if (is_null($subtree)) 
-		{ 
-			$subtree = $node; 
-		}
-		else
-		{
-			if ($node->value < $subtree->value)
-			{
-				$this->insertNode($node, $subtree->left);
-			}
-			elseif ($node->value > $subtree->value)
-			{
-				$this->insertNode($node, $subtree->right);
-			}
-		}
-		return $this;
-	}
-}
+    function __construct(){
+        $this->root = null;
+    }
+    function build(Vertex $child, $parent = null){
+        if (!$this->root){
+            $this->root=$child;
+        return;
+    }
+        if (!parent)  $parent=$this->root;
+    
+    
+    
+    if ($child->key > $parent->key){
+        //right child
+        if(!$parent->root->rightChild){
+             $parent->rightChild=$child;
+             return;
+        }
+       
+    } else {
+       $this->build( $child, $parent->rightChild);   
+    }
+    } else {
+        
+     //left child   
+   if ($child->key>$parent->key){
+       
+        if(!$parent->root->leftChild){
+            $parent->leftChild=$child;
+            return;
+        }
+       
+    } else {
+     $this->build $child;
+     $parent->leftChild;   
+    }         
+    
+//	protected $root = NULL;
+//
+//	public function isEmpty ()
+//	{
+//		return is_null($this->root);
+//	}
+//
+//	public function insert ($value)
+//	{
+//		$node = new BinaryNode($value);
+//		$this->insertNode($node, $this->root);
+//	}
+//
+//	protected function insertNode (BinaryNode $node, &$subtree)
+//	{
+//		if (is_null($subtree)) 
+//		{ 
+//			$subtree = $node; 
+//		}
+//		else
+//		{
+//			if ($node->value < $subtree->value)
+//			{
+//				$this->insertNode($node, $subtree->left);
+//			}
+//			elseif ($node->value > $subtree->value)
+//			{
+//				$this->insertNode($node, $subtree->right);
+//			}
+//		}
+//		return $this;
+//	}
+//}
 
     <!-- # вспомогательный метод который возвращает созданную вершину.
     function createVertex($key){
         return new Vertex($key); 
     } -->
+        
+        
+        
 protected function &findNode ($value, &$subtree)
 {
 	// Если элемент не найден, возвращаем FALSE
@@ -112,5 +151,3 @@ $tree->init();
 #$tree->print(); // вами реализованный метод показа сформированного дерева.
 
 ?>
-
-
