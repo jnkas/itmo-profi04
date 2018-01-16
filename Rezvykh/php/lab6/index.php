@@ -1,3 +1,6 @@
+<?php 
+include 'includes/readWrite.php';
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -14,11 +17,7 @@
 				<span class='navbar-toggler-icon'></span>
 			</button>
 			<div class='collapse navbar-collapse' id='navbarNavDropdown'>
-				<?php include 'menu.php' ?>
-				
-				<span>
-					<a href='#'>Админка</a>
-	      		</span>
+				<?php echo printNavTree(true); ?>
 			</div>
 		</nav>
 	</div>
@@ -26,38 +25,10 @@
 	<div class='container'>
 		<div class="row">
 			<div class="col">
-				<div class="card">
-					<div class="card-header">
-						<ul class="nav nav-tabs card-header-tabs">
-							<li class="nav-item">
-								<a class="nav-link active" href="#">Добавить страницу</a>
-							</li>
-							<!--<li class="nav-item">
-								<a class="nav-link" href="#">Link</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link disabled" href="#">Disabled</a>
-							</li> -->
-						</ul>
-					</div>
-					<div class="card-body">
-						<div class="row">
-							<div class="col-md-3">
-								<?php echo printNavTree(false); ?>
-							</div>
-							<div class="col-md-9">
-								<div>
-								<?php echo newCategory(); ?>
-								</div>
-								<?php echo printMainForm(); ?>
-							</div>
-						</div>
-					</div>
-				</div>
+				<h1>Главная страница</h1>
 			</div>
 		</div>
 	</div>
-
 
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type='text/javascript' src='js/popper.min.js'></script>

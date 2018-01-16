@@ -1,5 +1,6 @@
 <?php
 include '../../includes/readWrite.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -18,10 +19,6 @@ include '../../includes/readWrite.php';
 			</button>
 			<div class='collapse navbar-collapse' id='navbarNavDropdown'>
 				<?php echo printNavTree(true); ?>
-				
-				<span>
-					<a href='../../'>Админка</a>
-	      		</span>
 			</div>
 		</nav>
 	</div>
