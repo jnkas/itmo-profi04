@@ -78,4 +78,4 @@ $(function () {
             alert('Request failed: ' + textStatus);
         });
     };
-});s
+});

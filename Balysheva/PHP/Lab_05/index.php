@@ -19,19 +19,22 @@
         <div class="cal_table">
 
 <?php
-//только на декабрь
+// пока генерирует только на декабрь
 function generateTable() {
     $dec_2017 = '.12.2017';
     $december = ' декабря';
     
     $caption = 'Дата события';
     $table = '<table><caption>' . $caption . '</caption><tr>';
+
     for($i = 1; $i <= 31; $i++) {
         $n = ($i < 10)?'0'.$i : $i;
+
         $table .= '<td data-date="' . $n . $dec_2017 . '">' . $i . '</td>';
         if ($i % 7 === 0) {
             $table .= '</tr><tr>';
         };
+
     };    
     $table .= '</tr></table>';
     echo $table;

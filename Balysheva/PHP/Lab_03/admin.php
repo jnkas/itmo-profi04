@@ -9,9 +9,11 @@
 
 <body>
 
-    <?php
-    echo '<form action="handler_form.php" method="POST">
+    <?php ?>
+    <form action="handler.php" method="POST" id="admin_page">
+
         <fieldset>
+            <legend>Заполните поля для внесения информации в базу</legend>
             
             <label for="my_date">Выберите дату</label>
             <input type="date" name="date" id="my_date">
@@ -23,10 +25,12 @@
             <textarea name="desc" id="my_desc"></textarea>
             
             <input type="submit" value="Отправить">
+
         </fieldset>
-    </form>';
+
+    </form>
     
-    ?>
+    
 
 </body>
 

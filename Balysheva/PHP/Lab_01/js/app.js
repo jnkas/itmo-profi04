@@ -1,16 +1,26 @@
-var date = new Date();
-var dt = date.getDate() + "." + (date.getMonth()+1) + "." + date.getFullYear();
+//var dt = '019.12.2017';
+var dt = '19.12.2017';
 
 var request = $.ajax({
-    url: "serviser.php",
     method: "POST",
-    data: {date : dt},
+    url: "servicer.php",
+    data: {
+        id: dt
+    },
     dataType: "json"
 });
 
-request.done(function(msg){
-    $("#calendar").html("<h1>" + msg[0] + "</h1>" + "<p><h3>" + msg[1] + "</h3>"+ "<h3>" + msg[2] + "</h3>" + "<img src=" + msg[3] + " align='left'></p>");
+/* первый способ 
+request.done(function (msg) {
+    $('#day-calendar').html("<h1>" + msg.date + "</h1>" + "<h2>" + msg.header + "</h2>" + "<img src=" + msg.img + ">" + "<p>" + msg.desc + "</p>");
 });
- request.fail(function(jqXHR, textStatus){
-     alert("Request failed: " + textStatus);
- });
+*/
+/* второй способ */
+request.done(function (msg) {
+    $('#day-calendar').html(msg);
+});
+
+request.fail(function (jqXHR, textStatus) {
+    alert('Request failed: ' + textStatus);
+});
+/**/
