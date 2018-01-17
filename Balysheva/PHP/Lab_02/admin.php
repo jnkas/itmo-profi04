@@ -11,6 +11,7 @@
 
     <?php
     echo '<form action="handler.php" method="POST">
+
         <fieldset>
             <legend>Заполните поля</legend>
             
@@ -24,7 +25,9 @@
             <textarea name="desc" id="my_desc"></textarea>
             
             <input type="submit" value="Отправить">
+
         </fieldset>
+
     </form>';
     
     ?>
