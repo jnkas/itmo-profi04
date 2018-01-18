@@ -38,7 +38,7 @@ class Router
             if (preg_match('/\{.*\}/', $key, $matches) !== 0) {
                 $method     = str_replace($matches[0], '', $key);
                 $paramValue = str_replace($method, '', $url);
-                if($method.$paramValue === $url) {
+                if ($method.$paramValue === $url) {
                     return [
                         'route' => $route,
                         'param' => $paramValue

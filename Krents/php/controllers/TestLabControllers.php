@@ -43,4 +43,11 @@ class TestLabControllers
     {
         var_dump($id);
     }
+
+    public function testRequest()
+    {
+        var_dump(app()->request->input->all());
+        var_dump(app()->request->session->all());
+        var_dump(app()->request->getClientIp());
+    }
 }

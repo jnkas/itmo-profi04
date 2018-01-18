@@ -25,3 +25,4 @@ Router::get('/binary', 'Controllers\BinaryTreeController@build');
 Router::get('/stack', 'Controllers\TestLabControllers@stack');
 Router::get('/queue', 'Controllers\TestLabControllers@queue');
 Router::get('/test/{id}', 'Controllers\TestLabControllers@test');
+Router::get('/request_test', 'Controllers\TestLabControllers@testRequest');
