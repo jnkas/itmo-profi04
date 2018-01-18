@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="/public/js/jquery-3.2.1.min.js"></script>
+    <script src="/public/js/mustache.min.js"></script>
     <script src="/public/js/app.js"></script>
     <link rel="stylesheet" href="/public/css/styles.css">
     <link rel="stylesheet" href="/public/css/bootstrap.min.css">
@@ -37,7 +38,5 @@
     <div class="clear"></div>
 </div>
 
-<!--<div id="myCalendar"></div>-->
-<!---->
-<!--</body>-->
+</body>
 </html>

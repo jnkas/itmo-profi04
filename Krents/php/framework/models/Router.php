@@ -24,13 +24,27 @@ class Router
         self::$routesPost[$url] = $action;
     }
 
-    public static function checkRouteExist($url)
+    public static function checkRouteExist($url, $method)
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            return self::$routesPost[$url];
+        $routes = [];
+        if ($method === 'POST') {
+            $routes = self::$routesPost;
         }
-        if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-            return self::$routesGet[$url];
+        if ($method === 'GET') {
+            $routes = self::$routesGet;
+        }
+
+        foreach ($routes as $key => $route) {
+            if (preg_match('/{.*}/', $key, $matches) !== 0) {
+                $method     = str_replace($matches[0], '', $key);
+                $paramValue = str_replace($method, '', $url);
+                return [
+                    'route' => $route,
+                    'param' => $paramValue
+                ];
+            } elseif ($key === $url) {
+                return $route;
+            }
         }
         return null;
     }

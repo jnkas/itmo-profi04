@@ -17,3 +17,11 @@ Router::post('/calendar/get_filter_event', 'Controllers\CalendarController@getFi
 
 // Fourth lab
 Router::post('/auth', 'Controllers\AdminCalendarController@auth');
+
+// Sixth lab - binary tree
+Router::get('/binary', 'Controllers\BinaryTreeController@build');
+
+// 13.01 lessons stack and queue lab
+Router::get('/stack', 'Controllers\TestLabControllers@stack');
+Router::get('/queue', 'Controllers\TestLabControllers@queue');
+Router::get('/test/{id}', 'Controllers\TestLabControllers@test');

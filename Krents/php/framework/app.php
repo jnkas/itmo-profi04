@@ -25,13 +25,18 @@ $url = $_SERVER['REQUEST_URI'];
 if (substr($url, -1, 1) === '/' && substr($url, -2, 1) !== '\\') {
     $url = substr($url, 0, -1);
 }
+
 $url = explode('?', $_SERVER['REQUEST_URI'], 2)[0];
-if (($route = \Framework\Router::checkRouteExist($url)) !== null) {
+
+if (($routeData = \Framework\Router::checkRouteExist($url, $_SERVER['REQUEST_METHOD'])) !== null) {
+    $route = is_array($routeData) ? $routeData['route'] : $routeData;
     list($controller, $action) = explode('@', $route);
     $controllerClass = new $controller();
-    echo $controllerClass->$action(array_merge($_POST, $_GET, ['files' => $_FILES]));
+
+    echo is_array($routeData) && isset($routeData['param']) ?
+        $controllerClass->$action($routeData['param'], array_merge($_POST, $_GET, ['files' => $_FILES])) :
+        $controllerClass->$action(array_merge($_POST, $_GET, ['files' => $_FILES]));
     return;
 }
 echo '<h1>404</h1>';
 return http_response_code(404);
-
