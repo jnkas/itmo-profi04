@@ -35,13 +35,15 @@ class Router
         }
 
         foreach ($routes as $key => $route) {
-            if (preg_match('/{.*}/', $key, $matches) !== 0) {
+            if (preg_match('/\{.*\}/', $key, $matches) !== 0) {
                 $method     = str_replace($matches[0], '', $key);
                 $paramValue = str_replace($method, '', $url);
-                return [
-                    'route' => $route,
-                    'param' => $paramValue
-                ];
+                if($method.$paramValue === $url) {
+                    return [
+                        'route' => $route,
+                        'param' => $paramValue
+                    ];
+                }
             } elseif ($key === $url) {
                 return $route;
             }

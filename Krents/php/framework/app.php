@@ -27,7 +27,6 @@ if (substr($url, -1, 1) === '/' && substr($url, -2, 1) !== '\\') {
 }
 
 $url = explode('?', $_SERVER['REQUEST_URI'], 2)[0];
-
 if (($routeData = \Framework\Router::checkRouteExist($url, $_SERVER['REQUEST_METHOD'])) !== null) {
     $route = is_array($routeData) ? $routeData['route'] : $routeData;
     list($controller, $action) = explode('@', $route);
