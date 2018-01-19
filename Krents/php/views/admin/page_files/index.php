@@ -1,6 +1,6 @@
 <?php include_once APP_PATH.'/views/layout/admin_header.php' ?>
     <div class="panel-heading">
-        Добавление нового события для календаря
+        Добавление новой страницы(файлом)
     </div>
 
     <div class="panel-body" style="width: 90%; margin-left: 5%">

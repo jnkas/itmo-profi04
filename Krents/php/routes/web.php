@@ -20,13 +20,21 @@ Router::post('/calendar/get_filter_event', 'Controllers\CalendarController@getFi
 Router::all('/admin/auth', 'Controllers\Admin\AuthController@auth');
 Router::all('/admin/logout', 'Controllers\Admin\AuthController@logout');
 
-// Seventh lab - binary tree
-Router::get('/binary', 'Controllers\BinaryTreeController@build');
-
 // Sixth lab - save pages at file
 Router::get('/pages_files/{id}', 'Controllers\PageController@showFromFiles');
 Router::get('/admin/pages_files', 'Controllers\Admin\PageAtFilesController@index');
 Router::post('/admin/pages_files/add', 'Controllers\Admin\PageAtFilesController@create');
+
+// Seventh lab - binary tree
+Router::get('/binary', 'Controllers\BinaryTreeController@build');
+
+
+// Seventh lab - save pages at file
+Router::get('/page/{id}', 'Controllers\PageController@show');
+Router::get('/admin/page', 'Controllers\Admin\PageController@index');
+Router::post('/admin/page/add', 'Controllers\Admin\PageController@create');
+Router::get('/admin/page/delete/{id}', 'Controllers\Admin\PageController@delete');
+Router::all('/admin/page/edit/{id}', 'Controllers\Admin\PageController@edit');
 
 // 13.01 lessons stack and queue lab
 Router::get('/stack', 'Controllers\TestLabControllers@stack');
@@ -34,5 +42,3 @@ Router::get('/queue', 'Controllers\TestLabControllers@queue');
 Router::get('/test/{id}', 'Controllers\TestLabControllers@test');
 Router::get('/request_test', 'Controllers\TestLabControllers@testRequest');
 
-
-Router::get('/admin/pages', 'Controllers\Admin\PageController@index');

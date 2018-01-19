@@ -14,43 +14,85 @@ class Page
     public $id = null;
     public $title;
     public $content;
+    const PATH = APP_PATH.'/public/files/pages';
 
-
-    public function create($title, $content)
+    /**
+     * Create new page
+     */
+    public function create()
     {
-        $this->content = $content;
-        $this->title   = $title;
+        $data             = $this->getAllPages();
+        $id               = $this->getAvailableId();
+        $data->last_index = $id;
+
+        $data->pages->$id = [
+            'title'   => $this->title,
+            'content' => $this->content,
+        ];
+        $this->save($data);
     }
 
+    /**
+     * Edit page
+     * @param $id
+     * @param $title
+     * @param $content
+     */
     public function edit($id, $title, $content)
     {
-        $this->content = $content;
-        $this->title   = $title;
+        $data                      = $this->getAllPages();
+        $data->pages->$id->title   = $title;
+        $data->pages->$id->content = $content;
+        $this->save($data);
     }
 
+    /**
+     * Get page data
+     * @param $id
+     * @return mixed
+     */
     public function get($id)
     {
+        return $this->getAllPages()->pages->$id;
     }
 
-    public function getAll()
+
+    /**
+     * Save data to file
+     * @param $data
+     */
+    public function save($data)
     {
+        file_put_contents(APP_PATH.'/public/files/pages', json_encode($data));
     }
 
-    public function save()
-    {
-        if ($this->id === null) {
-            $this->id = $this->getAvailableId();
-        }
-    }
-
+    /**
+     * Delete page
+     * @param $id
+     */
     public function delete($id)
     {
+        $data = $this->getAllPages();
+        unset($data->pages->$id);
+        $this->save($data);
+    }
 
+    /**
+     * Get all data
+     * @return mixed
+     */
+    public function getAllPages()
+    {
+        return json_decode(file_get_contents(self::PATH));
     }
 
 
+    /**
+     * Get id for new page
+     * @return mixed
+     */
     private function getAvailableId()
     {
-        return 1;
+        return ++$this->getAllPages()->last_index;
     }
 }

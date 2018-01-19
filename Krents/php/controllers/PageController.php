@@ -9,18 +9,27 @@
 namespace Controllers;
 
 
+use Models\Page;
+
 class PageController
 {
 
-    public function show($input)
+    public function show($id)
     {
-        return view('/admin/page/index');
+        $page = (new Page())->get($id);
+        if ($page !== null) {
+            return view('/layout/page', [
+                'title'   => $page->title,
+                'content' => $page->content,
+            ]);
+        }
+        echo '<h1>404</h1>';
+        return http_response_code(404);
     }
 
     public function showFromFiles($id)
     {
-        $view = '/pages_files/'.$id;
-        ;
+        $view = '/pages_files/'.$id;;
         if (file_exists(APP_PATH.'/views'.$view.'.php')) {
             return view($view, [
                 'menu' => $this->getMenu()

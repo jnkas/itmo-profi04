@@ -9,47 +9,49 @@
 namespace Controllers\Admin;
 
 
+use Framework\Input;
+use Models\Page;
+
 class PageController extends AdminBaseController
 {
 
-    public function index($input)
+    public function index()
     {
-        return view('/admin/page/index');
+        return view('/admin/page/index', [
+            'pages' => (new Page())->getAllPages()->pages
+        ]);
     }
 
-    public function auth($input)
+    public function create(Input $input)
     {
-        $accounts = json_decode(file_get_contents(APP_PATH.'/public/files/passwd'));
-        foreach ($accounts as $account) {
-            if ($account->login === $input['login'] && $account->pass === md5($input['password'])) {
-                $_SESSION['auth'] = true;
-                return app()->redirect('/admin/calendar');
-            }
-        }
-        $_SESSION['error_auth'] = true;
-        return app()->redirect('/admin/calendar');
+        $page          = new Page();
+        $page->content = $input->get('content');
+        $page->title   = $input->get('title');
+        $page->create();
+        return app()->redirect('/admin/page');
     }
 
-    public function addEvent($input)
+    public function edit($id, Input $input)
     {
-        $date  = date('d.m.Y', strtotime($input['date']));
-        $image = $input['files']['image'];
-        $type  = null;
-        if ($image['type'] === 'image/png') {
-            $type = 'png';
+        $pageModel = new Page();
+        if (app()->request->isMethod('post')) {
+            $pageModel->edit($id, $input->get('title'), $input->get('content'));
+            return app()->redirect('/admin/page');
         }
-        if ($image['type'] === 'image/jpeg') {
-            $type = 'jpg';
-        }
-        $imgFileName = '/public/img/'.$date.'.'.$type;
-        move_uploaded_file($image['tmp_name'], APP_PATH.$imgFileName);
-        $data = [
-            'date'    => $date,
-            'header'  => $input['title'],
-            'img_url' => $imgFileName,
-            'desc'    => $input['desc']
-        ];
-        file_put_contents(APP_PATH.'/public/files/events/'.$date, json_encode($data));
-        return app()->redirect('/calendar/admin');
+        $page = $pageModel->get($id);
+        return view('/admin/page/index', [
+            'pages'     => (new Page())->getAllPages()->pages,
+            'title'     => $page->title,
+            'content'   => $page->content,
+            'pageTitle' => 'Редактирование страницы "'.$page->title.'"',
+            'actionUrl' => '/admin/page/edit/'.$id,
+        ]);
     }
+
+    public function delete($id)
+    {
+        (new Page())->delete($id);
+        return app()->redirect('/admin/page');
+    }
+
 }

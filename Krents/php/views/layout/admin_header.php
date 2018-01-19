@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <script src="/public/js/jquery-3.2.1.min.js"></script>
+    <script src="/public/js/bootstrap.js"></script>
+    <script src="/public/js/summernote.min.js"></script>
+
     <link rel="stylesheet" href="/public/css/bootstrap.min.css">
     <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="/public/css/summernote.css">
+    <script>
+        $(document).ready(function() {
+            $('#summernote').summernote();
+        });
+    </script>
 </head>
 <body>
 
@@ -16,7 +27,7 @@
         <ul class="nav navbar-nav">
             <li class="<?php echo app()->request->getUrl() === '/admin/calendar'  || app()->request->getUrl() === '/admin' ? 'active' : ''?>"><a href="/admin/calendar">События календаря</a></li>
             <li class="<?php echo app()->request->getUrl() === '/admin/pages_files'  ? 'active' : ''?>"><a href="/admin/pages_files">Создание страниц(файлы)</a></li>
-            <li class="<?php echo app()->request->getUrl() === '/admin/pages'  ? 'active' : ''?>"><a href="/admin/pages">Усправлениями страницами(хранилище)</a></li>
+            <li class="<?php echo app()->request->getUrl() === '/admin/page'  ? 'active' : ''?>"><a href="/admin/page">Усправлениями страницами(хранилище)</a></li>
         </ul>
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
