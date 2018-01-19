@@ -24,6 +24,12 @@ class Router
         self::$routesPost[$url] = $action;
     }
 
+    public static function all($url, $action)
+    {
+        self::$routesPost[$url] = $action;
+        self::$routesGet[$url]  = $action;
+    }
+
     public static function checkRouteExist($url, $method)
     {
         $routes = [];

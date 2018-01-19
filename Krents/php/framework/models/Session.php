@@ -17,4 +17,15 @@ class Session extends GlobalParams
         parent::__construct($_SESSION);
     }
 
+
+    /**
+     * Remove value by key
+     * @param $key
+     */
+    public function remove($key)
+    {
+        unset($this->storage[$key]);
+        unset($_SESSION[$key]);
+    }
+
 }

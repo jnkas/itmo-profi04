@@ -12,4 +12,14 @@ function app()
     return $app;
 }
 
+/**
+ * @param $tplName
+ * @param array $attributes
+ */
+function view($tplName, $attributes = [])
+{
+    app()->view->render($tplName, $attributes);
+}
+
+
 return app()->run();

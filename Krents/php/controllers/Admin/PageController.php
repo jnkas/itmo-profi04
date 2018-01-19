@@ -6,21 +6,15 @@
  * Time: 7:57 PM
  */
 
-namespace Controllers;
+namespace Controllers\Admin;
 
 
-class AdminCalendarController
+class PageController extends AdminBaseController
 {
 
     public function index($input)
     {
-        if (isset($_SESSION['auth']) && $_SESSION['auth'] === true) {
-            unset($_SESSION['error_auth']);
-            return view('calendar/admin/index');
-        }
-        return view('calendar/admin/auth', [
-            'errorAuth' => isset($_SESSION['error_auth']) && $_SESSION['error_auth'] ===  true
-        ]);
+        return view('/admin/page/index');
     }
 
     public function auth($input)
@@ -29,11 +23,11 @@ class AdminCalendarController
         foreach ($accounts as $account) {
             if ($account->login === $input['login'] && $account->pass === md5($input['password'])) {
                 $_SESSION['auth'] = true;
-                return redirect('/calendar/admin');
+                return app()->redirect('/admin/calendar');
             }
         }
         $_SESSION['error_auth'] = true;
-        return redirect('/calendar/admin');
+        return app()->redirect('/admin/calendar');
     }
 
     public function addEvent($input)
@@ -56,6 +50,6 @@ class AdminCalendarController
             'desc'    => $input['desc']
         ];
         file_put_contents(APP_PATH.'/public/files/events/'.$date, json_encode($data));
-        return redirect('/calendar/admin');
+        return app()->redirect('/calendar/admin');
     }
 }

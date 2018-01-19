@@ -1,5 +1,7 @@
-body * {
-    display: inline-block;
+/**/
+
+.content {
+    margin: 0 20%;
 }
 
 #myCalendar {
@@ -53,7 +55,7 @@ body * {
 }
 
 .admin-form {
-    width: 400px;
+    width: 750px;
     margin: 20px;
 }
 
@@ -91,6 +93,7 @@ body * {
 .current-event-daily {
     padding: 20px 0;
 }
-.current-event-daily +.current-event-daily {
+
+.current-event-daily + .current-event-daily {
     border-top: 1px solid gray;
 }

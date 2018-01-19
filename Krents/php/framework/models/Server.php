@@ -8,11 +8,18 @@
 
 namespace Framework;
 
-
+/**
+ * Class Server
+ * @package Framework
+ */
 class Server extends GlobalParams
 {
+    /**
+     * Server constructor.
+     */
     public function __construct()
     {
         parent::__construct($_SERVER);
     }
+
 }

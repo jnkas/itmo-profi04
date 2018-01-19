@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/public/css/styles.css">
 </head>
 <body>
-<form action="/auth" method="post" class="admin-form" enctype="multipart/form-data">
+<form action="/admin/auth" method="post" class="admin-form" enctype="multipart/form-data">
     <label for="login">Login</label>
     <input type="text" name="login" class="form-control " id="login" required>
     <label for="password">Password</label>

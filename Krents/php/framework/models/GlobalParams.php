@@ -8,19 +8,22 @@
 
 namespace Framework;
 
-
+/**
+ * Class GlobalParams
+ * @package Framework
+ */
 class GlobalParams
 {
-
+    /** @var array */
     protected $storage;
 
     /**
      * GlobalParams constructor.
      * @param array $data
      */
-    public function __construct(array $data)
+    public function __construct(array &$data)
     {
-        $this->storage = $data;
+        $this->storage = &$data;
     }
 
     /**
@@ -32,6 +35,7 @@ class GlobalParams
     {
         return isset($this->storage[$key]) ? $this->storage[$key] : null;
     }
+
 
     /**
      * Get all storage
