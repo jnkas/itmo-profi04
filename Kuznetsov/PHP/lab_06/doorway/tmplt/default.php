@@ -14,6 +14,16 @@
         <a href="../index.php">На главную</a>
         <p>%s</p>
     </div>
+    
+    <h3 class="def">Выберите интересующую вас страницу</h3>
+    
+    <div class="links">
+        
+        <?php
+            include '../menu.php';
+        ?>
+        
+    </div>
 
 </body>
 
