@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Page name</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
 </head>
 
 <body>
 
     <main class="page">
 
-        <?php foreach($data as $value): ?>
+        <?php if(!empty($data)) :
+        foreach($data as $value): ?>
         <section class="post">
             <h2>
                 <?= $value['title']; ?>
@@ -26,14 +27,16 @@
 
         </section>
         <?php endforeach; ?>
+        <?php endif; ?>
 
     </main>
 
     <aside class="sidebar">
         <button><a href="index">Все страницы</a></button>
         <button><a href="admin">Создать страницу</a></button>
-
-        <?php foreach($data as $value): ?>
+        
+        <?php if(!empty($data)) :
+        foreach($data as $value): ?>
         <p class="links">
             <button><a href="admin?<?= $value['id']; ?>">edit</a></button>
             <button><a href="del?<?= $value['id']; ?>">delete</a></button>
@@ -42,7 +45,7 @@
             </a>
         </p>
         <?php endforeach; ?>
-
+        <?php endif; ?>
     </aside>
 
 </body>
