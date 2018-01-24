@@ -1,8 +1,8 @@
 <?php 
 $str = 'site gen';
-?>
 
-<!DOCTYPE html>
+
+$template = '<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -15,8 +15,11 @@ $str = 'site gen';
 	<div class="container">
 		<form action="hendler_form_site_gen.php" method="POST" enctype="multipart/form-data">
 			<div class="form-group form-control-lg">
-				<label>Category</label>
-				<input class="form-control" type="text" name="category" required>
+				<label>Select Category</label>
+				<select name="category">
+					{{#arrCategory}}<option value="{{cat}}">{{cat}}</option>{{/arrCategory}}
+				 </select>
+				<input style="display:none" class="form-control" type="text" name="category111" >
 			</div>
 			<div class="form-group form-control-lg">
 				<label>Page Name</label>
@@ -30,7 +33,7 @@ $str = 'site gen';
 			</div>
 			
 	    
-			<div class="form-group form-control-lg"><button type="submit" class="btn btn-primary">Send and Save Page on the server</button></div>
+			<div class="form-group form-control-lg"><button type="submit" class="btn btn-primary">Send and Save Page on server</button></div>
 	  </form>
 
 	</div>
@@ -38,11 +41,20 @@ $str = 'site gen';
 
 	
 
-
 	
 </body>
 </html>
+';
 
+	$filepath = "config.TXT";
+	$inputDataJSON = file_get_contents($filepath);
+	$dataArray = json_decode($inputDataJSON, true);
+	//var_dump($dataArray["arrCategory"]);
 
+require_once('Mustache/Autoloader.php');
+Mustache_Autoloader::register();
+$mustacheEngine = new Mustache_Engine;
 
-<h1><?php echo $str; ?></h1> 
+echo $mustacheEngine -> render($template, $dataArray);
+
+?>
