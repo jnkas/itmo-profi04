@@ -14,7 +14,19 @@ class Controller
     {
         $model = new Model();
         $dataArr = $model->addNews();
-        $viewer = new Viewer();
-        echo $viewer->render($dataArr);
+        header("Location:../index.php");
+    }
+
+    public function deleteNews()
+    {
+        $model = new Model();
+        $dataArr = $model->deleteNews();
+        header("Location:../../index.php");
+    }
+
+    public function editNews(){
+        $model = new Model();
+        $dataArr = $model->editNews();
+        header("Location:../index.php");
     }
 }

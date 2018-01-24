@@ -13,9 +13,13 @@ class DBWork    //Класс работы с текстовым файлом х�
     /*Метод формирования массива объектов NewsObj, из строк текстового файла*/
     private function getNewsInArr() {
         $currContentFileNews = file("newsDB/news.txt");
-        foreach ($currContentFileNews as $key=>$value) {
-            $tempArr = explode(";", $value);
-            $currContentFileNews[$key] = new NewsObj($tempArr[0], $tempArr[1], $tempArr[2], trim($tempArr[3]));
+        if (count($currContentFileNews) !== 0){
+            foreach ($currContentFileNews as $key=>$value) {
+                $tempArr = explode(";", $value);
+                $currContentFileNews[$key] = new NewsObj($tempArr[0], $tempArr[1], $tempArr[2], trim($tempArr[3]));
+            }
+        } else {
+            $currContentFileNews = null;
         }
         return $currContentFileNews;
     }

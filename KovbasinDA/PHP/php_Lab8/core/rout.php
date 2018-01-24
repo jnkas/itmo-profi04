@@ -1,7 +1,7 @@
 <?php
-
-include "core/newsObj.php";
-include "core/dbWork.php";
+//include "autoloader.php";
+include "core/newsobj.php";
+include "core/dbwork.php";
 include "backend/model/model.php";
 include "backend/viewer/viewer.php";
 

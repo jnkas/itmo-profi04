@@ -1,17 +1,8 @@
-1;CurrDate;AAA;AAAA
-2;CurrDate;BBB;bbbb
-3;CurrDate;CCCC;cccc
-4;CurrDate;DDD;dddddd
-5;CurrDate;EEE;eeeee
-6;CurrDate;News5;Новость какая-то
-7;CurrDate;News6;Text for nwes 6
-8;CurrDate;News7;Text for news 7
-9;CurrDate;News8;News8 textNews8 textNews8 textNews8 text
-10;CurrDate;FGHJH;HGKieveioubuvu
-11;CurrDate;GHJK;84359
-12;CurrDate;GHJK;84359
-13;CurrDate;ggg;gggggggg
-14;CurrDate;154;221
-15;CurrDate;News15;Text for news 15
-16;CurrDate;News16;Text for news 16
-17;CurrDate;News17;Text for news 17
+1;CurrDate;News1;Text for news 1
+2;CurrDate;News 2;Text for news 2
+3;CurrDate;News 3;Text for news 3
+4;CurrDate;News 4;Text for news 4
+5;CurrDate;News 5;Text for news 5
+6;CurrDate;News 6;Text News 6
+7;CurrDate;News 7;Text for news 7
+8;CurrDate;News 8;Text for news 
