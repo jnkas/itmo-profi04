@@ -3,6 +3,3 @@
 3;CurrDate;News 3;Text for news 3
 4;CurrDate;News 4;Text for news 4
 5;CurrDate;News 5;Text for news 5
-6;CurrDate;News 6;Text News 6
-7;CurrDate;News 7;Text for news 7
-8;CurrDate;News 8;Text for news 

@@ -1,9 +1,5 @@
 <?php
-//include "autoloader.php";
-include "core/newsobj.php";
-include "core/dbwork.php";
-include "backend/model/model.php";
-include "backend/viewer/viewer.php";
+include "autoloader.php";
 
 class Rout
 {
