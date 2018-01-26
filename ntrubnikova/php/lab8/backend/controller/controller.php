@@ -23,11 +23,14 @@ class Controller {
     }
     
     public function edit(){
-        echo "Редактирование";
+        echo "Редактирование страницы";
     }
 
-    public function del(){
-        echo "Удаление";
+    public function delete(){
+        $mdl = new Model();
+        $allPages = $mdl->getAllPages();
+        $request = new Request();
+        $mdl->deletePage($allPages, $request->post, $request->server);
     }
     
 }

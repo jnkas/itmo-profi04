@@ -1,4 +1,4 @@
-html {
+﻿html {
     font-family: Arial;
     
 }
@@ -63,4 +63,8 @@ textarea {
 
 .form p {
     margin: 15px 0 5px 0;
+}
+
+.hidden {
+display:none;
 }

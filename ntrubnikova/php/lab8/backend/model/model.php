@@ -7,6 +7,7 @@ class Model {
     
     public function getAllPages(){
         $fileLines = file(FILENAME, FILE_IGNORE_NEW_LINES);
+        $fileLines = str_replace("\xEF\xBB\xBF",'',$fileLines);
         $pagesArray = [];
         foreach ($fileLines as $value) {
             $tempArray = explode(';', $value);
@@ -26,7 +27,7 @@ class Model {
                 $newid = $id + 1;
             }
         }
-        //Записываем данные
+        //Записываем новую страницу в конец файла
         if (!empty($post->readPost('pageHeader')) && !empty($post->readPost('pagetext'))){
             $pageContent = "\r\n". $newid. ';'. $post->readPost('pageHeader'). ';'. $post->readPost('pagetext');
             file_put_contents(FILENAME,$pageContent,FILE_APPEND);
@@ -35,5 +36,18 @@ class Model {
         else {
             header('Location:'.'http://' . $server->get('HTTP_HOST').'/index');
         }
+    }
+    
+    public function deletePage($pagesArray, $post, $server){
+        $pageId = $post->readPost('id');
+        file_put_contents(FILENAME,"");
+        $pageContent = '';
+        foreach($pagesArray as $value) {
+            if ($value['id'] !== $pageId){
+                $pageContent .= $value['id']. ';'. $value['pageHeader']. ';'. $value['pageContent']. "\r\n";
+            }
+        } 
+        file_put_contents(FILENAME,rtrim($pageContent,"\r\n"),FILE_APPEND);
+        header('Location:'.'http://' . $server->get('HTTP_HOST').'/index');
     }
 }
