@@ -1,7 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="text-align: center">
+
 <?PHP
 # Задание 1 
 
-echo "Реализовать метод build и print в классе BTree"; 
+//echo "Реализовать метод build и print в классе BTree";
 # Класс описывающий вершину бинарного дерева
 class Vertex {
     public $key;
