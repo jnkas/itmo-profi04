@@ -68,3 +68,20 @@ textarea {
 .hidden {
 display:none;
 }
+
+.readonly {
+    border: none;
+    background-color: transparent;
+}
+
+/* Страницы */
+.page-header {
+    color: forestgreen;
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.page-content {
+    color: brown;
+    font-size: 20px;
+}

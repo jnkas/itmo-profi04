@@ -1,8 +1,14 @@
 <?php
 define('FILENAME', 'asset/content.txt');
 class Model {
-    public function getPage() {
-        return ['data' => 'Однажды в студеную зимнюю пору..'];
+    public function getPageById($pagesArray, $post) {
+        $pageId = $post->readPost('id');
+        foreach ($pagesArray as $value){
+            if ($value['id'] == $pageId){
+                $page = $value;
+            }
+        }
+        return $page;
     }
     
     public function getAllPages(){
@@ -18,7 +24,7 @@ class Model {
         return $pagesArray;
     }
     
-    public function savePage($pagesArray, $post, $server){
+    public function saveNewPage($pagesArray, $post, $server){
         //Ищем последний ID
         $id = 1;
         foreach ($pagesArray as $value){
@@ -38,16 +44,41 @@ class Model {
         }
     }
     
+    public function editPage($pagesArray, $post){
+        $pageId = $post->readPost('id');
+        foreach($pagesArray as $value) {
+            if ($value['id'] == $pageId){
+                $page = $value;
+            }
+        }
+        return $page;
+    }
+    
+    public function saveModifiedPage($pagesArray, $post, $server){
+        $fileLines = '';
+        $pageId = $post->readPost('id');
+        foreach ($pagesArray as $value){
+            if ($value['id'] == $pageId){
+                $fileLines .= $post->readPost('id'). ';'. $post->readPost('pageHeader'). ';'. $post->readPost('pagetext'). "\r\n";
+            }
+            else {
+                $fileLines .= $value['id']. ';'. $value['pageHeader']. ';'. $value['pageContent']. "\r\n";
+            }
+        }
+        file_put_contents(FILENAME,rtrim($fileLines,"\r\n"));
+        header('Location:'.'http://' . $server->get('HTTP_HOST').'/index');
+    }
+    
     public function deletePage($pagesArray, $post, $server){
         $pageId = $post->readPost('id');
         file_put_contents(FILENAME,"");
-        $pageContent = '';
+        $fileLines = '';
         foreach($pagesArray as $value) {
             if ($value['id'] !== $pageId){
-                $pageContent .= $value['id']. ';'. $value['pageHeader']. ';'. $value['pageContent']. "\r\n";
+                $fileLines .= $value['id']. ';'. $value['pageHeader']. ';'. $value['pageContent']. "\r\n";
             }
         } 
-        file_put_contents(FILENAME,rtrim($pageContent,"\r\n"),FILE_APPEND);
+        file_put_contents(FILENAME,rtrim($fileLines,"\r\n"));
         header('Location:'.'http://' . $server->get('HTTP_HOST').'/index');
     }
 }

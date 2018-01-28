@@ -36,6 +36,9 @@ class View {
     }
     
     public function renderPage(Array $pagesArray = NULL) {
+        if (!$pagesArray == NULL) {
+            extract($pagesArray);
+            }
         ob_start();
         try {
             include(TEMPLATE_PATH.$this->template);
