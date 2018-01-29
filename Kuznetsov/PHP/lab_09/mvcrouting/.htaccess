@@ -1,0 +1,14 @@
+﻿# .htaccess
+# Если mod_rewrite есть на сервере
+<IfModule mod_rewrite.c>
+# Активируем модуль
+RewriteEngine On
+# Если файл не существует или не является директорией
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Флаги:
+# L — остановить процесс преобразования на этой строчке
+# и не выполнять последующие за ней преобразования адреса.
+# QSA — строка запроса ($_GET). Если не указывать, то "потеряется".
+RewriteRule ^(.*)$ index.php [L,QSA]
+</IfModule>

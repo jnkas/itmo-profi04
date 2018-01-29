@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /*padding: 0;
+    margin: 0;*/
+}
+
+body {
+    background-color: #ededed;
+}
+
+/*--- admin.php ----------*/
+
+.auth_page label,
+.auth_page input:not([type="submit"]) {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+}
+
+a.auth_page {
+    text-decoration: none;
+}
+a.auth_page:hover {
+    text-decoration: underline;
+}
+
+fieldset.admin_page,
+.auth_page fieldset {
+    width: 600px;
+    margin: 50px 0 0 150px;
+    border-radius: 10px;
+}
+
+
+.admin_page label,
+.admin_page select,
+.admin_page input[type="text"],
+.admin_page textarea {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+}
+
+.admin_page label {
+    margin-top: 20px;
+}
+
+.admin_page input[type="submit"], 
+.auth_page input[type="submit"] 
+{
+    width: 35%;
+    height: 40px;
+    margin: 20px 0 20px 10%;
+    border-radius: 6px;
+    background-color: #008300;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/*--- template.php ----------*/
+
+
+main.page {
+    float: left;
+    display: inline-block;
+    width: 70%;
+    border: 1px solid black;
+    margin: 0;
+}
+
+section.post {
+    border-bottom: 1px dotted grey;
+    
+    padding: 5px;
+}
+
+.post h2 {
+    color: #00004d;
+}
+
+.post p,
+.post small {
+    color: #22223c;
+}
+
+aside.sidebar {
+    float: right;
+    display: inline-block;
+    width: 30%;
+    /*border: 1px solid black;*/
+    padding: 5px;
+}
+.sidebar button {
+    margin-bottom: 2px;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+p.links {
+    border-bottom: 1px dotted grey;
+}
+
+.sidebar span {
+    display: block;
+    text-align: center;
+    background-color: #585858;
+    color: #fff;
+    margin-bottom: 10px;
+}
