@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<form action="../controller/addNews" method="post">
+<form action="../../controller/addNews" method="post">
     <label for="idHeadNews">Заголовок новости</label>
     <input name="nameHeadNews" id="idHeadNews" type="text">
     <label for="idNewsContent">Текст новости:</label>
