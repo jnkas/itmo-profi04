@@ -11,7 +11,7 @@ return [
     'redis' => [
         'host'     => env('REDIS_HOST', '127.0.0.1'),
         'port'     => env('REDIS_PORT', '6379'),
-        'password' => env('REDIS_PASS', null),
+        'password' => env('REDIS_PASS'),
     ],
 
 ];
