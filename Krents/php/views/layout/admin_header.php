@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <script src="/public/js/jquery-3.2.1.min.js"></script>
-    <script src="/public/js/bootstrap.js"></script>
-    <script src="/public/js/summernote.min.js"></script>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/summernote.min.js"></script>
 
-    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/public/css/styles.css">
-    <link rel="stylesheet" href="/public/css/summernote.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/summernote.css">
     <script>
         $(document).ready(function() {
             $('#summernote').summernote();
