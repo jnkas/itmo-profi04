@@ -18,14 +18,12 @@ class Controller {
             $v->render($data);
         } else {
             $v = new View('admin.php');
-            $v->render($d);
+            $v->render($nothing);
         }
     }
     
     public function addAction() {
         //добавление страницы
-        //$title = $_POST['page_name'];
-        //$text = $_POST['page_content'];
         $app = new App();
         $title = $app->request->input->get('page_name');
         $text = $app->request->input->get('page_content');
@@ -45,8 +43,6 @@ class Controller {
     
     public function editAction($id) {
         //echo 'редактирование';
-        //$title = $_POST['page_name'];
-        //$text = $_POST['page_content'];
         $app = new App();
         $title = $app->request->input->get('page_name');
         $text = $app->request->input->get('page_content');
@@ -62,4 +58,50 @@ class Controller {
         $v = new View('template.php');
         $v->render($mdl);
     }
+    
+    public function authAction() {
+        //страница авторизации
+        $v = new View('login.php');
+        $v->render($nothing);
+    }
+    
+    public function checkAction() {
+        //проверка авторизации
+        if(isset($_POST['login']) && isset($_POST['password']) && isset($_POST['login_submit'])) {
+            $app = new App();
+            $login = $app->request->input->get('login');
+            $psw = $app->request->input->get('password');
+            $app->request->auth->init($login, $psw);
+            
+            if($app->request->auth->verification()) {
+                header("Location: index");
+            } else {
+                header("Location: auth");
+            }
+        }
+    }
+    
+    public function logoutAction() {
+        //выход из учетной записи
+        $app = new App();
+        $app->request->auth->logout();
+        header("Location: index");
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
