@@ -11,7 +11,6 @@ namespace Lumisade\Models;
 
 class UserProfile extends User
 {
-    public $login;
     public $name;
     public $phone;
     public $email;
@@ -26,6 +25,8 @@ class UserProfile extends User
         foreach ($userData as $key => $value) {
             $this->$key = $value;
         }
+
+        parent::__construct();
 
     }
 }

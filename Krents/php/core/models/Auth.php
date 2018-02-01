@@ -47,7 +47,7 @@ class Auth
     }
 
     /**
-     * @return null|UserProfile
+     * @return UserProfile
      */
     public function user()
     {

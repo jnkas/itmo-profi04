@@ -8,9 +8,24 @@
 
 namespace Lumisade\Models;
 
-
-class User
+/**
+ * Class User
+ * @package Lumisade\Models
+ * @property int id
+ * @property string login
+ * @property string password
+ * @property bool is_active
+ * @property string created_at
+ * @property string updated_at
+ */
+class User extends Model
 {
+    protected $fields = [
+        'id'        => 'int',
+        'login'     => 'string',
+        'password'  => 'string',
+        'is_active' => 'bool',
+    ];
 
     /**
      * @param $login
@@ -19,32 +34,19 @@ class User
      */
     public function getUser($login, $password)
     {
-        $accounts = json_decode(file_get_contents(APP_PATH.'/public/files/passwd'));
-        foreach ($accounts as $account) {
-            if ($account->login === $login && $this->checkPassword($password, $account->pass)) {
-                unset($account->pass);
-                return $account;
-            }
-        }
-        return null;
+        return $this->where([
+            'login'    => $login,
+            'password' => $this->generateHash($password),
+
+        ])->first();
     }
 
     /**
      * @param $password string
      * @return string
      */
-    public function generatePassword($password)
+    public function generateHash($password)
     {
-        return password_hash($password, PASSWORD_BCRYPT);
-    }
-
-    /**
-     * CHeck password hash
-     * @param $hash string
-     * @return string
-     */
-    public function checkPassword($password, $hash)
-    {
-        return password_verify($password, $hash);
+        return crypt($password, '$2y$07$nXD2mYsHux2pH7wFJdlu7fVLv$');
     }
 }

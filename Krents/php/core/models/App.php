@@ -20,8 +20,12 @@ class App
     public $request;
     public $logger;
     public $response;
+
     /** @var  Auth */
     public $auth;
+
+    /** @var  \DatabaseHandler */
+    public $DB;
 
     /** @var  View|null */
     public $view;
@@ -42,6 +46,7 @@ class App
         $this->request = new Request();
         $this->view    = new View();
         $this->auth    = new Auth();
+        $this->DB      = \DatabaseHandler::class;
         return $this->handleUrl();
     }
 
