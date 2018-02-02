@@ -26,12 +26,12 @@
                     {
                         echo "<option>".$value."</option>";
                     }
- ?>
+                    ?>
                 </select>
             </div>
-    <div class="secondTypeDiv"><label     for="namePage">Название страницы:</label>
+            <div class="secondTypeDiv"><label for="namePage">Название страницы:</label>
                 <input type="text" name="namePage" id="namePage">
-    </div>
+            </div>
             <div class="secondTypeDiv"><label for="textAreaPage">Текст страницы:</label>
                 <textarea name="textAreaPage" id="textAreaPage" cols="30" rows="10"></textarea>
             </div>
