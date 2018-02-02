@@ -6,7 +6,7 @@
  * Time: 15:33
  */
 
-class Request
+class request
 {
     public $input;
     public $server;

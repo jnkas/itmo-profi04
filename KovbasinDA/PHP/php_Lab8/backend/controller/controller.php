@@ -7,14 +7,21 @@ class Controller
         $model = new Model();
         $dataArr = $model->basicAction();
         $viewer = new Viewer();
-        echo $viewer->render($dataArr);
+        echo $viewer->render($dataArr, "constructMainPage.php");
     }
 
     public function addNews()
     {
         $model = new Model();
-        $dataArr = $model->addNews();
-        header("Location:../index.php");
+        $templAdd = "constructMainPage.php";
+        if (!empty($_POST)) {
+            $dataArr = $model->addNews();
+        } else {
+            $templAdd = "adminNewNews.php";
+            $dataArr = "";
+        }
+        $viewer = new Viewer();
+        echo $viewer->render($dataArr, $templAdd);
     }
 
     public function deleteNews()
@@ -26,7 +33,14 @@ class Controller
 
     public function editNews(){
         $model = new Model();
-        $dataArr = $model->editNews();
-        header("Location:../index.php");
+        $templEdit = "constructMainPage.php";
+        if (!empty($_POST)) {
+            $dataArr = $model->editNews();
+        } else {
+            $templEdit = "adminEditNews.php";
+            $dataArr = "";
+        }
+        $viewer = new Viewer();
+        echo $viewer->render($dataArr, $templEdit);
     }
 }
