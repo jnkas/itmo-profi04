@@ -1,0 +1,15 @@
+.newsCard {
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    background: darkseagreen;
+    border: solid 2px black;
+    flex-direction: column;
+    margin: 5px;
+    width: inherit;
+}
+
+.newsCard h3 {
+    color: firebrick;
+}

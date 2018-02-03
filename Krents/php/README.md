@@ -1,10 +1,8 @@
-# PHP
-Лабораторные задания по курсу php.
-Добавил МРП роутинга для упрощения разработки - /routes/web.php 
-Там же отписаны комменты по лабам
-
-
-
-##Lab 5, mustache
- /php/public/js/app.js:83
- /php/public/js/app.js:137
+ # Install
+ * Copy file .env.example to .env and set at that file your local environments
+ 
+ 
+ ## Requirements
+ * Php 7.2
+ * Mysql
+ * Redis (optionally, for session storage)

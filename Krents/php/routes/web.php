@@ -1,6 +1,6 @@
 <?php
 
-use Framework\Router;
+use Lumisade\Models\Router;
 
 Router::get('/hw/first', 'Controllers\FirstHomeWorkController@index');
 

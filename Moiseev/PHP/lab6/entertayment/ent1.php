@@ -9,7 +9,7 @@
         <?php include "../menuDefault.php"?>
     </div>
     <div class="defaultPage">
-        <span>Событие искусства 1</span>
+        <span>Событие развлечений 1</span>
     </div>
 </body>
 </html>

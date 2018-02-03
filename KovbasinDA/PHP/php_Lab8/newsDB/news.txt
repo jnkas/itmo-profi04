@@ -1,0 +1,5 @@
+1;CurrDate;News1;Text for news 1. Edit2!
+2;CurrDate;News 2;Text for news 2
+3;CurrDate;News 3;Text for news 3
+4;CurrDate;News 4;Text for news 4.And new text. !!!!!!
+5;CurrDate;News 5;Text for news 5 test.

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="/public/js/Treant.js"></script>
-    <script src="/public/js/raphael.js"></script>
-    <link rel="stylesheet" href="/public/css/Treant.css">
-    <link rel="stylesheet" href="/public/css/custom-colored.css">
+    <script src="/js/Treant.js"></script>
+    <script src="/js/raphael.js"></script>
+    <link rel="stylesheet" href="/css/Treant.css">
+    <link rel="stylesheet" href="/css/custom-colored.css">
 </head>
 <body>
 <div class="chart" id="tree-structure" ></div>

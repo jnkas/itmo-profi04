@@ -1,3 +1,0 @@
-﻿1~firstpage~firsttext
-2~secondpage~secondtext
-3~Primer~Text

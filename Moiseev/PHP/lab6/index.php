@@ -1,4 +1,4 @@
-<html lang="en">
+>                                                                                                                                                                                                                                               <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>php_Lab6</title>
@@ -24,7 +24,7 @@
         </ul>
     </div>
 </body>
-</html>
+</html> 
                                                                                                                                                                                <li><a href="<?="../".$keyDir."/".$valueFile?>"><?=$valueFile?></a></li>
                         <? endif; ?>
                     <? endforeach; ?>
