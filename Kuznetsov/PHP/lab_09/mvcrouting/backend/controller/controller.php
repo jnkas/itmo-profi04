@@ -87,6 +87,29 @@ class Controller {
         $app->request->auth->logout();
         header("Location: index");
     }
+    
+    public function regformAction() {
+        $v = new View('registration.php');
+        $v->render($nothing);
+    }
+    
+    public function registrationAction() {
+        $app = new App();
+        $username = $app->request->input->get('username');
+        $login = $app->request->input->get('login');
+        $psw1 = $app->request->input->get('password1');
+        $psw2 = $app->request->input->get('password2');
+        if($psw1 === $psw2) {
+            $model = new Model();
+            $model->addUser($username, $login, $psw1);
+            $v = new View('login.php');
+            $v->render($username);
+        } else {
+            $v = new View('registration.php');
+            $v->render([$username, $login]);
+        }
+    }
+    
 }
 
 

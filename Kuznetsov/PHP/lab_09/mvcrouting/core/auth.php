@@ -5,7 +5,8 @@ class UserModel {
         //запрос к данным для нахождения пользователя в системе
         //возвращает массив с набором свойств
         //return ['login'=>'Vasya', 'phone'=>'89111232343', 'email'=>'example@mail.ru', 'role'=>'admin'];
-        $lines = file('./logipass/logipass.txt');
+        
+        /*$lines = file('./logipass/logipass.txt');
         foreach($lines as $line) {
             $arr = explode('~', $line);
             if($arr[0] === $login && $arr[1] === $password) {
@@ -13,6 +14,14 @@ class UserModel {
             } else {
                 return;
             }
+        }*/
+        
+        $query = 'SELECT * FROM authorization WHERE login=:login AND password=:password';
+        $result = DatabaseHandler::GetRow($query, ['login'=>$login, 'password'=>$password]);
+        if($result !== false) {
+            return $result;
+        } else {
+            return;
         }
     }
 }
@@ -56,7 +65,7 @@ class Auth {
             $this->user = new UserProfile($result);
             $_SESSION['auth'] = true;
             $_SESSION['profile'] = $this->user;
-            $_SESSION['username'] = $result['name'];
+            $_SESSION['login'] = $result['login'];
             return true;
         } else {
             return false;
@@ -66,7 +75,7 @@ class Auth {
     public function logout() {
         unset($_SESSION['auth']);
         unset($_SESSION['profile']);
-        unset($_SESSION['username']);
+        unset($_SESSION['login']);
     }
     
     public function isAuth() {

@@ -1,5 +1,5 @@
 <?php
-//include 'config.php';
+include './core/config.php';
 //Class providing generic data access functionality
 //$result = DatabaseHandler::GetAll('select * from auth where id= :id', ['id'=>100]);
 

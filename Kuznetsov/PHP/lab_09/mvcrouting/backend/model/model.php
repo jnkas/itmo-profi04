@@ -72,6 +72,12 @@ class Model {
         }
         return ($arr)? array_reverse($arr) : null;
     }
+    
+    public function addUser($username, $login, $password) {
+        $password = md5($password);
+        $query = 'INSERT INTO authorization VALUES (null, :username, :login, :password)';
+        $result = DatabaseHandler::Execute($query, ['username'=>$username, 'login'=>$login, 'password'=>$password]);
+    }
 }
 
 

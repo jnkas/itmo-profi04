@@ -24,6 +24,10 @@ echo '<br>';
 var_export($name);
 echo '</pre>';
 */
-<?= //(!empty($msg))? "<p>{$msg}</p>" : null ; ?>
 
-
+include 'core/databasehandler.php';
+$query = 'SELECT * FROM authorization WHERE login=:login AND password=:password';
+$login = 'guest';
+$password = '5f4dcc3b5aa765d61d8327deb882cf99';
+$result = DatabaseHandler::GetRow($query, ['login'=>$login, 'password'=>$password]);
+var_dump($result);

@@ -17,8 +17,8 @@ if($app->request->auth->isAuth()) : //если вошли?>
            
            <main class="page">
 
-            <?php if(!empty($data)) :
-            foreach($data as $value): ?>
+    <?php if(!empty($data)) :
+    foreach($data as $value): ?>
             <section class="post">
                 <h2>
                     <?= $value['title']; ?>
@@ -40,7 +40,7 @@ if($app->request->auth->isAuth()) : //если вошли?>
         <aside class="sidebar">
 
             <div class="login_info">
-                <span><?= "Вы вошли как: {$_SESSION['username']}"; ?></span>
+                <span><?= "Вы вошли как: <b>{$_SESSION['login']}</b>"; ?></span>
                 <button><a href="logout">Выйти</a></button>
             </div>
 
@@ -48,9 +48,9 @@ if($app->request->auth->isAuth()) : //если вошли?>
             <?= (count($data) === 1)? '<button><a href="index">Все статьи</a></button>' : null ; ?>
             
             <p class="list_title">Список статей:</p>
-            <?php if(!empty($data)) :
-            foreach($data as $value): ?>
-            <p class="links">
+    <?php if(!empty($data)) :
+    foreach($data as $value): ?>
+            <div class="links">
                 
                 <a href="get?<?= $value['id']; ?>" class="links">
                     <?= $value['id'] . ': ' . $value['title']; ?>
@@ -59,7 +59,7 @@ if($app->request->auth->isAuth()) : //если вошли?>
                 <button class="btn"><a href="admin?<?= $value['id']; ?>">edit</a></button>
                 <button class="btn"><a href="del?<?= $value['id']; ?>">delete</a></button>
                 
-            </p>
+            </div>
 
     <?php endforeach;
     endif; ?>
@@ -88,8 +88,8 @@ if($app->request->auth->isAuth()) : //если вошли?>
             
             <main class="page">
 
-            <?php if(!empty($data)) :
-            foreach($data as $value): ?>
+    <?php if(!empty($data)) :
+    foreach($data as $value): ?>
             <section class="post">
                 <h2>
                     <?= $value['title']; ?>
@@ -119,9 +119,9 @@ if($app->request->auth->isAuth()) : //если вошли?>
             <?= (count($data) === 1)? '<button><a href="index">Все статьи</a></button>' : null ; ?>
 <!--            <button><a href="admin">Создать страницу</a></button>-->
             <p class="list_title">Список статей:</p>
-            <?php if(!empty($data)) :
-            foreach($data as $value): ?>
-            <p class="links">
+    <?php if(!empty($data)) :
+    foreach($data as $value): ?>
+            <div class="links">
 <!--
                 <button><a href="admin?<?= $value['id']; ?>">edit</a></button>
                 <button><a href="del?<?= $value['id']; ?>">delete</a></button>
@@ -129,7 +129,7 @@ if($app->request->auth->isAuth()) : //если вошли?>
                 <a href="get?<?= $value['id']; ?>">
                     <?= $value['id'] . ': ' . $value['title']; ?>
                 </a>
-            </p>
+            </div>
 
     <?php endforeach;
     endif; ?>
