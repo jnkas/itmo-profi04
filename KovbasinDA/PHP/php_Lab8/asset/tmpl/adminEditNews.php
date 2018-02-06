@@ -15,6 +15,3 @@
 </form>
 </body>
 </html>
-<?php
-
-?>

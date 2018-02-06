@@ -13,3 +13,14 @@
 .newsCard h3 {
     color: firebrick;
 }
+
+#authorizationId {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border: solid black 2px;
+    background-color: darkseagreen;
+    margin: 5px;
+}

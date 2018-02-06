@@ -43,4 +43,24 @@ class Controller
         $viewer = new Viewer();
         echo $viewer->render($dataArr, $templEdit);
     }
+
+    public function authorization() {
+        $model = new Model();
+        $resultCheck = $model->checkUserProf();
+        if ($resultCheck) {
+            $dataArr = $model->basicAction();
+            $template = "constructMainPage.php";
+        } else {
+            $dataArr = "";
+            $template = "authorization.php";
+        }
+        $viewer = new Viewer();
+        echo $viewer->render($dataArr, $template);
+    }
+
+    public function logoutUser() {
+        $model = new Model();
+        $model->logoutUser();
+        header("Location:../../index.php");
+    }
 }

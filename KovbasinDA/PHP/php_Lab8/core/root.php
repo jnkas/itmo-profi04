@@ -1,11 +1,16 @@
 <?php
 include "autoloader.php";
 
-class Rout
+class Root
 {
     public static function Start(){
+        session_start();
         $controllerName = "Controller";
-        $actionName = "basicAction";
+        if ( isset($_SESSION["auth"]) && $_SESSION["auth"] === true) {
+            $actionName = "basicAction";
+        } else {
+            $actionName = "authorization";
+        }
         $routes = explode("/" ,$_SERVER["REQUEST_URI"]);
 
         if (!empty($routes[1])) {

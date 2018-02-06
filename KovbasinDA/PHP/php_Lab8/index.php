@@ -1,3 +1,3 @@
 <?php
-include "core/rout.php";
-Rout::Start();
+include "core/root.php";
+Root::Start();

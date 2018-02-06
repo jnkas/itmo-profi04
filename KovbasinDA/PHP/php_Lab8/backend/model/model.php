@@ -63,4 +63,26 @@ class Model
         fclose($fDB);
         return $arrNews;
     }
+
+    public function checkUserProf() {
+        $tempReturn = false;
+        if (isset($_POST[loginName]) && isset($_POST[passName])) {
+            $handlerDB = new DBWork();
+            $arrUserInf = $handlerDB->arrUserInf;
+            foreach ($arrUserInf as $value) {
+                if ($_POST[loginName] === $value->login && $_POST[passName] === $value->password) {
+                    $_SESSION["auth"] = true;
+                    $_POST[loginName] = "";
+                    $_POST[passName] = "";
+                    $tempReturn = true;
+                    break;
+                }
+            }
+        }
+        return $tempReturn;
+    }
+
+    public function logoutUser() {
+        session_unset();
+    }
 }
