@@ -1,0 +1,105 @@
+﻿html {
+    font-family: Arial;
+    
+}
+
+/* Заголовки */
+h1 {
+    font-size: 30px;
+}
+
+/* Таблицы */
+table {
+     font-size: 15px;
+}
+
+table th {
+    padding: 5px;
+    border: 1px solid lightgray;
+    font-weight: bold;
+    text-align: left;
+}
+
+table td {
+    padding: 5px;
+    border: 1px solid lightgray;
+}
+
+table td:nth-child(2) {
+    width: 200px;
+}
+
+table td:nth-child(3) {
+    width: 300px;
+}
+
+table td:nth-child(4), table td:nth-child(5){
+    width: 150px;
+}
+
+/* Кнопки */
+
+
+#logout {
+    position:fixed;
+    top: 10px;
+    right:10px;
+}
+
+button {
+    width: 150px;
+    height: 30px;
+    background-color: lightgrey;
+    font-size: 15px;
+    border: 1px solid darkgrey;
+    padding: 0;
+}
+
+/* Форма */
+input {
+    width: 300px;
+    height: 30px;
+    font-size: 14px;
+    padding: 0 2px;
+}
+
+textarea {
+    width: 300px;
+    height: 200px;
+    padding: 2px;
+    margin: 0 0 5px 0;
+}
+
+form p {
+    margin: 15px 0 5px 0;
+}
+
+.hidden {
+display:none;
+}
+
+.readonly {
+    border: none;
+    background-color: transparent;
+}
+
+input[type="password"] {
+    margin-bottom: 10px;
+}
+
+/* Страницы */
+.page-header {
+    color: forestgreen;
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.page-content {
+    color: brown;
+    font-size: 20px;
+}
+
+/* Ошибки */
+#error {
+    color: #ff6666;
+}
