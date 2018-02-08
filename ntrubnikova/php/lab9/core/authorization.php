@@ -25,7 +25,7 @@ class Authorization {
             $_SESSION['profile'] = $this->user;
             return 'verified';
         } else {
-            return 'Неправильное имя пользователя или пароль';
+            return 'Неверное имя пользователя или пароль';
         }
     }
     

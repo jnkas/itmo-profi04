@@ -6,7 +6,7 @@
        <link rel="stylesheet" href="asset/css/styles.css">
    </head>
     <body>
-      <div id="error"><?php echo $error; ?></div>
+      <div id="error"><?php echo $message; ?></div>
        <h1>Войти - CMS</h1>
        <div id="form">
         <form action="login" method="post">

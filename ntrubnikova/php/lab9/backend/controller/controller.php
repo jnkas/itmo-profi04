@@ -78,9 +78,9 @@ class Controller {
     }
     
 //Авторизация
-    public function authorize(){
+    public function authorize($message = null){
         $view = new View('authForm.tpl');
-        $view->renderPage();
+        $view->renderPage($message);
     }
     
     public function register(){
@@ -95,11 +95,8 @@ class Controller {
         
         $mdl = new UserModel();
         $result = $mdl->saveUser($login, $password);
-        if ($result == 'registered') {
-            $page = ['error'=>'Пользователь зарегистрирован, войдите'];
-            $view = new View('authForm.tpl');
-            $view->renderPage($page);
-        }
+        $message = ['message'=>$result];
+        $this->authorize($message);
     }
     
     public function login(){
@@ -114,9 +111,8 @@ class Controller {
             $this->index();
         }
         else {
-            $page = ['error'=>$auth->verification()];
-            $view = new View('authForm.tpl');
-            $view->renderPage($page);
+            $message = ['message'=>$auth->verification()];
+            $this->authorize($message);
         }
     }
     

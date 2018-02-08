@@ -11,7 +11,7 @@ class UserModel {
         $query = "insert into auth values ('', :login, :password)";
         $result =  DatabaseHandler::execute($query, ['login'=>$login , 'password'=>$password]);
 //        return $result;
-        return 'registered';
+        return 'Пользователь зарегистрирован, войдите';
     }
     
 }
