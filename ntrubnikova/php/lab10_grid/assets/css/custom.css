@@ -1,0 +1,30 @@
+html {
+    font-size: 14px;
+}
+
+.page-link {
+    color: #6c757d;
+}
+
+.page-link:hover {
+    color: black;
+}
+
+.page-item.active .page-link {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.col-sm {
+    padding: 0;
+}
+
+/*Table*/
+
+#new-record {
+    display: none;
+}
+
+.rows-per-page {
+    width: 60px;
+}
