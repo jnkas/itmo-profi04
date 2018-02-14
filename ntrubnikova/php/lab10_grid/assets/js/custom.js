@@ -10,7 +10,7 @@ var requiredFields = ['login'];
 
 //New records
 function addRecord(){    
-    var fieldsHtml = '<tr id="' + lastRecID + '"><td><form method="post" action="add.php" id="form-' + lastRecID + '"></form></td>';
+    var fieldsHtml = '<tr id="' + lastRecID + '"><td><form method="post" action="add" id="form-' + lastRecID + '"></form></td>';
     
     for (var i = 1; i < varArray.length; i++) {
         fieldsHtml += '<td id="' + varArray[i] + '-' + lastRecID + '"><input type="text" name="' + varArray[i] + '" class="form-control" form="form-' + lastRecID + '"></td>';
@@ -136,11 +136,11 @@ function changeButtonsToEdit(recID){
     $('#delete-' + recID).replaceWith('<button type="button" class="btn btn-outline-secondary" id="cancel-' + recID + '" onclick="cancelRecord(this.id)"><img src="assets/img/x-square.svg" width=20/></button>');
 }
 
-function deleteRecord(clickedId){
+function deleteRecord(clickedId){    
     //console.log(clickedId);
     $.ajax({
         method: 'POST',
-        url: 'delete.php',
+        url: 'delete',
         data: {'id': clickedId},
         success: function(data){
             

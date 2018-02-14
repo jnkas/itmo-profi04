@@ -6,7 +6,8 @@ spl_autoload_register(function ($class_name) {
 	$directories = [
         'core/',
         'backend/view/',
-        'backend/model/'
+        'backend/model/',
+        'backend/controller/'
         ];
     foreach($directories as $directory){
         //echo $directory.$class_name . '.php';

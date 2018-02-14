@@ -16,7 +16,7 @@ class View {
         foreach ($data as $userData){
             $id = $userData['id'];
             $login = $userData['login'];
-            $row = '<tr id="'. $id. '"><form method="post" action="save.php" id="form-'. $id. '"></form>'. "\r\n";
+            $row = '<tr id="'. $id. '"><form method="post" action="save" id="form-'. $id. '"></form>'. "\r\n";
 
             foreach ($userData as $key => $value){
                 $row .= '<td class="align-middle" id="'. $key. '-'. $id. '">'. $value. '</td>'. "\r\n";
