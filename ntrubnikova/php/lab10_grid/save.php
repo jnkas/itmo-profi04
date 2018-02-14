@@ -6,5 +6,5 @@ $request = new Request();
 $post = $request->post->postArray;
 
 $mdl = new Model();
-$mdl->insertRecord($post);
+$mdl->updateRecord($post);
 

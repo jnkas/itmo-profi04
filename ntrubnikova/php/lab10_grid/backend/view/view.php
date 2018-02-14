@@ -14,12 +14,12 @@ class View {
         //Create HTML from DB data
         $usersTable = '';
         foreach ($data as $userData){
-            $row = '<tr>'. "\r\n";
             $id = $userData['id'];
             $login = $userData['login'];
+            $row = '<tr id="'. $id. '"><form method="post" action="save.php" id="form-'. $id. '"></form>'. "\r\n";
 
             foreach ($userData as $key => $value){
-                $row .= '<td id="'. $key. '-'. $id. '">'. $value. '</td>'. "\r\n";
+                $row .= '<td class="align-middle" id="'. $key. '-'. $id. '">'. $value. '</td>'. "\r\n";
             }
 
             //Add buttons to rows

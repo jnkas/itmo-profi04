@@ -1,44 +1,50 @@
+//TBD: Автоматом создавать переменные
+
 var lastRecID = 10 + 1;
 
 //List ids for fields to edit
 var varArray = ['id', 'login', 'pass', 'name', 'lastname'];
 var requiredFields = ['login'];
 
+//TBD End
+
 //New records
 function addRecord(){    
-    var fieldsHtml = '<tr id="' + lastRecID + '"><td><form method="post" action="test.php" id="new-' + lastRecID + '"></form></td>';
+    var fieldsHtml = '<tr id="' + lastRecID + '"><td><form method="post" action="add.php" id="form-' + lastRecID + '"></form></td>';
     
     for (var i = 1; i < varArray.length; i++) {
-        fieldsHtml += '<td id="' + varArray[i] + '-' + lastRecID + '"><input type="text" name="' + varArray[i] + '" class="form-control" form="new-' + lastRecID + '"></td>';
+        fieldsHtml += '<td id="' + varArray[i] + '-' + lastRecID + '"><input type="text" name="' + varArray[i] + '" class="form-control" form="form-' + lastRecID + '"></td>';
     }
     
-    var buttonsHtml = '<td><button type="submit" class="btn btn-outline-success" id="save-' + lastRecID + '" onclick="saveNewRecord(this.id)"><img src="assets/img/check-square.svg" width=20/></button></td><td><button type="button" class="btn btn-outline-secondary" id="cancel-' + lastRecID + '" onclick="cancelNewRecord(this.id)"><img src="assets/img/x-square.svg" width=20/></button></td></tr>';
+    var buttonsHtml = '<td><button type="submit" class="btn btn-outline-success" id="save-' + lastRecID + '" onclick="saveRecord(this.id)"><img src="assets/img/check-square.svg" width=20/></button></td><td><button type="button" class="btn btn-outline-secondary" id="cancel-' + lastRecID + '" onclick="cancelNewRecord(this.id)"><img src="assets/img/x-square.svg" width=20/></button></td></tr>';
     
     $('#table').prepend(fieldsHtml + buttonsHtml);
     lastRecID += 1;
 }
 
-function saveNewRecord(clickedId){
+function saveRecord(clickedId){
     var recID = clickedId.replace( /^\D+/g, '');
-    var form = $('#new-' + recID);
+    var form = $('#form-' + recID);
+    var action = $(form).attr('action');
     
     var fields = fieldsNotEmpty(requiredFields, recID);
-    console.log(fields);
+//    console.log(fields);
     if(fields.length == 0) {
         $.ajax({
         method: 'POST',
-        url: 'add.php',
+        url: action,
         data: form.serialize(),
         success: function(data){
             
             if (data.indexOf('error') >= 0) {
                 //Pass data to error modal dialog (Bootstrap docs)
                 $('#errorModal').modal();
-                $('#errorModal').find('.modal-body').html('<p>Не могу добавить запись: ' + data + '</p>');
+                $('#errorModal').find('.modal-body').html('<p>Ошибка: ' + data + '</p>');
             }
             else {
-                saveRecord(clickedId);
+                changeRecordOnSave(clickedId);
                 console.log("Результат сохранения: " + data);
+                location.reload();
                 }
          }
     });
@@ -68,23 +74,29 @@ function editRecord(clickedId){
     }
     
     //Make fields editable
-    for (var i = 1; i < varArray.length; i++) {
+    for (var i = 0; i < varArray.length; i++) {
         window[varArray[i]] = $('#' + window[varArray[i] + 'ID']).html();
         
-        $('#' + window[varArray[i] + 'ID']).html('<input type="text" class="form-control" value="' + window[varArray[i]] + '" data-old="' + window[varArray[i]] + '"/>');
+        if (i == 0) {
+            $('#' + window[varArray[i] + 'ID']).html('<input readonly type="text" class="form-control-plaintext" value="' + window[varArray[i]] + '" data-old="' + window[varArray[i]] + '" form="form-' + recID + '" name="' + [varArray[i]] +'"/>');
+            }
+        if (i > 0) {
+            $('#' + window[varArray[i] + 'ID']).html('<input type="text" class="form-control" value="' + window[varArray[i]] + '" data-old="' + window[varArray[i]] + '" form="form-' + recID + '" name="' + [varArray[i]] +'"/>');
+            }
     }
+    
     //Change buttons
     changeButtonsToEdit(recID);
 }
 
-function saveRecord(clickedId) {
+function changeRecordOnSave(clickedId) {
     //Make fields non-editable
     var recID = clickedId.replace( /^\D+/g, '');
     
-    for (var i = 1; i < varArray.length; i++) {
+    for (var i = 0; i < varArray.length; i++) {
         var val = $('#' + varArray[i] + '-' + recID).find('input').val();
         
-        $('#' + varArray[i] + '-' + recID).replaceWith('<td id="' + varArray[i] + '-' + recID + '" data-value="' + val + '">' + val + '</td>');     
+        $('#' + varArray[i] + '-' + recID).replaceWith('<td class="align-middle" id="' + varArray[i] + '-' + recID + '" data-value="' + val + '">' + val + '</td>');     
     }
     
     //Change buttons
@@ -95,10 +107,10 @@ function cancelRecord(clickedId) {
     //Make fields non-editable
     var recID = clickedId.replace( /^\D+/g, '');
     
-    for (var i = 1; i < varArray.length; i++) {
+    for (var i = 0; i < varArray.length; i++) {
         var dataOld = $('#' + varArray[i] + '-' + recID).children('input').attr('data-old');
         
-        $('#' + varArray[i] + '-' + recID).replaceWith('<td id="' + varArray[i] + '-' + recID + '" data-value="' + dataOld + '">' + dataOld + '</td>'); 
+        $('#' + varArray[i] + '-' + recID).replaceWith('<td class="align-middle" id="' + varArray[i] + '-' + recID + '" data-value="' + dataOld + '">' + dataOld + '</td>'); 
     }
     
     //Change buttons
@@ -106,12 +118,13 @@ function cancelRecord(clickedId) {
 }
 
 function changeButtonsToNormal(recID){
-    
+    var login = $('#login-' + recID).html();
+        
         //Change edit button
         $('#save-' + recID).replaceWith('<button type="button" class="btn btn-outline-warning" id="edit-' + recID + '" onclick="editRecord(this.id)"><img src="assets/img/edit.svg" width=20/></button>');
         
         //Change cancel button
-        $('#cancel-' + recID).replaceWith('<button type="button" class="btn btn-outline-danger" id="delete-' + recID + '" data-toggle="modal" data-target="#deleteModal" data-id="' + recID + '"><img src="assets/img/trash.svg" width=20/></button>');
+        $('#cancel-' + recID).replaceWith('<button type="button" id="delete-' + recID + '" class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteModal" data-login="' + login + '" data-id="' + recID + '"><img src="assets/img/trash.svg" width=20/></button>');
 }
 
 function changeButtonsToEdit(recID){
@@ -124,8 +137,7 @@ function changeButtonsToEdit(recID){
 }
 
 function deleteRecord(clickedId){
-    console.log(clickedId);
-    
+    //console.log(clickedId);
     $.ajax({
         method: 'POST',
         url: 'delete.php',
@@ -138,6 +150,7 @@ function deleteRecord(clickedId){
                 $('#errorModal').find('.modal-body').html('<p>Не могу удалить запись: ' + data + '</p>');
             }
             else {
+                $('#' + clickedId).replaceWith('');
                 $('#deleteModal').modal('hide');
                 console.log("Результат удаления: " + data);
                 }
@@ -169,4 +182,4 @@ $('#deleteModal').on('show.bs.modal', function (event) {
     
     modal.find('.modal-body').html('<p>Вы уверены, что хотите удалить пользователя ' + user + '?</p>');
     modal.find('.btn-danger').attr('id', recID);
-})
+});

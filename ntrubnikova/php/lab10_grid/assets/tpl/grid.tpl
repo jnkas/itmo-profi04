@@ -24,9 +24,9 @@
     <!-- Content -->
     <main role="main" class="container">
          <h2 class="mt-5">Пользователи</h2>
-         <p class="lead">Управление</p>
+         <p class="lead">Управление учетными записями пользователей</p>
           
-         <div class="container">
+         <div>
                <div class="row">
                     <div class="col-sm nopadding">
                         <button type="button" class="btn btn-success" onclick="addRecord()">Новая запись</button>

@@ -20,6 +20,7 @@ class DatabaseHandler {
 			
  		// Configure PDO to throw exceptions
 			self::$_mHandler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+          
        }
       catch (PDOException $e){ 
              // Close the database handler and trigger an error
@@ -59,6 +60,8 @@ catch(PDOException $e)
     self::Close();
     trigger_error($e->getMessage(), E_USER_ERROR);
 }}
+   
+    
 //---------------------------------------------------------------------------------------------------------------------
 // Wrapper method for PDOStatement::fetchAll()
 
