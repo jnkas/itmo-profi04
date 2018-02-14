@@ -5,6 +5,7 @@
     text-align: center;
     flex-direction: column;
 }
+
 fieldset {
     border: solid black 2px;
     background-color: #FFB841;
@@ -14,8 +15,7 @@ input {
     width: 100%;
 }
 
-h1
-{
+h1 {
     width: max-content;
     padding: 10px;
 
@@ -36,6 +36,26 @@ p {
     margin-bottom: 5px;
     margin-top: 5px;
 }
+
 #day-calender form label {
     display: block;
+}
+
+#firstMenu {
+    background-color: darkseagreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#firstMenu div:first-child {
+    border: 2px solid black;
+}
+
+#headerFilter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
