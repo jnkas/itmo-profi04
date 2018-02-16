@@ -1,17 +1,31 @@
 <?php
 
-include('config.php');
-$arr_dir = array_diff(scandir('dir'), array('..', '.'));
+include "config.php";
 
-foreach($arr_dir as $value) {
-	echo '<div>';
-	$dir_files = array_diff(scandir('dir/'.$value), array('..', '.'));
-	$dir = $value;
-	echo $dir.'<br>';
-	foreach($dir_files as $value) {
-		echo '<a href="dir/'.$dir.'/'.$value.'">'.$value.'</a><br>';
+$arr_pageMenu = "<div class='header'>";
+
+foreach($arr_page as $value) {
+	$dir = '../'. array_search($value, $arr_page);
+	$files = '';
+	
+	if (is_dir($dir)){
+		$files  = array_slice(scandir($dir),2);
+		$filesHTML = '';
+		
+		
+		foreach($files as $val){
+			$buffer = explode("\n",file_get_contents($dir. '/' . $val));
+			$name = strip_tags($buffer[4]);
+			$filesHTML .= '<a href="'. $dir. '/' . $val. '">' .$name. '</a>';
+			
+		};
+		$arr_pageMenu = '<div class="down">
+		<button class="category">'. $value. '</button>
+		<div class="pages">'. $filesHTML. '</div></div>';			
 	}
-	echo '</div>';
 }
+
+$arr_pageMenu .='</div>';
+echo $arr_pageMenu;
 
 ?>
