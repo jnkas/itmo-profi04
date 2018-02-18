@@ -10,7 +10,10 @@ class View {
     	$this->template = $tmpl;
     }
     
-    public function dataToTable(Array $data) {
+    public function dataToTable(Array $data, $post) {
+        extract($post);
+        $num = $startRec + 1;
+        
         //Create HTML from DB data
         $numRecs = count($data);
         $usersTable = '<tbody id="table" data-recs="'. $numRecs. '">';
@@ -20,11 +23,17 @@ class View {
             $row = '<tr id="'. $id. '">'. "\r\n";
 
             foreach ($userData as $key => $value){
-                $row .= '<td class="align-middle" id="'. $key. '-'. $id. '" data-value="'. $value. '">'. $value. '</td>'. "\r\n";
+                if ($key == 'id') {
+                    $row .= '<td class="align-middle" data-value="'. $num. '">'. $num. '</td>'. "\r\n";
+                    $num = $num + 1;
+                }
+                else {
+                    $row .= '<td class="align-middle" id="'. $key. '-'. $id. '" data-value="'. $value. '">'. $value. '</td>'. "\r\n";
+                    }
             }
 
             //Add buttons to rows
-            $row .= '<td><button type="button" class="btn btn-outline-warning" id="edit-'. $id. '" onclick="editRecord(this.id)"><img src="assets/img/edit.svg" width=20/></button></td><td><button type="button" id="delete-'. $id. '" class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteModal" data-login="'. $login. '" data-id="'. $id .'"><img src="assets/img/trash.svg" width=20/></button><form method="post" action="save" id="form-'. $id. '"></form></td>'. "\r\n";
+            $row .= '<td><button type="button" class="btn btn-outline-warning" id="edit-'. $id. '" onclick="editRecord(this.id)"><img src="assets/img/edit.svg" width=20/></button></td><td><button type="button" id="delete-'. $id. '" class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteModal" data-login="'. $login. '" data-id="'. $id .'"><img src="assets/img/trash.svg" width=20/></button><input type="hidden" name="id" value="'. $id. '" class="form-control" form="form-'. $id.'"><form method="post" action="save" id="form-'. $id. '"></form></td>'. "\r\n";
 
             $row.='</tr>' . "\r\n";
             $usersTable .= $row;

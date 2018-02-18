@@ -1,5 +1,5 @@
 //List ids for fields to edit
-var varArray = ['id', 'login', 'pass', 'name', 'lastname'];
+var varArray = ['login', 'pass', 'name', 'lastname'];
 var requiredFields = ['login'];
 
 //Variables
@@ -7,8 +7,6 @@ var rowsPerPage = 5;
 var offset = 0;
 var totalPages;
 var lastRecID = rowsPerPage + 1;
-
-//TBD End
 
 //Get records
 function getRecords(start, num){
@@ -18,11 +16,7 @@ function getRecords(start, num){
         data: {startRec: start,
                numRecs: num},
         success: function(data){
-            $('#table').replaceWith(data);
-            
-//            $('#user-table tbody tr').each(function(num){
-//                $(this).children(":eq(0)").html(num + 1);
-//            });      
+            $('#table').replaceWith(data);     
             
         }
     });
@@ -40,6 +34,7 @@ function getPageNum(){
     });
 }
 
+parseInt
 
 //Pagination
 function showPaginationNav(pagesNum){
@@ -73,7 +68,7 @@ function changeRowsPerPage() {
 function addRecord(){    
     var fieldsHtml = '<tr id="' + lastRecID + '"><td></td>';
     
-    for (var i = 1; i < varArray.length; i++) {
+    for (var i = 0; i < varArray.length; i++) {
         fieldsHtml += '<td id="' + varArray[i] + '-' + lastRecID + '"><input type="text" name="' + varArray[i] + '" class="form-control" form="form-' + lastRecID + '"></td>';
     }
     
@@ -90,6 +85,7 @@ function saveRecord(clickedId){
     
     var fields = fieldsNotEmpty(requiredFields, recID);
 //    console.log(fields);
+    
     if(fields.length == 0) {
         $.ajax({
         method: 'POST',
@@ -138,12 +134,8 @@ function editRecord(clickedId){
     for (var i = 0; i < varArray.length; i++) {
         window[varArray[i]] = $('#' + window[varArray[i] + 'ID']).html();
         
-        if (i == 0) {
-            $('#' + window[varArray[i] + 'ID']).html('<input readonly type="text" class="form-control-plaintext" value="' + window[varArray[i]] + '" data-old="' + window[varArray[i]] + '" form="form-' + recID + '" name="' + [varArray[i]] +'"/>');
-            }
-        if (i > 0) {
-            $('#' + window[varArray[i] + 'ID']).html('<input type="text" class="form-control" value="' + window[varArray[i]] + '" data-old="' + window[varArray[i]] + '" form="form-' + recID + '" name="' + [varArray[i]] +'"/>');
-            }
+        $('#' + window[varArray[i] + 'ID']).html('<input type="text" class="form-control" value="' + window[varArray[i]] + '" data-old="' + window[varArray[i]] + '" form="form-' + recID + '" name="' + [varArray[i]] +'"/>');
+            
     }
     
     //Change buttons

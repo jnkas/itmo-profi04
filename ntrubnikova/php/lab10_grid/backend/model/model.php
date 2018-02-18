@@ -32,15 +32,15 @@ class Model{
         return $result;
     }
     
-    public function updateRecord(Array $row, $table){
-        extract($row);
+    public function updateRecord(Array $post, $table, $idField){
+        extract($post);
         $tableFields = ' ';
-        foreach($row as $key=>$value) {
+        foreach($post as $key=>$value) {
             $tableFields .=  $key. " = ". "'". $value. "', ";
         }
         
         $tableFields = rtrim($tableFields,', ');
-        $query = "update ". $table ." set". $tableFields ." where id=". $id;
+        $query = "update ". $table ." set". $tableFields ." where ".$idField."=". $id;
         var_dump($query);
         $result =  DatabaseHandler::execute($query, $row);
         return $result;

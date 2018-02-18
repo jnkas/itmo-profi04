@@ -48,7 +48,7 @@
         <table class="table table-striped sortable" id="user-table">
                <thead>
                  <tr>
-                     <th scope="col">ID</th>
+                     <th scope="col">#</th>
                      <th scope="col">Логин</th>
                      <th scope="col">Пароль</th>
                      <th scope="col">Имя</th>
@@ -112,6 +112,11 @@
     </div>
     
     <!-- JavaScript -->
+    <script>
+    //List ids for fields to edit
+        var varArray = ['login', 'pass', 'name', 'lastname'];
+        var requiredFields = ['login'];  
+    </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>

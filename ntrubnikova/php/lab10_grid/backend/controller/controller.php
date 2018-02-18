@@ -15,7 +15,7 @@ class Controller {
     public function index() {
         //Create page with empty table
         $view = new View('grid.tpl');
-        $view->renderPage();
+        $view->renderPage($fieldsArray, $requiredArray);
         }
     
     public function get(){
@@ -26,7 +26,7 @@ class Controller {
         $mdl = new Model();
         $result = $mdl->getData($post, $this->table, $this->order);
         $view = new View();
-        $view->dataToTable($result);
+        $view->dataToTable($result, $post);
     }
     
     public function getCount(){
@@ -50,7 +50,7 @@ class Controller {
         $request = new Request();
         $post = $request->post->postArray;
         $mdl = new Model();
-        $mdl->updateRecord($post, $this->table);
+        $mdl->updateRecord($post, $this->table, $this->idField);
     }
     
     public function delete() {
