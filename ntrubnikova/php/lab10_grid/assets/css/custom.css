@@ -2,6 +2,22 @@ html {
     font-size: 14px;
 }
 
+
+/* Table */
+
+#new-record {
+    display: none;
+}
+
+.rows-per-page {
+    width: 60px;
+}
+
+/* Pagination */
+.first, .last {
+    display: none;
+}
+
 .page-link {
     color: #6c757d;
 }
@@ -11,17 +27,6 @@ html {
 }
 
 .page-item.active .page-link {
-    background-color: #6c757d;
-    border-color: #6c757d;
-}
-
-
-/*Table*/
-
-#new-record {
-    display: none;
-}
-
-.rows-per-page {
-    width: 60px;
+    background-color: #28a745;
+    border-color: #00ad27;
 }

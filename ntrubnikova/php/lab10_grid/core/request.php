@@ -9,7 +9,7 @@ class Request {
     public $test;
         
     //Методы
-    function __construct(){
+    public function __construct(){
         $this->get = new Input();
         $this->post = new Input();
         $this->server = new Server();
@@ -24,12 +24,12 @@ class Input {
     public $postArray;
     
     //Методы
-    function __construct() {
+    public function __construct() {
         $this->getArray = $_GET;
         $this->postArray = $_POST;
     }
     
-    function readGet($key){
+    public function readGet($key){
         if (isset($key)){
             return $this->getArray[$key];   
         }
@@ -38,7 +38,7 @@ class Input {
         }
     }
     
-    function readPost($key){
+    public function readPost($key){
         if (isset($key)){
             return $this->postArray[$key];   
         }
@@ -53,15 +53,15 @@ class Session {
     private $key;
     
     //Методы
-    function __construct() {
+    public function __construct() {
         $this->session = $_SESSION;
     }
     
-    function set($value){
+    public function set($value){
         $this->session[$key] = $value;
     }
     
-    function get($key){
+    public function get($key){
         if (isset($key)){
             return $this->session[$key];   
         }
@@ -76,11 +76,11 @@ class Server {
     private $key;
     
     //Методы
-    function __construct() {
+    public function __construct() {
         $this->server = $_SERVER;
     }
     
-    function get($key){
+    public function get($key){
         if (isset($key)){
             return $this->server[$key];   
         }

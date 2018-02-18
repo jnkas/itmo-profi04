@@ -2,8 +2,15 @@
 
 class Model{
     
-    public function getData(){
-        return DatabaseHandler::GetAll('select * from users');
+    public function getData(Array $post){
+        extract($post);
+        return DatabaseHandler::GetAll("select * from users limit ". $startRec. ", ". $numRecs);
+    }
+    
+    public function getRecCount(){
+        $query = "select count(*) from users";
+        $result =  DatabaseHandler::GetOne($query);
+        echo $result;
     }
     
     public function insertRecord(Array $row){

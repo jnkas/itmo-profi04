@@ -1,12 +1,66 @@
-//TBD: Автоматом создавать переменные
-
-var lastRecID = 10 + 1;
-
 //List ids for fields to edit
 var varArray = ['id', 'login', 'pass', 'name', 'lastname'];
 var requiredFields = ['login'];
 
+//Variables
+var rowsPerPage = 5;
+var offset = 0;
+var totalPages;
+var lastRecID = rowsPerPage + 1;
+
 //TBD End
+
+//Get records
+function getRecords(start, num){
+    $.ajax({
+        method: 'POST',
+        url: 'get',
+        data: {startRec: start,
+               numRecs: num},
+        success: function(data){
+            $('#table').replaceWith(data);
+         }
+    });
+}
+
+function getPageNum(){
+        $.ajax({
+        method: 'POST',
+        url: 'getCount',
+        data:{},
+        success: function(data){
+            var pageNum = Math.ceil(parseFloat(data / rowsPerPage));
+            showPaginationNav(pageNum);
+         }
+    });
+}
+
+//Pagination
+function showPaginationNav(totalPages){
+    //Destroy if exists
+    $('#pagination').twbsPagination('destroy');
+    $('#pagination').twbsPagination({
+        totalPages: totalPages,
+        visiblePages: 5,
+        prev: '<<',
+        next: '>>',
+        onPageClick: function (event, page) {
+            offset = (page - 1) * rowsPerPage;
+            getRecords(offset,rowsPerPage); 
+        }
+    });
+}
+
+//Load records on page load
+$(document).ready(getRecords(offset,rowsPerPage));
+getPageNum();
+
+//Load records on number of rows per page reset
+function changeRowsPerPage() {
+    rowsPerPage = document.getElementById("page-num").value;
+    getRecords(offset,rowsPerPage);
+    getPageNum();
+}
 
 //New records
 function addRecord(){    
@@ -159,7 +213,7 @@ function deleteRecord(clickedId){
     
 }
 
-//Check if input fields are empty
+//Check if input fields are empty (auxiliary)
 function fieldsNotEmpty(fields, id){
     var emptyFieldsArray = [];
     for (var i = 0; i < fields.length; i++) {
@@ -173,7 +227,7 @@ function fieldsNotEmpty(fields, id){
     
 }
 
-//Pass data to delete modal dialog (Bootstrap docs)
+//Pass data to the delete modal dialog (Bootstrap docs)
 $('#deleteModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget);
     var recID = button.data('id'); 
@@ -183,3 +237,4 @@ $('#deleteModal').on('show.bs.modal', function (event) {
     modal.find('.modal-body').html('<p>Вы уверены, что хотите удалить пользователя ' + user + '?</p>');
     modal.find('.btn-danger').attr('id', recID);
 });
+

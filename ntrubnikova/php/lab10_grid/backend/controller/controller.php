@@ -4,15 +4,26 @@ class Controller {
 //Управление страницами
     
     public function index() {
-        //Get list of users
-        $mdl = new Model();
-        $result = $mdl->getData();
-
-        //Create page with table rows
+        //Create page with empty table
         $view = new View('grid.tpl');
-        $table = $view->dataToTable($result);
-        $view->renderPage($table);
+        $view->renderPage();
         }
+    
+    public function get(){
+        //Get list of records
+        $request = new Request();
+        $post = $request->post->postArray;
+        
+        $mdl = new Model();
+        $result = $mdl->getData($post);
+        $view = new View();
+        $view->dataToTable($result);
+    }
+    
+    public function getCount(){
+        $mdl = new Model();
+        $result = $mdl->getRecCount();
+    }
     
     public function add() {
         $request = new Request();

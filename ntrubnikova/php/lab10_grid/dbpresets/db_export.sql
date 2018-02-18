@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `lastname` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `login` (`login`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table fly.users: ~4 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
@@ -33,7 +33,14 @@ INSERT INTO `users` (`id`, `login`, `pass`, `name`, `lastname`) VALUES
 	(1, 'peter', '123456', 'Петр', 'Смирнов'),
 	(2, 'ivan1999', '654321', 'Иван', 'Сидоров'),
 	(3, 'tanya', 'pa$$word', 'Татьяна', 'Иванова'),
-	(4, 'pupsik89', 'p@ssw0rd', 'Александр', 'Васильев');
+	(4, 'pupsik89', 'p@ssw0rd', 'Александр', 'Васильев'),
+	(5, 'maddog', 'pa$sword', 'Виктор', 'Собакин'),
+	(6, 'kitty', 'catcat', 'Ярослав', 'Кошкин'),
+	(7, 'boss1999', 'pass123', 'Михаил', 'Мышкин'),
+	(8, 'kosmos', 'mypass', 'Стас', 'Михайлов'),
+	(9, 'ginger', 'passpass', 'Ирина', 'Николаева'),
+	(10, 'admin', '1234567890', 'Лев', 'Карамзин'),
+	(11, 'lilya', '1234567890', 'Лилия', 'Василькова');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

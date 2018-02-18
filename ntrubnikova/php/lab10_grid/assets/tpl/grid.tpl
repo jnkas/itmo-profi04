@@ -35,7 +35,7 @@
            <!-- Number of rows dropdown-->
                <div class="col-sm col-md-auto">
                   <p class="float-left m-2">Записей на странице:</p>
-                   <select class="form-control mb-3 rows-per-page">
+                   <select class="form-control mb-3 rows-per-page" id="page-num" onchange="changeRowsPerPage()">
                       <option>5</option>
                       <option>10</option>
                       <option>20</option>
@@ -57,42 +57,14 @@
                      <th scope="col" width="150px" data-defaultsort="disabled">Удалить</th>
                 </tr>
               </thead>
-              <tbody id="table"> 
-              <?php echo $tableHtml; ?>       
-<!--
-                <tr>
-                     <td id="id-1">1</td>
-                     <td id="login-1">vasya</td>
-                     <td id="pass-1">123</td>
-                     <td id="name-1">Василий</td>
-                     <td id="lastname-1">Третьяков</td>
-                      
-                     <td><button type="button" class="btn btn-outline-warning" id="edit-1" onclick="editRecord(this.id)"><img src="assets/img/edit.svg" width=20/></button></td>
-                     <td><button type="button" id="delete-1" class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteModal" data-login="vasya" data-id="1"><img src="assets/img/trash.svg" width=20/></button></td>
-                </tr>
-                <tr>
-                      <td id="id-2">2</td>
-                      <td id="login-2">fat_sid</td>
-                      <td id="pass-2">321</td>
-                      <td id="name-2">Сидор</td>
-                      <td id="lastname-2">Петров</td>
-                      
-                      <td><button type="button" class="btn btn-outline-warning" id="edit-2" onclick="editRecord(this.id)"><img src="assets/img/edit.svg" width=20/></button></td>
-                      <td><button type="button" id="delete-2" class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteModal" data-login="fat_sid" data-id="2"><img src="assets/img/trash.svg" width=20/></button></td>
-                </tr>
--->   
+              <tbody id="table">    
+
               </tbody>
         </table>
             
     <!--Pagination-->
-        <nav aria-label="Page navigation example">
-               <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">&lt;&lt;</a></li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">&gt;&gt;</a></li>
-                  </ul>
+        <nav>
+               <ul class="pagination" id="pagination"></ul>
         </nav>
             
     <!--End of table-->
@@ -144,6 +116,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bootstrap-sortable.js"></script>
+    <script src="assets/js/jquery.twbsPagination.min.js"></script>
     <script src="assets/js/custom.js"></script>
     
   </body>
