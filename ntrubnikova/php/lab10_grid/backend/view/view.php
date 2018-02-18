@@ -20,7 +20,7 @@ class View {
             $row = '<tr id="'. $id. '">'. "\r\n";
 
             foreach ($userData as $key => $value){
-                $row .= '<td class="align-middle" id="'. $key. '-'. $id. '">'. $value. '</td>'. "\r\n";
+                $row .= '<td class="align-middle" id="'. $key. '-'. $id. '" data-value="'. $value. '">'. $value. '</td>'. "\r\n";
             }
 
             //Add buttons to rows

@@ -2,18 +2,24 @@
 
 class Model{
     
-    public function getData(Array $post){
+    public function getData(Array $post, $table, $order){
         extract($post);
-        return DatabaseHandler::GetAll("select * from users limit ". $startRec. ", ". $numRecs);
+        return DatabaseHandler::GetAll("select * from ". $table ." order by ". $order. " limit ". $startRec. ", ". $numRecs);
     }
     
-    public function getRecCount(){
-        $query = "select count(*) from users";
+    public function getRecCount($table){
+        $query = "select count(*) from ". $table;
         $result =  DatabaseHandler::GetOne($query);
         echo $result;
     }
     
-    public function insertRecord(Array $row){
+    public function getLastRec($table, $idField){
+        $query = "select max(". $idField .") from ". $table;
+        $result =  DatabaseHandler::GetOne($query);
+        echo $result;
+    }
+    
+    public function insertRecord(Array $row, $table){
         extract($row);
         $tableFields = '';
         foreach($row as $key=>$value) {
@@ -21,12 +27,12 @@ class Model{
         }
         
         $tableFields = rtrim($tableFields,',');
-        $query = "insert into users values ('',". $tableFields .")";
+        $query = "insert into ". $table. " values ('',". $tableFields .")";
         $result =  DatabaseHandler::execute($query, $row);
         return $result;
     }
     
-    public function updateRecord(Array $row){
+    public function updateRecord(Array $row, $table){
         extract($row);
         $tableFields = ' ';
         foreach($row as $key=>$value) {
@@ -34,15 +40,15 @@ class Model{
         }
         
         $tableFields = rtrim($tableFields,', ');
-        $query = "update users set". $tableFields ." where id=". $id;
+        $query = "update ". $table ." set". $tableFields ." where id=". $id;
         var_dump($query);
         $result =  DatabaseHandler::execute($query, $row);
         return $result;
     }
     
-    public function deleteRecord($id){
-        $query = "delete from users where id = :id";
-        $result =  DatabaseHandler::execute($query, ['id'=>$id]);
+    public function deleteRecord($idField, $idValue, $table){
+        $query = "delete from ". $table." where ". $idField. " = :idValue";
+        $result =  DatabaseHandler::execute($query, ['idValue' => $idValue]);
 //        return $result;
     }
         

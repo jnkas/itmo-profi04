@@ -4,7 +4,7 @@ include "request.php";
 
 class App {    
     public static function run() {
-        $ctr  = new Controller();
+        $ctr  = new Controller('users', 'login', 'id');
         
         // Router
         $uri = $_SERVER['REQUEST_URI'];

@@ -19,7 +19,12 @@ function getRecords(start, num){
                numRecs: num},
         success: function(data){
             $('#table').replaceWith(data);
-         }
+            
+//            $('#user-table tbody tr').each(function(num){
+//                $(this).children(":eq(0)").html(num + 1);
+//            });      
+            
+        }
     });
 }
 
@@ -35,24 +40,26 @@ function getPageNum(){
     });
 }
 
+
 //Pagination
-function showPaginationNav(totalPages){
+function showPaginationNav(pagesNum){
     //Destroy if exists
     $('#pagination').twbsPagination('destroy');
     $('#pagination').twbsPagination({
-        totalPages: totalPages,
+        totalPages: pagesNum,
         visiblePages: 5,
         prev: '<<',
         next: '>>',
-        onPageClick: function (event, page) {
-            offset = (page - 1) * rowsPerPage;
-            getRecords(offset,rowsPerPage); 
+        onPageClick: function(event, page){
+            var start = (page - 1) * rowsPerPage;
+            getRecords(start,rowsPerPage); 
+            
         }
     });
 }
 
 //Load records on page load
-$(document).ready(getRecords(offset,rowsPerPage));
+$(document).ready(getRecords(offset,rowsPerPage, 1));
 getPageNum();
 
 //Load records on number of rows per page reset
@@ -64,13 +71,13 @@ function changeRowsPerPage() {
 
 //New records
 function addRecord(){    
-    var fieldsHtml = '<tr id="' + lastRecID + '"><td><form method="post" action="add" id="form-' + lastRecID + '"></form></td>';
+    var fieldsHtml = '<tr id="' + lastRecID + '"><td></td>';
     
     for (var i = 1; i < varArray.length; i++) {
         fieldsHtml += '<td id="' + varArray[i] + '-' + lastRecID + '"><input type="text" name="' + varArray[i] + '" class="form-control" form="form-' + lastRecID + '"></td>';
     }
     
-    var buttonsHtml = '<td><button type="submit" class="btn btn-outline-success" id="save-' + lastRecID + '" onclick="saveRecord(this.id)"><img src="assets/img/check-square.svg" width=20/></button></td><td><button type="button" class="btn btn-outline-secondary" id="cancel-' + lastRecID + '" onclick="cancelNewRecord(this.id)"><img src="assets/img/x-square.svg" width=20/></button></td></tr>';
+    var buttonsHtml = '<td><button type="submit" class="btn btn-outline-success" id="save-' + lastRecID + '" onclick="saveRecord(this.id)"><img src="assets/img/check-square.svg" width=20/></button></td><td><button type="button" class="btn btn-outline-secondary" id="cancel-' + lastRecID + '" onclick="cancelNewRecord(this.id)"><img src="assets/img/x-square.svg" width=20/></button><form method="post" action="add" id="form-' + lastRecID + '"></form></td></tr>';
     
     $('#table').prepend(fieldsHtml + buttonsHtml);
     lastRecID += 1;

@@ -45,7 +45,7 @@
         </div>
        
     <!-- Table -->
-        <table class="table table-striped sortable">
+        <table class="table table-striped sortable" id="user-table">
                <thead>
                  <tr>
                      <th scope="col">ID</th>
