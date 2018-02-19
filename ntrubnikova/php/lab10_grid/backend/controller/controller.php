@@ -34,11 +34,6 @@ class Controller {
         $result = $mdl->getRecCount($this->table);
     }
     
-    public function getLast(){
-        $mdl = new Model();
-        $result = $mdl->getLastRec($this->table, $this->idField);
-    }
-    
     public function add() {
         $request = new Request();
         $post = $request->post->postArray;

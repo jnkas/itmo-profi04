@@ -13,12 +13,6 @@ class Model{
         echo $result;
     }
     
-    public function getLastRec($table, $idField){
-        $query = "select max(". $idField .") from ". $table;
-        $result =  DatabaseHandler::GetOne($query);
-        echo $result;
-    }
-    
     public function insertRecord(Array $row, $table){
         extract($row);
         $tableFields = '';
