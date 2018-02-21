@@ -16,7 +16,7 @@ if (!empty($_POST['category']) && !empty($_POST['pagename']) && !empty($_POST['p
         mkdir('pages/'. $key);
     };
     
-    file_put_contents($file,str_replace('Content',$_POST['pagetext'],file_get_contents($templateFile)));
+    file_put_contents($file,str_replace('text',$_POST['pagetext'],file_get_contents($templateFile)));
     
     file_put_contents($file,str_replace('Caption Page',$_POST['name'],file_get_contents($file)));
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Caption Page</title>
+    <title>страница 2</title>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 
 <div class="logo">
    <img class='i' src="../i.png" alt="">
-    <p>text</p>
+    <p>текст страницы 2</p>
 </div>
 
 <div class="content">
