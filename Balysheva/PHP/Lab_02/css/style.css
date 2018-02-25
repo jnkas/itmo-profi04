@@ -1,44 +1,26 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-}
-
-body {
-    font-family: sans-serif;
+#day-calender {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 h1 {
-    color: #525252;
-    border: 2px dotted #525252;
-    border-radius: 5px;
-    width: max-content;
-    padding: 10px;
+    display: block;
+}
+
+img {
+    height: 500px;
 }
 
 p {
-    font-size: 20px;
-
-}
-img {
-    box-shadow: 0 0 10px 5px rgba(128, 128, 128, 1);
-    height: 60vh;
-/*    float: right;*/
-}
-
-fieldset {
-    width: 50vw;
-    padding: 20px;
-}
-
-label, input {
     display: block;
-    margin: 10px 0;
 }
-
-input[type="text"], textarea {
-    width: 90%;
+#day-calender form div {
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
-
-textarea {
-    height: 80px;
+#day-calender form div label {
+    display: block;
 }

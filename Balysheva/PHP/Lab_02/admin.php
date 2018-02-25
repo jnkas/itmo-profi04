@@ -1,37 +1,20 @@
-<!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
-    <title>Admin</title>
+    <title>php_Lab1</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+<div id="day-calender">
+    <form action="handler_form.php" method="post">
+        <div><label for="inpDateEvent">Дата события:</label><input id="inpDateEvent" type="date" name="dateEvent"></div>
+        <div><label for="inpHeadEvent">Заголовок события:</label><input id="inpHeadEvent" type="text" name="headEvent" ></div>
 
-    <?php
-    echo '<form action="handler.php" method="POST">
-
-        <fieldset>
-            <legend>Заполните поля</legend>
-            
-            <label for="my_date">Выберите дату</label>
-            <input type="date" name="date" id="my_date">
-            
-            <label for="my_header">Введите заголовок</label>
-            <input type="text" name="header" id="my_header">
-            
-            <label for="my_desc">Введите описание</label>
-            <textarea name="desc" id="my_desc"></textarea>
-            
-            <input type="submit" value="Отправить">
-
-        </fieldset>
-
-    </form>';
-    
-    ?>
+        <div><label for="inpDescriptionEvent">Описание события:</label>
+        <textarea name="descriptionEvent" id="inpDescriptionEvent" cols="50" rows="10"></textarea></div>
+        <div><button type="submit" style="width: 300px">Send</button></div>
+    </form>
+</div>
 
 </body>
-
 </html>
