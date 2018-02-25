@@ -1,3 +1,3 @@
 <?php
-include "core/root.php";
+require "core/root.php";
 Root::Start();

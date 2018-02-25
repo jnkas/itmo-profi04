@@ -5,31 +5,32 @@ class Root
 {
     public static function Start(){
         session_start();
-        $controllerName = "Controller";
-        if ( isset($_SESSION["auth"]) && $_SESSION["auth"] === true) {
-            $actionName = "basicAction";
+        $request = new RequestFram();
+        if ($request->session->get("auth")) {
+            $controllerName = "Main";
+            $actionName = "index";
         } else {
-            $actionName = "authorization";
+            $controllerName = "Authorization";
+            $actionName = "checkAuthorization";
         }
-        $routes = explode("/" ,$_SERVER["REQUEST_URI"]);
 
-        if (!empty($routes[1])) {
-            ($routes[1] == "index.php") ? $controllerName = "Controller" : $controllerName = $routes[1];
+        $routes = explode("/" , $request->server->get("REQUEST_URI"));
+
+        if (!empty($routes[1]) && ($routes[1] != "index.php")) {
+            $controllerName = $routes[1];
         }
 
         if (!empty($routes[2])) {
             $actionName = $routes[2];
         }
 
-        $controllerFile = strtolower($controllerName).".php";
-        $controllerPath = "backend/controller/".$controllerFile;
-        if (file_exists($controllerPath)) {
-            include "backend/controller/".$controllerFile;
-        }
-
+        $controllerName = "Controller_".$controllerName;
         $controller = new $controllerName;
+
         if (method_exists($controller, $actionName)) {
             $controller->$actionName();
+        } else {
+            echo "Status: Not Found.";
         }
     }
 }

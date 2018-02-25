@@ -2,10 +2,10 @@
 <head>
     <meta charset="UTF-8">
     <title>php_Lab8_admin</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../asset/css/style.css">
 </head>
 <body>
-<form action="/controller/editNews" method="post">
+<form action="/Main/editNews" method="post" id="authorizationId">
     <input type="hidden" name="idNews" value="<?php echo $_GET[idNews] ?>">
     <label for="idHeadNews">Заголовок новости</label>
     <input name="nameHeadNews" id="idHeadNews" type="text" value="<?php echo $_GET[nameNews] ?>">

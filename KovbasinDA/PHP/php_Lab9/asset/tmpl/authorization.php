@@ -10,5 +10,6 @@
         <label for="passId">password:</label><input id="passId" name="passName" type="password">
         <button>Submit</button>
     </form>
+    <a href="/Authorization/registrationUser">Registration</a>
 </body>
 </html>

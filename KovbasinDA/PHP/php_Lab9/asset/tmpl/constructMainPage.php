@@ -9,5 +9,4 @@ if ($data !== null) {
 } else {
     $tempMainPage = sprintf(file_get_contents("asset/tmpl/mainPage.tmpl"), "No elements.");
 }
-//return $tempMainPage;
 echo $tempMainPage;

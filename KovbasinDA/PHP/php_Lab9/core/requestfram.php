@@ -6,7 +6,7 @@
  * Time: 15:33
  */
 
-class request
+class RequestFram
 {
     public $input;
     public $server;

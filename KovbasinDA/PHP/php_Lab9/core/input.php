@@ -16,7 +16,7 @@ class Input
     }
 
     function get($key) {
-        $result = (isset($key)) ? $this->input[$key] : null;
+        $result = (isset($key)) ? $this->input[$key] : false;
         return $result;
     }
 
