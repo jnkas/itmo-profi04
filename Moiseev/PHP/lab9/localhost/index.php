@@ -1,26 +1,10 @@
 <?php
+
 include "./core/app.php";
 
+session_start();
+
 App::run();
+//$app = new App();
+//$app->run();
 
-
-
-//$route = $_GET['route'];
-// Роутер 
-function  runController ()
-{ 
-    $ctr  = new Controller();
-    $uri = $_SERVER[ 'REQUEST_URI' ];
-    $action  =  trim( $uri ,  '/' );
-    $route = $action . 'Action';
-    $ctr->$route();
-}
-
-runController();
-
-
-
-
-
-
-?>

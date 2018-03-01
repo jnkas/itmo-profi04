@@ -1,10 +1,28 @@
 <?php
 
 class Request {
-// ваш код
+    public $input; //это get и post
+    public $server;
+    public $session;
+    public $auth;
+    //public $databaseHandler;
 
+    function __construct() {
+        $this->input = new Input(); 
+        $this->server = new Server();
+        $this->session = new Session();
+        $this->auth = new Auth();
+        //$this->databaseHandler = new DatabaseHandler();
+    }
 }
 
-class Input {
-	// ваш код
-}
+/*$rq = new Request();
+$rq->session->get/set();
+$rq->input->get();*/
+
+//$app = new Application();
+//$app->request->input->set(xxx, 1135430);
+//echo $app->request->input->get(xxx); //$_SERVER['SCRIPT_NAME']
+
+
+
