@@ -1,6 +1,3 @@
-//List ids for fields to edit
-var varArray = ['login', 'pass', 'name', 'lastname'];
-var requiredFields = ['login'];
 
 //Variables
 var rowsPerPage = 5;
