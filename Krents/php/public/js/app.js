@@ -58,25 +58,40 @@ $(function () {
             method: 'POST',
             data: $(event.target).serializeArray(),
             dataType: 'json',
+            // success: function (response) {
+            //     eventMain.empty();
+            //     eventTitle.empty();
+            //     eventImg.empty();
+            //     eventDesc.empty();
+            //     for (let key in response) {
+            //         let eventNew = $('<div class="current-event-daily"></div>'),
+            //             eventTitleFilter= $('<div class="current-event-title"></div>'),
+            //             eventImgFilter = $('<div class="current-event-img"></div>'),
+            //             eventDescFilter = $('<div class="current-event-desc"></div>');
+            //         let dataEvent = JSON.parse(response[key]);
+            //         eventImgFilter.append($('<img src="' + dataEvent.img_url + '">'));
+            //         eventTitleFilter.text(key + ': ' + dataEvent.header);
+            //         eventDescFilter.text(dataEvent.desc);
+            //         eventNew
+            //             .append(eventTitleFilter)
+            //             .append(eventImgFilter)
+            //             .append(eventDescFilter);
+            //         eventMain.append(eventNew);
+            //     }
+            //
+            // },
+            // Mustache
             success: function (response) {
                 eventMain.empty();
-                eventTitle.empty();
-                eventImg.empty();
-                eventDesc.empty();
                 for (let key in response) {
-                    let eventNew = $('<div class="current-event-daily"></div>'),
-                        eventTitleFilter= $('<div class="current-event-title"></div>'),
-                        eventImgFilter = $('<div class="current-event-img"></div>'),
-                        eventDescFilter = $('<div class="current-event-desc"></div>');
                     let dataEvent = JSON.parse(response[key]);
-                    eventImgFilter.append($('<img src="' + dataEvent.img_url + '">'));
-                    eventTitleFilter.text(key + ': ' + dataEvent.header);
-                    eventDescFilter.text(dataEvent.desc);
-                    eventNew
-                        .append(eventTitleFilter)
-                        .append(eventImgFilter)
-                        .append(eventDescFilter);
-                    eventMain.append(eventNew);
+                    dataEvent[date] = key;
+                    let template = '<div class="current-event-daily">' +
+                        '<div class="current-event-title">{{date}}: {{header}}</div>' +
+                        '<div class="current-event-img"><img src="{{img_url}}"></div>' +
+                        '<div class="current-event-desc">{{desc}}</div>' +
+                        '</div>' ;
+                    mainDiv.append(eventMain.append(Mustache.render(template, dataEvent)));
                 }
 
             },
@@ -104,20 +119,32 @@ $(function () {
             method: 'POST',
             data: {date: date},
             dataType: 'json',
+            // success: function (response) {
+            //     eventMain.empty();
+            //     eventTitle.empty();
+            //     eventImg.empty();
+            //     eventDesc.empty();
+            //
+            //     eventImg.append($('<img src="' + response.img_url + '">'));
+            //     eventTitle.text(response.header);
+            //     eventDesc.text(response.desc);
+            //     eventMain
+            //         .append(eventTitle)
+            //         .append(eventImg)
+            //         .append(eventDesc);
+            //     mainDiv.append(eventMain);
+            // },
+            // Mustache
             success: function (response) {
                 eventMain.empty();
-                eventTitle.empty();
-                eventImg.empty();
-                eventDesc.empty();
+                let template =
+                        '<div class="current-event-title"> {{header}}</div>' +
+                        '<div class="current-event-img"><img src="{{img_url}}"></div>' +
+                        '<div class="current-event-desc">{{desc}}</div>' ;
 
-                eventImg.append($('<img src="' + response.img_url + '">'));
-                eventTitle.text(response.header);
-                eventDesc.text(response.desc);
-                eventMain
-                    .append(eventTitle)
-                    .append(eventImg)
-                    .append(eventDesc);
-                mainDiv.append(eventMain);
+                mainDiv.append(eventMain.html(Mustache.render(template, response)));
+
+
             },
             error: function (response) {
                 eventMain.empty();

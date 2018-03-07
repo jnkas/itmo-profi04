@@ -1,0 +1,26 @@
+.newsCard {
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    background: darkseagreen;
+    border: solid 2px black;
+    flex-direction: column;
+    margin: 5px;
+    width: inherit;
+}
+
+.newsCard h3 {
+    color: firebrick;
+}
+
+#authorizationId {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border: solid black 2px;
+    background-color: darkseagreen;
+    margin: 5px;
+}

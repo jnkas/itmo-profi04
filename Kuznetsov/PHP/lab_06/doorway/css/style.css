@@ -91,4 +91,20 @@ div#gen_page {
     margin: 10px;
 }
 
+div.links {
+    width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.links section {
+    text-align: center;
+}
+
+h3.def {
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
 /*----------------------------------------------------------------------*/

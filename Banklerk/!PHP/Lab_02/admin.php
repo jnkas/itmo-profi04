@@ -9,7 +9,7 @@
 <body>
 	<div id="day-calender">
 		<form action="handler_form.php" method="post">
-			<fieldset> <legend><b>Админка научного календаря:</b></legend>
+			<fieldset> <legend><b>Админка научного календаря</b></legend>
 				<p>
 					<label for="inpDataEvent">Дата события:</label>
 					<input type="date" id="inpDateEvent" name="dateEvent"/>

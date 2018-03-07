@@ -1,57 +1,76 @@
-#day-calender {
+#day-calender
+{
     display: flex;
+    flex-direction: column;
+
+    margin: 5px;
+
+    text-align: center;
+
+    border: solid black 2px;
+    background-color: #ffb841;
+
     align-items: center;
     justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    border: solid black 2px;
-    background-color: darkseagreen;
-    margin: 5px;
 }
 
-form input {
+form input
+{
     width: 100%;
 }
 
-h1 {
+h1
+{
     display: block;
 }
 
-img {
+img
+{
     height: 500px;
 }
 
-p {
+p
+{
     display: block;
 }
 
-#day-calender form div {
-    margin-bottom: 5px;
+#day-calender form div
+{
     margin-top: 5px;
+    margin-bottom: 5px;
 }
-#day-calender form div label {
+#day-calender form div label
+{
     display: block;
 }
 
-#firstMenu {
-    background-color: darkseagreen;
+#firstMenu
+{
     display: flex;
+
+    text-align: center;
+
+    background-color: #ffb841;
+
     align-items: center;
     justify-content: space-around;
-    text-align: center;
 }
 
-#firstMenu div:first-child {
+#firstMenu div:first-child
+{
     border: 2px solid black;
 }
 
-#headerFilter {
+#headerFilter
+{
     display: flex;
+
+    text-align: center;
+
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
-#filterHREF {
+#filterHREF
+{
     font-size: 50px;
 }
-

@@ -1,0 +1,32 @@
+html {
+    font-size: 14px;
+}
+
+
+/* Table */
+
+#new-record {
+    display: none;
+}
+
+.rows-per-page {
+    width: 60px;
+}
+
+/* Pagination */
+.first, .last {
+    display: none;
+}
+
+.page-link {
+    color: #6c757d;
+}
+
+.page-link:hover {
+    color: black;
+}
+
+.page-item.active .page-link {
+    background-color: #28a745;
+    border-color: #00ad27;
+}

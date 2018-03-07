@@ -1,0 +1,740 @@
+Last login: Tue Feb  6 20:40:47 on ttys000
+MacBook-Air-Oleg:~ olegfomicev$ cd /Applications/MAMP/Library/bin
+MacBook-Air-Oleg:bin olegfomicev$ mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 6
+Server version: 5.6.35 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create table user_table id,name,lastname;
+ERROR 1046 (3D000): No database selected
+mysql> show tables;
+ERROR 1046 (3D000): No database selected
+mysql> show tdatabse;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tdatabse' at line 1
+mysql> show databse;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'databse' at line 1
+mysql> show database;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'database' at line 1
+mysql> CREATE DATABASE shop;
+Query OK, 1 row affected (0,01 sec)
+
+mysql> show shop;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'shop' at line 1
+mysql> GRANT ALL PRIVILEGES ON shop* TO admin@localhost IDENTIFIED BY 'root';
+ERROR 1046 (3D000): No database selected
+mysql> shop
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'shop' at line 1
+mysql> use shop;
+Database changed
+mysql> GRANT ALL PRIVILEGES ON shop * TO oleg@localhost IDENTIFIED BY 'root';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* TO oleg@localhost IDENTIFIED BY 'root'' at line 1
+mysql> GRANT ALL PRIVILEGES ON shop  TO oleg@localhost IDENTIFIED BY 'root';
+Query OK, 0 rows affected (0,01 sec)
+
+mysql> $ mysql -u oleg@localhost -p
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '$ mysql -u oleg@localhost -p' at line 1
+mysql> exit;
+Bye
+MacBook-Air-Oleg:bin olegfomicev$ $ mysql -u oleg@localhost -p
+-bash: $: command not found
+MacBook-Air-Oleg:bin olegfomicev$  mysql -u oleg@localhost -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'oleg@localhost'@'localhost' (using password: YES)
+MacBook-Air-Oleg:bin olegfomicev$ SHOW DATABASES;
+-bash: SHOW: command not found
+MacBook-Air-Oleg:bin olegfomicev$  mysql -u oleg@localhost -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'oleg@localhost'@'localhost' (using password: YES)
+MacBook-Air-Oleg:bin olegfomicev$  mysql -u oleg@localhost -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'oleg@localhost'@'localhost' (using password: YES)
+MacBook-Air-Oleg:bin olegfomicev$  mysql -u oleg@localhost -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'oleg@localhost'@'localhost' (using password: YES)
+MacBook-Air-Oleg:bin olegfomicev$  mysql -u oleg@localhost -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'oleg@localhost'@'localhost' (using password: YES)
+MacBook-Air-Oleg:bin olegfomicev$  mysql -u oleg -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 12
+Server version: 5.6.35 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| shop               |
++--------------------+
+2 rows in set (0,00 sec)
+
+mysql> use shop;
+Database changed
+mysql> CREATE TABLE client (id INTEGER(), name VARCHAR(20), LASTNAME(30));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '), name VARCHAR(20), LASTNAME(30))' at line 1
+mysql> CREATE TABLE client (id INTEGER(), name VARCHAR(20), lastname VARCHAR(30));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '), name VARCHAR(20), lastname VARCHAR(30))' at line 1
+mysql> CREATE TABLE client (id INTEGER(), name VARCHAR(20), lastname VARCHAR(30) );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '), name VARCHAR(20), lastname VARCHAR(30) )' at line 1
+mysql> CREATE TABLE client (id INTEGER(), name VARCHAR(20), lastname VARCHAR(30);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '), name VARCHAR(20), lastname VARCHAR(30)' at line 1
+mysql> CREATE TABLE client (id INTEGER(10), name VARCHAR(20), lastname VARCHAR(30);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> CREATE TABLE client (id INTEGER(10), name VARCHAR(20), lastname VARCHAR(30));
+ERROR 1142 (42000): CREATE command denied to user 'oleg'@'localhost' for table 'client'
+mysql> CREATE TABLE client (id INTEGER(10), name VARCHAR(20), lastname VARCHAR(30), birth DATE);
+ERROR 1142 (42000): CREATE command denied to user 'oleg'@'localhost' for table 'client'
+mysql> CREATE TABLE client (id INTEGER(10), name VARCHAR(20), lastname VARCHAR(30), birth DATE);
+ERROR 1142 (42000): CREATE command denied to user 'oleg'@'localhost' for table 'client'
+mysql> EXIT
+Bye
+MacBook-Air-Oleg:bin olegfomicev$ cd /Applications/MAMP/Library/bin
+MacBook-Air-Oleg:bin olegfomicev$  mysql -u oleg -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'oleg'@'localhost' (using password: YES)
+MacBook-Air-Oleg:bin olegfomicev$  mysql -u oleg -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 14
+Server version: 5.6.35 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE TABLE client (id INTEGER(10), name VARCHAR(20), lastname VARCHAR(30), birth DATE);
+ERROR 1046 (3D000): No database selected
+mysql> use shop;
+Database changed
+mysql> use shop;
+Database changed
+mysql> CREATE TABLE client (id INTEGER(10), name VARCHAR(20), lastname VARCHAR(30), birth DATE);
+ERROR 1142 (42000): CREATE command denied to user 'oleg'@'localhost' for table 'client'
+mysql> exit
+Bye
+MacBook-Air-Oleg:bin olegfomicev$ cd /Applications/MAMP/Library/bin
+MacBook-Air-Oleg:bin olegfomicev$ mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 15
+Server version: 5.6.35 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use shop;
+Database changed
+mysql> CREATE TABLE client (id INTEGER(10), name VARCHAR(20), lastname VARCHAR(30), birth DATE);
+Query OK, 0 rows affected (0,03 sec)
+
+mysql> SHOW TABLES;
++----------------+
+| Tables_in_shop |
++----------------+
+| client         |
++----------------+
+1 row in set (0,00 sec)
+
+mysql> DESCRIBE client;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | int(10)     | YES  |     | NULL    |       |
+| name     | varchar(20) | YES  |     | NULL    |       |
+| lastname | varchar(30) | YES  |     | NULL    |       |
+| birth    | date        | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0,02 sec)
+
+mysql> CREATE TABLE product (id INTEGER(10), name VARCHAR(20), price INTEGER(10));
+Query OK, 0 rows affected (0,03 sec)
+
+mysql> DESCRIBE product;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(10)     | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
+| price | int(10)     | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0,00 sec)
+
+mysql> ALTER TABLE product RENAME TO basket;
+Query OK, 0 rows affected (0,01 sec)
+
+mysql> DESCRIBE basket;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(10)     | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
+| price | int(10)     | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0,01 sec)
+
+mysql> ALTER TABLE basket lastname VARCHAR(30);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'lastname VARCHAR(30)' at line 1
+mysql> ALTER TABLE basket ADD lastname VARCHAR(30);
+Query OK, 0 rows affected (0,05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE basket;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | int(10)     | YES  |     | NULL    |       |
+| name     | varchar(20) | YES  |     | NULL    |       |
+| price    | int(10)     | YES  |     | NULL    |       |
+| lastname | varchar(30) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0,00 sec)
+
+mysql> DESCRIBE client;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | int(10)     | YES  |     | NULL    |       |
+| name     | varchar(20) | YES  |     | NULL    |       |
+| lastname | varchar(30) | YES  |     | NULL    |       |
+| birth    | date        | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0,00 sec)
+
+mysql> LOAD DATA LOCAL INFILE "/Applications/MAMP/htdocs/sql/client.txt" INTO TABLE client;
+Query OK, 4 rows affected, 16 warnings (0,00 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 16
+
+mysql> DESCRIBE client;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | int(10)     | YES  |     | NULL    |       |
+| name     | varchar(20) | YES  |     | NULL    |       |
+| lastname | varchar(30) | YES  |     | NULL    |       |
+| birth    | date        | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0,01 sec)
+
+mysql> show client;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'client' at line 1
+mysql> show tables;
++----------------+
+| Tables_in_shop |
++----------------+
+| basket         |
+| client         |
++----------------+
+2 rows in set (0,00 sec)
+
+mysql> use client;
+ERROR 1049 (42000): Unknown database 'client'
+mysql> show tables client;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'client' at line 1
+mysql> SHOW TABLES;
++----------------+
+| Tables_in_shop |
++----------------+
+| basket         |
+| client         |
++----------------+
+2 rows in set (0,00 sec)
+
+mysql> SHOW TABLES;
++----------------+
+| Tables_in_shop |
++----------------+
+| basket         |
+| client         |
++----------------+
+2 rows in set (0,01 sec)
+
+mysql> SELECT * FROM client;
++------+------+----------+-------+
+| id   | name | lastname | birth |
++------+------+----------+-------+
+|  101 | NULL | NULL     | NULL  |
+|  102 | NULL | NULL     | NULL  |
+|  105 | NULL | NULL     | NULL  |
+|  201 | NULL | NULL     | NULL  |
++------+------+----------+-------+
+4 rows in set (0,00 sec)
+
+mysql> LOAD DATA LOCAL INFILE "/Applications/MAMP/htdocs/sql/client.txt" INTO TABLE client;
+Query OK, 4 rows affected, 16 warnings (0,01 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 16
+
+mysql> SELECT * FROM client;
++------+------+----------+-------+
+| id   | name | lastname | birth |
++------+------+----------+-------+
+|  101 | NULL | NULL     | NULL  |
+|  102 | NULL | NULL     | NULL  |
+|  105 | NULL | NULL     | NULL  |
+|  201 | NULL | NULL     | NULL  |
+|  101 | NULL | NULL     | NULL  |
+|  102 | NULL | NULL     | NULL  |
+|  105 | NULL | NULL     | NULL  |
+|  201 | NULL | NULL     | NULL  |
++------+------+----------+-------+
+8 rows in set (0,00 sec)
+
+mysql> LOAD DATA LOCAL INFILE "/Applications/MAMP/htdocs/sql/client.txt" INTO TABLE client;
+Query OK, 4 rows affected, 16 warnings (0,00 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 16
+
+mysql> SELECT * FROM client;
++------+------+----------+-------+
+| id   | name | lastname | birth |
++------+------+----------+-------+
+|  101 | NULL | NULL     | NULL  |
+|  102 | NULL | NULL     | NULL  |
+|  105 | NULL | NULL     | NULL  |
+|  201 | NULL | NULL     | NULL  |
+|  101 | NULL | NULL     | NULL  |
+|  102 | NULL | NULL     | NULL  |
+|  105 | NULL | NULL     | NULL  |
+|  201 | NULL | NULL     | NULL  |
+|  101 | NULL | NULL     | NULL  |
+|  102 | NULL | NULL     | NULL  |
+|  105 | NULL | NULL     | NULL  |
+|  201 | NULL | NULL     | NULL  |
++------+------+----------+-------+
+12 rows in set (0,00 sec)
+
+mysql> LOAD DATA LOCAL INFILE "/Applications/MAMP/htdocs/sql/client.txt" INTO TABLE client;
+Query OK, 4 rows affected, 16 warnings (0,00 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 16
+
+mysql> SELECT * FROM client;
++------+------+----------+-------+
+| id   | name | lastname | birth |
++------+------+----------+-------+
+|  101 | NULL | NULL     | NULL  |
+|  102 | NULL | NULL     | NULL  |
+|  105 | NULL | NULL     | NULL  |
+|  201 | NULL | NULL     | NULL  |
+|  101 | NULL | NULL     | NULL  |
+|  102 | NULL | NULL     | NULL  |
+|  105 | NULL | NULL     | NULL  |
+|  201 | NULL | NULL     | NULL  |
+|  101 | NULL | NULL     | NULL  |
+|  102 | NULL | NULL     | NULL  |
+|  105 | NULL | NULL     | NULL  |
+|  201 | NULL | NULL     | NULL  |
+|  301 | NULL | NULL     | NULL  |
+|  102 | NULL | NULL     | NULL  |
+|  105 | NULL | NULL     | NULL  |
+|  201 | NULL | NULL     | NULL  |
++------+------+----------+-------+
+16 rows in set (0,00 sec)
+
+mysql> DESCRIBE client;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | int(10)     | YES  |     | NULL    |       |
+| name     | varchar(20) | YES  |     | NULL    |       |
+| lastname | varchar(30) | YES  |     | NULL    |       |
+| birth    | date        | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0,00 sec)
+
+mysql> INSERT INTO pet
+    ->     -> VALUES ('Puffball','Diane','hamster','f','1999-03-30',NULL);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-> VALUES ('Puffball','Diane','hamster','f','1999-03-30',NULL)' at line 2
+mysql> INSERT INTO client 
+    -> VALUES ('111','ivan','ivanov','1990-12-12';)
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
+    -> INSERT INTO client  VALUES ('111','ivan','ivanov','1990-12-12');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+INSERT INTO client  VALUES ('111','ivan','ivanov','1990-12-12')' at line 1
+mysql> INSERT INTO client  
+    -> VALUES ('111','ivan','ivanov','1990-12-12');
+Query OK, 1 row affected (0,00 sec)
+
+mysql> SELECT * FROM client;
++------+------+----------+------------+
+| id   | name | lastname | birth      |
++------+------+----------+------------+
+|  101 | NULL | NULL     | NULL       |
+|  102 | NULL | NULL     | NULL       |
+|  105 | NULL | NULL     | NULL       |
+|  201 | NULL | NULL     | NULL       |
+|  101 | NULL | NULL     | NULL       |
+|  102 | NULL | NULL     | NULL       |
+|  105 | NULL | NULL     | NULL       |
+|  201 | NULL | NULL     | NULL       |
+|  101 | NULL | NULL     | NULL       |
+|  102 | NULL | NULL     | NULL       |
+|  105 | NULL | NULL     | NULL       |
+|  201 | NULL | NULL     | NULL       |
+|  301 | NULL | NULL     | NULL       |
+|  102 | NULL | NULL     | NULL       |
+|  105 | NULL | NULL     | NULL       |
+|  201 | NULL | NULL     | NULL       |
+|  111 | ivan | ivanov   | 1990-12-12 |
++------+------+----------+------------+
+17 rows in set (0,00 sec)
+
+mysql> LOAD DATA LOCAL INFILE "/Applications/MAMP/htdocs/sql/client.txt" INTO TABLE client;
+Query OK, 6 rows affected, 21 warnings (0,00 sec)
+Records: 6  Deleted: 0  Skipped: 0  Warnings: 21
+
+mysql> SELECT * FROM client;
++------+---------------------+------------+------------+
+| id   | name                | lastname   | birth      |
++------+---------------------+------------+------------+
+|  101 | NULL                | NULL       | NULL       |
+|  102 | NULL                | NULL       | NULL       |
+|  105 | NULL                | NULL       | NULL       |
+|  201 | NULL                | NULL       | NULL       |
+|  101 | NULL                | NULL       | NULL       |
+|  102 | NULL                | NULL       | NULL       |
+|  105 | NULL                | NULL       | NULL       |
+|  201 | NULL                | NULL       | NULL       |
+|  101 | NULL                | NULL       | NULL       |
+|  102 | NULL                | NULL       | NULL       |
+|  105 | NULL                | NULL       | NULL       |
+|  201 | NULL                | NULL       | NULL       |
+|  301 | NULL                | NULL       | NULL       |
+|  102 | NULL                | NULL       | NULL       |
+|  105 | NULL                | NULL       | NULL       |
+|  201 | NULL                | NULL       | NULL       |
+|  111 | ivan                | ivanov     | 1990-12-12 |
+|  101 | NULL                | NULL       | NULL       |
+|  102 | NULL                | NULL       | NULL       |
+|  105 | NULL                | NULL       | NULL       |
+|  201 | NULL                | NULL       | NULL       |
+|  203 | NULL                | NULL       | NULL       |
+|  222 | лоза костя          | 1886-11-30 | NULL       |
++------+---------------------+------------+------------+
+23 rows in set (0,00 sec)
+
+mysql> LOAD DATA LOCAL INFILE "/Applications/MAMP/htdocs/sql/client.txt" INTO TABLE client;
+Query OK, 6 rows affected, 20 warnings (0,00 sec)
+Records: 6  Deleted: 0  Skipped: 0  Warnings: 20
+
+mysql> SELECT * FROM client;
++------+---------------------+------------+------------+
+| id   | name                | lastname   | birth      |
++------+---------------------+------------+------------+
+|  101 | NULL                | NULL       | NULL       |
+|  102 | NULL                | NULL       | NULL       |
+|  105 | NULL                | NULL       | NULL       |
+|  201 | NULL                | NULL       | NULL       |
+|  101 | NULL                | NULL       | NULL       |
+|  102 | NULL                | NULL       | NULL       |
+|  105 | NULL                | NULL       | NULL       |
+|  201 | NULL                | NULL       | NULL       |
+|  101 | NULL                | NULL       | NULL       |
+|  102 | NULL                | NULL       | NULL       |
+|  105 | NULL                | NULL       | NULL       |
+|  201 | NULL                | NULL       | NULL       |
+|  301 | NULL                | NULL       | NULL       |
+|  102 | NULL                | NULL       | NULL       |
+|  105 | NULL                | NULL       | NULL       |
+|  201 | NULL                | NULL       | NULL       |
+|  111 | ivan                | ivanov     | 1990-12-12 |
+|  101 | NULL                | NULL       | NULL       |
+|  102 | NULL                | NULL       | NULL       |
+|  105 | NULL                | NULL       | NULL       |
+|  201 | NULL                | NULL       | NULL       |
+|  203 | NULL                | NULL       | NULL       |
+|  222 | лоза костя          | 1886-11-30 | NULL       |
+|  101 | NULL                | NULL       | NULL       |
+|  102 | NULL                | NULL       | NULL       |
+|  105 | NULL                | NULL       | NULL       |
+|  201 | NULL                | NULL       | NULL       |
+|  203 | NULL                | NULL       | NULL       |
+|  222 | лоза                | костя      | 1886-11-30 |
++------+---------------------+------------+------------+
+29 rows in set (0,00 sec)
+
+mysql> DELETE FROM client;
+Query OK, 29 rows affected (0,00 sec)
+
+mysql> SELECT * FROM client;
+Empty set (0,00 sec)
+
+mysql> DESCRIBE client;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | int(10)     | YES  |     | NULL    |       |
+| name     | varchar(20) | YES  |     | NULL    |       |
+| lastname | varchar(30) | YES  |     | NULL    |       |
+| birth    | date        | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0,01 sec)
+
+mysql> LOAD DATA LOCAL INFILE "/Applications/MAMP/htdocs/sql/client.txt" INTO TABLE client;
+Query OK, 4 rows affected (0,01 sec)
+Records: 4  Deleted: 0  Skipped: 0  Warnings: 0
+
+mysql> SELECT * FROM client;
++------+------------+----------------------+------------+
+| id   | name       | lastname             | birth      |
++------+------------+----------------------+------------+
+|  101 | иван       | иванов               | 1991-12-23 |
+|  201 | петр       | нестеров             | 1989-10-12 |
+|  294 | алина      | голованова           | 1987-11-06 |
+|  103 | артем      | знатов               | 1990-05-20 |
++------+------------+----------------------+------------+
+4 rows in set (0,00 sec)
+
+mysql> DESCRIBE basket;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| id       | int(10)     | YES  |     | NULL    |       |
+| name     | varchar(20) | YES  |     | NULL    |       |
+| price    | int(10)     | YES  |     | NULL    |       |
+| lastname | varchar(30) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0,01 sec)
+
+mysql> LOAD DATA LOCAL INFILE "/Applications/MAMP/htdocs/sql/basket.txt" INTO TABLE basket;
+ERROR 2 (HY000): File '/Applications/MAMP/htdocs/sql/basket.txt' not found (Errcode: 2 - No such file or directory)
+mysql> LOAD DATA LOCAL INFILE "/Applications/MAMP/htdocs/sql/basket.txt" INTO TABLE basket;
+Query OK, 8 rows affected, 2 warnings (0,01 sec)
+Records: 8  Deleted: 0  Skipped: 0  Warnings: 2
+
+mysql> SELECT * FROM basket;
++------+--------------------+-------+------------------+
+| id   | name               | price | lastname         |
++------+--------------------+-------+------------------+
+| 1233 | телефон            |  5000 | знатов           |
+| 1233 | телефон            |  5000 | нестеров         |
+| 1001 | часы               | 12000 | головина         |
+| 1000 | радио              |   500 | иванов           |
+| 2049 | наушники           |   500 | знатов           |
+|   10 | пакет              |    50 | головина         |
+| 1234 | весы               |   900 | NULL             |
+|  100 | телевизор          | 20000 | NULL             |
++------+--------------------+-------+------------------+
+8 rows in set (0,00 sec)
+
+mysql> SELECT c.id, c.name, c.lastname, c.birth
+    -> FROM client c;
++------+------------+----------------------+------------+
+| id   | name       | lastname             | birth      |
++------+------------+----------------------+------------+
+|  101 | иван       | иванов               | 1991-12-23 |
+|  201 | петр       | нестеров             | 1989-10-12 |
+|  294 | алина      | голованова           | 1987-11-06 |
+|  103 | артем      | знатов               | 1990-05-20 |
++------+------------+----------------------+------------+
+4 rows in set (0,00 sec)
+
+mysql> SELECT c.id, c.name, c.lastname, c.birth FROM client c
+    -> WHERE c.id=101;
++------+----------+--------------+------------+
+| id   | name     | lastname     | birth      |
++------+----------+--------------+------------+
+|  101 | иван     | иванов       | 1991-12-23 |
++------+----------+--------------+------------+
+1 row in set (0,00 sec)
+
+mysql> SELECT b.id, b.name,b.price
+    -> FROM basket bж
+    -> ;
+ERROR 1054 (42S22): Unknown column 'b.id' in 'field list'
+mysql> SELECT DISTINCT b.id, b.name,b.price FROM basket b;
++------+--------------------+-------+
+| id   | name               | price |
++------+--------------------+-------+
+| 1233 | телефон            |  5000 |
+| 1001 | часы               | 12000 |
+| 1000 | радио              |   500 |
+| 2049 | наушники           |   500 |
+|   10 | пакет              |    50 |
+| 1234 | весы               |   900 |
+|  100 | телевизор          | 20000 |
++------+--------------------+-------+
+7 rows in set (0,00 sec)
+
+mysql> SELECT b.id, b.name,b.price FROM basket b WHERE b.lastname=голованова ;
+ERROR 1054 (42S22): Unknown column 'голованова' in 'where clause'
+mysql> SELECT b.id, b.name,b.price FROM basket b WHERE b.lastname='голованова' ;
+Empty set (0,00 sec)
+
+mysql> SELECT b.id, b.name,b.price FROM basket b;
++------+--------------------+-------+
+| id   | name               | price |
++------+--------------------+-------+
+| 1233 | телефон            |  5000 |
+| 1233 | телефон            |  5000 |
+| 1001 | часы               | 12000 |
+| 1000 | радио              |   500 |
+| 2049 | наушники           |   500 |
+|   10 | пакет              |    50 |
+| 1234 | весы               |   900 |
+|  100 | телевизор          | 20000 |
++------+--------------------+-------+
+8 rows in set (0,00 sec)
+
+mysql> SELECT b.id, b.name,b.price FROM basket b
+    -> WHERE b.lastname=знатов;
+ERROR 1054 (42S22): Unknown column 'знатов' in 'where clause'
+mysql> SELECT b.id, b.name,b.price FROM basket b WHERE b.lastname='знатов';
++------+------------------+-------+
+| id   | name             | price |
++------+------------------+-------+
+| 1233 | телефон          |  5000 |
+| 2049 | наушники         |   500 |
++------+------------------+-------+
+2 rows in set (0,00 sec)
+
+mysql> SELECT b.name bn
+    -> FROM basket b
+    -> LEFT JOIN client c
+    -> ON c.lastname=b.lastname
+    -> where b.lastname!=NULL;
+Empty set (0,01 sec)
+
+mysql> SELECT b.name bn FROM basket b LEFT JOIN client c ON c.lastname=b.lastname where b.price>100;
++--------------------+
+| bn                 |
++--------------------+
+| радио              |
+| телефон            |
+| телефон            |
+| наушники           |
+| часы               |
+| весы               |
+| телевизор          |
++--------------------+
+7 rows in set (0,00 sec)
+
+mysql> SELECT SUM(b.price) FROM basket b WHERE b.lastname='голованова';
++--------------+
+| SUM(b.price) |
++--------------+
+|         NULL |
++--------------+
+1 row in set (0,00 sec)
+
+mysql> SELECT sum(b.price) FROM basket b WHERE b.lastname='голованова';
++--------------+
+| sum(b.price) |
++--------------+
+|         NULL |
++--------------+
+1 row in set (0,00 sec)
+
+mysql> SELECT SUM(b.price) FROM basket b WHERE b.lastname='иванов';
++--------------+
+| SUM(b.price) |
++--------------+
+|          500 |
++--------------+
+1 row in set (0,00 sec)
+
+mysql> SELECT SUM(b.price) FROM basket b WHERE b.lastname='голованова';
++--------------+
+| SUM(b.price) |
++--------------+
+|         NULL |
++--------------+
+1 row in set (0,00 sec)
+
+mysql> SELECT SUM(b.price) FROM basket b WHERE b.lastname='головинова';
++--------------+
+| SUM(b.price) |
++--------------+
+|         NULL |
++--------------+
+1 row in set (0,00 sec)
+
+mysql> SELECT SUM(b.price) FROM basket b WHERE b.lastname='головина';
++--------------+
+| SUM(b.price) |
++--------------+
+|        12050 |
++--------------+
+1 row in set (0,00 sec)
+
+mysql> SELECT SUM(b.price) FROM basket b;
++--------------+
+| SUM(b.price) |
++--------------+
+|        43950 |
++--------------+
+1 row in set (0,00 sec)
+
+mysql> INSERT INTO client VALUES ('111','алина','головина','1990-12-12');
+Query OK, 1 row affected (0,01 sec)
+
+mysql> SELECT b.name bn FROM basket b LEFT JOIN client ON b.id=c.id WHERE b.name=NULL;
+ERROR 1054 (42S22): Unknown column 'c.id' in 'on clause'
+mysql> SELECT b.name bn FROM basket b LEFT JOIN client c ON b.id=c.id WHERE b.name=NULL;
+Empty set (0,00 sec)
+
+mysql> SELECT b.name  FROM basket b LEFT JOIN client c ON b.id=c.id WHERE b.name=NULL;
+Empty set (0,00 sec)
+
+mysql> SELECT b.name bn FROM basket b LEFT JOIN client c ON b.id=c.id WHERE b.lastname=NULL;
+Empty set (0,00 sec)
+
+mysql> SELECT b.name bn FROM basket b  WHERE b.lastname=NULL;
+Empty set (0,00 sec)
+
+mysql> SELECT b.name bn FROM basket b  WHERE b.lastname='NULL';
+Empty set (0,01 sec)
+
+mysql> SELECT b.name  FROM basket b  WHERE b.lastname='NULL';
+Empty set (0,00 sec)
+
+mysql> SELECT b.name  FROM basket b  WHERE b.lastname='нестеров';
++----------------+
+| name           |
++----------------+
+| телефон        |
++----------------+
+1 row in set (0,00 sec)
+
+mysql> SELECT b.name  FROM basket b  WHERE b.lastname='/N';
+Empty set (0,00 sec)
+
+mysql> SELECT b.name  FROM basket b  WHERE b.lastname=/N'
+    '> SELECT b.name  FROM basket b  WHERE b.lastname=/N'
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/N'
+SELECT b.name  FROM basket b  WHERE b.lastname=/N'' at line 1
+mysql> SELECT b.name  FROM basket b  WHERE b.lastname=/N'                                                                         SELECT b.name  FROM basket b  WHERE b.lastname=/N;
+    '> 
+    '> SELECT b.name  FROM basket b  WHERE b.lastname=/N'                                                                         SELECT b.name  FROM basket b  WHERE b.lastname=/N ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/N'
+SELECT b.name  FROM basket b  WHERE b.lastname=/N;
+
+SELECT b.name  FROM bask' at line 1
+mysql> 

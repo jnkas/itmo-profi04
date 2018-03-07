@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /*padding: 0;
+    margin: 0;*/
+}
+
+/*--- admin.php ----------*/
+
+fieldset#admin_page {
+    width: 600px;
+    margin: 50px 0 0 150px;
+    border-radius: 10px;
+}
+
+#admin_page label,
+#admin_page select,
+#admin_page input[type="text"],
+#admin_page textarea {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+}
+
+#admin_page label {
+    margin-top: 20px;
+}
+
+#admin_page input[type="submit"] {
+    width: 35%;
+    height: 40px;
+    margin: 20px 0 20px 10%;
+    border-radius: 6px;
+    background-color: #008300;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/*--- template.php ----------*/
+
+
+main.page {
+    float: left;
+    display: inline-block;
+    width: 70%;
+    border: 1px solid black;
+    margin: 0;
+}
+
+section.post {
+    border-bottom: 1px dotted grey;
+    
+    padding: 5px;
+}
+
+aside.sidebar {
+    float: right;
+    display: inline-block;
+    width: 30%;
+    /*border: 1px solid black;*/
+    padding: 5px;
+}
+.sidebar button {
+    margin-bottom: 2px;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+p.links {
+    border-bottom: 1px dotted grey;
+}

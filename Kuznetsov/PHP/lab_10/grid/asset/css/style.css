@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*--- adminpage.php ----------*/
+
+.admin_page table {
+    border-collapse: collapse;
+}
+
+.admin_page td,
+.admin_page th {
+    border: 1px solid #4b4b4b;
+    padding: 8px;
+} 
+
+.rows:nth-of-type(odd) {
+    background-color: #ebebeb;
+}
+
+.rows:hover {
+/*    border: 2px solid red;*/
+    background: #ffffa8;
+}
+
+.users_table button {
+    margin-left: 3px;
+    margin-right: 3px;
+    padding: 3px 5px;
+}
+
+.users_table button:hover {
+    background: #41ff41;
+    text-decoration: underline;
+}
+
+.btn {
+    margin: 8px 5px;
+    padding: 3px;
+    min-width: 25px;
+}
+
+.btn:hover {
+    background: #aaaeff;
+    text-decoration: underline;
+}

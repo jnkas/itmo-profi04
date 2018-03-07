@@ -1,0 +1,41 @@
+body {
+    font: 14px "Veranda";
+}
+
+.mainForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+select {
+    width: 250px;
+}
+
+textarea {
+    width: 250px;
+}
+
+button {
+    width: 250px;
+    margin-top: 10px;
+}
+
+input {
+    width: 250px;
+}
+
+.defaultPage {
+    display: block;
+    width: inherit;
+    border: 2px solid black;
+    background: cornflowerblue;
+    text-align: center;
+}
+
