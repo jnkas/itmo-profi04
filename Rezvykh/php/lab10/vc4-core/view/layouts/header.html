@@ -1,0 +1,40 @@
+<header>
+    <div class='container'>
+        <nav class='navbar navbar-expand-lg navbar-light bg-light'>
+            <a class='navbar-brand' href='<?php echo ROOTSITE; ?>'>Блог</a>
+            <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation'>
+                <span class='navbar-toggler-icon'></span>
+            </button>
+            <div class='collapse navbar-collapse' id='navbarNavDropdown'>
+                <ul class='navbar-nav mr-auto'>
+                   <!-- <li class='nav-item dropdown'>
+                        <a class='nav-link dropdown-toggle' href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                            Бытовая техника
+                        </a>
+                    </li>
+                    <li class='nav-item dropdown'>
+                        <a class='nav-link dropdown-toggle' href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                            Цифровая техника
+                        </a>
+                    </li>-->
+                    <?php if (User::isAdmin()): ?>
+                    <span class='navbar-text'>
+                        <a href="<?php echo ROOTSITE; ?>admin">Админка</a>
+                    </span>
+                    <?php endif; ?>
+                </ul>
+                <ul class="navbar-nav">
+                    <?php if (!User::isAuth()): ?>
+                    <li class='nav-item'><a class='nav-link' href="<?php echo ROOTSITE; ?>user/register">Регистрация</a></li>
+                    <li class='nav-item'><a class='nav-link' href="<?php echo ROOTSITE; ?>user/login">Вход</a></li>
+                    <?php else: ?>
+                        <?php if (User::getName()): ?>
+                        <li class='nav-item'><span class='navbar-text'>Привет, <?php echo User::getName(); ?></span></li>
+                        <?php endif; ?>
+                    <li class='nav-item'><a class='nav-link' href="<?php echo ROOTSITE; ?>user/logout">Выход</a></li>
+                    <?php endif; ?>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
