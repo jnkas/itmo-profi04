@@ -1,0 +1,32 @@
+body {
+    -webkit-animation: bg 45s infinite;
+    -moz-animation: bg 45s infinite;
+    -o-animation: bg 45s infinite;
+    animation: bg 45s infinite;
+}
+
+@keyframes bg {
+    0% {
+        background-image: url(../img/9.jpg);
+    }
+    
+    20%{
+       background-image: url(../img/1.jpg);
+    }
+    
+    40%{
+        background-image: url(../img/2.jpg);
+    }
+    
+    60% {
+        background-image: url(../img/5.jpg);
+    }
+    
+    80% {
+        background-image: url(../img/11.jpg);
+    }
+    
+    100% {
+        background-image: url(../img/7.jpg);
+    }
+}

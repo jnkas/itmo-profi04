@@ -1,0 +1,34 @@
+body{
+    background-color: whitesmoke
+}
+
+p {
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    margin: -50px 0 0 -250px;
+    text-transform: uppercase;
+    font-size: 250px;
+    color: white;
+    opacity: 50%
+   
+}
+.p-0{
+    padding: 0;
+}
+h4 {
+    text-align: center;
+    color: darkgray;
+    font-style: italic;
+    font-size: 17px;
+
+}
+h5 {
+    text-align: center;
+    color: darkgray;
+    font-style: italic;
+    font-size: 12px;
+}
