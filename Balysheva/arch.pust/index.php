@@ -1,10 +1,13 @@
+<?php
+    require "includes/config.php";
+?>
 <!DOCTYPE html>
 <html lang="eng">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>ARCH.PUST</title>
+    <title><?php echo $config['title']; ?></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bgswitch.css">
@@ -13,12 +16,12 @@
 <body>
     <div> 
         <?php 
-        include "../archpust/navbar.php";
+        include "../archpust/includes/navbar.php";
         ?>
     </div>
 
     <div class="container-fluid">
-        <p>pustylnik</p>
+        <p>PUSTYLNIK</p>
     </div>
     
 

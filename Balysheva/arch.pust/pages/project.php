@@ -1,12 +1,15 @@
+<?php
+    require "../includes/config.php";
+?>
 <!DOCTYPE html>
 <html lang="eng">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>ARCH.PUST</title>
+    <title><?php echo $config['title']; ?></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 
 </head>
 
@@ -14,11 +17,20 @@
 
     <div>
         <?php 
-        include "../archpust/navbar.php";
+        include "../includes/navbar.php";
         ?>
     </div>
-
-    <div class="container-fluid p-0">
+<?php 
+    $project = mysqli_query($connection, "SELECT * FROM `projects` WHERE `id_pr` = ". (int) $_GET['id']);
+    
+    if(mysqli_num_rows($project) <= 0){
+        ?>
+        <h1>Проект не найден</h1>
+        <?php
+    } else {
+        $pr = mysqli_fetch_assoc($project)
+        ?>
+        <div class="container-fluid p-0">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li class="active" data-target="#carouselExampleIndicators" data-slide-to="0">
@@ -30,13 +42,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/1.jpg" alt="" class="d-block w-100">
+                    <img src="../static/slider/<?php echo $pr['img1'];?>" alt="" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/1(1).jpg" alt="" class="d-block w-100">
+                    <img src="../static/slider/<?php echo $pr['img2'];?>" alt="" class="d-block w-100">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/1(2).jpg" alt="" class="d-block w-100">
+                    <img src="../static/slider/<?php echo $pr['img3'];?>" alt="" class="d-block w-100">
                 </div>
             </div>
             <a href="#carouselExampleIndicators" class="carousel-control-prev" role="button" data-slide="prev">
@@ -50,9 +62,14 @@
         </div>
     </div>
     <div>
-        <h4>Досуговый центр.</h4>
-        <h5>Вмещает 1500 человек. Учебный проект. 2016 г.</h5>
+        <h4><?php echo $pr['name'];?></h4>
+        <h5><?php echo $pr['descr'];?></h5>
     </div>
+        <?php
+    }
+    
+    ?>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

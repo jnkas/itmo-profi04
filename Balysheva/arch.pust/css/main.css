@@ -1,24 +1,34 @@
-body{
+*{
+    margin:0;
+    padding:0;
+}
+body {
     background-color: whitesmoke
 }
 
 p {
     display: block;
     position: absolute;
-    width: 500px;
-    height: 100px;
+    width: 800px;
+    height: 200px;
     left: 50%;
     top: 50%;
-    margin: -50px 0 0 -250px;
+    margin: -100px 0 0 -400px;
     text-transform: uppercase;
-    font-size: 250px;
-    color: white;
-    opacity: 50%
-   
+    font-size: 160px;
+    color: rgba(0,0,0,0.6);
 }
-.p-0{
+
+.p-0 {
     padding: 0;
 }
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon{
+    height: 50px;
+    width: 50px;
+}
+
 h4 {
     text-align: center;
     color: darkgray;
@@ -26,9 +36,31 @@ h4 {
     font-size: 17px;
 
 }
+
 h5 {
     text-align: center;
     color: darkgray;
     font-style: italic;
     font-size: 12px;
 }
+
+.contact,
+.about{
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: auto;
+    background-color: rgba(255,255,255,0.8);
+    text-align: center;
+    
+}
+.contact,
+.fa-facebook-official,
+.fa-instagram,
+.fa-vk{
+    color: dimgrey;
+}
+.about {
+    padding: 5%;
+}
+
