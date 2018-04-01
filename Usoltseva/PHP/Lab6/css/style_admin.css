@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+.goSite {
+	width: 540px;
+	margin: 0 auto;
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.goSite a {
+	display: block;
+	padding: 1rem;
+	/* color: rgb(63, 5, 183); */
+	/* border-radius: 1rem; */
+	/* text-transform: uppercase; */
+	 background-color: white;
+	/* background-color: rgba(83, 53, 144, 0.4); */
+}
+
+.goSite a:hover {
+	/* color: lightgrey; */
+	/* background-color: rgb(83, 53, 144); */
+	/* background-color: rgba(83, 53, 144, 0.2); */
+}
+
+form {
+    margin: 50px auto 0 auto;
+    width: 500px;
+    padding: 20px;
+    /* border: 1px solid rgb(153, 153, 186); */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 0 30px rgb(255,255,224); */
+     background-color: white;
+}
+
+fieldset {
+    padding: 10px;
+    padding-top: 25px;
+    /* border: 1px solid rgb(153, 153, 186); */
+    /* border-radius: 5px; */
+}
+
+fieldset legend {
+    font-size: 1.5rem;
+    /* color: rgb(52, 73, 94); */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select {
+	width: 50%;
+}
+
+select,
+input[type="text"],
+textarea {
+    background-color: floralwhite;
+}
+
+select,
+input[type="text"]{
+    height: 35px;
+    margin-bottom: 10px;
+    padding: 2px 5px;
+    color: #000;
+    border: 2px solid rgb(189, 195, 199);
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+}
+
+textarea {
+    max-width: 475px;
+    padding: 5px 5px;
+    color: #000;
+    border: 2px solid rgb(189, 195, 199);
+    border-radius: 2px;
+}
+
+select:hover,
+input[type="text"]:hover,
+textarea:hover {
+	border: 2px solid rgb(142, 147, 150);
+}
+
+
+input[type="submit"] {
+    width: 150px;
+    height: 40px;
+   margin-left: 150px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    
+    background-color: green;
+    border-radius: 1px;
+    outline-style: none;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(177, 177, 193);
+}

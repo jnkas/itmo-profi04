@@ -1,0 +1,17 @@
+.timeline {
+	width: inherit;
+	min-height: 150px;
+	margin: 15px 0;
+	padding: 10px;
+	/* border: 1px solid darkslateblue; */
+    background-color: #c4f497;
+	/* background-color: rgb(72, 61, 139); */
+	/* background-color: rgba(72, 61, 139, 0.15); */
+}
+
+.imgTML {
+	float: left;
+	margin-right: 15px;
+	border-radius: 1px;
+    max-height: 50px;
+}

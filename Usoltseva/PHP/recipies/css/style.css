@@ -1,0 +1,63 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.navbar-brand {
+    font-family: 'Changa', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
+    background-color: #2c68c9;
+}
+
+body {
+    margin: 0 0 100px; /* bottom = footer height */
+    background: url(../images/bg-body.jpg);
+}
+
+.panel{
+    background-color: #eee;
+}
+
+h1, h2{
+    font-family: 'Changa', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+th {
+    font-size: 1.3em;
+}
+
+.status{
+    border: 1px;
+    background: yellow;
+    width: 50%;
+    color: black;
+}
+
+.instructions{
+    border: 1px;
+    background: yellow;
+}
+
+.button--delete{
+		border:0;
+		background:transparent;
+		padding:0;
+		margin-top:3px;
+		margin-left: 5px;
+		font-size:14px;
+		color:#ed5a5a;
+}
+
+
+@media query
